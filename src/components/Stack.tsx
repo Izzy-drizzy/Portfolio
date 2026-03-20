@@ -64,7 +64,7 @@ export default function Stack() {
       viewport={{ once: true, margin: '-80px' }}
     >
       <motion.div variants={fadeUp} custom={0} className="mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
           My stack<span className="text-[#F45D01]">.</span>
         </h2>
         <p className="text-sm text-gray-400 mt-3">

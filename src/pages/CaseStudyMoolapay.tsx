@@ -87,7 +87,7 @@ export default function CaseStudyMoolapay() {
               <span>/</span>
               <span className="text-gray-300">Moolapay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -141,7 +141,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl font-bold">The Challenge</h2>
+              <h2 className="text-2xl font-semibold">The Challenge</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -199,7 +199,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl font-bold">My Contribution</h2>
+              <h2 className="text-2xl font-semibold">My Contribution</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -233,7 +233,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Approach</SectionLabel>
-              <h2 className="text-2xl font-bold mb-10">Research & Strategy</h2>
+              <h2 className="text-2xl font-semibold mb-10">Research & Strategy</h2>
             </motion.div>
 
             {/* Research methods */}
@@ -423,7 +423,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl font-bold mb-10">Unexpected Obstacles</h2>
+              <h2 className="text-2xl font-semibold mb-10">Unexpected Obstacles</h2>
             </motion.div>
             <div className="space-y-6">
               {[
@@ -474,7 +474,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl font-bold mb-4">A Visual-First Social Finance Platform</h2>
+              <h2 className="text-2xl font-semibold mb-4">A Visual-First Social Finance Platform</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mb-10">
                 Splash → minimal onboarding (3 screens) → main dashboard. Navigation organised around what users actually do —
                 not technical service names. Five focused tabs: Home, Transfers, Wallets, Expenses, Profile.
@@ -566,7 +566,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Testing & Refinement</SectionLabel>
-              <h2 className="text-2xl font-bold mb-4">What the Tests Revealed</h2>
+              <h2 className="text-2xl font-semibold mb-4">What the Tests Revealed</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-xl mb-10">
                 Tested with 12 participants across varying digital literacy levels. Three task scenarios, each revealing something the design had missed.
               </p>
@@ -661,7 +661,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
-              <h2 className="text-2xl font-bold mb-10">Final Designs</h2>
+              <h2 className="text-2xl font-semibold mb-10">Final Designs</h2>
             </motion.div>
             {/* First row — 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -699,7 +699,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-bold mb-8">Measurable Outcomes</h2>
+              <h2 className="text-2xl font-semibold mb-8">Measurable Outcomes</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -735,7 +735,7 @@ export default function CaseStudyMoolapay() {
             <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div className="lg:col-span-4">
                 <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Long-term Value</p>
-                <h3 className="text-xl font-bold">A Scalable Foundation</h3>
+                <h3 className="text-xl font-semibold">A Scalable Foundation</h3>
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
@@ -762,7 +762,7 @@ export default function CaseStudyMoolapay() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-bold">Healf App Onboarding</h2>
+              <h2 className="text-2xl font-semibold">Healf App Onboarding</h2>
               <p className="text-sm text-gray-400 mt-1">Redesigning wellness discovery and engagement</p>
             </div>
             <Link to="/work/healf"

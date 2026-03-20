@@ -30,7 +30,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]"
+            className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]"
           >
             Product designer building <br></br> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products that drive measurable business impact
           </motion.h1>

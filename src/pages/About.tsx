@@ -88,7 +88,7 @@ export default function About() {
           variants={fadeUp}
         >
           <p className="text-sm text-gray-500 mb-2">About</p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
             About Me<span className="text-[#F45D01]">.</span>
           </h1>
         </motion.div>
@@ -131,7 +131,7 @@ export default function About() {
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <h2 className="text-xl font-bold">
+                  <h2 className="text-xl font-semibold">
                     {item.title}{' '}
                     <span className="text-gray-600 font-normal text-sm">{item.icon}</span>
                   </h2>
@@ -163,7 +163,7 @@ export default function About() {
           viewport={{ once: true, margin: '-60px' }}
           variants={fadeUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
             My Reads<span className="text-[#F45D01]">.</span>
           </h2>
 

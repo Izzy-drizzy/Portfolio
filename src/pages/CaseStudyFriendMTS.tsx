@@ -32,7 +32,7 @@ export default function CaseStudyFriendMTS() {
               <span>/</span>
               <span className="text-gray-300">FriendMTS</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
               Building a dynamic digital identity for a global <span className="text-[#F45D01]">anti-piracy</span> technology leader
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -74,7 +74,7 @@ export default function CaseStudyFriendMTS() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-bold">Moolapay</h2>
+              <h2 className="text-2xl font-semibold">Moolapay</h2>
               <p className="text-sm text-gray-400 mt-1">Financial inclusion for underserved communities</p>
             </div>
             <Link to="/work/Moolapay" className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-6 py-3 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors shrink-0">
