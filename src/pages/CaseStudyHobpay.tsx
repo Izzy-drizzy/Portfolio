@@ -119,8 +119,8 @@ export default function CaseStudyHobpay() {
               <span>/</span>
               <span className="text-gray-300">Hobpay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-              Cross-platform fintech redesign recovering <span className="text-[#F45D01]">28%</span> of blocked users
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
+              Cross-platform fintech redesign recovering 28% of blocked users
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
               Strategic web-first redesign eliminating platform barriers for a Nigerian fintech serving 10K+ users.

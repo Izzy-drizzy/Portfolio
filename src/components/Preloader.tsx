@@ -65,7 +65,7 @@ export default function Preloader() {
 
             {/* Right — Name + progress percentage below */}
             <div>
-              <h1 className="text-[18px] md:text-[26px] font-bold tracking-tight text-[#E4E3E0] leading-none font-mono">
+              <h1 className="text-[18px] md:text-[26px] font-bold tracking-tight text-[#E4E3E0] leading-none">
                 {displayText}
               </h1>
               <p className="text-[8px] md:text-[10px] font-mono text-gray-500 mt-2 tracking-widest">

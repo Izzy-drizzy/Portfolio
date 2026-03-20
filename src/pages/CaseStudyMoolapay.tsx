@@ -87,8 +87,8 @@ export default function CaseStudyMoolapay() {
               <span>/</span>
               <span className="text-gray-300">Moolapay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-              Designing financial inclusion for communities left behind by <span className="text-[#F45D01]">traditional banking</span>
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
+              Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
               Financial inclusion platform connecting underserved Nigerian communities to cryptocurrency and digital payments.

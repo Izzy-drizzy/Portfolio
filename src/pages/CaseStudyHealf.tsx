@@ -88,8 +88,8 @@ export default function CaseStudyHealf() {
               <span>/</span>
               <span className="text-gray-300">Healf App Onboarding</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-              Redesigning onboarding to connect users to the right wellness content <span className="text-[#F45D01]">faster</span>
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
+              Redesigning onboarding to connect users to the right wellness content faster
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
               UX audit and onboarding redesign for Healf's wellness platform. Simplified navigation, improved content hierarchy,

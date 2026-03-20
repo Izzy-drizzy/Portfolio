@@ -66,7 +66,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
         {/* Right Column — wider, cards side by side */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:col-span-6 lg:col-start-7">
           <motion.a
-            href="/work/Healf-Onboarding"
+            href="/work/healf"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}

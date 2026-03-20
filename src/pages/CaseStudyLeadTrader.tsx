@@ -86,8 +86,8 @@ export default function CaseStudyLeadTrader() {
               <span>/</span>
               <span className="text-gray-300">Lead Trader</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-              Redesigning a stock trading platform for both novice and <span className="text-[#F45D01]">expert</span> traders
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]">
+              Redesigning a stock trading platform for both novice and expert traders
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
               Strategic demo redesign for a parent company evaluating a full product overhaul. Identified critical UX issues
