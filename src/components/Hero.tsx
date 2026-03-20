@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Clock from './Clock';
 
 interface HeroProps {
@@ -55,10 +56,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 <ArrowUpRight size={15} />
                 Let's Work Together
               </button>
-              <button className="flex items-center gap-2 border border-[#E4E3E0]/20 text-[#E4E3E0] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#E4E3E0]/10 transition-colors">
+              <Link to="/work" className="flex items-center gap-2 border border-[#E4E3E0]/20 text-[#E4E3E0] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#E4E3E0]/10 transition-colors">
                 <ArrowRight size={15} />
                 View All Work
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
