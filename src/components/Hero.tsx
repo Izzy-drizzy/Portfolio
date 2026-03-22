@@ -67,7 +67,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
         {/* Right Column — wider, cards side by side */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:col-span-6 lg:col-start-7">
           <motion.a
-            href="/work/healf"
+            href="/work/Edusmart"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -75,17 +75,17 @@ export default function Hero({ onOpenContact }: HeroProps) {
           >
             <div className="aspect-[5/3] overflow-hidden bg-[#222]">
               <img
-                src="/images/healf/slide-2.png"
-                alt="Healf Onboarding Redesign"
+                src="/images/edusmart/slide-1.png"
+                alt="EduSmart Analytics"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
             <div className="p-4">
               <h2 className="text-base font-semibold mb-2 leading-snug">
-                Redesigning Healf's Onboarding for better discovery and engagement
+                Preventing £5M revenue loss through stakeholder validation
               </h2>
               <p className="text-xs text-gray-400 mb-3 line-clamp-2">
-                UX audit and onboarding redesign for wellness platform. Simplified navigation, improved content hierarchy, and enhanced service discovery for better user engagement.
+                AI-powered student analytics platform for 200+ UK/Canadian universities. Validation workshops exposed 15/22 assumptions were wrong — protecting £5M in contracts.
               </p>
               <div className="flex items-center gap-1.5 text-xs font-medium border-t border-gray-800 pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />
