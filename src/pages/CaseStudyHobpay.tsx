@@ -123,9 +123,7 @@ export default function CaseStudyHobpay() {
               Cross-platform fintech redesign recovering 28% of blocked users
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
-              Strategic web-first redesign eliminating platform barriers for a Nigerian fintech serving 10K+ users.
-              Simplified navigation, streamlined service access, and progressive disclosure increased satisfaction
-              30% while recovering iOS-blocked users.
+              Hobpay ran on Android only — no iOS, no web. 28% of potential users simply couldn't get in. What started as a platform access fix turned into a full UX overhaul. Satisfaction went from 3.2 to 4.2. Bill payment completion went from 45% to 85%.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-gray-500">
               <span>2023</span>
@@ -211,8 +209,8 @@ export default function CaseStudyHobpay() {
                 <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">UX Issues</h3>
                 <ul className="space-y-2">
                   {[
-                    'Visual hierarchy chaos causing user confusion',
-                    'Overwhelming options presented simultaneously without hierarchy',
+                    'No visual hierarchy — everything competed for attention at once',
+                    'Too many options shown at once with no way to prioritise',
                     'Inconsistent design language across screens',
                     'Poor accessibility on older Android devices',
                   ].map((item, i) => (
@@ -421,10 +419,10 @@ export default function CaseStudyHobpay() {
                 <h3 className="text-base font-semibold">Key Findings</h3>
                 <ul className="space-y-3">
                   {[
-                    'Bill payments dominated usage (43% primary use) yet navigation treated all services equally',
-                    'Careplan loans were the most popular feature for frequent users but discovery was poor',
-                    'Interface overwhelmed users — too many options with no hierarchy',
-                    'Successful Nigerian fintechs prioritize quick actions and clear visual hierarchy for slower networks',
+                    'Bill payments were 43% of all usage, yet the nav treated them the same as every other service',
+                    'Careplan loans were popular with frequent users but almost impossible to find',
+                    'Users described the interface as overwhelming — too many options, no clear path',
+                    'Competing apps on slower networks all had one thing in common: quick actions front and centre',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
                       <span className="text-[#F45D01] mt-1 shrink-0">—</span>
@@ -439,17 +437,17 @@ export default function CaseStudyHobpay() {
                 {
                   num: '01',
                   title: 'Progressive Disclosure',
-                  body: 'Reveal functionality as needed rather than overwhelming upfront. New users see a simplified interface; power users access advanced features on demand.',
+                  body: 'Show what users need, when they need it. New users get a simpler view; advanced features are there when someone goes looking.',
                 },
                 {
                   num: '02',
                   title: 'Task-Oriented Architecture',
-                  body: "Organise around user goals — pay bills, invest, get loans — rather than internal service names like Rintegra or Careplan that users didn't recognise.",
+                  body: "Group things by what users are trying to do, not by internal product names. Nobody searched for 'Rintegra' — they searched for 'invest.'",
                 },
                 {
                   num: '03',
                   title: 'Trust-Building Design',
-                  body: 'Clear visual hierarchy, consistent interactions, and transparent security communication build confidence at every sensitive financial touchpoint.',
+                  body: 'Financial apps need to earn trust with every screen. Security details are visible, not buried in fine print. Consistent patterns mean users know what they\'re about to do before they tap.',
                 },
               ].map((p) => (
                 <div key={p.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
@@ -479,20 +477,20 @@ export default function CaseStudyHobpay() {
                 {
                   num: '01',
                   title: 'Balancing Feature Accessibility with Simplification',
-                  problem: 'Hobpay offered investments (Rintegra), bill payments, insurance, and loans (Careplan). Hiding too much reduced feature discovery; showing everything caused the original overwhelming experience.',
-                  solution: 'Created "Quick Actions" for frequent tasks and a "Services" section organised by user goals, not technical names. Progressive disclosure revealed details on demand.',
+                  problem: 'Hobpay had investments (Rintegra), bill payments, insurance, and loans (Careplan). Hiding too much killed discovery. Showing everything caused the original overload.',
+                  solution: 'Built a "Quick Actions" strip for frequent tasks and a "Services" section sorted by user goals, not internal names. Details expand when someone actually needs them.',
                 },
                 {
                   num: '02',
                   title: 'Technical Constraints of Nigerian Mobile Networks',
-                  problem: 'Users frequently on 2G/3G networks with older Android devices — any interface that loaded slowly or felt heavy would drive abandonment.',
-                  solution: 'Designed lightweight interfaces with optimised component structure, fallback states for slow connections, and progressive loading that prioritised essential data first.',
+                  problem: 'Most users were on 2G/3G with older Android devices. A slow or heavy interface meant abandonment.',
+                  solution: 'Kept components lightweight, added fallback states for slow connections, and loaded essential data first. The rest came in after.',
                 },
                 {
                   num: '03',
                   title: 'Cross-Platform Strategy Under Time Pressure',
-                  problem: 'Building native iOS and Android apps would take 12+ months. The business needed iOS users immediately to hit investor milestones.',
-                  solution: 'Proposed a web-first approach as both an immediate solution and a UX testing ground — eliminating the iOS barrier instantly while establishing design patterns for future mobile apps.',
+                  problem: 'Building native iOS and Android apps would take 12+ months. The business needed iOS users now to hit investor milestones.',
+                  solution: 'Proposed a web-first build: it removed the iOS barrier immediately and gave us a real testing ground for design patterns before committing to native apps.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -575,7 +573,7 @@ export default function CaseStudyHobpay() {
                 {
                   title: 'Login & Security',
                   before: 'Opaque security communication creating hesitation at sensitive points',
-                  after: 'Clear security measures communicated, biometric option for faster access, streamlined "forgot password" flow, trust signals without overwhelming',
+                  after: 'Security measures made visible, biometric login added, "forgot password" reduced to fewer steps, trust signals present without crowding the screen',
                 },
               ].map((s, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 space-y-4">
@@ -702,15 +700,15 @@ export default function CaseStudyHobpay() {
             <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div className="lg:col-span-4">
                 <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Long-term Value</p>
-                <h3 className="text-xl font-semibold">Strategic Foundation</h3>
+                <h3 className="text-xl font-semibold">What It Led To</h3>
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'Web platform served as design foundation for subsequent mobile app updates',
-                  'Enabled company to meet investor transaction milestones',
-                  'Reduced development time for mobile apps — reused components and patterns',
-                  'Design patterns established are still in use today, enabling faster feature launches',
-                  'Established company-wide design system for consistent cross-platform experience',
+                  'The web platform became the base for all mobile app updates — components and patterns reused directly',
+                  'The company hit investor transaction milestones it had been missing',
+                  'Mobile development moved faster because the hard decisions were already settled',
+                  'The design system built for this project is still in use',
+                  'A web-first build solved the iOS problem in weeks, not the 12 months a native app would have taken',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
                     <span className="text-[#F45D01] mt-1 shrink-0">—</span>

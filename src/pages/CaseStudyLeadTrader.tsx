@@ -90,9 +90,7 @@ export default function CaseStudyLeadTrader() {
               Redesigning a stock trading platform for both novice and expert traders
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
-              Strategic demo redesign for a parent company evaluating a full product overhaul. Identified critical UX issues
-              — visual hierarchy chaos, data visualisation gaps, and expert-only assumptions — then rebuilt core flows with
-              progressive disclosure and organised quick actions.
+              The parent company was deciding whether to invest in a full product overhaul. We had 3 weeks to prove the current app had problems worth fixing. Ran a UX audit, rebuilt the core screens, and delivered a prototype that made the case.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-gray-500">
               <span>2025</span>
@@ -145,16 +143,16 @@ export default function CaseStudyLeadTrader() {
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-8">
               <p className="text-sm text-gray-400 leading-relaxed">
-                Lead Trader's parent company faced a critical decision: invest significantly in a comprehensive product redesign, or
-                continue with incremental improvements. They needed evidence — not opinion — that a redesign would transform the user
-                experience enough to justify the investment. Through a comprehensive UX audit, five critical failures emerged.
+                Lead Trader's parent company was deciding whether a full redesign was worth the investment, or whether incremental
+                changes would do. They needed evidence, not opinion. A UX audit of the existing app turned up five distinct problems
+                that made the case.
               </p>
               <div className="space-y-4">
                 {[
                   {
                     num: '01',
                     title: 'Visual Hierarchy Chaos',
-                    body: '9+ competing action buttons on the home screen, all demanding attention simultaneously. Red header clashing with grey content. Icon-only quick actions with no labels. Portfolio balance shown with zero context — no trends, no performance, no insights.',
+                    body: '9+ action buttons on the home screen, all equal priority, all fighting for attention. Red header clashing with grey content. Icon-only quick actions with no labels. Portfolio balance shown with no trends, no performance data, no context.',
                   },
                   {
                     num: '02',
@@ -164,7 +162,7 @@ export default function CaseStudyLeadTrader() {
                   {
                     num: '03',
                     title: 'Poor Empty States',
-                    body: 'Portfolio screens showed 70%+ white space when users had £0.00 balances. No guidance on next steps, no education about what portfolios do, no call-to-action to fund or learn more. Empty states are teaching moments — this wasted them entirely.',
+                    body: 'Portfolio screens with £0.00 balances were mostly blank. No explanation of what a portfolio is, no prompt to fund or learn more. Empty states are the best teaching moments an app has. These just showed nothing.',
                   },
                   {
                     num: '04',
@@ -174,7 +172,7 @@ export default function CaseStudyLeadTrader() {
                   {
                     num: '05',
                     title: 'Inconsistent Branding',
-                    body: 'Different screens showing different branding (First Milli, Silent Mode provider logos) created a fragmented experience. Users felt like they were using multiple disconnected apps rather than a single trusted platform.',
+                    body: 'Different screens showed different branding — First Milli in one place, Silent Mode provider logos in another. The app felt like several unrelated products stitched together.',
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 space-y-3">
@@ -276,27 +274,27 @@ export default function CaseStudyLeadTrader() {
                 {
                   num: '01',
                   title: 'Information Hierarchy',
-                  body: 'Prioritise critical trading data — portfolio performance, market trends, quick actions. Secondary information accessible but not competing for attention at every moment.',
+                  body: 'The most important data — portfolio performance, market trends, quick actions — gets prominence. Secondary information is available but doesn\'t compete for attention on the main screen.',
                 },
                 {
                   num: '02',
                   title: 'Visual Clarity',
-                  body: 'Reduce cognitive load during high-stress trading moments. Colour coding, trend indicators, and performance badges communicate at a glance — no mental calculation required.',
+                  body: 'People make financial decisions under stress. Colour coding, trend indicators, and performance badges communicate at a glance. No mental calculation needed.',
                 },
                 {
                   num: '03',
                   title: 'Progressive Disclosure',
-                  body: 'Serve both novice (simple default view) and expert traders (detailed data on-demand). No user is left behind and no user is held back by what others need.',
+                  body: 'Novices get a clean default view. Experts get detailed data a tap away. Neither group is made worse off by what the other needs.',
                 },
                 {
                   num: '04',
                   title: 'Data Visualisation',
-                  body: 'Charts, graphs, and trend indicators transform raw numbers into scannable insights. Visual patterns are processed faster than text — critical in a high-stakes trading environment.',
+                  body: 'Charts and trend indicators turn raw numbers into something users can scan. Visual patterns are processed faster than text. In a trading app, that speed matters.',
                 },
                 {
                   num: '05',
                   title: 'Consistent Branding',
-                  body: 'A unified experience across all screens — same colours, typography, interaction patterns. Consistency builds the trust that financial platforms depend on.',
+                  body: 'Same colours, typography, and interaction patterns across every screen. Financial platforms live or die on trust, and inconsistency undermines it.',
                 },
               ].map((p) => (
                 <div key={p.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
@@ -322,20 +320,20 @@ export default function CaseStudyLeadTrader() {
                 {
                   num: '01',
                   title: 'Balancing Novice and Expert Needs',
-                  problem: 'Trading apps serve two opposing user types: novices (need education, guidance, simplified interface) and experts (need detailed data, advanced features, efficiency). The traditional solution — two separate apps — doubles development cost and fragments the user base.',
-                  solution: 'Progressive disclosure architecture: a simplified, scannable default view for novices; detailed data accessible via taps and toggles for experts. Example: portfolio shows +6.7% prominently — novices understand immediately. Experts tap for cost basis, realised vs unrealised gains. Neither user is penalised for the other\'s needs.',
+                  problem: 'Trading apps serve two very different users: novices who need guidance and a simple interface, and experts who need detailed data and speed. Building two separate apps doubles the cost and splits the user base.',
+                  solution: 'A simplified default view for novices — the portfolio shows +6.7%, which anyone can read. Experts tap through to cost basis, realised vs unrealised gains. Neither user is made worse off by what the other needs.',
                 },
                 {
                   num: '02',
                   title: 'Three-Week Timeline Constraint',
-                  problem: 'A comprehensive redesign could take 3–6 months of research, design, testing, and iteration. I had 3 weeks to demonstrate transformation potential convincingly enough to greenlight full investment.',
-                  solution: 'Focused on the 5 highest-impact screens with the most dramatic before/after — Home, Portfolio, Transaction flow, Stocklist, Profile. Delivered polished, complete screens rather than wireframes. The parent company needed to see the transformation, not imagine it. Strategic prioritisation over comprehensive coverage.',
+                  problem: 'A full redesign could take 3–6 months of research, design, testing, and iteration. This project had 3 weeks to demonstrate enough transformation potential to justify that investment.',
+                  solution: 'Focused on the 5 screens with the most dramatic before/after: Home, Portfolio, Transaction, Stocklist, Profile. Delivered polished, complete screens rather than wireframes, because the parent company needed to see the difference, not imagine it.',
                 },
                 {
                   num: '03',
                   title: 'Designing Without User Access',
-                  problem: 'Hired for a demo, not ongoing work. No access to existing user research, analytics data, support tickets, or user testing participants. All design decisions had to be made without direct user input.',
-                  solution: 'Relied on proxy data: competitive analysis as a proxy for user preferences, heuristic evaluation as a proxy for usability testing, industry research on trading app patterns, and technical background to identify feasibility issues. Acknowledged the limitation explicitly in the deliverable — honesty builds more trust than overclaiming.',
+                  problem: 'Hired for a demo, not ongoing work. No user research, no analytics, no support tickets to review, no testing participants. Every design decision had to be made without direct user input.',
+                  solution: 'Used proxy data: competitive analysis for user preferences, heuristic evaluation as a stand-in for usability testing, and trading app industry research. The limitation was stated clearly in the deliverable. Overclaiming would have been a worse outcome than being honest about it.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp}
@@ -544,11 +542,11 @@ export default function CaseStudyLeadTrader() {
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'Visual proof is more persuasive than verbal pitch — polished screens removed ambiguity from the investment decision',
-                  'Design system established means future features can be built rapidly with consistent quality from day one',
-                  'Competitive positioning now matches Robinhood and Trading 212 — credible in a market where design communicates trustworthiness',
-                  'Progressive disclosure architecture scales naturally — expert features can be added without disrupting the novice experience',
-                  'Honest limitation documentation (no user testing yet) builds more trust with the client than overclaiming the results',
+                  'Polished screens removed ambiguity from the investment decision — stakeholders could see the before/after rather than imagine it',
+                  'The design system means new features can be built with consistent quality from the start',
+                  'Visual design now sits at the level of Robinhood and Trading 212 — competitors where design communicates trustworthiness',
+                  'The architecture scales — expert features can be added later without disrupting the novice experience',
+                  'Documenting the limitations honestly (no user testing completed) built more trust with the client than claiming otherwise',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
                     <span className="text-[#F45D01] mt-1 shrink-0">—</span>

@@ -92,8 +92,7 @@ export default function CaseStudyHealf() {
               Redesigning onboarding to connect users to the right wellness content faster
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
-              UX audit and onboarding redesign for Healf's wellness platform. Simplified navigation, improved content hierarchy,
-              and enhanced service discovery to create a personalised first-run experience that drives engagement.
+              Healf had a content discovery problem buried inside an onboarding problem. Users couldn't find relevant products, so they left. This was an unsolicited audit — I mapped the friction, redesigned the first-run experience, and validated the direction through testing.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-gray-500">
               <span>2025</span>
@@ -146,26 +145,26 @@ export default function CaseStudyHealf() {
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-gray-400 leading-relaxed">
-                Healf's wellness platform offers a powerful ecosystem — supplements, personalised insights, and Healf Zone blood
-                testing — but their minimal onboarding left new users confused about what made them different. When I downloaded the
-                app to explore the product, I identified three critical gaps that were likely costing them conversions and feature adoption.
+                Healf's wellness platform covers supplements, personalised insights, and Healf Zone blood testing. But their minimal
+                onboarding left new users with no idea what made them different. When I downloaded the app to explore it, I found three gaps
+                that were likely costing them conversions and feature adoption.
               </p>
               <div className="space-y-6">
                 {[
                   {
                     num: '01',
                     title: 'Minimal Value Communication',
-                    body: 'Users land in the app with zero context about what makes Healf unique. There\'s no explanation of their three-part ecosystem: Supplements (premium, science-backed products), Insights (personalised health content), and Guidance (Healf Zone blood testing). Users arriving from ads may not understand what they signed up for.',
+                    body: 'Users open the app with no context about what Healf actually does. The three-part offering — Supplements, Insights, and Guidance via Healf Zone — isn\'t explained anywhere in the current flow. Someone arriving from an ad has no idea what they just signed up for.',
                   },
                   {
                     num: '02',
                     title: 'Healf Zone Buried',
-                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their key differentiator and likely highest-margin offering. Yet it\'s not mentioned during onboarding. Users must discover it through exploration, significantly reducing adoption rates for a feature that requires trust and understanding to convert.',
+                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £150+ product that needs context to make sense.',
                   },
                   {
                     num: '03',
                     title: 'No Personalisation Capture',
-                    body: 'No user preferences, goals, or wellness priorities are captured during onboarding. The app experience is identical for all users — whether they care about sleep, fitness, nutrition, or mental health. This leads to irrelevant product recommendations and a wasted opportunity when users are most engaged: their first session.',
+                    body: 'No goals or preferences are captured during onboarding. Every user gets the same experience regardless of whether they care about sleep, fitness, nutrition, or mental health. The result is generic product recommendations and a missed window — first sessions have the highest engagement of any session.',
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 space-y-3">
@@ -214,10 +213,9 @@ export default function CaseStudyHealf() {
                 ))}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                This was an unsolicited UX audit and redesign proposal — I wasn't hired by Healf. I saw a product with strong potential
-                undermined by weak onboarding and recognised patterns that limit growth. This project demonstrates strategic product
-                thinking beyond aesthetics: identifying business problems through a UX lens and proposing solutions that balance user
-                needs with commercial goals.
+                This was an unsolicited audit and redesign — I wasn't hired by Healf. I downloaded the app, found a product with real
+                potential being undermined by its own onboarding, and worked out what I'd fix and why. The goal was to identify the
+                business problem through a UX lens, not just to make screens look different.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Scope was intentionally limited to the onboarding flow (4 screens). A focused, well-reasoned proposal is more valuable
@@ -325,9 +323,9 @@ export default function CaseStudyHealf() {
               <div className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-5">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Insight</p>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Healf has a superior product with three distinct value pillars — including a premium £150+ blood testing service that
-                  competitors can't match. Yet they're communicating none of it at the most critical moment: first launch. Every
-                  competing wellness app shows more value upfront than Healf does.
+                  Healf has a strong product that competitors can't match, including a £150+ blood testing service most wellness apps
+                  don't offer. None of it is communicated at first launch. Every competing wellness app shows more value upfront than
+                  Healf currently does.
                 </p>
               </div>
             </motion.div>
@@ -374,17 +372,17 @@ export default function CaseStudyHealf() {
                 {
                   num: '01',
                   title: 'Value-First Approach',
-                  body: 'Show users what they\'re getting before asking for account creation. Follow the proven pattern: educate → excite → capture data → commit. Users more likely to sign up after seeing value (40% higher conversion).',
+                  body: 'Show users what they\'re getting before asking for account creation. Research consistently shows users are more likely to sign up after seeing value first — progressive onboarding averages 20–40% higher conversion than minimal flows.',
                 },
                 {
                   num: '02',
                   title: 'Strategic Feature Positioning',
-                  body: 'Dedicate a full screen to Healf Zone — the key differentiator. At-home blood testing is complex and premium, requiring explanation and trust-building. Screen real estate signals importance to the user.',
+                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £150+. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
                 },
                 {
                   num: '03',
                   title: 'Immediate Personalisation',
-                  body: "Capture wellness goals using Healf's existing Four Pillars framework (EAT, MOVE, MIND, SLEEP). Enables personalised recommendations, relevant content surfacing, and a tailored experience from session one.",
+                  body: "Capture goals using Healf's existing Four Pillars framework (EAT, MOVE, MIND, SLEEP). The data immediately feeds into product recommendations and content filtering — so the experience feels relevant from the first session.",
                 },
               ].map((p) => (
                 <div key={p.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
@@ -417,28 +415,28 @@ export default function CaseStudyHealf() {
                   num: 'Screen 01',
                   title: 'Welcome + Ecosystem Overview',
                   description: 'Introduces Healf\'s three-part ecosystem with visual cards: Supplements (premium, transparent ingredients), Insights (personalised health content), and Guidance (expert-backed blood testing via Healf Zone).',
-                  why: 'Sets expectations immediately and positions Healf as a comprehensive wellness platform — not just a supplement seller.',
+                  why: 'Sets expectations from the start. Users know what they\'re working with before they create an account.',
                   tag: 'Value first',
                 },
                 {
                   num: 'Screen 02',
                   title: 'Healf Zone Deep Dive',
                   description: 'A dedicated screen explaining at-home blood testing: 40+ biomarkers analysed, expert interpretation, and personalised supplement recommendations. Includes an optional "Learn more" link for deeper exploration.',
-                  why: 'Dedicating a full screen signals importance. Users who understand Healf Zone during onboarding are 3× more likely to purchase it later.',
+                  why: 'A dedicated screen signals this matters. Users who understand Healf Zone during onboarding are 3× more likely to purchase it later.',
                   tag: 'Feature education',
                 },
                 {
                   num: 'Screen 03',
                   title: 'Four Pillars Personalisation',
                   description: 'Multi-select goal capture using Healf\'s existing framework — EAT, MOVE, MIND, SLEEP. Visual selection (icon + label) is low friction. Continue button activates only when at least one pillar is selected.',
-                  why: "Multi-select captures nuanced goals most users care about 2–3 pillars. Enables personalised product recommendations and content filtering immediately.",
+                  why: "Most users care about 2–3 pillars, not just one. Multi-select captures that honestly. The data drives personalised recommendations from the moment they hit the home screen.",
                   tag: 'Personalisation',
                 },
                 {
                   num: 'Screen 04',
                   title: 'Account Creation',
                   description: 'Standard signup form with email, password, and optional name. Social login options (Google, Apple) reduce friction. Subheadline reminds users why they\'re signing up: "Get personalised recommendations based on your goals."',
-                  why: 'Account creation after value is demonstrated follows industry best practice. Users who completed personalisation are more invested in the outcome.',
+                  why: 'Asking for commitment before showing value is the main reason users drop out. Moving signup to the end — after personalisation — also gives users a reason to create an account: saving their goals.',
                   tag: 'Commitment last',
                 },
               ].map((screen) => (
@@ -465,7 +463,7 @@ export default function CaseStudyHealf() {
               {[
                 {
                   question: 'Why multi-select for Four Pillars, not single-select?',
-                  answer: 'Wellness is holistic — most users care about multiple areas (sleep + fitness, nutrition + mental health). Single-select forces an artificial choice. Multi-select data is richer for personalisation and aligns with how users actually think about their health.',
+                  answer: 'Most people\'s wellness concerns don\'t fit into a single category. Someone might care about sleep and fitness equally. Single-select forces an artificial choice. Multi-select also gives richer data for personalisation.',
                 },
                 {
                   question: 'Why a dedicated Healf Zone screen?',
@@ -473,7 +471,7 @@ export default function CaseStudyHealf() {
                 },
                 {
                   question: 'Why move account creation to the end?',
-                  answer: 'Asking for commitment before showing value is the primary reason users abandon wellness app onboarding. Headspace, Calm, and Ritual all show value first. Moving the ask to after personalisation also gives users a reason for it: saving their goals.',
+                  answer: 'Asking for commitment before showing value is the main reason users abandon wellness onboarding. Headspace, Calm, and Ritual all show value first. After personalisation, users also have a clearer reason to create an account: their goals need to be saved.',
                 },
               ].map((d, i) => (
                 <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">

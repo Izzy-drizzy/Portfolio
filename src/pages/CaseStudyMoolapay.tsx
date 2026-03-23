@@ -91,8 +91,7 @@ export default function CaseStudyMoolapay() {
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
-              Financial inclusion platform connecting underserved Nigerian communities to cryptocurrency and digital payments.
-              Simplified navigation and visual language transcending literacy barriers, with trust-building elements and culturally-aware interface patterns.
+              A payments app built for Nigerian users that existing fintech apps weren't designed for — varying literacy levels, unreliable connectivity, and genuine distrust of crypto after years of scams. 92% task completion in testing. 78% of testers said it felt made for them.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-gray-500">
               <span>2022</span>
@@ -145,27 +144,27 @@ export default function CaseStudyMoolapay() {
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-gray-400 leading-relaxed">
-                Nigeria has one of Africa's largest cryptocurrency adoption rates, yet millions of potential users are excluded by
-                complex fintech interfaces designed for tech-savvy urban users. Existing apps — Kuda, PiggyVest, Cowrywise — serve
-                educated, digitally-literate users, leaving those with varying literacy levels, limited smartphone experience, and
-                inconsistent internet connectivity completely behind.
+                Nigeria has one of Africa's largest cryptocurrency adoption rates, yet millions of potential users are shut out by
+                fintech interfaces built for urban, digitally-literate people. Apps like Kuda, PiggyVest, and Cowrywise work well
+                for that audience. They don't work for users with limited smartphone experience, inconsistent internet, or
+                lower reading levels.
               </p>
               <div className="space-y-5">
                 {[
                   {
                     num: '01',
                     title: 'Crypto Complexity Barrier',
-                    body: 'Existing crypto wallets require technical knowledge of public/private keys, blockchain confirmations, network fees, and wallet addresses. Research found 68% of respondents found cryptocurrency "too complicated" despite genuine interest in using it.',
+                    body: 'Existing crypto wallets assume users know about public/private keys, blockchain confirmations, network fees, and wallet addresses. 68% of survey respondents found cryptocurrency "too complicated" — not because they weren\'t interested, but because the interfaces weren\'t built for them.',
                   },
                   {
                     num: '02',
                     title: 'Money Management Invisibility',
-                    body: "Traditional expense tracking apps require manual categorisation, receipt scanning, or complex budget setup — friction that users with limited time and digital literacy won't overcome. 73% of respondents struggled to monitor where their money goes, citing 'too much effort' as the barrier.",
+                    body: "Traditional expense tracking apps need manual categorisation, receipt scanning, or elaborate budget setup. Most users just stop. 73% of respondents said they couldn't keep track of spending, with 'too much effort' as the main reason.",
                   },
                   {
                     num: '03',
                     title: 'Savings Failure',
-                    body: "Without automated systems or behavioural nudges, discretionary income gets spent rather than saved. 65% of respondents said they 'want to save but can't seem to' despite having some discretionary income — the problem is systemic, not motivational.",
+                    body: "When there's no system working in the background, money gets spent. 65% of respondents said they wanted to save but couldn't follow through — not because they lacked motivation, but because nothing made it easy to start.",
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 space-y-3">
@@ -384,27 +383,27 @@ export default function CaseStudyMoolapay() {
                 {
                   num: '01',
                   title: 'Visual-First Communication',
-                  body: 'Icons, colours, and visual patterns carry meaning. Text supports visuals, not the other way around. Critical for users with limited literacy or reading comprehension.',
+                  body: 'Icons, colours, and visual patterns carry meaning. Text supports visuals, not the other way around. This matters most for users who navigate by pattern, not by reading.',
                 },
                 {
                   num: '02',
                   title: 'Progressive Disclosure',
-                  body: 'Show only essential information initially. Advanced features accessible on-demand. Prevents overwhelming novice users while still serving power users.',
+                  body: 'Show only what users need at each step. Advanced options are there if someone looks for them. Novice users don\'t have to ignore features they don\'t understand yet.',
                 },
                 {
                   num: '03',
                   title: 'Automated Intelligence',
-                  body: 'The app works in the background to track, categorise, and manage money. Users benefit from smart defaults rather than manual configuration.',
+                  body: 'The app tracks and categorises spending in the background. Users get the benefit without having to set anything up.',
                 },
                 {
                   num: '04',
                   title: 'Cultural Localisation',
-                  body: 'Interface language, examples, and patterns reflect Nigerian context. "Moolah" (slang for money) resonates culturally while remaining internationally viable.',
+                  body: 'Language, examples, and patterns reflect Nigerian context. "Moolah" is Nigerian slang for money. The interface feels local, not translated.',
                 },
                 {
                   num: '05',
                   title: 'Low-Bandwidth Optimisation',
-                  body: 'Lightweight interfaces for varying connectivity. Core features work offline. Data-heavy features load progressively — essential for 2G/3G networks.',
+                  body: 'Core features work on 2G/3G. Data-heavy content loads progressively. The app doesn\'t require a good connection to be useful.',
                 },
               ].map((p) => (
                 <div key={p.num} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
@@ -430,20 +429,20 @@ export default function CaseStudyMoolapay() {
                 {
                   num: '01',
                   title: 'Balancing Simplicity with Crypto Complexity',
-                  problem: 'Cryptocurrency inherently involves complex concepts — blockchain, wallets, addresses, network fees. Oversimplifying risks security breaches or user confusion when things go wrong.',
-                  solution: 'Created a two-tier experience: Basic mode hides technical details, Advanced mode exposes them. Used visual metaphors ("Money vault" for wallet, "Send to phone number" instead of wallet address) and progressive education — tooltips explain concepts when users need them, not upfront.',
+                  problem: 'Cryptocurrency involves real complexity: blockchain, wallets, addresses, network fees. Hiding too much creates security problems. Showing too much drives people away.',
+                  solution: 'Built a two-tier experience: Basic mode hides the technical details, Advanced mode exposes them. Visual language ("Money vault" for wallet, "Send to phone number" instead of wallet address) replaces jargon. Tooltips explain concepts when users run into them, not before.',
                 },
                 {
                   num: '02',
                   title: 'Designing for Varying Literacy Levels',
-                  problem: 'One interface must serve users with limited reading comprehension (visual learners), moderate digital literacy (needing guidance), and high digital literacy (wanting efficiency) — simultaneously.',
+                  problem: 'The same interface needs to work for someone navigating by icons alone, someone who needs light guidance, and someone who just wants to get in and out fast.',
                   solution: 'Icon + text pattern for every action (redundant communication builds confidence). Universal colour language: green = money in, red = money out, blue = savings. Visual feedback via animations confirms actions. Simplified language: "Send money" not "Transfer funds," "Save automatically" not "Configure auto-debit." Testing validated: users with limited literacy completed core tasks 85% of the time using icons alone.',
                 },
                 {
                   num: '03',
                   title: 'Trust-Building in a Crypto-Sceptical Market',
-                  problem: 'Cryptocurrency scams are common in Nigeria. Target users have often been burned before. Building trust for a new platform requires more than just good design — it requires transparency.',
-                  solution: 'All fees shown upfront with no hidden charges. Visual confirmation preview before every transaction. Clear security communication (encryption, two-factor auth). Educational "How we keep your money safe" content. Social proof from users like them — not corporate endorsements.',
+                  problem: 'Crypto scams are common in Nigeria. Many of the users this was built for had already been burned. A polished UI doesn\'t fix that on its own.',
+                  solution: 'Every fee is shown before the transaction goes through. A visual preview shows exactly where money is going. Security information isn\'t buried in settings — it\'s shown where users actually need to see it.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp}
@@ -488,28 +487,28 @@ export default function CaseStudyMoolapay() {
                   title: 'Dashboard',
                   tag: 'Visual-first',
                   description: 'Large, prominent balance overview with visual breakdown (Cash vs Crypto vs Savings). Four Quick Action icons front and centre: Send Money, Receive Cash, Buy Airtime, Save Now. Visual transaction timeline with colour-coded icons — green up arrow (money in), red down arrow (money out).',
-                  why: 'Scannable in 3 seconds. Icons communicate meaning without reading text. Most-used actions front and centre, eliminating the navigation hunting that frustrated users in existing apps.',
+                  why: 'Readable in 3 seconds. Icons carry meaning without text. The most-used actions are front and centre, so users aren\'t hunting through menus.',
                 },
                 {
                   num: 'Feature 02',
                   title: 'Transfers',
                   tag: 'Phone numbers not wallets',
                   description: "Simplified 3-step send flow: select recipient by phone number (not wallet address) → enter amount in Naira or crypto (app handles conversion) → visual confirmation preview showing money moving between accounts. SMS + in-app confirmation on success.",
-                  why: "Phone numbers are a familiar mental model — users already send money this way via mobile banking. Eliminating wallet addresses removes the single biggest technical barrier to crypto adoption for non-technical users.",
+                  why: "Nigerians already send money using phone numbers through mobile banking. Removing wallet addresses removes the single biggest technical barrier — the app handles the lookup, users never see it.",
                 },
                 {
                   num: 'Feature 03',
                   title: 'Wallets',
                   tag: 'Crypto made approachable',
                   description: '"Your Bitcoin vault" instead of "BTC wallet." Balance shown in both crypto and Naira equivalents. Simple "Convert to Naira" button for swapping. Advanced users can tap "View address" to see technical details — beginners never need to see it.',
-                  why: "Progressive disclosure at its core: power users get full control, novice users get simplicity. Neither is penalised for the other's needs.",
+                  why: "Power users get full control. Novice users get simplicity. Neither group is penalised for the other's needs.",
                 },
                 {
                   num: 'Feature 04',
                   title: 'Expenses',
                   tag: 'Automated tracking',
                   description: 'App automatically categorises transactions using merchant data. Visual spending chart with colour-coded categories (Food, Transport, Bills). Weekly/monthly toggle. One-tap to correct a category. Automated insights: "You spent 40% less on food this week!"',
-                  why: 'Manual expense tracking has 12% adoption. Automated tracking has 78% engagement. Users get the benefit of financial visibility without any effort — removing the discipline barrier entirely.',
+                  why: 'Manual expense tracking has 12% adoption. Automated tracking has 78% engagement. The benefit is there without requiring any habit change from the user.',
                 },
               ].map((feature) => (
                 <motion.div key={feature.num} variants={fadeUp}
@@ -735,15 +734,15 @@ export default function CaseStudyMoolapay() {
             <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div className="lg:col-span-4">
                 <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Long-term Value</p>
-                <h3 className="text-xl font-semibold">A Scalable Foundation</h3>
+                <h3 className="text-xl font-semibold">Built to Extend</h3>
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'Design system scales to additional features — bill payments, savings goals, investments — without redesign',
-                  'Visual-first patterns apply directly to new cryptocurrencies (same card, different icon)',
-                  'Cultural localisation approach translates to other African markets with minimal adaptation',
-                  'Accessibility principles built into components ensure future features remain inclusive by default',
-                  'Low-bandwidth optimisation strategy documented — new features inherit performance constraints automatically',
+                  'The design system supports new features — bill payments, savings goals, investments — without needing a redesign',
+                  'Visual-first patterns work for any new cryptocurrency (same card structure, different icon)',
+                  'The localisation approach can be adapted for other African markets without starting from scratch',
+                  'Accessibility is built into the component layer, so new features inherit it by default',
+                  'Performance constraints are documented and shared — new features don\'t accidentally break the low-bandwidth experience',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
                     <span className="text-[#F45D01] mt-1 shrink-0">—</span>

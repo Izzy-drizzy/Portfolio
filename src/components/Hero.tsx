@@ -46,7 +46,8 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-gray-400 max-w-sm mb-6 leading-relaxed">
-              I design SaaS products across fintech, health & wellness, EdTech, and B2B platforms. Whether it's financial transactions, personalized wellbeing experiences, or analytics dashboards, I focus on creating products that users love and businesses scale from.            </p>
+              I design product experiences mostly in fintech, health tech, and EdTech. The brief is usually clear. The actual problem usually isn't. I spend a lot of time in that gap.
+            </p>
 
             <div className="flex flex-wrap gap-3">
               <button
@@ -85,7 +86,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 Preventing £5M revenue loss through stakeholder validation
               </h2>
               <p className="text-xs text-gray-400 mb-3 line-clamp-2">
-                AI-powered student analytics platform for 200+ UK/Canadian universities. Validation workshops exposed 15/22 assumptions were wrong — protecting £5M in contracts.
+                Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything — 15 of 22 were wrong. That discovery protected £5M in contracts.
               </p>
               <div className="flex items-center gap-1.5 text-xs font-medium border-t border-gray-800 pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />
@@ -113,7 +114,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 Cross-platform fintech redesign recovering 28% of blocked users
               </h2>
               <p className="text-xs text-gray-400 mb-3 line-clamp-2">
-                Strategic web-first redesign eliminating platform barriers for Nigerian fintech serving 10K+ users. Simplified navigation, streamlined service access, and progressive disclosure increased satisfaction 30% while recovering iOS-blocked users.
+                Hobpay had no iOS app. 28% of potential users couldn't log in at all. Built a web-first platform to fix access, then redesigned the whole UX. Satisfaction went from 3.2 to 4.2.
               </p>
               <div className="flex items-center gap-1.5 text-xs font-medium border-t border-gray-800 pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />

@@ -112,7 +112,7 @@ export default function CaseStudyEdusmart() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-gray-400 leading-relaxed mb-6">
-                AI-powered student analytics platform serving 200+ UK and Canadian universities. Validation workshops revealed 15 of 22 product assumptions were wrong — pivoting from student self-monitoring to a faculty intervention tool protected £5M in at-risk contracts.
+                Student analytics platform for 200+ universities across the UK and Canada. We ran assumption-testing workshops before building anything — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and protected £5M in contracts.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-gray-500 mb-8">
@@ -180,17 +180,17 @@ export default function CaseStudyEdusmart() {
                 {
                   n: '01',
                   title: '48-Hour Reporting Lag',
-                  body: 'Students identified as at-risk too late for effective intervention. Faculty spending 5–6 hours per week manually tracking cohorts in Excel spreadsheets.',
+                  body: 'Students were flagged as at-risk too late for intervention to help. Faculty were spending 5–6 hours per week tracking cohorts manually in Excel.',
                 },
                 {
                   n: '02',
                   title: 'Scalability Failure',
-                  body: 'System performance degraded above 100,000 students. Fragmented data across Blackboard, Moodle, Canvas and HR systems with no unified view.',
+                  body: 'Performance degraded above 100,000 students. Data was split across Blackboard, Moodle, Canvas, and HR systems with no single view across all of them.',
                 },
                 {
                   n: '03',
                   title: '£5M Revenue at Risk',
-                  body: '3 major university contracts actively evaluating US EdTech competitors. Regulatory pressure on AI-driven analytics and GDPR compliance eroding client confidence.',
+                  body: '3 major university contracts were actively evaluating US EdTech competitors. GDPR pressure around AI-driven analytics was giving clients a reason to look elsewhere.',
                 },
               ].map((p) => (
                 <motion.div key={p.n} variants={fadeUp}
@@ -290,7 +290,7 @@ export default function CaseStudyEdusmart() {
               <SectionLabel>Research & Approach</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">A 9-phase validation-first process</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
-                Rather than jumping to solutions, I built a process that tested every assumption before investing in wireframes or visual design. Uncover real problems → Test assumptions with stakeholders → Design only validated solutions → Iterate through usability testing.
+                Before touching wireframes or visual design, I built a process to test every assumption with real stakeholders. Uncover real problems, test assumptions, design only validated solutions, then iterate through usability testing.
               </p>
             </motion.div>
 
@@ -300,25 +300,25 @@ export default function CaseStudyEdusmart() {
                 {
                   phase: 'Phase 1–2',
                   title: 'Journey Mapping & Persona Creation',
-                  detail: 'Led cross-functional workshops with 12 participants to map two critical flows: the student lifecycle and the faculty intervention workflow. Synthesised findings into 4 validated personas — Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, 280 students, Excel-dependent), David Robertson (admin, GDPR anxiety).',
+                  detail: 'Ran workshops with 12 participants to map two flows: the student lifecycle and the faculty intervention workflow. Findings produced 4 personas — Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, 280 students, Excel-dependent), David Robertson (admin, GDPR anxiety).',
                   quote: '"With 280 students, I can\'t monitor everyone by hand. I need to know WHO to help WHEN." — Dr. Sarah Chen',
                 },
                 {
                   phase: 'Phase 3–4',
                   title: 'UX Recommendations & Stakeholder Validation',
-                  detail: 'Documented improvement recommendations — then got suspicious. My own recommendations contained contradictions: recommending more analytics transparency when users said analytics were already too complex. Designed a validation framework: 22 assumptions across 3 user types, rated in 2-hour structured workshops.',
+                  detail: 'Documented recommendations — then the BA and PM flagged a contradiction: we were recommending more analytics transparency while users said analytics were already too complex. That conflict shaped the validation framework: 22 assumptions across 3 user types, tested in 2-hour structured workshops.',
                   quote: 'Result: 15 of 22 assumptions REJECTED. We were building the wrong product.',
                 },
                 {
                   phase: 'Phase 5–7',
                   title: 'Wireframes → Hi-Fi → Prototype',
-                  detail: 'Streamlined from 58 features to 20 validated ones. Designed 3 dashboards (Student, Instructor, Admin) + 6 secondary pages — desktop-first, based on the validated finding that faculty work at desks, not on mobile. Built interactive Figma prototypes across 3 user flows for usability testing.',
+                  detail: 'Cut from 58 features to 20 validated ones. Designed 3 dashboards (Student, Instructor, Admin) and 6 secondary pages — desktop-first, because the research confirmed faculty work at desks, not on mobile. Built interactive Figma prototypes across 3 user flows for usability testing.',
                   quote: null,
                 },
                 {
                   phase: 'Phase 8–9',
                   title: 'Usability Testing & Success Metrics',
-                  detail: '15 participants (5 per persona), 5 tasks each, unmoderated remote testing via Maze. Delivered 88% overall task completion (target: >80%), 4.2/5 satisfaction (target: 4+), zero P0 critical bugs. Documented success metrics and handoff specifications for the development team.',
+                  detail: '15 participants (5 per persona), 5 tasks each, unmoderated remote via Maze. Results: 88% task completion (target >80%), 4.2/5 satisfaction (target 4+), zero P0 bugs. Success metrics and handoff specs documented for the development team.',
                   quote: '"This is exactly what I need. Simple, fast, and tells me who to contact." — Instructor participant',
                 },
               ].map((p) => (
@@ -397,20 +397,20 @@ export default function CaseStudyEdusmart() {
                 {
                   n: '01',
                   title: 'Convincing stakeholders to cut 66% of scope',
-                  challenge: 'After validation revealed 15/22 assumptions wrong, I had to explain to PM, BA and client stakeholders why 38 features should be cut. Initial resistance: "But users mentioned these features in interviews."',
-                  solution: 'Built a Feature Validation Matrix mapping every feature to interview evidence AND workshop validation. "At-risk student list" — mentioned by 5/5 faculty, validated: KEEP. "AI explainability dashboard" — mentioned once, not validated: CUT. Data beat opinion. PM and BA aligned; client required two additional presentations but ultimately approved.',
+                  challenge: 'After validation rejected 15/22 assumptions, I had to explain to the PM, BA, and client stakeholders why 38 features should go. The pushback: "But users mentioned these in interviews."',
+                  solution: 'Built a Feature Validation Matrix linking every feature to interview mentions and workshop validation. "At-risk student list" — mentioned by 5/5 faculty, validated: keep. "AI explainability dashboard" — mentioned once, not validated: cut. The data made the case. PM and BA aligned quickly; the client took two additional presentations but came around.',
                 },
                 {
                   n: '02',
                   title: 'Cross-functional coordination in Scrum as a consultant',
-                  challenge: 'The BA had written acceptance criteria for 58 features before validation workshops proved 38 were unnecessary. 2-week sprint timelines clashed with longer design validation cycles.',
-                  solution: 'Proposed marking unvalidated features as "pending validation" so BA could defer acceptance criteria. Defined design tasks as user stories for sprint planning. By Sprint 4, the team had a rhythm: BA focused on validated requirements, PM allocated workshop time in planning, I delivered wireframes scoped to confirmed features.',
+                  challenge: 'The BA had already written acceptance criteria for 58 features before validation showed 38 were unnecessary. Two-week sprint timelines didn\'t fit the longer validation cycles.',
+                  solution: 'Proposed marking unvalidated features as "pending validation" so the BA could defer criteria without blocking progress. Design tasks were written as user stories for sprint planning. By Sprint 4 the team had a workable rhythm: BA on confirmed requirements, PM building workshop time into sprint planning, me delivering wireframes only for validated features.',
                 },
                 {
                   n: '03',
                   title: 'Designing for three very different user types simultaneously',
-                  challenge: 'Students, instructors and admins have fundamentally different mental models, trust levels and task frequencies. Initial designs tried to serve all three equally — resulting in an overwhelming platform for everyone.',
-                  solution: 'Validated that faculty is the primary retention driver. Reduced student features from 18 to 8, admin from 18 to 4, and invested the freed capacity into a deep instructor intervention workflow. Each dashboard optimised for a single job-to-be-done.',
+                  challenge: 'Students, instructors, and admins have different mental models, trust levels, and task frequencies. Early designs tried to serve all three equally, which made the platform overwhelming for all of them.',
+                  solution: 'Validated that faculty is the primary retention driver. Cut student features from 18 to 8, admin from 18 to 4, and put the freed capacity into a thorough instructor intervention workflow. Each dashboard does one job well.',
                 },
               ].map((c) => (
                 <motion.div key={c.n} variants={fadeUp}
@@ -443,7 +443,7 @@ export default function CaseStudyEdusmart() {
               <SectionLabel>Solution</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">A faculty intervention tool — not a student monitoring platform</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
-                After stakeholder validation exposed that we had the primary user wrong, the platform was redesigned around a single core insight: retention value comes from faculty identifying and contacting struggling students early — not from students tracking their own performance.
+                Validation showed we had the primary user wrong. The redesign centred on one finding: retention value comes from faculty identifying and contacting struggling students early. Students checking their own dashboards didn't move the needle.
               </p>
             </motion.div>
 
@@ -453,19 +453,19 @@ export default function CaseStudyEdusmart() {
                   user: 'Students',
                   count: '8 features',
                   screens: ['2-step onboarding (down from 5)', 'Simple dashboard — GPA, class rank, at-risk courses, Email Instructor CTA', 'Single consent toggle + data transparency (not 4 granular controls)'],
-                  decision: 'Desktop-first (mobile usage assumption rejected). Action-oriented alerts — students want to know what to DO.',
+                  decision: 'Desktop-first — the mobile usage assumption was rejected in validation. Alerts are action-oriented: students want to know what to do, not just what\'s happening.',
                 },
                 {
                   user: 'Instructors',
                   count: '8 features (primary focus)',
                   screens: ['Dashboard: at-risk count (12), contacted this week (8), priority alerts', 'Colour-coded student list — red (High Risk), amber (Medium), blue (Watch)', 'Student detail view: risk factors, pre-written email template, Mark as Contacted'],
-                  decision: 'Colour-coded severity for instant triage of 100+ cohorts. Pre-written templates reduce outreach friction and standardise messaging.',
+                  decision: 'Colour-coded severity lets instructors triage 100+ students at a glance. Pre-written email templates lower the barrier to outreach and keep messaging consistent.',
                 },
                 {
                   user: 'Admins',
                   count: '4 features',
                   screens: ['Dashboard: students monitored (15,000), flagged (47), GDPR PASS, consent 85%', 'Compliance dashboard: GDPR checklist (6 items), consent donut chart', 'Integration status: LMS 98% green, SIS 81% amber — Fix Issue CTA'],
-                  decision: 'PASS/FAIL compliance — admins need assurance, not configuration. Visual health indicators with drill-down only for issues.',
+                  decision: 'PASS/FAIL compliance status — admins need to know everything is fine, not to configure anything. Drill-down is available when something isn\'t.',
                 },
               ].map((u) => (
                 <motion.div key={u.user} variants={fadeUp}
@@ -554,9 +554,9 @@ export default function CaseStudyEdusmart() {
             {/* Business impact cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '£5M', label: 'Annual contracts retained', sub: '3 major universities stayed engaged with the validated roadmap' },
-                { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features cut before a single line of code was written' },
-                { val: '15 months', label: 'Misdirected development prevented', sub: 'Validation-first approach stopped building the wrong product entirely' },
+                { val: '£5M', label: 'Annual contracts retained', sub: '3 major universities stayed engaged after seeing the validated roadmap' },
+                { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features removed before any code was written' },
+                { val: '15 months', label: 'Of misdirected development avoided', sub: 'Testing assumptions first stopped the team from building the wrong product' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
                   className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
@@ -587,7 +587,7 @@ export default function CaseStudyEdusmart() {
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Next Case Study</p>
               <h2 className="text-2xl md:text-3xl font-semibold mb-2">Hobpay</h2>
               <p className="text-sm text-gray-400 max-w-md leading-relaxed">
-                Strategic web-first redesign eliminating platform barriers for Nigerian fintech serving 10K+ users.
+                Web-first redesign that removed iOS barriers and brought 10K+ users to a Nigerian fintech platform.
               </p>
             </motion.div>
             <motion.div variants={fadeUp}>
