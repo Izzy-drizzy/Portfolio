@@ -107,7 +107,7 @@ export default function CaseStudyEdusmart() {
                 <span>EduSmart Analytics</span>
               </motion.div>
 
-              <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-6">
+              <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight mb-6">
                 Preventing £5M revenue loss through stakeholder validation
               </motion.h1>
 
@@ -156,7 +156,7 @@ export default function CaseStudyEdusmart() {
             ].map((s) => (
               <motion.div key={s.val} variants={fadeUp}
                 className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                <p className="text-3xl md:text-4xl font-semibold text-[#F45D01] mb-2">{s.val}</p>
+                <p className="text-3xl md:text-4xl font-medium text-[#F45D01] mb-2">{s.val}</p>
                 <p className="text-xs text-gray-400 leading-relaxed">{s.label}</p>
               </motion.div>
             ))}
@@ -169,7 +169,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">A £5M crisis hiding inside a reporting lag</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A £5M crisis hiding inside a reporting lag</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 EduSmart Analytics — founded 2017, serving 200+ institutions with 6% UK market share — faced a post-COVID inflection point. 48-hour reporting delays were preventing early student intervention, and three major university clients were actively evaluating competitors.
               </p>
@@ -219,7 +219,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Product Design Consultant, Amdari</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 Engaged as the sole UX/UI lead within a cross-functional Scrum team — working alongside a Project Manager and Business Analyst in 2-week sprints, with weekly reviews involving EduSmart's product and engineering stakeholders.
               </p>
@@ -288,7 +288,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Research & Approach</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">A 9-phase validation-first process</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A 9-phase validation-first process</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 Before touching wireframes or visual design, I built a process to test every assumption with real stakeholders. Uncover real problems, test assumptions, design only validated solutions, then iterate through usability testing.
               </p>
@@ -389,7 +389,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold">What I had to overcome</h2>
+              <h2 className="text-2xl md:text-3xl font-medium">What I had to overcome</h2>
             </motion.div>
 
             <div className="space-y-4">
@@ -441,7 +441,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">A faculty intervention tool — not a student monitoring platform</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A faculty intervention tool — not a student monitoring platform</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 Validation showed we had the primary user wrong. The redesign centred on one finding: retention value comes from faculty identifying and contacting struggling students early. Students checking their own dashboards didn't move the needle.
               </p>
@@ -502,7 +502,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
               <SectionLabel>Final Designs</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold">9 screens across 3 user types</h2>
+              <h2 className="text-2xl md:text-3xl font-medium">9 screens across 3 user types</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -526,7 +526,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-semibold">Validated design, measurable outcomes</h2>
+              <h2 className="text-2xl md:text-3xl font-medium">Validated design, measurable outcomes</h2>
             </motion.div>
 
             {/* Usability metrics table */}
@@ -560,7 +560,7 @@ export default function CaseStudyEdusmart() {
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
                   className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                  <p className="text-2xl font-semibold text-[#F45D01] mb-1">{s.val}</p>
+                  <p className="text-2xl font-medium text-[#F45D01] mb-1">{s.val}</p>
                   <p className="text-xs font-medium text-gray-300 mb-2">{s.label}</p>
                   <p className="text-xs text-gray-500 leading-relaxed">{s.sub}</p>
                 </motion.div>
@@ -585,7 +585,7 @@ export default function CaseStudyEdusmart() {
             className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
             <motion.div variants={fadeUp}>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Next Case Study</p>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-2">Hobpay</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-2">Hobpay</h2>
               <p className="text-sm text-gray-400 max-w-md leading-relaxed">
                 Web-first redesign that removed iOS barriers and brought 10K+ users to a Nigerian fintech platform.
               </p>

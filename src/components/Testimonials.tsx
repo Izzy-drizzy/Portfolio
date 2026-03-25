@@ -71,7 +71,7 @@ export default function Testimonials() {
       viewport={{ once: true, margin: "-80px" }}
     >
       <motion.div className="pb-8 mb-8" variants={fadeUp} custom={0}>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
           Testimonials from peers &amp; coworkers<span className="text-[#F45D01]">.</span>
         </h2>
         <p className="text-sm text-gray-400 mt-3">

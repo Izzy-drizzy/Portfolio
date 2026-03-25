@@ -31,7 +31,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]"
+            className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]"
           >
             Product designer building <br></br> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products that drive measurable business impact
           </motion.h1>
@@ -82,7 +82,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               />
             </div>
             <div className="p-4">
-              <h2 className="text-base font-semibold mb-2 leading-snug">
+              <h2 className="text-base font-medium mb-2 leading-snug">
                 Preventing £5M revenue loss through stakeholder validation
               </h2>
               <p className="text-xs text-gray-400 mb-3 line-clamp-2">
@@ -110,7 +110,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               />
             </div>
             <div className="p-4">
-              <h2 className="text-base font-semibold mb-2 leading-snug">
+              <h2 className="text-base font-medium mb-2 leading-snug">
                 Cross-platform fintech redesign recovering 28% of blocked users
               </h2>
               <p className="text-xs text-gray-400 mb-3 line-clamp-2">

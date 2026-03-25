@@ -87,7 +87,7 @@ export default function CaseStudyMoolapay() {
               <span>/</span>
               <span className="text-gray-300">Moolapay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -126,7 +126,7 @@ export default function CaseStudyMoolapay() {
               { stat: '7→3', label: 'Steps to send crypto, down from typical wallet' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#F45D01] mb-2">{item.stat}</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
                 <p className="text-xs text-gray-400">{item.label}</p>
               </motion.div>
             ))}
@@ -140,7 +140,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl font-semibold">The Challenge</h2>
+              <h2 className="text-2xl font-medium">The Challenge</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -182,7 +182,7 @@ export default function CaseStudyMoolapay() {
                   { val: '54%', label: 'Abandoned financial apps due to complexity' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-5">
-                    <p className="text-3xl font-bold text-white mb-1">{m.val}</p>
+                    <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
                     <p className="text-xs text-gray-500">{m.label}</p>
                   </div>
                 ))}
@@ -198,14 +198,15 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl font-semibold">My Contribution</h2>
+              <h2 className="text-2xl font-medium">My Contribution</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {[
                   { label: 'Role', value: 'UX Research, UI Design, User Testing, Design System' },
                   { label: 'Platform', value: 'Mobile App (iOS/Android)' },
-                  { label: 'Team', value: 'Designer, Product Managers, Engineers' },
+                  { label: 'Team', value: 'Founder, Product Managers, Engineers' },
+                  { label: 'Engagement', value: 'Contract — concluded after deliverables' },
                 ].map((item, i) => (
                   <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-5">
                     <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">{item.label}</p>
@@ -214,9 +215,7 @@ export default function CaseStudyMoolapay() {
                 ))}
               </div>
               <p className="text-sm text-gray-400 leading-relaxed mb-4">
-                I led design on Moolapay end-to-end — embedded within a cross-functional team of product managers and
-                engineers building a real product for underserved Nigerian communities. I owned the full design process:
-                user research, information architecture, interaction design, visual design, and the design system.
+                I was brought in as a contract designer working directly with the Moolapay founder, product managers, and engineering team. I owned the full design process: user research, information architecture, interaction design, visual design, and the design system. The engagement ended after design deliverables were handed off to the development team.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Research was conducted through community interviews and observational studies with participants across Lagos,
@@ -232,7 +231,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Approach</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Research & Strategy</h2>
+              <h2 className="text-2xl font-medium mb-10">Research & Strategy</h2>
             </motion.div>
 
             {/* Research methods */}
@@ -422,7 +421,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Unexpected Obstacles</h2>
+              <h2 className="text-2xl font-medium mb-10">Unexpected Obstacles</h2>
             </motion.div>
             <div className="space-y-6">
               {[
@@ -473,7 +472,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-4">A Visual-First Social Finance Platform</h2>
+              <h2 className="text-2xl font-medium mb-4">A Visual-First Social Finance Platform</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mb-10">
                 Splash → minimal onboarding (3 screens) → main dashboard. Navigation organised around what users actually do —
                 not technical service names. Five focused tabs: Home, Transfers, Wallets, Expenses, Profile.
@@ -565,7 +564,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Testing & Refinement</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-4">What the Tests Revealed</h2>
+              <h2 className="text-2xl font-medium mb-4">What the Tests Revealed</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-xl mb-10">
                 Tested with 12 participants across varying digital literacy levels. Three task scenarios, each revealing something the design had missed.
               </p>
@@ -597,7 +596,7 @@ export default function CaseStudyMoolapay() {
                   <div className="lg:col-span-5">
                     <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Task {i + 1}</p>
                     <p className="text-sm font-medium text-gray-200 mb-3">{t.task}</p>
-                    <p className="text-3xl font-bold text-[#F45D01]">{t.success}</p>
+                    <p className="text-3xl font-medium text-[#F45D01]">{t.success}</p>
                     <p className="text-xs text-gray-500 mt-1">success rate</p>
                   </div>
                   <div className="lg:col-span-6 lg:col-start-7 space-y-4">
@@ -660,7 +659,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Final Designs</h2>
+              <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
             {/* First row — 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -698,7 +697,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-8">Measurable Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-8">Measurable Outcomes</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -709,26 +708,12 @@ export default function CaseStudyMoolapay() {
                 { stat: '7→3', label: 'Steps to send crypto', sub: 'Down from typical wallet experience' },
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                  <p className="text-3xl font-bold text-[#F45D01] mb-1">{item.stat}</p>
+                  <p className="text-3xl font-medium text-[#F45D01] mb-1">{item.stat}</p>
                   <p className="text-xs text-gray-400 mb-1">{item.label}</p>
                   <p className="text-xs text-gray-600">{item.sub}</p>
                 </motion.div>
               ))}
             </div>
-
-            {/* User quotes */}
-            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-              {[
-                { quote: '"I don\'t have to juggle three banking apps anymore. Everything is in one place and I can see exactly where my money is going."', person: 'Kemi, 28 — HR Manager & Business Owner' },
-                { quote: '"Receiving international payments used to be a nightmare. Now I just share a link and the money arrives in my wallet."', person: 'David, 20 — Student & Freelance Developer' },
-                { quote: '"I get notified every time someone logs into my account. As someone who runs two businesses, that peace of mind is everything."', person: 'Peace, 21 — Lawyer & Entrepreneur' },
-              ].map((q, i) => (
-                <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                  <p className="text-sm text-gray-300 leading-relaxed italic">{q.quote}</p>
-                  <p className="text-xs text-gray-600 mt-4">— {q.person}</p>
-                </div>
-              ))}
-            </motion.div>
 
             {/* Design system legacy */}
             <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -761,7 +746,7 @@ export default function CaseStudyMoolapay() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-semibold">Healf App Onboarding</h2>
+              <h2 className="text-2xl font-medium">Healf App Onboarding</h2>
               <p className="text-sm text-gray-400 mt-1">Redesigning wellness discovery and engagement</p>
             </div>
             <Link to="/work/healf"

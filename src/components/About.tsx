@@ -43,7 +43,7 @@ export default function About() {
       <motion.h2
         variants={fadeUp}
         custom={0}
-        className="text-3xl md:text-4xl font-bold tracking-tight mb-16"
+        className="text-3xl md:text-4xl font-medium tracking-tight mb-16"
       >
         My design approach<span className="text-[#F45D01]">.</span>
       </motion.h2>

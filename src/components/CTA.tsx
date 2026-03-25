@@ -29,7 +29,7 @@ export default function CTA({ onOpenContact }: CTAProps) {
       <motion.h2
         variants={fadeUp}
         custom={1}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-10 max-w-2xl"
+        className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-10 max-w-2xl"
       >
         Let's create something that works<span className="text-[#F45D01]">.</span>
       </motion.h2>

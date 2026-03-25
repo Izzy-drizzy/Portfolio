@@ -172,7 +172,7 @@ export default function Work() {
           variants={fadeUp}
         >
           <p className="text-sm text-gray-500 mb-2">Work</p>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-tight">
             Index of Work<span className="text-[#F45D01]">.</span>
           </h1>
         </motion.div>
@@ -191,7 +191,7 @@ export default function Work() {
             <div className="px-5 md:px-8 pt-8 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-8">
               <motion.div className="flex-1 min-w-0" variants={fadeUp} custom={0}>
                 <p className="text-xs text-gray-500 mb-1">({project.number})</p>
-                <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-5">
+                <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-5">
                   {project.title}
                 </h2>
 

@@ -88,7 +88,7 @@ export default function About() {
           variants={fadeUp}
         >
           <p className="text-sm text-gray-500 mb-2">About</p>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-medium tracking-tight">
             About Me<span className="text-[#F45D01]">.</span>
           </h1>
         </motion.div>
@@ -163,7 +163,7 @@ export default function About() {
           viewport={{ once: true, margin: '-60px' }}
           variants={fadeUp}
         >
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-10">
             My Reads<span className="text-[#F45D01]">.</span>
           </h2>
 

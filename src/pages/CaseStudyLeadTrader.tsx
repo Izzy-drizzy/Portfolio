@@ -86,7 +86,7 @@ export default function CaseStudyLeadTrader() {
               <span>/</span>
               <span className="text-gray-300">Lead Trader</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
               Redesigning a stock trading platform for both novice and expert traders
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -125,7 +125,7 @@ export default function CaseStudyLeadTrader() {
               { stat: '3wks', label: 'From audit to polished demo greenlit for full development' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#F45D01] mb-2">{item.stat}</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
                 <p className="text-xs text-gray-400">{item.label}</p>
               </motion.div>
             ))}
@@ -139,7 +139,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl font-semibold">The Challenge</h2>
+              <h2 className="text-2xl font-medium">The Challenge</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-8">
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -195,7 +195,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl font-semibold">My Contribution</h2>
+              <h2 className="text-2xl font-medium">My Contribution</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -229,7 +229,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Approach</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Research & Strategy</h2>
+              <h2 className="text-2xl font-medium mb-10">Research & Strategy</h2>
             </motion.div>
 
             {/* Research methods */}
@@ -313,7 +313,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Unexpected Obstacles</h2>
+              <h2 className="text-2xl font-medium mb-10">Unexpected Obstacles</h2>
             </motion.div>
             <div className="space-y-6">
               {[
@@ -364,7 +364,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-4">Five Screen Transformations</h2>
+              <h2 className="text-2xl font-medium mb-4">Five Screen Transformations</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mb-10">
                 Each screen addressed a specific audit finding. The new information architecture shifted from flat, equal-weight navigation
                 to a clear hierarchy: Home as the central hub, Portfolio for performance insights, Funds for transactions, Stocklist as
@@ -476,7 +476,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Final Designs</h2>
+              <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {images.map((src, i) => (
@@ -495,7 +495,7 @@ export default function CaseStudyLeadTrader() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-8">Demo Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-8">Demo Outcomes</h2>
             </motion.div>
 
             {/* Impact grid */}
@@ -565,7 +565,7 @@ export default function CaseStudyLeadTrader() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-semibold">Hobpay</h2>
+              <h2 className="text-2xl font-medium">Hobpay</h2>
               <p className="text-sm text-gray-400 mt-1">Cross-platform fintech redesign recovering 28% of blocked users</p>
             </div>
             <Link to="/work/Hobpay"

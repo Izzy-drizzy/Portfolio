@@ -119,7 +119,7 @@ export default function CaseStudyHobpay() {
               <span>/</span>
               <span className="text-gray-300">Hobpay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
               Cross-platform fintech redesign recovering 28% of blocked users
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -168,7 +168,7 @@ export default function CaseStudyHobpay() {
               { stat: '85%', label: 'Bill payment completion' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#F45D01] mb-2">{item.stat}</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
                 <p className="text-xs text-gray-400">{item.label}</p>
               </motion.div>
             ))}
@@ -186,7 +186,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl font-semibold">The Challenge</h2>
+              <h2 className="text-2xl font-medium">The Challenge</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <div className="space-y-4">
@@ -223,12 +223,13 @@ export default function CaseStudyHobpay() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { val: '3.2/5', label: 'Initial satisfaction score' },
-                  { val: '43%', label: 'Users only using bill payments' },
+                  { val: '3.2/5', label: 'Initial satisfaction score', src: 'Pre-design survey' },
+                  { val: '43%', label: 'Users only using bill payments', src: 'App analytics' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-5">
-                    <p className="text-3xl font-bold text-white mb-1">{m.val}</p>
+                    <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
                     <p className="text-xs text-gray-500">{m.label}</p>
+                    <p className="text-xs text-gray-700 mt-1">Source: {m.src}</p>
                   </div>
                 ))}
               </div>
@@ -247,7 +248,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl font-semibold">My Contribution</h2>
+              <h2 className="text-2xl font-medium">My Contribution</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -278,7 +279,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Approach</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Research & Strategy</h2>
+              <h2 className="text-2xl font-medium mb-10">Research & Strategy</h2>
             </motion.div>
             {/* Competitor comparison */}
             <motion.div variants={fadeUp} className="mb-10 space-y-4">
@@ -470,7 +471,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Unexpected Obstacles</h2>
+              <h2 className="text-2xl font-medium mb-10">Unexpected Obstacles</h2>
             </motion.div>
             <div className="space-y-6">
               {[
@@ -524,7 +525,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-4">Information Architecture Redesign</h2>
+              <h2 className="text-2xl font-medium mb-4">Information Architecture Redesign</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mb-6">
                 Shifted from a service-based structure (Rintegra, Careplan, Bills, Wallet) to a user-goal-based structure: Dashboard → Quick Actions → Services → Wallet.
               </p>
@@ -604,7 +605,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Final Designs</h2>
+              <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {images.map((src, i) => (
@@ -626,7 +627,7 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-6">Measurable Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-6">Measurable Outcomes</h2>
             </motion.div>
             {/* Metrics chart — native */}
             <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 mb-8 space-y-5">
@@ -675,7 +676,7 @@ export default function CaseStudyHobpay() {
                 { stat: '+31%', label: 'Bill payment completion', sub: '45% → 85%' },
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                  <p className="text-3xl font-bold text-[#F45D01] mb-1">{item.stat}</p>
+                  <p className="text-3xl font-medium text-[#F45D01] mb-1">{item.stat}</p>
                   <p className="text-xs text-gray-400 mb-1">{item.label}</p>
                   <p className="text-xs text-gray-600">{item.sub}</p>
                 </motion.div>
@@ -731,7 +732,7 @@ export default function CaseStudyHobpay() {
           >
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-semibold">Moolapay</h2>
+              <h2 className="text-2xl font-medium">Moolapay</h2>
               <p className="text-sm text-gray-400 mt-1">Financial inclusion for underserved communities</p>
             </div>
             <Link

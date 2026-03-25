@@ -88,7 +88,7 @@ export default function CaseStudyHealf() {
               <span>/</span>
               <span className="text-gray-300">Healf App Onboarding</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
               Redesigning onboarding to connect users to the right wellness content faster
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
@@ -127,7 +127,7 @@ export default function CaseStudyHealf() {
               { stat: '25%', label: 'Retention lift (projected)' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#F45D01] mb-2">{item.stat}</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
                 <p className="text-xs text-gray-400">{item.label}</p>
               </motion.div>
             ))}
@@ -141,7 +141,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl font-semibold">The Challenge</h2>
+              <h2 className="text-2xl font-medium">The Challenge</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-gray-400 leading-relaxed">
@@ -182,7 +182,7 @@ export default function CaseStudyHealf() {
                   { val: '~10%', label: 'Users discovering Healf Zone via exploration' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-5">
-                    <p className="text-3xl font-bold text-white mb-1">{m.val}</p>
+                    <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
                     <p className="text-xs text-gray-500">{m.label}</p>
                   </div>
                 ))}
@@ -198,7 +198,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="lg:col-span-4">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl font-semibold">My Contribution</h2>
+              <h2 className="text-2xl font-medium">My Contribution</h2>
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -231,7 +231,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Approach</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Research & Strategy</h2>
+              <h2 className="text-2xl font-medium mb-10">Research & Strategy</h2>
             </motion.div>
 
             {/* Competitive analysis — native */}
@@ -401,7 +401,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-4">Progressive 4-Screen Onboarding</h2>
+              <h2 className="text-2xl font-medium mb-4">Progressive 4-Screen Onboarding</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl mb-10">
                 A strategic redesign that explains the ecosystem upfront, dedicates a full screen to Healf Zone's unique value,
                 captures wellness goals through Four Pillars selection, and moves account creation to the end — after value is demonstrated.
@@ -493,7 +493,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-10">Final Designs</h2>
+              <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               {images.slice(0, 2).map((src, i) => (
@@ -520,7 +520,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Expected Impact</SectionLabel>
-              <h2 className="text-2xl font-semibold mb-2">Projected Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-2">Projected Outcomes</h2>
               <p className="text-sm text-gray-500 leading-relaxed max-w-xl mb-8">
                 Since this is an unsolicited redesign, outcomes are projected based on industry benchmarks from Appcues research and
                 wellness app onboarding studies.
@@ -592,7 +592,7 @@ export default function CaseStudyHealf() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div>
               <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Next Case Study</p>
-              <h2 className="text-2xl font-semibold">Lead Trader</h2>
+              <h2 className="text-2xl font-medium">Lead Trader</h2>
               <p className="text-sm text-gray-400 mt-1">Redesigning stock trading for novice and expert users</p>
             </div>
             <Link to="/work/LeadTrader"

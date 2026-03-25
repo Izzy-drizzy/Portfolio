@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           </Link>
 
           <p className="text-sm text-gray-400 mb-4">Last updated: March 2026</p>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
             Privacy Policy<span className="text-[#F45D01]">.</span>
           </h1>
           <p className="text-gray-400 mb-16 text-sm leading-relaxed">
