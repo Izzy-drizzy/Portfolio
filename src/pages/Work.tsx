@@ -183,7 +183,7 @@ export default function Work() {
 
           <button
             onClick={() => setAscending((a) => !a)}
-            className="flex items-center gap-2 border border-gray-700 text-gray-400 hover:text-[#E4E3E0] hover:border-gray-500 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors flex-shrink-0 self-end mb-1"
+            className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors flex-shrink-0 self-end mb-1"
             title={ascending ? 'Sort descending' : 'Sort ascending'}
           >
             {ascending ? <ArrowUpNarrowWide size={15} /> : <ArrowDownNarrowWide size={15} />}
@@ -241,7 +241,7 @@ export default function Work() {
                 href={project.href}
                 variants={fadeUp}
                 custom={1}
-                className="flex items-center gap-2 border border-gray-700 text-[#E4E3E0] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#E4E3E0]/10 transition-colors self-start flex-shrink-0 md:mt-1"
+                className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
               >
                 <ArrowRight size={15} />
                 View Case Study
