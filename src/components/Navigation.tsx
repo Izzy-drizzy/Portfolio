@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Menu, X, ArrowUpRight, Moon } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 interface NavigationProps {
   onOpenContact: () => void;
@@ -17,9 +18,10 @@ function SlideText({ children }: { children: string }) {
 
 export default function Navigation({ onOpenContact }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-7 md:px-10 py-4 bg-[#141414]/80 backdrop-blur-md text-[#E4E3E0] border-b border-gray-800/50">
+    <header className="fixed top-0 left-0 right-0 z-50 px-7 md:px-10 py-4 bg-[var(--bg)]/80 backdrop-blur-md text-[var(--text)] border-b border-[var(--border)]/50">
       <div className="flex items-center justify-between">
         <a href="/" className="transition-transform duration-300 hover:scale-105 inline-block">
           <img src="/logo.svg" alt="Logo" className="h-7 w-auto" />
@@ -33,18 +35,21 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
 
         <div className="hidden md:flex items-center gap-4">
           <button
+            onClick={toggle}
+            className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
+          >
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+          <button
             onClick={onOpenContact}
-            className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
+            className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
           >
             <ArrowUpRight size={16} />
             Let's Work Together
           </button>
-          <button className="p-2 border border-[#E4E3E0]/20 rounded-lg hover:bg-[#E4E3E0]/10 transition-colors">
-            <Moon size={16} />
-          </button>
         </div>
 
-        <button 
+        <button
           className="md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -54,20 +59,28 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-[#141414] text-[#E4E3E0] p-6 flex flex-col gap-6 md:hidden"
+          className="absolute top-full left-0 right-0 bg-[var(--bg)] text-[var(--text)] p-6 flex flex-col gap-6 md:hidden"
         >
           <a href="/work" className="text-2xl font-normal">Work</a>
           <a href="/about" className="text-2xl font-normal">About</a>
           <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
-          <button 
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggle}
+              className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          </div>
+          <button
             onClick={() => {
               setIsOpen(false);
               onOpenContact();
             }}
-            className="flex items-center justify-center gap-2 bg-[#E4E3E0] text-[#141414] px-6 py-3 rounded-lg text-lg font-medium mt-4"
+            className="flex items-center justify-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-6 py-3 rounded-lg text-lg font-medium mt-4"
           >
             <ArrowUpRight size={20} />
             Let's Work Together

@@ -62,7 +62,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   const inputClass =
-    'w-full p-4 bg-[#1A1A1A] rounded-xl border border-transparent focus:border-gray-700 focus:bg-[#222] outline-none transition-all placeholder:text-gray-500';
+    'w-full p-4 bg-[var(--surface)] rounded-xl border border-transparent focus:border-[var(--border-md)] focus:bg-[var(--surface-input)] outline-none transition-all placeholder:text-[var(--text-500)]';
 
   return (
     <AnimatePresence>
@@ -80,20 +80,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-full max-w-2xl bg-[#141414] text-[#E4E3E0] z-[101] overflow-y-auto shadow-2xl border-l border-gray-800"
+            className="fixed top-0 right-0 bottom-0 w-full max-w-2xl bg-[var(--bg)] text-[var(--text)] z-[101] overflow-y-auto shadow-2xl border-l border-[var(--border)]"
           >
             <div className="p-8 md:p-12">
               <button
                 onClick={onClose}
-                className="absolute top-8 right-8 p-2 hover:bg-gray-800 rounded-lg transition-colors"
+                className="absolute top-8 right-8 p-2 hover:bg-[var(--surface-2)] rounded-lg transition-colors"
               >
                 <X size={24} />
               </button>
 
               <div className="mb-12">
-                <p className="text-sm font-medium text-gray-400 mb-4">Contact</p>
+                <p className="text-sm font-medium text-[var(--text-400)] mb-4">Contact</p>
                 <h2 className="text-4xl font-medium mb-4">Let's Work Together</h2>
-                <p className="text-gray-400">
+                <p className="text-[var(--text-400)]">
                   Got a role, project, or just want to chat about design? Fill in the form and I'll get back to you soon.
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-medium">First Name <span className="text-gray-500">*</span></label>
+                      <label className="text-sm font-medium">First Name <span className="text-[var(--text-500)]">*</span></label>
                       <input
                         required
                         type="text"
@@ -121,7 +121,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-medium">Last Name <span className="text-gray-500">*</span></label>
+                      <label className="text-sm font-medium">Last Name <span className="text-[var(--text-500)]">*</span></label>
                       <input
                         required
                         type="text"
@@ -135,7 +135,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-medium">Email Address <span className="text-gray-500">*</span></label>
+                      <label className="text-sm font-medium">Email Address <span className="text-[var(--text-500)]">*</span></label>
                       <input
                         required
                         type="email"
@@ -158,12 +158,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Enquiry Type <span className="text-gray-500">*</span></label>
+                    <label className="text-sm font-medium">Enquiry Type <span className="text-[var(--text-500)]">*</span></label>
                     <select
                       required
                       value={fields.enquiryType}
                       onChange={set('enquiryType')}
-                      className={`${inputClass} appearance-none text-[#E4E3E0]`}
+                      className={`${inputClass} appearance-none text-[var(--text)]`}
                     >
                       <option value="" hidden>Select one...</option>
                       <option value="Job opportunity">Job opportunity</option>
@@ -173,7 +173,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Message <span className="text-gray-500">*</span></label>
+                    <label className="text-sm font-medium">Message <span className="text-[var(--text-500)]">*</span></label>
                     <textarea
                       required
                       placeholder="Your message"
@@ -189,11 +189,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       required
                       type="checkbox"
                       id="privacy"
-                      className="w-5 h-5 rounded border-gray-700 bg-[#1A1A1A] text-[#E4E3E0] focus:ring-[#E4E3E0] focus:ring-offset-[#141414]"
+                      className="w-5 h-5 rounded border-[var(--border-md)] bg-[var(--surface)] text-[var(--text)] focus:ring-[var(--text)] focus:ring-offset-[var(--bg)]"
                     />
-                    <label htmlFor="privacy" className="text-sm text-gray-400">
+                    <label htmlFor="privacy" className="text-sm text-[var(--text-400)]">
                       I have read and agree to the{' '}
-                      <Link to="/privacy-policy" className="underline hover:text-[#E4E3E0]">
+                      <Link to="/privacy-policy" className="underline hover:text-[var(--text)]">
                         Privacy Policy
                       </Link>
                     </label>
@@ -212,7 +212,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <button
                     type="submit"
                     disabled={status === 'sending'}
-                    className="flex items-center justify-center w-full gap-2 bg-[#E4E3E0] text-[#141414] px-6 py-4 rounded-xl text-sm font-medium hover:bg-opacity-90 transition-colors mt-8 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="flex items-center justify-center w-full gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-6 py-4 rounded-xl text-sm font-medium hover:bg-opacity-90 transition-colors mt-8 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {status === 'sending' ? (
                       <>

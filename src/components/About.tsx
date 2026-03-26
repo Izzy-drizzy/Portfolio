@@ -35,7 +35,7 @@ export default function About() {
 
   return (
     <motion.section
-      className="w-full py-24 px-7 md:px-10 border-t border-gray-800"
+      className="w-full py-24 px-7 md:px-10 border-t border-[var(--border)]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
@@ -53,10 +53,10 @@ export default function About() {
         {/* Left — Accordion */}
         <motion.div variants={fadeUp} custom={1} className="space-y-0">
           {accordionData.map((item, index) => (
-            <div key={index} className="border-b border-gray-800">
+            <div key={index} className="border-b border-[var(--border)]">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex items-center justify-between w-full py-5 text-left font-medium text-lg hover:text-gray-300 transition-colors"
+                className="flex items-center justify-between w-full py-5 text-left font-medium text-lg hover:text-[var(--text-300)] transition-colors"
               >
                 {item.title}
                 <motion.div
@@ -75,7 +75,7 @@ export default function About() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-6 text-gray-400 text-sm leading-relaxed">
+                    <p className="pb-6 text-[var(--text-400)] text-sm leading-relaxed">
                       {item.content}
                     </p>
                   </motion.div>
@@ -87,7 +87,7 @@ export default function About() {
 
         {/* Right — Text */}
         <motion.div variants={fadeUp} custom={2} className="flex flex-col justify-between gap-10">
-          <div className="text-gray-400 space-y-6 text-sm leading-relaxed">
+          <div className="text-[var(--text-400)] space-y-6 text-sm leading-relaxed">
             <p>
               I design SaaS products that have to work for the person using it, the stakeholder who owns the outcome, the business metric it needs to move, and the engineer building it. A design that can't be shipped isn't a solution. One that ships but misses the problem isn't either.
             </p>

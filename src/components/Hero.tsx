@@ -45,19 +45,19 @@ export default function Hero({ onOpenContact }: HeroProps) {
               <Clock />
             </div>
 
-            <p className="text-sm text-gray-400 max-w-sm mb-6 leading-relaxed">
+            <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
               I design product experiences mostly in fintech, health tech, and EdTech. The brief is usually clear. The actual problem usually isn't. I spend a lot of time in that gap.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={onOpenContact}
-                className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
+                className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
               >
                 <ArrowUpRight size={15} />
                 Let's Work Together
               </button>
-              <Link to="/work" className="flex items-center gap-2 border border-[#E4E3E0]/20 text-[#E4E3E0] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[#E4E3E0]/10 transition-colors">
+              <Link to="/work" className="flex items-center gap-2 border border-[var(--text)]/20 text-[var(--text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-[var(--text)]/10 transition-colors">
                 <ArrowRight size={15} />
                 View All Work
               </Link>
@@ -72,9 +72,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="group block relative rounded-xl overflow-hidden bg-[#1A1A1A] shadow-sm hover:shadow-md transition-shadow border border-gray-800"
+            className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
           >
-            <div className="aspect-[5/3] overflow-hidden bg-[#222]">
+            <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
               <img
                 src="/images/edusmart/slide-1.png"
                 alt="EduSmart Analytics"
@@ -85,10 +85,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               <h2 className="text-base font-medium mb-2 leading-snug">
                 Preventing £5M revenue loss through stakeholder validation
               </h2>
-              <p className="text-xs text-gray-400 mb-3 line-clamp-2">
+              <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
                 Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything — 15 of 22 were wrong. That discovery protected £5M in contracts.
               </p>
-              <div className="flex items-center gap-1.5 text-xs font-medium border-t border-gray-800 pt-3 mt-1 pb-1">
+              <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />
                 View Case Study
               </div>
@@ -100,9 +100,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
-            className="group block relative rounded-xl overflow-hidden bg-[#1A1A1A] shadow-sm hover:shadow-md transition-shadow border border-gray-800"
+            className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
           >
-            <div className="aspect-[5/3] overflow-hidden bg-[#222]">
+            <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
               <img
                 src="/images/hobpay/slide-1.png"
                 alt="Hobpay Case Study"
@@ -113,10 +113,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               <h2 className="text-base font-medium mb-2 leading-snug">
                 Cross-platform fintech redesign recovering 28% of blocked users
               </h2>
-              <p className="text-xs text-gray-400 mb-3 line-clamp-2">
+              <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
                 Hobpay had no iOS app. 28% of potential users couldn't log in at all. Built a web-first platform to fix access, then redesigned the whole UX. Satisfaction went from 3.2 to 4.2.
               </p>
-              <div className="flex items-center gap-1.5 text-xs font-medium border-t border-gray-800 pt-3 mt-1 pb-1">
+              <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />
                 View Case Study
               </div>

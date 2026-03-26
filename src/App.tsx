@@ -18,7 +18,7 @@ export default function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-[#E4E3E0] font-sans selection:bg-[#E4E3E0] selection:text-[#141414]">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
       <Preloader />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
       <main>

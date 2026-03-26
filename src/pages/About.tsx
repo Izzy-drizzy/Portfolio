@@ -76,7 +76,7 @@ export default function About() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-[#E4E3E0] font-sans selection:bg-[#E4E3E0] selection:text-[#141414]">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28 px-7 md:px-10">
@@ -87,7 +87,7 @@ export default function About() {
           animate="visible"
           variants={fadeUp}
         >
-          <p className="text-sm text-gray-500 mb-2">About</p>
+          <p className="text-sm text-[var(--text-500)] mb-2">About</p>
           <h1 className="text-5xl md:text-6xl font-medium tracking-tight">
             About Me<span className="text-[#F45D01]">.</span>
           </h1>
@@ -95,13 +95,13 @@ export default function About() {
 
         {/* Bio */}
         <motion.div
-          className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 mb-4"
+          className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 mb-4"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
           custom={1}
         >
-          <div className="space-y-5 text-gray-300 text-base leading-relaxed">
+          <div className="space-y-5 text-[var(--text-300)] text-base leading-relaxed">
             <p>
               Hi, I'm Bukunmi — Oluwabukunmi David Isijola if we're being formal. I've been a creator for as long as I can remember. Growing up, I was the kid always scribbling something; drawing comic books with my brother, filling entire notebooks with stories to share with friends who'd eagerly await the next chapter. That early love for visual storytelling shaped everything that came after.
             </p>
@@ -111,7 +111,7 @@ export default function About() {
             <p>
               Fast forward through a Master's in Computer Science and 4+ years designing fintech and SaaS products, and here I am: a Product Designer who bridges design and development. I understand what users need and what engineers can build, which means I create experiences that don't just look good — they work, they scale, and they drive measurable business impact.
             </p>
-            <p className="text-gray-400">
+            <p className="text-[var(--text-400)]">
               Currently running Artbox Studio while exploring Senior Product Designer opportunities at companies building products that matter.
             </p>
           </div>
@@ -122,7 +122,7 @@ export default function About() {
           {expertise.map((item, i) => (
             <motion.div
               key={item.title}
-              className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 flex flex-col gap-6"
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 flex flex-col gap-6"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
@@ -146,7 +146,7 @@ export default function About() {
                   <ArrowUpRight size={12} />
                 </a>
               </div>
-              <div className="space-y-4 text-sm text-gray-400 leading-relaxed">
+              <div className="space-y-4 text-sm text-[var(--text-400)] leading-relaxed">
                 {item.body.map((para, j) => (
                   <p key={j}>{para}</p>
                 ))}
@@ -157,7 +157,7 @@ export default function About() {
 
         {/* My Reads */}
         <motion.div
-          className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-8 mb-12"
+          className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
@@ -167,7 +167,7 @@ export default function About() {
             My Reads<span className="text-[#F45D01]">.</span>
           </h2>
 
-          <div className="divide-y divide-gray-800">
+          <div className="divide-y divide-[var(--border)]">
             {reads.map((read, i) => (
               <motion.div
                 key={i}
@@ -179,7 +179,7 @@ export default function About() {
                   <h3 className="text-base font-semibold leading-snug">{read.title}</h3>
                   <span className="text-xs text-[#F45D01] flex-shrink-0 mt-0.5">{read.date}</span>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed">{read.body}</p>
+                <p className="text-sm text-[var(--text-400)] leading-relaxed">{read.body}</p>
               </motion.div>
             ))}
           </div>

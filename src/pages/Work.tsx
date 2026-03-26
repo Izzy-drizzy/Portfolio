@@ -145,7 +145,7 @@ function ImageMarquee({ images }: { images: string[] }) {
         {doubled.map((src, i) => (
           <div
             key={i}
-            className="flex-shrink-0 rounded-xl overflow-hidden bg-[#1A1A1A]"
+            className="flex-shrink-0 rounded-xl overflow-hidden bg-[var(--surface)]"
             style={{ width: '42vw', height: '52vh' }}
           >
             <img src={src} alt="" className="w-full h-full object-cover" />
@@ -163,7 +163,7 @@ export default function Work() {
   const sortedProjects = ascending ? [...projects] : [...projects].reverse();
 
   return (
-    <div className="min-h-screen bg-[#141414] text-[#E4E3E0] font-sans selection:bg-[#E4E3E0] selection:text-[#141414]">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28">
@@ -175,7 +175,7 @@ export default function Work() {
           variants={fadeUp}
         >
           <div>
-            <p className="text-sm text-gray-500 mb-2">Work</p>
+            <p className="text-sm text-[var(--text-500)] mb-2">Work</p>
             <h1 className="text-4xl md:text-6xl font-medium tracking-tight">
               Index of Work<span className="text-[#F45D01]">.</span>
             </h1>
@@ -183,7 +183,7 @@ export default function Work() {
 
           <button
             onClick={() => setAscending((a) => !a)}
-            className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors flex-shrink-0 self-end mb-1"
+            className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors flex-shrink-0 self-end mb-1"
             title={ascending ? 'Sort descending' : 'Sort ascending'}
           >
             {ascending ? <ArrowUpNarrowWide size={15} /> : <ArrowDownNarrowWide size={15} />}
@@ -196,7 +196,7 @@ export default function Work() {
         {sortedProjects.map((project, i) => (
           <motion.section
             key={project.number}
-            className="rounded-xl border border-gray-800 bg-[#1A1A1A] overflow-hidden"
+            className="rounded-xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
@@ -204,7 +204,7 @@ export default function Work() {
             {/* Info Row */}
             <div className="px-5 md:px-8 pt-8 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-8">
               <motion.div className="flex-1 min-w-0" variants={fadeUp} custom={0}>
-                <p className="text-xs text-gray-500 mb-1">({project.number})</p>
+                <p className="text-xs text-[var(--text-500)] mb-1">({project.number})</p>
                 <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-5">
                   {project.title}
                 </h2>
@@ -214,7 +214,7 @@ export default function Work() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs border border-gray-700 text-gray-400 px-3 py-1 rounded-full"
+                      className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full"
                     >
                       {tag}
                     </span>
@@ -222,16 +222,16 @@ export default function Work() {
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-gray-300 leading-relaxed max-w-lg mb-4">
+                <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-lg mb-4">
                   {project.description}
                 </p>
 
                 {/* Collaboration */}
                 {project.collaboration && (
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-[var(--text-500)]">
                     <span>In collaboration with</span>
                     <br />
-                    <span className="text-gray-400">{project.collaboration}</span>
+                    <span className="text-[var(--text-400)]">{project.collaboration}</span>
                   </div>
                 )}
               </motion.div>
@@ -241,7 +241,7 @@ export default function Work() {
                 href={project.href}
                 variants={fadeUp}
                 custom={1}
-                className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
+                className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
               >
                 <ArrowRight size={15} />
                 View Case Study

@@ -1,6 +1,7 @@
 import {StrictMode, useEffect} from 'react';
 import {createRoot} from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import App from './App.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import Work from './pages/Work.tsx';
@@ -20,19 +21,21 @@ function ScrollToTop() {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work/Hobpay" element={<CaseStudyHobpay />} />
-        <Route path="/work/Moolapay" element={<CaseStudyMoolapay />} />
-        <Route path="/work/healf" element={<CaseStudyHealf />} />
-        <Route path="/work/LeadTrader" element={<CaseStudyLeadTrader />} />
-        <Route path="/work/Edusmart" element={<CaseStudyEdusmart />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work/Hobpay" element={<CaseStudyHobpay />} />
+          <Route path="/work/Moolapay" element={<CaseStudyMoolapay />} />
+          <Route path="/work/healf" element={<CaseStudyHealf />} />
+          <Route path="/work/LeadTrader" element={<CaseStudyLeadTrader />} />
+          <Route path="/work/Edusmart" element={<CaseStudyEdusmart />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </StrictMode>,
 );

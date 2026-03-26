@@ -40,7 +40,7 @@ const fadeUp = {
 };
 
 function SectionLabel({ children }: { children: string }) {
-  return <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">{children}</p>;
+  return <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-3">{children}</p>;
 }
 
 function ImageCarousel() {
@@ -70,10 +70,10 @@ function ImageCarousel() {
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }} />
       ))}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#141414] to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--bg)] to-transparent pointer-events-none" />
       <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <button onClick={prev} className="w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center hover:bg-black/80 transition-colors"><ArrowLeft size={14} /></button>
-        <span className="text-xs text-gray-400">{current + 1} / {images.length}</span>
+        <span className="text-xs text-[var(--text-400)]">{current + 1} / {images.length}</span>
         <button onClick={next} className="w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center hover:bg-black/80 transition-colors"><ArrowRight size={14} /></button>
       </div>
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
@@ -90,7 +90,7 @@ export default function CaseStudyEdusmart() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-[#E4E3E0]">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>
@@ -101,8 +101,8 @@ export default function CaseStudyEdusmart() {
           <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28">
             <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
 
-              <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-gray-500 mb-6">
-                <Link to="/work" className="hover:text-gray-300 transition-colors">Case Studies</Link>
+              <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-6">
+                <Link to="/work" className="hover:text-[var(--text-300)] transition-colors">Case Studies</Link>
                 <span>/</span>
                 <span>EduSmart Analytics</span>
               </motion.div>
@@ -111,11 +111,11 @@ export default function CaseStudyEdusmart() {
                 Preventing £5M revenue loss through stakeholder validation
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="text-sm text-gray-400 leading-relaxed mb-6">
+              <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
                 AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and protected £5M in contracts.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-gray-500 mb-8">
+              <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
                 <span>2026 (Ongoing)</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Product Design Consultant @ Amdari</span>
@@ -123,7 +123,7 @@ export default function CaseStudyEdusmart() {
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 {tags.map((t) => (
-                  <span key={t} className="text-xs border border-gray-700 text-gray-400 px-3 py-1 rounded-full">{t}</span>
+                  <span key={t} className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{t}</span>
                 ))}
               </motion.div>
             </motion.div>
@@ -131,7 +131,7 @@ export default function CaseStudyEdusmart() {
 
           {/* Right — carousel */}
           <motion.div
-            className="lg:col-span-7 rounded-xl overflow-hidden bg-[#1A1A1A]"
+            className="lg:col-span-7 rounded-xl overflow-hidden bg-[var(--surface)]"
             style={{ height: '65vh' }}
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
@@ -142,7 +142,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── SUMMARY STATS ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
@@ -155,22 +155,22 @@ export default function CaseStudyEdusmart() {
               { val: '£5M', label: 'Annual contracts protected through focused delivery' },
             ].map((s) => (
               <motion.div key={s.val} variants={fadeUp}
-                className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-3xl md:text-4xl font-medium text-[#F45D01] mb-2">{s.val}</p>
-                <p className="text-xs text-gray-400 leading-relaxed">{s.label}</p>
+                <p className="text-xs text-[var(--text-400)] leading-relaxed">{s.label}</p>
               </motion.div>
             ))}
           </motion.div>
         </section>
 
         {/* ── PROBLEM FRAMING ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Problem Framing</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">A £5M crisis hiding inside a reporting lag</h2>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+              <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 EduSmart Analytics — founded 2017, serving 200+ institutions with 6% UK market share — faced a post-COVID inflection point. 48-hour reporting delays were preventing early student intervention, and three major university clients were actively evaluating competitors.
               </p>
             </motion.div>
@@ -194,10 +194,10 @@ export default function CaseStudyEdusmart() {
                 },
               ].map((p) => (
                 <motion.div key={p.n} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                   <span className="text-xs text-[#F45D01] font-mono block mb-3">{p.n}</span>
                   <h3 className="text-sm font-semibold mb-2">{p.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{p.body}</p>
+                  <p className="text-xs text-[var(--text-400)] leading-relaxed">{p.body}</p>
                 </motion.div>
               ))}
             </div>
@@ -206,7 +206,7 @@ export default function CaseStudyEdusmart() {
             <motion.div variants={fadeUp}
               className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-6 md:p-8">
               <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">The Critical Discovery</p>
-              <p className="text-sm text-gray-300 leading-relaxed max-w-3xl">
+              <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-3xl">
                 Through stakeholder validation workshops with 15 participants, I discovered 15 out of 22 initial product assumptions were wrong. We weren't just over-designing — we were building the wrong product entirely. The pivot: cut scope from 58 to 20 validated features and shift focus from student self-monitoring to faculty intervention.
               </p>
             </motion.div>
@@ -214,22 +214,22 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── ROLE & TEAM ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Role & Team</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+              <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 Engaged as the sole UX/UI lead within a cross-functional Scrum team — working alongside a Project Manager and Business Analyst in 2-week sprints, with weekly reviews involving EduSmart's product and engineering stakeholders.
               </p>
-              <p className="text-sm text-gray-500 leading-relaxed max-w-2xl mt-3">
+              <p className="text-sm text-[var(--text-500)] leading-relaxed max-w-2xl mt-3">
                 I used Claude throughout the project as a thinking partner — synthesising interview notes into patterns, pressure-testing the assumption validation framework, and working through IA decisions before committing them to Figma. It helped me move faster without skipping the thinking.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
+              <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">My Responsibilities</p>
                 <ul className="space-y-2.5">
                   {[
@@ -241,7 +241,7 @@ export default function CaseStudyEdusmart() {
                     'Interactive Figma prototypes for usability testing',
                     'Recruited and tested with 15 users — 88% task completion',
                   ].map((r) => (
-                    <li key={r} className="flex gap-2.5 text-xs text-gray-400 leading-relaxed">
+                    <li key={r} className="flex gap-2.5 text-xs text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-0.5 flex-shrink-0">+</span>
                       {r}
                     </li>
@@ -249,36 +249,36 @@ export default function CaseStudyEdusmart() {
                 </ul>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
+              <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">Team Structure</p>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs font-semibold text-gray-300 mb-1.5">Amdari Consulting Team</p>
+                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Consulting Team</p>
                     <ul className="space-y-1.5">
                       {[
                         ['Bukunmi (Me)', 'Product Design Consultant — full UX/UI ownership'],
                         ['Project Manager', 'Scrum facilitation, sprint planning, stakeholder management'],
                         ['Business Analyst', 'Requirements gathering, feature prioritisation, acceptance criteria'],
                       ].map(([name, role]) => (
-                        <li key={name} className="text-xs text-gray-400">
-                          <span className="text-gray-300 font-medium">{name}</span> — {role}
+                        <li key={name} className="text-xs text-[var(--text-400)]">
+                          <span className="text-[var(--text-300)] font-medium">{name}</span> — {role}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-300 mb-1.5">EduSmart Stakeholders</p>
+                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">EduSmart Stakeholders</p>
                     <ul className="space-y-1.5">
                       {[
                         'Product & Engineering teams (weekly sprint reviews)',
                         '15 validation workshop participants (5 students, 5 faculty, 5 admins)',
                         '12 journey mapping workshop participants',
                       ].map((s) => (
-                        <li key={s} className="text-xs text-gray-400">– {s}</li>
+                        <li key={s} className="text-xs text-[var(--text-400)]">– {s}</li>
                       ))}
                     </ul>
                   </div>
-                  <p className="text-xs text-gray-600 pt-1">Methodology: Agile/Scrum — 2-week sprints, daily standups</p>
+                  <p className="text-xs text-[var(--text-600)] pt-1">Methodology: Agile/Scrum — 2-week sprints, daily standups</p>
                 </div>
               </motion.div>
             </div>
@@ -286,13 +286,13 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── RESEARCH APPROACH ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Research & Approach</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">A 9-phase validation-first process</h2>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+              <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 Before touching wireframes or visual design, I built a process to test every assumption with real stakeholders. Uncover real problems, test assumptions, design only validated solutions, then iterate through usability testing.
               </p>
             </motion.div>
@@ -326,15 +326,15 @@ export default function CaseStudyEdusmart() {
                 },
               ].map((p) => (
                 <motion.div key={p.phase} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4">
                   <div className="md:col-span-3">
                     <span className="text-xs text-[#F45D01] font-mono block mb-1">{p.phase}</span>
                     <h3 className="text-sm font-semibold leading-snug">{p.title}</h3>
                   </div>
                   <div className="md:col-span-9">
-                    <p className="text-sm text-gray-400 leading-relaxed mb-3">{p.detail}</p>
+                    <p className="text-sm text-[var(--text-400)] leading-relaxed mb-3">{p.detail}</p>
                     {p.quote && (
-                      <p className="text-xs text-gray-500 italic border-l-2 border-gray-700 pl-3">{p.quote}</p>
+                      <p className="text-xs text-[var(--text-500)] italic border-l-2 border-[var(--border-md)] pl-3">{p.quote}</p>
                     )}
                   </div>
                 </motion.div>
@@ -367,17 +367,17 @@ export default function CaseStudyEdusmart() {
                 },
               ].map((c) => (
                 <motion.div key={c.n} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-5">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                   <span className="text-xs text-[#F45D01] font-mono block mb-2">{c.n}</span>
                   <h3 className="text-xs font-semibold mb-4">{c.title}</h3>
                   <div className="space-y-3">
                     <div>
-                      <p className="text-[10px] text-gray-600 uppercase tracking-widest mb-1">Assumption</p>
-                      <p className="text-xs text-gray-500 leading-relaxed">{c.before}</p>
+                      <p className="text-[10px] text-[var(--text-600)] uppercase tracking-widest mb-1">Assumption</p>
+                      <p className="text-xs text-[var(--text-500)] leading-relaxed">{c.before}</p>
                     </div>
                     <div>
                       <p className="text-[10px] text-[#F45D01] uppercase tracking-widest mb-1">Reality</p>
-                      <p className="text-xs text-gray-300 leading-relaxed">{c.after}</p>
+                      <p className="text-xs text-[var(--text-300)] leading-relaxed">{c.after}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -387,7 +387,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── CHALLENGES ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -417,19 +417,19 @@ export default function CaseStudyEdusmart() {
                 },
               ].map((c) => (
                 <motion.div key={c.n} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
                   <div className="lg:col-span-3">
                     <span className="text-xs text-[#F45D01] font-mono block mb-1">{c.n}</span>
                     <h3 className="text-sm font-semibold leading-snug">{c.title}</h3>
                   </div>
                   <div className="lg:col-span-8 lg:col-start-5 grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Challenge</p>
-                      <p className="text-sm text-gray-500 leading-relaxed">{c.challenge}</p>
+                      <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Challenge</p>
+                      <p className="text-sm text-[var(--text-500)] leading-relaxed">{c.challenge}</p>
                     </div>
                     <div>
                       <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">How I solved it</p>
-                      <p className="text-sm text-gray-300 leading-relaxed">{c.solution}</p>
+                      <p className="text-sm text-[var(--text-300)] leading-relaxed">{c.solution}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -439,18 +439,18 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── PROCESS ARTIFACTS ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-12">
               <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">Process</p>
               <h2 className="text-2xl font-medium">The Messy Middle</h2>
-              <p className="text-sm text-gray-400 mt-3 max-w-2xl">User personas, journey maps, and lo-fi wireframes from before a single hi-fi screen was produced.</p>
+              <p className="text-sm text-[var(--text-400)] mt-3 max-w-2xl">User personas, journey maps, and lo-fi wireframes from before a single hi-fi screen was produced.</p>
             </motion.div>
 
             {/* User Personas — 2x2 grid */}
             <motion.div variants={fadeUp} className="mb-4">
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Personas</p>
+              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Personas</p>
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
               {[
@@ -459,32 +459,32 @@ export default function CaseStudyEdusmart() {
                 { src: '/images/edusmart/process/personas/persona-3.png', label: 'User persona 3' },
                 { src: '/images/edusmart/process/personas/persona-4.png', label: 'User persona 4' },
               ].map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
-                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                  <p className="text-xs text-[var(--text-600)] px-4 py-2">{img.label}</p>
                 </div>
               ))}
             </motion.div>
 
             {/* Journey Maps — 2 col */}
             <motion.div variants={fadeUp} className="mb-4">
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Journey Maps</p>
+              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Journey Maps</p>
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
                 { src: '/images/edusmart/process/personas/journey-1.png', label: 'Journey map 1' },
                 { src: '/images/edusmart/process/personas/journey-2.png', label: 'Journey map 2' },
               ].map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
-                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                  <p className="text-xs text-[var(--text-600)] px-4 py-2">{img.label}</p>
                 </div>
               ))}
             </motion.div>
 
             {/* Lo-fi Wireframes — 3 col */}
             <motion.div variants={fadeUp} className="mb-4">
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
+              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {[
@@ -492,9 +492,9 @@ export default function CaseStudyEdusmart() {
                 { src: '/images/edusmart/process/lofi/lofi-instructor.png', label: 'Instructor Dashboard — wireframe' },
                 { src: '/images/edusmart/process/lofi/lofi-admin.png', label: 'Admin Dashboard — wireframe' },
               ].map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
-                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                  <p className="text-xs text-[var(--text-600)] px-4 py-2">{img.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -502,13 +502,13 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── SOLUTION ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Solution</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">A faculty intervention tool — not a student monitoring platform</h2>
-              <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
+              <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 Validation showed we had the primary user wrong. The redesign centred on one finding: retention value comes from faculty identifying and contacting struggling students early. Students checking their own dashboards didn't move the needle.
               </p>
             </motion.div>
@@ -532,8 +532,8 @@ export default function CaseStudyEdusmart() {
                   },
                 ].map((item, i) => (
                   <div key={i}>
-                    <p className="text-sm font-medium text-gray-200 mb-2">{item.title}</p>
-                    <p className="text-xs text-gray-400 leading-relaxed">{item.body}</p>
+                    <p className="text-sm font-medium text-[var(--text-300)] mb-2">{item.title}</p>
+                    <p className="text-xs text-[var(--text-400)] leading-relaxed">{item.body}</p>
                   </div>
                 ))}
               </div>
@@ -561,25 +561,25 @@ export default function CaseStudyEdusmart() {
                 },
               ].map((u) => (
                 <motion.div key={u.user} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] overflow-hidden">
-                  <div className="px-5 py-4 border-b border-gray-800">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden">
+                  <div className="px-5 py-4 border-b border-[var(--border)]">
                     <p className="font-semibold text-sm">{u.user}</p>
-                    <p className="text-xs text-gray-500 mt-0.5">{u.count}</p>
+                    <p className="text-xs text-[var(--text-500)] mt-0.5">{u.count}</p>
                   </div>
                   <div className="p-5 space-y-4">
                     <div>
                       <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Screens</p>
                       <ul className="space-y-1.5">
                         {u.screens.map((s) => (
-                          <li key={s} className="flex gap-2 text-xs text-gray-400 leading-relaxed">
-                            <span className="text-gray-700 flex-shrink-0">–</span>{s}
+                          <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
+                            <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600 uppercase tracking-widest mb-2">Design Rationale</p>
-                      <p className="text-xs text-gray-500 leading-relaxed">{u.decision}</p>
+                      <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Design Rationale</p>
+                      <p className="text-xs text-[var(--text-500)] leading-relaxed">{u.decision}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -589,7 +589,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── FINAL DESIGNS ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
@@ -600,11 +600,11 @@ export default function CaseStudyEdusmart() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {finalDesigns.map((img, i) => (
                 <motion.div key={i} variants={fadeUp}
-                  className="rounded-xl overflow-hidden bg-[#1A1A1A] border border-gray-800 group cursor-pointer">
+                  className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] group cursor-pointer">
                   <ImageZoom src={img.src} alt={img.label}
                     className="w-full aspect-[4/3] object-cover group-hover:scale-[1.02] transition-transform duration-500" />
                   <div className="px-4 py-3">
-                    <p className="text-xs text-gray-500">{img.label}</p>
+                    <p className="text-xs text-[var(--text-500)]">{img.label}</p>
                   </div>
                 </motion.div>
               ))}
@@ -613,7 +613,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── RESULTS ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -622,11 +622,11 @@ export default function CaseStudyEdusmart() {
             </motion.div>
 
             {/* Usability metrics table */}
-            <motion.div variants={fadeUp} className="rounded-xl border border-gray-800 bg-[#1A1A1A] overflow-hidden mb-6">
-              <div className="px-6 py-4 border-b border-gray-800">
-                <p className="text-xs text-gray-500 uppercase tracking-widest">Usability Testing Results</p>
+            <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden mb-6">
+              <div className="px-6 py-4 border-b border-[var(--border)]">
+                <p className="text-xs text-[var(--text-500)] uppercase tracking-widest">Usability Testing Results</p>
               </div>
-              <div className="divide-y divide-gray-800">
+              <div className="divide-y divide-[var(--border)]">
                 {[
                   { label: 'Task Completion Rate', target: '>80%', result: '88% (66/75 tasks)', status: 'Exceeded' },
                   { label: 'Average Time Per Task', target: '<3 min', result: '2m 25s average', status: 'Met' },
@@ -634,9 +634,9 @@ export default function CaseStudyEdusmart() {
                   { label: 'Critical (P0) Bugs', target: '0', result: '0 found', status: 'Met' },
                 ].map((r) => (
                   <div key={r.label} className="px-6 py-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                    <span className="text-gray-300 text-xs font-medium">{r.label}</span>
-                    <span className="text-gray-500 text-xs">{r.target}</span>
-                    <span className="text-gray-300 text-xs">{r.result}</span>
+                    <span className="text-[var(--text-300)] text-xs font-medium">{r.label}</span>
+                    <span className="text-[var(--text-500)] text-xs">{r.target}</span>
+                    <span className="text-[var(--text-300)] text-xs">{r.result}</span>
                     <span className="text-xs text-[#F45D01]">{r.status}</span>
                   </div>
                 ))}
@@ -651,10 +651,10 @@ export default function CaseStudyEdusmart() {
                 { val: '15 months', label: 'Of misdirected development avoided', sub: 'Testing assumptions first stopped the team from building the wrong product' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
-                  className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6">
+                  className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                   <p className="text-2xl font-medium text-[#F45D01] mb-1">{s.val}</p>
-                  <p className="text-xs font-medium text-gray-300 mb-2">{s.label}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed">{s.sub}</p>
+                  <p className="text-xs font-medium text-[var(--text-300)] mb-2">{s.label}</p>
+                  <p className="text-xs text-[var(--text-500)] leading-relaxed">{s.sub}</p>
                 </motion.div>
               ))}
             </div>
@@ -663,20 +663,20 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── NEXT CTA ── */}
-        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
             className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
             <motion.div variants={fadeUp}>
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Next Case Study</p>
+              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-3">Next Case Study</p>
               <h2 className="text-2xl md:text-3xl font-medium mb-2">Hobpay</h2>
-              <p className="text-sm text-gray-400 max-w-md leading-relaxed">
+              <p className="text-sm text-[var(--text-400)] max-w-md leading-relaxed">
                 Web-first redesign that removed iOS barriers and brought 10K+ users to a Nigerian fintech platform.
               </p>
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link to="/work/Hobpay"
-                className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-6 py-3 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors">
+                className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-6 py-3 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors">
                 View Case Study
                 <ArrowRight size={15} />
               </Link>

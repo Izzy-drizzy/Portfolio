@@ -58,7 +58,7 @@ const fadeUp = {
 export default function Stack() {
   return (
     <motion.section
-      className="w-full py-24 px-7 md:px-10 border-t border-gray-800"
+      className="w-full py-24 px-7 md:px-10 border-t border-[var(--border)]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}
@@ -67,7 +67,7 @@ export default function Stack() {
         <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
           My stack<span className="text-[#F45D01]">.</span>
         </h2>
-        <p className="text-sm text-gray-400 mt-3">
+        <p className="text-sm text-[var(--text-400)] mt-3">
           I am committed to staying updated with the best design and development tools and techniques.
         </p>
       </motion.div>
@@ -81,9 +81,9 @@ export default function Stack() {
             rel="noopener noreferrer"
             variants={fadeUp}
             custom={i + 1}
-            className="flex items-center gap-4 bg-[#1E1E1E] border border-gray-800 rounded-xl px-5 py-4 hover:border-gray-600 transition-colors group"
+            className="flex items-center gap-4 bg-[var(--surface-2)] border border-[var(--border)] rounded-xl px-5 py-4 hover:border-[var(--border-sm)] transition-colors group"
           >
-            <div className="w-11 h-11 rounded-lg bg-[#2A2A2A] flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <div className="w-11 h-11 rounded-lg bg-[var(--surface-3)] flex items-center justify-center flex-shrink-0 overflow-hidden">
               <img
                 src={tool.icon}
                 alt={tool.name}
@@ -91,10 +91,10 @@ export default function Stack() {
               />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-sm text-[#E4E3E0]">{tool.name}</p>
-              <p className="text-xs text-gray-400 mt-0.5">{tool.description}</p>
+              <p className="font-medium text-sm text-[var(--text)]">{tool.name}</p>
+              <p className="text-xs text-[var(--text-400)] mt-0.5">{tool.description}</p>
             </div>
-            <ArrowUpRight size={16} className="text-gray-600 group-hover:text-[#E4E3E0] transition-colors flex-shrink-0" />
+            <ArrowUpRight size={16} className="text-[var(--text-600)] group-hover:text-[var(--text)] transition-colors flex-shrink-0" />
           </motion.a>
         ))}
       </div>

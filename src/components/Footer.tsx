@@ -3,16 +3,16 @@ import Clock from './Clock';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#141414] text-[#E4E3E0] pt-24 pb-12 px-7 md:px-10 mt-12 border-t border-gray-800">
+    <footer className="bg-[var(--bg)] text-[var(--text)] pt-24 pb-12 px-7 md:px-10 mt-12 border-t border-[var(--border)]">
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-24">
-          
+
           {/* Left Column */}
           <div className="lg:col-span-4">
             <div className="mb-8">
               <Clock />
             </div>
-            <div className="text-gray-400 text-sm space-y-2">
+            <div className="text-[var(--text-400)] text-sm space-y-2">
               <p>Mon to Fri, 9AM - 5:30PM</p>
               <p>Sat, 10AM - 2PM</p>
               <p>Sundays & Bank Holidays, Closed</p>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Middle Column */}
           <div className="lg:col-span-4 lg:col-start-9">
-            <div className="text-gray-400 text-sm space-y-2 mb-8">
+            <div className="text-[var(--text-400)] text-sm space-y-2 mb-8">
               <p>Based in Cambridge,</p>
               <p>Cambridgeshire, United Kingdom</p>
             </div>
@@ -36,23 +36,23 @@ export default function Footer() {
             </a>
 
             <div className="flex flex-wrap gap-6 text-sm">
-              <a href="mailto:isijolabukunmi@gmail.com" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Mail</a>
-              <a href="https://www.instagram.com/bukunmi.isijola/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Instagram</a>
-              <a href="https://www.behance.net/bukunmiisijola" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Behance</a>
-              <a href="https://www.linkedin.com/in/bukunmi-isijola-ux/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">LinkedIn</a>
-              <a href="https://x.com/IsijolaBukunmi/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">X</a>
+              <a href="mailto:isijolabukunmi@gmail.com" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Mail</a>
+              <a href="https://www.instagram.com/bukunmi.isijola/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Instagram</a>
+              <a href="https://www.behance.net/bukunmiisijola" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Behance</a>
+              <a href="https://www.linkedin.com/in/bukunmi-isijola-ux/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">LinkedIn</a>
+              <a href="https://x.com/IsijolaBukunmi/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">X</a>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-3 items-center text-sm text-gray-500 border-t border-gray-800 pt-8">
+        <div className="grid grid-cols-3 items-center text-sm text-[var(--text-500)] border-t border-[var(--border)] pt-8">
           <span>© {new Date().getFullYear()} Bukunmi Isijola. All Rights Reserved.</span>
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-gray-300 transition-colors text-center">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[var(--text-300)] transition-colors text-center">
             Back to top
           </button>
           <div className="flex justify-end">
-            <Link to="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link to="/privacy-policy" className="hover:text-[var(--text-300)] transition-colors">Privacy Policy</Link>
           </div>
         </div>
 

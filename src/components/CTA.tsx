@@ -17,12 +17,12 @@ interface CTAProps {
 export default function CTA({ onOpenContact }: CTAProps) {
   return (
     <motion.section
-      className="w-full py-24 px-7 md:px-10 border-t border-gray-800"
+      className="w-full py-24 px-7 md:px-10 border-t border-[var(--border)]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}
     >
-      <motion.p variants={fadeUp} custom={0} className="text-sm text-gray-400 mb-4">
+      <motion.p variants={fadeUp} custom={0} className="text-sm text-[var(--text-400)] mb-4">
         Ready to collaborate?
       </motion.p>
 
@@ -38,7 +38,7 @@ export default function CTA({ onOpenContact }: CTAProps) {
         variants={fadeUp}
         custom={2}
         onClick={onOpenContact}
-        className="flex items-center gap-2 bg-[#E4E3E0] text-[#141414] px-7 py-4 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors"
+        className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-7 py-4 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-colors"
       >
         <ArrowUpRight size={16} />
         Drop a message
