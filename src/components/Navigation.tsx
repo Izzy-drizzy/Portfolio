@@ -34,9 +34,10 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          {/* Theme toggle — hidden until light mode is ready */}
           <button
             onClick={toggle}
-            className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
+            className="hidden p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -67,14 +68,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
           <a href="/work" className="text-2xl font-normal">Work</a>
           <a href="/about" className="text-2xl font-normal">About</a>
           <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
-          <div className="flex items-center gap-3">
-            <button
-              onClick={toggle}
-              className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
-            >
-              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
-          </div>
+          {/* Theme toggle — hidden until light mode is ready */}
           <button
             onClick={() => {
               setIsOpen(false);
