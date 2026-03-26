@@ -8,7 +8,7 @@ import ContactModal from '../components/ContactModal';
 const expertise = [
   {
     title: 'Design',
-    icon: '✕',
+    icon: '/icons/design-white.svg',
     link: { label: 'View Behance', href: 'https://www.behance.net/bukunmiisijola' },
     body: [
       "Here's what separates me from other designers: I prototype in code, not just Figma. This means I'm thinking about API constraints, loading states, and mobile performance while designing, not after. My approach combines thorough user research with rapid prototyping, always keeping business goals in focus.",
@@ -17,7 +17,7 @@ const expertise = [
   },
   {
     title: 'Development',
-    icon: '<>',
+    icon: '/icons/code-white.svg',
     link: { label: 'View GitHub', href: 'https://github.com/Izzy-drizzy' },
     body: [
       "My development expertise is my competitive advantage. With front-end experience and a solid understanding of technical constraints, I create designs that developers can actually build efficiently. This technical perspective helps me make smarter design decisions early, reducing back-and-forth and ensuring pixel-perfect implementations.",
@@ -26,7 +26,7 @@ const expertise = [
   },
   {
     title: 'Founder',
-    icon: '✕',
+    icon: '/icons/pen-white.svg',
     link: { label: 'View Artbox', href: 'https://artbox-studio.com' },
     body: [
       "In November 2024, I launched Artbox Studio to stay sharp while seeking the right full-time UX role. Running my own consultancy has taught me project management, stakeholder communication, and the importance of delivering work that drives real business results, not just wins design awards.",
@@ -131,9 +131,9 @@ export default function About() {
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">
-                    {item.title}{' '}
-                    <span className="text-gray-600 font-normal text-sm">{item.icon}</span>
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
+                    {item.title}
+                    <img src={item.icon} alt="" className="opacity-50" style={{ width: '1.1em', height: '1.1em' }} />
                   </h2>
                 </div>
                 <a
