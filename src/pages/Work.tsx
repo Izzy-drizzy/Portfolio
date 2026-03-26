@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
@@ -158,6 +158,9 @@ function ImageMarquee({ images }: { images: string[] }) {
 
 export default function Work() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [ascending, setAscending] = useState(true);
+
+  const sortedProjects = ascending ? [...projects] : [...projects].reverse();
 
   return (
     <div className="min-h-screen bg-[#141414] text-[#E4E3E0] font-sans selection:bg-[#E4E3E0] selection:text-[#141414]">
@@ -166,20 +169,31 @@ export default function Work() {
       <main className="pt-28">
         {/* Page Header */}
         <motion.div
-          className="px-4 md:px-10 pb-12"
+          className="px-4 md:px-10 pb-12 flex items-end justify-between gap-4"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
         >
-          <p className="text-sm text-gray-500 mb-2">Work</p>
-          <h1 className="text-4xl md:text-6xl font-medium tracking-tight">
-            Index of Work<span className="text-[#F45D01]">.</span>
-          </h1>
+          <div>
+            <p className="text-sm text-gray-500 mb-2">Work</p>
+            <h1 className="text-4xl md:text-6xl font-medium tracking-tight">
+              Index of Work<span className="text-[#F45D01]">.</span>
+            </h1>
+          </div>
+
+          <button
+            onClick={() => setAscending((a) => !a)}
+            className="flex items-center gap-2 border border-gray-700 text-gray-400 hover:text-[#E4E3E0] hover:border-gray-500 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors flex-shrink-0 self-end mb-1"
+            title={ascending ? 'Sort descending' : 'Sort ascending'}
+          >
+            {ascending ? <ArrowUpNarrowWide size={15} /> : <ArrowDownNarrowWide size={15} />}
+            <span className="hidden sm:inline">{ascending ? '001 → 00' + projects.length : '00' + projects.length + ' → 001'}</span>
+          </button>
         </motion.div>
 
         {/* Project List */}
         <div className="px-4 md:px-10 py-10 flex flex-col gap-12">
-        {projects.map((project, i) => (
+        {sortedProjects.map((project, i) => (
           <motion.section
             key={project.number}
             className="rounded-xl border border-gray-800 bg-[#1A1A1A] overflow-hidden"
