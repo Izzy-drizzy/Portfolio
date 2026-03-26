@@ -91,7 +91,7 @@ export default function Stack() {
               />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-semibold text-sm text-[#E4E3E0]">{tool.name}</p>
+              <p className="font-medium text-sm text-[#E4E3E0]">{tool.name}</p>
               <p className="text-xs text-gray-400 mt-0.5">{tool.description}</p>
             </div>
             <ArrowUpRight size={16} className="text-gray-600 group-hover:text-[#E4E3E0] transition-colors flex-shrink-0" />
