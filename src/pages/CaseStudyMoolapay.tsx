@@ -79,7 +79,7 @@ export default function CaseStudyMoolapay() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="min-h-screen pt-28 pb-12 px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
+        <section className="min-h-screen pt-28 pb-12 px-7 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
           <motion.div className="lg:col-span-5 flex flex-col gap-8" initial="hidden" animate="visible"
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} custom={0} className="flex items-center gap-2 text-xs text-gray-500">
@@ -115,7 +115,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Summary stats ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
@@ -134,7 +134,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Problem Framing ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -192,7 +192,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Role & Team ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -217,6 +217,9 @@ export default function CaseStudyMoolapay() {
               <p className="text-sm text-gray-400 leading-relaxed mb-4">
                 I was brought in as a contract designer working directly with the Moolapay founder, product managers, and engineering team. I owned the full design process: user research, information architecture, interaction design, visual design, and the design system. The engagement ended after design deliverables were handed off to the development team.
               </p>
+              <p className="text-sm text-gray-500 leading-relaxed mt-3">
+                I used Claude to help synthesise community interview notes and brainstorm culturally-aware design patterns — particularly for trust signals and how to frame financial concepts for users with varying literacy levels.
+              </p>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Research was conducted through community interviews and observational studies with participants across Lagos,
                 Abuja, and Port Harcourt — grounding every design decision in real behaviour rather than assumptions.
@@ -226,7 +229,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Research & Strategy ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -415,8 +418,54 @@ export default function CaseStudyMoolapay() {
           </motion.div>
         </section>
 
+        {/* ── Process Artifacts ── */}
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
+            <motion.div variants={fadeUp} className="mb-12">
+              <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">Process</p>
+              <h2 className="text-2xl font-medium">The Messy Middle</h2>
+              <p className="text-sm text-gray-400 mt-3 max-w-2xl">User flows, journey maps, and wireframe sketches from before the hi-fi screens were made.</p>
+            </motion.div>
+
+            {/* User Flow & IA — full width */}
+            <motion.div variants={fadeUp} className="mb-3">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Flow & Information Architecture</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A] mb-12">
+              <ImageZoom src="/images/moolapay/process/user-flow-ia.png" alt="User flow and IA diagram" className="w-full object-cover" />
+              <p className="text-xs text-gray-600 px-4 py-2">User flow & IA — full app structure</p>
+            </motion.div>
+
+            {/* Journey Maps — 2 col */}
+            <motion.div variants={fadeUp} className="mb-3">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Journey Maps</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
+              {[
+                { src: '/images/moolapay/process/journey-fund-transfer.png', label: 'Journey map — Fund Transfer' },
+                { src: '/images/moolapay/process/journey-scan-to-pay.png', label: 'Journey map — Scan to Pay' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Wireframes — full width */}
+            <motion.div variants={fadeUp} className="mb-3">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Wireframes & IA Sketches</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+              <ImageZoom src="/images/moolapay/process/wireframes.png" alt="Messy wireframes and IA sketches" className="w-full object-cover" />
+              <p className="text-xs text-gray-600 px-4 py-2">Lo-fi wireframes & IA sketches</p>
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* ── Challenges ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp}>
@@ -467,7 +516,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Solution ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -559,7 +608,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Testing & Refinement ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -654,7 +703,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Image Gallery ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -692,7 +741,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Results ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -740,7 +789,7 @@ export default function CaseStudyMoolapay() {
         </section>
 
         {/* ── Next project CTA ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}>

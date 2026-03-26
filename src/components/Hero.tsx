@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenContact }: HeroProps) {
   return (
-    <section className="relative min-h-screen pt-28 pb-8 px-10 flex flex-col overflow-hidden">
+    <section className="relative min-h-screen pt-28 pb-8 px-7 md:px-10 flex flex-col overflow-hidden">
 
       {/* Grain overlay */}
       <div className="absolute inset-0 -top-[50%] -left-[50%] w-[200%] h-[200%] pointer-events-none z-0 opacity-[0.04]"
@@ -33,7 +33,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]"
           >
-            Product designer building <br></br> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products that drive measurable business impact
+            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products that drive measurable business impact
           </motion.h1>
 
           <motion.div

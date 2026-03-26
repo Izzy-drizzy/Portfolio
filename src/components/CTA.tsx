@@ -17,7 +17,7 @@ interface CTAProps {
 export default function CTA({ onOpenContact }: CTAProps) {
   return (
     <motion.section
-      className="w-full py-24 px-10 border-t border-gray-800"
+      className="w-full py-24 px-7 md:px-10 border-t border-gray-800"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}

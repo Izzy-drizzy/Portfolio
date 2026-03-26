@@ -3,7 +3,7 @@ import Clock from './Clock';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#141414] text-[#E4E3E0] pt-24 pb-12 px-10 mt-12 border-t border-gray-800">
+    <footer className="bg-[#141414] text-[#E4E3E0] pt-24 pb-12 px-7 md:px-10 mt-12 border-t border-gray-800">
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-24">
           

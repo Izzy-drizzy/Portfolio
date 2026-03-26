@@ -12,7 +12,7 @@ export default function LogoWall() {
   ];
 
   return (
-    <section className="py-24 px-10 max-w-7xl mx-auto border-t border-gray-800">
+    <section className="py-24 px-7 md:px-10 max-w-7xl mx-auto border-t border-gray-800">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-50">
         {logos.map((logo) => (
           <motion.div

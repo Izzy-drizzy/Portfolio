@@ -29,7 +29,7 @@ const finalDesigns = [
   { src: '/images/edusmart/final-9.png', label: 'Admin — Data Integration Status' },
 ];
 
-const tags = ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'];
+const tags = ['EdTech', 'AI-Powered', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -95,7 +95,7 @@ export default function CaseStudyEdusmart() {
 
       <main>
         {/* ── HERO ── */}
-        <section className="min-h-screen pt-28 pb-16 px-5 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <section className="min-h-screen pt-28 pb-16 px-4 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
           {/* Left — text */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28">
@@ -112,7 +112,7 @@ export default function CaseStudyEdusmart() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-gray-400 leading-relaxed mb-6">
-                Student analytics platform for 200+ universities across the UK and Canada. We ran assumption-testing workshops before building anything — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and protected £5M in contracts.
+                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and protected £5M in contracts.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-gray-500 mb-8">
@@ -142,7 +142,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── SUMMARY STATS ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
@@ -164,7 +164,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── PROBLEM FRAMING ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -214,7 +214,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── ROLE & TEAM ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -222,6 +222,9 @@ export default function CaseStudyEdusmart() {
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 Engaged as the sole UX/UI lead within a cross-functional Scrum team — working alongside a Project Manager and Business Analyst in 2-week sprints, with weekly reviews involving EduSmart's product and engineering stakeholders.
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed max-w-2xl mt-3">
+                I used Claude throughout the project as a thinking partner — synthesising interview notes into patterns, pressure-testing the assumption validation framework, and working through IA decisions before committing them to Figma. It helped me move faster without skipping the thinking.
               </p>
             </motion.div>
 
@@ -283,7 +286,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── RESEARCH APPROACH ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -384,7 +387,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── CHALLENGES ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -396,9 +399,9 @@ export default function CaseStudyEdusmart() {
               {[
                 {
                   n: '01',
-                  title: 'Convincing stakeholders to cut 66% of scope',
-                  challenge: 'After validation rejected 15/22 assumptions, I had to explain to the PM, BA, and client stakeholders why 38 features should go. The pushback: "But users mentioned these in interviews."',
-                  solution: 'Built a Feature Validation Matrix linking every feature to interview mentions and workshop validation. "At-risk student list" — mentioned by 5/5 faculty, validated: keep. "AI explainability dashboard" — mentioned once, not validated: cut. The data made the case. PM and BA aligned quickly; the client took two additional presentations but came around.',
+                  title: 'Reducing scope by 66% based on shared findings',
+                  challenge: 'When validation rejected 15/22 assumptions, the question became which 38 features to cut. The risk was that features mentioned in interviews would feel hard to remove, even when they failed structured validation.',
+                  solution: 'Built a Feature Validation Matrix that mapped every feature to its interview mentions and workshop outcome. Reviewed it with the PM, BA, and client as a team — they had all been in the workshops, so the data wasn\'t new to them. "At-risk student list": mentioned by 5/5 faculty, validated — keep. "AI explainability dashboard": mentioned once, not validated — cut. The shared context meant scope decisions came from the evidence, not from debate.',
                 },
                 {
                   n: '02',
@@ -435,8 +438,71 @@ export default function CaseStudyEdusmart() {
           </motion.div>
         </section>
 
+        {/* ── PROCESS ARTIFACTS ── */}
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
+            <motion.div variants={fadeUp} className="mb-12">
+              <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">Process</p>
+              <h2 className="text-2xl font-medium">The Messy Middle</h2>
+              <p className="text-sm text-gray-400 mt-3 max-w-2xl">User personas, journey maps, and lo-fi wireframes from before a single hi-fi screen was produced.</p>
+            </motion.div>
+
+            {/* User Personas — 2x2 grid */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Personas</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
+              {[
+                { src: '/images/edusmart/process/personas/persona-1.png', label: 'User persona 1' },
+                { src: '/images/edusmart/process/personas/persona-2.png', label: 'User persona 2' },
+                { src: '/images/edusmart/process/personas/persona-3.png', label: 'User persona 3' },
+                { src: '/images/edusmart/process/personas/persona-4.png', label: 'User persona 4' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Journey Maps — 2 col */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Journey Maps</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
+              {[
+                { src: '/images/edusmart/process/personas/journey-1.png', label: 'Journey map 1' },
+                { src: '/images/edusmart/process/personas/journey-2.png', label: 'Journey map 2' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Lo-fi Wireframes — 3 col */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {[
+                { src: '/images/edusmart/process/lofi/lofi-student.png', label: 'Student Dashboard — wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-instructor.png', label: 'Instructor Dashboard — wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-admin.png', label: 'Admin Dashboard — wireframe' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* ── SOLUTION ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -445,6 +511,32 @@ export default function CaseStudyEdusmart() {
               <p className="text-sm text-gray-400 leading-relaxed max-w-2xl">
                 Validation showed we had the primary user wrong. The redesign centred on one finding: retention value comes from faculty identifying and contacting struggling students early. Students checking their own dashboards didn't move the needle.
               </p>
+            </motion.div>
+
+            {/* AI Features callout */}
+            <motion.div variants={fadeUp} className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-6 mb-8">
+              <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">AI-Powered Features</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: 'At-Risk Classification',
+                    body: 'ML model continuously scores students based on grade trajectory, attendance patterns, and LMS engagement. Outputs a risk tier (High / Medium / Watch) surfaced directly to instructors — no manual triage.',
+                  },
+                  {
+                    title: 'Dashboard Insights',
+                    body: 'AI-generated cohort summaries give instructors a weekly digest: how many students declined, which courses are driving risk, and which outreach actions have already been taken.',
+                  },
+                  {
+                    title: 'Design challenge: AI trust',
+                    body: 'Non-technical faculty don\'t trust black-box scores. The core design decision was showing risk factors alongside the classification — not just a red label, but why a student is flagged, so instructors act with confidence rather than anxiety.',
+                  },
+                ].map((item, i) => (
+                  <div key={i}>
+                    <p className="text-sm font-medium text-gray-200 mb-2">{item.title}</p>
+                    <p className="text-xs text-gray-400 leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -458,8 +550,8 @@ export default function CaseStudyEdusmart() {
                 {
                   user: 'Instructors',
                   count: '8 features (primary focus)',
-                  screens: ['Dashboard: at-risk count (12), contacted this week (8), priority alerts', 'Colour-coded student list — red (High Risk), amber (Medium), blue (Watch)', 'Student detail view: risk factors, pre-written email template, Mark as Contacted'],
-                  decision: 'Colour-coded severity lets instructors triage 100+ students at a glance. Pre-written email templates lower the barrier to outreach and keep messaging consistent.',
+                  screens: ['Dashboard: AI-flagged at-risk count (12), contacted this week (8), priority alerts', 'AI-classified student list — red (High Risk), amber (Medium), blue (Watch) with visible risk factors', 'Student detail view: why they were flagged, pre-written email template, Mark as Contacted'],
+                  decision: 'Showing the AI\'s reasoning (not just the label) was the key trust decision. Instructors act on "missed 4 sessions + grade drop" — they don\'t act on a red dot alone. Pre-written email templates reduce the friction from seeing a flagged student to actually reaching out.',
                 },
                 {
                   user: 'Admins',
@@ -497,7 +589,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── FINAL DESIGNS ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
@@ -521,7 +613,7 @@ export default function CaseStudyEdusmart() {
         </section>
 
         {/* ── RESULTS ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
@@ -567,19 +659,11 @@ export default function CaseStudyEdusmart() {
               ))}
             </div>
 
-            {/* Quote */}
-            <motion.div variants={fadeUp}
-              className="rounded-xl border border-gray-800 bg-[#1A1A1A] p-6 md:p-8">
-              <p className="text-sm text-gray-300 italic mb-3 leading-relaxed">
-                "Finally, someone actually asked us what we need instead of assuming."
-              </p>
-              <p className="text-xs text-gray-600">— EduSmart client stakeholder, post-validation workshop</p>
-            </motion.div>
           </motion.div>
         </section>
 
         {/* ── NEXT CTA ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
             className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">

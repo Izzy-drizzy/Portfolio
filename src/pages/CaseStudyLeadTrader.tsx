@@ -78,7 +78,7 @@ export default function CaseStudyLeadTrader() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="min-h-screen pt-28 pb-12 px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
+        <section className="min-h-screen pt-28 pb-12 px-7 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
           <motion.div className="lg:col-span-5 flex flex-col gap-8" initial="hidden" animate="visible"
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} custom={0} className="flex items-center gap-2 text-xs text-gray-500">
@@ -114,7 +114,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Summary stats ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
@@ -133,7 +133,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Problem Framing ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -189,7 +189,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Role & Team ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -224,7 +224,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Research & Approach ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -308,7 +308,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Challenges ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp}>
@@ -333,7 +333,7 @@ export default function CaseStudyLeadTrader() {
                   num: '03',
                   title: 'Designing Without User Access',
                   problem: 'Hired for a demo, not ongoing work. No user research, no analytics, no support tickets to review, no testing participants. Every design decision had to be made without direct user input.',
-                  solution: 'Used proxy data: competitive analysis for user preferences, heuristic evaluation as a stand-in for usability testing, and trading app industry research. The limitation was stated clearly in the deliverable. Overclaiming would have been a worse outcome than being honest about it.',
+                  solution: 'Used proxy data: competitive analysis for user preferences, heuristic evaluation as a stand-in for usability testing, and trading app industry research. I also used Claude to rapidly synthesise patterns across 4 competitors and surface common friction points — compressing what would have been a full research phase into a structured brief I could design against. The limitation was stated clearly in the deliverable.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp}
@@ -359,7 +359,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Solution ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -471,7 +471,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Image Gallery ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -490,7 +490,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Results ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -559,7 +559,7 @@ export default function CaseStudyLeadTrader() {
         </section>
 
         {/* ── Next project CTA ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}>

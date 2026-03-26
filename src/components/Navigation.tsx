@@ -19,7 +19,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-10 py-4 bg-[#141414]/80 backdrop-blur-md text-[#E4E3E0] border-b border-gray-800/50">
+    <header className="fixed top-0 left-0 right-0 z-50 px-7 md:px-10 py-4 bg-[#141414]/80 backdrop-blur-md text-[#E4E3E0] border-b border-gray-800/50">
       <div className="flex items-center justify-between">
         <a href="/" className="transition-transform duration-300 hover:scale-105 inline-block">
           <img src="/logo.svg" alt="Logo" className="h-7 w-auto" />

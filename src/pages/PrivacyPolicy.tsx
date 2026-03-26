@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="min-h-screen bg-[#141414] text-[#E4E3E0]">
-      <div className="max-w-3xl mx-auto px-10 py-24">
+      <div className="max-w-3xl mx-auto px-7 md:px-10 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

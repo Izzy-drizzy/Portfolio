@@ -79,7 +79,7 @@ export default function About() {
     <div className="min-h-screen bg-[#141414] text-[#E4E3E0] font-sans selection:bg-[#E4E3E0] selection:text-[#141414]">
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
-      <main className="pt-28 px-10">
+      <main className="pt-28 px-7 md:px-10">
         {/* Page Header */}
         <motion.div
           className="pb-12"

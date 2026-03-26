@@ -166,7 +166,7 @@ export default function Work() {
       <main className="pt-28">
         {/* Page Header */}
         <motion.div
-          className="px-5 md:px-10 pb-12"
+          className="px-4 md:px-10 pb-12"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -178,7 +178,7 @@ export default function Work() {
         </motion.div>
 
         {/* Project List */}
-        <div className="px-5 md:px-10 py-10 flex flex-col gap-12">
+        <div className="px-4 md:px-10 py-10 flex flex-col gap-12">
         {projects.map((project, i) => (
           <motion.section
             key={project.number}

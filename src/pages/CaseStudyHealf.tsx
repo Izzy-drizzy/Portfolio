@@ -15,6 +15,13 @@ const images = [
   '/images/healf/slide-5.png',
 ];
 
+const finalDesigns = [
+  '/images/healf/final/final-1.jpg',
+  '/images/healf/final/final-2.jpg',
+  '/images/healf/final/final-3.jpg',
+  '/images/healf/final/final-4.jpg',
+];
+
 const tags = ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'];
 
 const fadeUp = {
@@ -80,7 +87,7 @@ export default function CaseStudyHealf() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="min-h-screen pt-28 pb-12 px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
+        <section className="min-h-screen pt-28 pb-12 px-7 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
           <motion.div className="lg:col-span-5 flex flex-col gap-8" initial="hidden" animate="visible"
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} custom={0} className="flex items-center gap-2 text-xs text-gray-500">
@@ -116,7 +123,7 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Summary stats ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
@@ -135,7 +142,7 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Problem Framing ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -191,8 +198,36 @@ export default function CaseStudyHealf() {
           </motion.div>
         </section>
 
+        {/* ── Original State ── */}
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
+            <motion.div variants={fadeUp} className="mb-8">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Original State</p>
+              <h2 className="text-2xl font-medium">The existing flow — annotated</h2>
+              <p className="text-sm text-gray-400 mt-3 max-w-2xl">
+                Screenshots of the original Healf onboarding in sequence, with friction points marked. These are the screens the redesign was responding to.
+              </p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+              {[
+                { src: '/images/healf/before/before-1.png', label: 'Step 1' },
+                { src: '/images/healf/before/before-2.png', label: 'Step 2' },
+                { src: '/images/healf/before/before-3.png', label: 'Step 3' },
+                { src: '/images/healf/before/before-4.png', label: 'Step 4' },
+                { src: '/images/healf/before/before-5.png', label: 'Step 5' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={`Original Healf screen — ${img.label}`} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-3 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* ── Role & Team ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -221,12 +256,15 @@ export default function CaseStudyHealf() {
                 Scope was intentionally limited to the onboarding flow (4 screens). A focused, well-reasoned proposal is more valuable
                 than a surface-level full-app redesign.
               </p>
+              <p className="text-sm text-gray-500 leading-relaxed mt-3">
+                I used Claude to structure the competitor analysis and pressure-test the onboarding flow logic — particularly the sequencing of personalisation questions and where to introduce the value proposition.
+              </p>
             </motion.div>
           </motion.div>
         </section>
 
         {/* ── Research & Approach ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -396,7 +434,7 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Solution ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -488,26 +526,18 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Image Gallery ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Screens</SectionLabel>
               <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              {images.slice(0, 2).map((src, i) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {finalDesigns.map((src, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i}
-                  className="rounded-xl overflow-hidden bg-[#1A1A1A] border border-gray-800 aspect-[4/3]">
-                  <ImageZoom src={src} alt={`Healf onboarding screen ${i + 1}`} className="w-full h-full object-cover" />
-                </motion.div>
-              ))}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {images.slice(2).map((src, i) => (
-                <motion.div key={i + 2} variants={fadeUp} custom={i + 2}
-                  className="rounded-xl overflow-hidden bg-[#1A1A1A] border border-gray-800 aspect-[4/3]">
-                  <ImageZoom src={src} alt={`Healf onboarding screen ${i + 3}`} className="w-full h-full object-cover" />
+                  className="rounded-xl overflow-hidden bg-[#1A1A1A] border border-gray-800">
+                  <ImageZoom src={src} alt={`Healf final design ${i + 1}`} className="w-full h-full object-cover" />
                 </motion.div>
               ))}
             </div>
@@ -515,7 +545,7 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Expected Impact ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
@@ -586,7 +616,7 @@ export default function CaseStudyHealf() {
         </section>
 
         {/* ── Next project CTA ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}>

@@ -107,7 +107,7 @@ export default function CaseStudyHobpay() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="min-h-screen pt-28 pb-12 px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
+        <section className="min-h-screen pt-28 pb-12 px-7 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center overflow-hidden">
           <motion.div
             className="lg:col-span-5 flex flex-col gap-8"
             initial="hidden"
@@ -153,7 +153,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Summary stats ── */}
-        <section className="px-5 md:px-10 py-16 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-16 border-t border-gray-800">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-6"
             initial="hidden"
@@ -176,7 +176,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Problem Framing ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden"
@@ -238,7 +238,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Role & Team ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-12 gap-12"
             initial="hidden"
@@ -265,12 +265,15 @@ export default function CaseStudyHobpay() {
               <p className="text-sm text-gray-400 leading-relaxed">
                 Solo designer working directly with the product manager and engineering team. My dual design-development perspective allowed me to design within technical constraints — understanding API limitations and mobile network realities in Nigeria informed decisions early, avoiding typical designer-developer back-and-forth.
               </p>
+              <p className="text-sm text-gray-500 leading-relaxed mt-3">
+                I used Claude as a thinking partner through the research phase — working through how to structure findings from the multi-platform audit and stress-testing the IA before committing to a direction in Figma.
+              </p>
             </motion.div>
           </motion.div>
         </section>
 
         {/* ── Research & Approach ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -461,8 +464,74 @@ export default function CaseStudyHobpay() {
           </motion.div>
         </section>
 
+        {/* ── Process Artifacts ── */}
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
+            <motion.div variants={fadeUp} className="mb-12">
+              <SectionLabel>Process</SectionLabel>
+              <h2 className="text-2xl font-medium">The Messy Middle</h2>
+              <p className="text-sm text-gray-400 mt-3 max-w-2xl">Research synthesis, wireframes, and persona work done before a single hi-fi screen was made.</p>
+            </motion.div>
+
+            {/* Research Insights */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Research Insights</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-12">
+              {[
+                { src: '/images/hobpay/process/research/research-1.png', label: 'Synthesis board' },
+                { src: '/images/hobpay/process/research/research-2.png', label: 'Key findings' },
+                { src: '/images/hobpay/process/research/research-3.png', label: 'Insight mapping' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* User Personas & Journey Maps */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">User Personas & Journey Maps</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
+              {[
+                { src: '/images/hobpay/process/personas/persona-1.png', label: 'User persona — primary' },
+                { src: '/images/hobpay/process/personas/persona-2.png', label: 'User persona — secondary' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
+                  <p className="text-xs text-gray-600 px-4 py-2">{img.label}</p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Lo-fi Wireframes */}
+            <motion.div variants={fadeUp} className="mb-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                '/images/hobpay/process/lofi/lofi-1.png',
+                '/images/hobpay/process/lofi/lofi-2.png',
+                '/images/hobpay/process/lofi/lofi-3.png',
+                '/images/hobpay/process/lofi/lofi-4.png',
+                '/images/hobpay/process/lofi/lofi-5.png',
+                '/images/hobpay/process/lofi/lofi-6.png',
+                '/images/hobpay/process/lofi/lofi-7.png',
+                '/images/hobpay/process/lofi/lofi-8.png',
+              ].map((src, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-gray-800 bg-[#1A1A1A]">
+                  <ImageZoom src={src} alt={`Wireframe ${i + 1}`} className="w-full object-cover" />
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* ── Challenges ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -516,7 +585,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Solution ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -596,7 +665,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Image Gallery ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -618,7 +687,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Results ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -722,7 +791,7 @@ export default function CaseStudyHobpay() {
         </section>
 
         {/* ── Next project CTA ── */}
-        <section className="px-5 md:px-10 py-20 border-t border-gray-800">
+        <section className="px-4 md:px-10 py-20 border-t border-gray-800">
           <motion.div
             className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
             initial="hidden"
