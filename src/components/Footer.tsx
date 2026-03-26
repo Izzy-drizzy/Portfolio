@@ -36,11 +36,11 @@ export default function Footer() {
             </a>
 
             <div className="flex flex-wrap gap-6 text-sm">
-              <a href="mailto:hello@bukunmiisijola.com" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Mail</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Instagram</a>
-              <a href="https://behance.net" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Behance</a>
-              <a href="https://linkedin.com/in/bukunmiisijola" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">LinkedIn</a>
-              <a href="https://x.com/bukunmiisijola" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">X</a>
+              <a href="mailto:isijolabukunmi@gmail.com" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Mail</a>
+              <a href="https://www.instagram.com/bukunmi.isijola/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Instagram</a>
+              <a href="https://www.behance.net/bukunmiisijola" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">Behance</a>
+              <a href="https://www.linkedin.com/in/bukunmi-isijola-ux/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">LinkedIn</a>
+              <a href="https://x.com/IsijolaBukunmi/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#E4E3E0] transition-colors">X</a>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ const expertise = [
   {
     title: 'Design',
     icon: '✕',
-    link: { label: 'View Behance', href: 'https://behance.net' },
+    link: { label: 'View Behance', href: 'https://www.behance.net/bukunmiisijola' },
     body: [
       "Here's what separates me from other designers: I prototype in code, not just Figma. This means I'm thinking about API constraints, loading states, and mobile performance while designing, not after. My approach combines thorough user research with rapid prototyping, always keeping business goals in focus.",
       "I've specialized in fintech and SaaS products, where complex information needs to be digestible and trustworthy. Recent work includes transforming an investment platform with 30% satisfaction improvements and redesigning trading applications for both novice and expert users. What excites me most is turning complex problems into simple, elegant solutions that users intuitively understand.",
@@ -18,7 +18,7 @@ const expertise = [
   {
     title: 'Development',
     icon: '<>',
-    link: { label: 'View GitHub', href: 'https://github.com' },
+    link: { label: 'View GitHub', href: 'https://github.com/Izzy-drizzy' },
     body: [
       "My development expertise is my competitive advantage. With front-end experience and a solid understanding of technical constraints, I create designs that developers can actually build efficiently. This technical perspective helps me make smarter design decisions early, reducing back-and-forth and ensuring pixel-perfect implementations.",
       "I've built responsive web applications, contributed to complex API integration, and optimised user interfaces for performance. This dual expertise means I can prototype functional solutions, not just pretty mockups. When I hand off designs, developers don't come back with 'this is impossible' — they come back with shipping dates.",
