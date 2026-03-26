@@ -27,7 +27,7 @@ const expertise = [
   {
     title: 'Founder',
     icon: '✕',
-    link: { label: 'View Artbox', href: 'https://artbox.studio' },
+    link: { label: 'View Artbox', href: 'https://artbox-studio.com' },
     body: [
       "In November 2024, I launched Artbox Studio to stay sharp while seeking the right full-time UX role. Running my own consultancy has taught me project management, stakeholder communication, and the importance of delivering work that drives real business results, not just wins design awards.",
       "While I've enjoyed the entrepreneurial experience, I'm specifically looking for a UX role at an established company where I can focus on product work, collaborate with strong teams, and contribute to meaningful growth.",
