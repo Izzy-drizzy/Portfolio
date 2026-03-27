@@ -87,7 +87,7 @@ export default function CaseStudyMoolapay() {
               <span>/</span>
               <span className="text-[var(--text-300)]">Moolapay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">

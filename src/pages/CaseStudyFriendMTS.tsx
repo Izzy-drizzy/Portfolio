@@ -32,7 +32,7 @@ export default function CaseStudyFriendMTS() {
               <span>/</span>
               <span className="text-gray-300">FriendMTS</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
               Building a dynamic digital identity for a global <span className="text-[#F45D01]">anti-piracy</span> technology leader
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">

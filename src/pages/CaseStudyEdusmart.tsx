@@ -107,7 +107,7 @@ export default function CaseStudyEdusmart() {
                 <span>EduSmart Analytics</span>
               </motion.div>
 
-              <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight mb-6">
+              <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-6">
                 Preventing £5M revenue loss through stakeholder validation
               </motion.h1>
 

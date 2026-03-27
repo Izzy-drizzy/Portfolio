@@ -119,7 +119,7 @@ export default function CaseStudyHobpay() {
               <span>/</span>
               <span className="text-[var(--text-300)]">Hobpay</span>
             </motion.div>
-            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-medium tracking-tight leading-[1.15]">
+            <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
               Cross-platform fintech redesign recovering 28% of blocked users
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
