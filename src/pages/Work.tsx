@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide } from 'lucide-react';
+import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
@@ -91,6 +91,7 @@ const projects = [
     description:
       'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
     collaboration: null,
+    locked: true,
     href: '/work/healf-zone-2',
     images: [
       '/images/healf-zone2/slides/slide-1.png',
@@ -254,15 +255,27 @@ export default function Work() {
               </motion.div>
 
               {/* View Case Study */}
-              <motion.a
-                href={project.href}
-                variants={fadeUp}
-                custom={1}
-                className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
-              >
-                <ArrowRight size={15} />
-                View Case Study
-              </motion.a>
+              {project.locked ? (
+                <motion.div
+                  variants={fadeUp}
+                  custom={1}
+                  className="flex items-center gap-2 border border-[var(--border-md)] text-[var(--text-500)] px-5 py-2.5 rounded-lg text-sm self-start flex-shrink-0 md:mt-1 cursor-default select-none"
+                  title="Access restricted — available via direct link"
+                >
+                  <Lock size={13} />
+                  Private
+                </motion.div>
+              ) : (
+                <motion.a
+                  href={project.href}
+                  variants={fadeUp}
+                  custom={1}
+                  className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
+                >
+                  <ArrowRight size={15} />
+                  View Case Study
+                </motion.a>
+              )}
             </div>
 
             {/* Images — full-width slider on mobile, marquee on desktop */}
