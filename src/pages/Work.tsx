@@ -68,6 +68,20 @@ const projects = [
   },
   {
     number: '005',
+    title: 'Healf Zone 2.0',
+    tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
+    description:
+      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. Evolved Healf Zone from a twice-yearly blood testing service into an ongoing intelligence companion — solving the 363-day engagement gap, integrating commerce without the sales-funnel feel, and mapping a clear path from £100M retailer to £1Bn health platform.',
+    collaboration: null,
+    href: '/work/healf-zone-2',
+    images: [
+      '/images/healf/slide-1.png',
+      '/images/healf/slide-2.png',
+      '/images/healf/slide-3.png',
+    ],
+  },
+  {
+    number: '006',
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
