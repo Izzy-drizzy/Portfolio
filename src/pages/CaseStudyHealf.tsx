@@ -96,10 +96,10 @@ export default function CaseStudyHealf() {
               <span className="text-[var(--text-300)]">Healf App Onboarding</span>
             </motion.div>
             <motion.h1 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]">
-              Redesigning onboarding to connect users to the right wellness content faster
+              Making Healf's onboarding as intentional as the ecosystem behind it
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              Healf had a content discovery problem buried inside an onboarding problem. Users couldn't find relevant products, so they left. This was an unsolicited audit — I mapped the friction, redesigned the first-run experience, and validated the direction through testing.
+              Healf's mobile app onboarding wasn't doing justice to the full ecosystem behind it. This was an unsolicited audit — I redesigned the first-run experience to be more intentional, ensuring it communicated the breadth and value of everything Healf offers from the very first interaction.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>2025</span>
@@ -128,10 +128,10 @@ export default function CaseStudyHealf() {
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
-              { stat: '+40%', label: 'Projected signup conversion' },
-              { stat: '80%+', label: 'Healf Zone awareness at launch' },
-              { stat: '35%', label: 'Higher engagement (projected)' },
-              { stat: '25%', label: 'Retention lift (projected)' },
+              { stat: '4 screens', label: 'Redesigned first-run flow — from zero to full ecosystem introduction' },
+              { stat: '0 → 1', label: 'Dedicated Healf Zone introduction screen added to onboarding' },
+              { stat: '4 pillars', label: 'Personalisation captured upfront using Healf\'s own EAT, MOVE, MIND, SLEEP framework' },
+              { stat: 'Last', label: 'Where account creation now sits — after value is shown, not before' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
@@ -152,21 +152,21 @@ export default function CaseStudyHealf() {
             </motion.div>
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
-                Healf's wellness platform covers supplements, personalised insights, and Healf Zone blood testing. But their minimal
-                onboarding left new users with no idea what made them different. When I downloaded the app to explore it, I found three gaps
-                that were likely costing them conversions and feature adoption.
+                Healf's wellness platform covers supplements, personalised insights, and Healf Zone blood testing. When I downloaded the app,
+                the home page was visually strong — but there was no guided first-run experience to frame what I was looking at. Users arrived
+                at a well-designed product without any intentional introduction to the ecosystem behind it.
               </p>
               <div className="space-y-6">
                 {[
                   {
                     num: '01',
-                    title: 'Minimal Value Communication',
-                    body: 'Users open the app with no context about what Healf actually does. The three-part offering — Supplements, Insights, and Guidance via Healf Zone — isn\'t explained anywhere in the current flow. Someone arriving from an ad has no idea what they just signed up for.',
+                    title: 'Unguided First Impression',
+                    body: 'Users were dropped straight into the home page — products on display, visuals well put together — but with no guided introduction to frame what they were looking at. The breadth of Healf\'s ecosystem (Supplements, Insights, Healf Zone) was all there, just with no intentional first-run experience to connect it for the user.',
                   },
                   {
                     num: '02',
                     title: 'Healf Zone Buried',
-                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £150+ product that needs context to make sense.',
+                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £189/year product that needs context to make sense.',
                   },
                   {
                     num: '03',
@@ -185,12 +185,12 @@ export default function CaseStudyHealf() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { val: '40–50%', label: 'Estimated signup completion (minimal flow)' },
-                  { val: '~10%', label: 'Users discovering Healf Zone via exploration' },
+                  { val: '0 screens', label: 'Dedicated to introducing Healf\'s ecosystem before the user reaches the home page' },
+                  { val: 'Post-signup', label: 'When Healf Zone first becomes visible — with no framing or explanation at first launch' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
-                    <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
-                    <p className="text-xs text-[var(--text-500)]">{m.label}</p>
+                    <p className="text-2xl font-medium text-white mb-2">{m.val}</p>
+                    <p className="text-xs text-[var(--text-500)] leading-relaxed">{m.label}</p>
                   </div>
                 ))}
               </div>
@@ -248,16 +248,14 @@ export default function CaseStudyHealf() {
                 ))}
               </div>
               <p className="text-sm text-[var(--text-400)] leading-relaxed mb-4">
-                This was an unsolicited audit and redesign — I wasn't hired by Healf. I downloaded the app, found a product with real
-                potential being undermined by its own onboarding, and worked out what I'd fix and why. The goal was to identify the
-                business problem through a UX lens, not just to make screens look different.
+                I'd been following Healf for a while before this — genuinely. I use their supplements personally and have a lot of
+                respect for what they're building. So when I noticed the gap between how strong the product is and how the app's
+                first-run experience represented it, I couldn't not do something about it. This wasn't a cold audit of a random app;
+                it was an attempt to solve a real problem in a product I actually care about.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
                 Scope was intentionally limited to the onboarding flow (4 screens). A focused, well-reasoned proposal is more valuable
                 than a surface-level full-app redesign.
-              </p>
-              <p className="text-sm text-[var(--text-500)] leading-relaxed mt-3">
-                I used Claude to structure the competitor analysis and pressure-test the onboarding flow logic — particularly the sequencing of personalisation questions and where to introduce the value proposition.
               </p>
             </motion.div>
           </motion.div>
@@ -344,9 +342,9 @@ export default function CaseStudyHealf() {
                   <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Healf's Approach</p>
                   <ul className="space-y-2">
                     {[
-                      'Minimal onboarding — likely just logo and "Get Started"',
-                      'Immediate account creation before any value is shown',
-                      'Healf Zone not mentioned — must be discovered through exploration',
+                      'Users land directly on the home page — no guided first-run introduction',
+                      'Ecosystem context left to the user to piece together through exploration',
+                      'Healf Zone present in the app but not surfaced or explained during first launch',
                       'No personalisation or goal capture at any point',
                     ].map((t, i) => (
                       <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
@@ -361,9 +359,9 @@ export default function CaseStudyHealf() {
               <div className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-5">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Insight</p>
                 <p className="text-sm text-[var(--text-300)] leading-relaxed">
-                  Healf has a strong product that competitors can't match, including a £150+ blood testing service most wellness apps
-                  don't offer. None of it is communicated at first launch. Every competing wellness app shows more value upfront than
-                  Healf currently does.
+                  Healf has a strong product that competitors can't match, including a £189/year blood testing service most wellness apps
+                  don't offer. The product was all there on first launch — but without an intentional first-run experience, users had
+                  no guidance to help them understand the full picture of what they'd just signed up for.
                 </p>
               </div>
             </motion.div>
@@ -392,7 +390,7 @@ export default function CaseStudyHealf() {
                   {[
                     'Progressive onboarding increases signup completion by 20–40% vs minimal flows',
                     'Wellness apps with personalised onboarding see 35% higher engagement and 25% higher retention',
-                    'Healf Zone\'s premium positioning (£150+) requires trust-building that minimal onboarding cannot provide',
+                    'Healf Zone\'s premium positioning (£189/year) requires trust-building that minimal onboarding cannot provide',
                     'Users who understand key features during onboarding use them 3× more than those who discover them later',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
@@ -415,7 +413,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '02',
                   title: 'Strategic Feature Positioning',
-                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £150+. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
+                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £189/year. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
                 },
                 {
                   num: '03',
@@ -505,7 +503,7 @@ export default function CaseStudyHealf() {
                 },
                 {
                   question: 'Why a dedicated Healf Zone screen?',
-                  answer: 'At-home blood testing isn\'t intuitive and costs £150+. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them — screen real estate signals value.',
+                  answer: 'At-home blood testing isn\'t intuitive and costs £189/year. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them — screen real estate signals value.',
                 },
                 {
                   question: 'Why move account creation to the end?',
@@ -550,45 +548,43 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Expected Impact</SectionLabel>
-              <h2 className="text-2xl font-medium mb-2">Projected Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-2">What This Redesign Is Built to Move</h2>
               <p className="text-sm text-[var(--text-500)] leading-relaxed max-w-xl mb-8">
-                Since this is an unsolicited redesign, outcomes are projected based on industry benchmarks from Appcues research and
-                wellness app onboarding studies.
+                Without access to Healf's internal data, specific numbers aren't something I can honestly claim. Instead — here's the
+                reasoning behind each design decision and what it's intended to improve.
               </p>
             </motion.div>
 
-            {/* Projected metrics chart */}
-            <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 mb-8 space-y-5">
-              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Current Estimate → Projected</p>
+            {/* Design intentions */}
+            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {[
-                { label: 'Signup Completion', before: 47, after: 70, beforeVal: '~45%', afterVal: '60–70%', delta: '+20–40%' },
-                { label: 'Healf Zone Awareness', before: 12, after: 85, beforeVal: '~10–15%', afterVal: '80%+', delta: '~7× lift' },
-                { label: 'Day-7 Retention', before: 55, after: 75, beforeVal: 'Baseline', afterVal: '+25%', delta: '+25%' },
-                { label: 'Product Engagement', before: 50, after: 75, beforeVal: 'Baseline', afterVal: '+35%', delta: '+35%' },
-              ].map((m) => (
-                <div key={m.label} className="space-y-1.5">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-[var(--text-400)]">{m.label}</span>
-                    <span className="text-[#F45D01] font-mono font-semibold">{m.delta}</span>
-                  </div>
-                  <div className="relative h-7 rounded-md bg-[var(--bg)] overflow-hidden">
-                    <div className="absolute inset-y-0 left-0 bg-gray-700/60 rounded-md flex items-center pl-2"
-                      style={{ width: `${m.before}%` }}>
-                      <span className="text-[10px] text-[var(--text-400)]">{m.beforeVal}</span>
-                    </div>
-                  </div>
-                  <div className="relative h-7 rounded-md bg-[var(--bg)] overflow-hidden">
-                    <div className="absolute inset-y-0 left-0 bg-[#F45D01]/70 rounded-md flex items-center pl-2 transition-all duration-700"
-                      style={{ width: `${m.after}%` }}>
-                      <span className="text-[10px] text-white font-medium">{m.afterVal}</span>
-                    </div>
-                  </div>
+                {
+                  num: '01',
+                  title: 'Signup completion',
+                  body: 'Moving account creation to the end — after value is shown and goals are captured — removes the ask-before-give drop-off point. Users arrive at signup with a reason to complete it: their personalisation needs to be saved.',
+                },
+                {
+                  num: '02',
+                  title: 'Healf Zone awareness',
+                  body: 'A dedicated onboarding screen guarantees every new user sees what Healf Zone is and why it matters. Currently it surfaces only through exploration — which most users won\'t do without prior context for a £189/year product.',
+                },
+                {
+                  num: '03',
+                  title: 'Day-7 retention',
+                  body: 'Personalisation captured at onboarding means the home screen feels relevant from session one. Users who arrive with their goals already set have more reason to return than those starting cold.',
+                },
+                {
+                  num: '04',
+                  title: 'Feature engagement',
+                  body: 'Users introduced to a feature during onboarding engage with it more than those who discover it later — the introduction creates intent. Without it, Healf Zone and Insights remain features users stumble across rather than seek out.',
+                },
+              ].map((item, i) => (
+                <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+                  <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">{item.num}</p>
+                  <p className="text-base font-medium text-[var(--text)] mb-2">{item.title}</p>
+                  <p className="text-sm text-[var(--text-400)] leading-relaxed">{item.body}</p>
                 </div>
               ))}
-              <div className="flex items-center gap-6 pt-2">
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-gray-700/60 inline-block" /><span className="text-xs text-[var(--text-500)]">Current estimate</span></div>
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-[#F45D01]/70 inline-block" /><span className="text-xs text-[var(--text-500)]">Projected</span></div>
-              </div>
             </motion.div>
 
             {/* Validation plan */}
