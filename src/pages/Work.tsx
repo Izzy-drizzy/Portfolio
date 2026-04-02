@@ -68,20 +68,6 @@ const projects = [
   },
   {
     number: '005',
-    title: 'Healf Zone 2.0',
-    tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
-    description:
-      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. Evolved Healf Zone from a twice-yearly blood testing service into an ongoing intelligence companion — solving the 363-day engagement gap, integrating commerce without the sales-funnel feel, and mapping a clear path from £100M retailer to £1Bn health platform.',
-    collaboration: null,
-    href: '/work/healf-zone-2',
-    images: [
-      '/images/healf/slide-1.png',
-      '/images/healf/slide-2.png',
-      '/images/healf/slide-3.png',
-    ],
-  },
-  {
-    number: '006',
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
@@ -96,6 +82,23 @@ const projects = [
       '/images/edusmart/slide-5.png',
       '/images/edusmart/slide-6.png',
       '/images/edusmart/slide-7.png',
+    ],
+  },
+  {
+    number: '006',
+    title: 'Healf Zone 2.0',
+    tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
+    description:
+      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
+    collaboration: null,
+    href: '/work/healf-zone-2',
+    images: [
+      '/images/healf-zone2/slides/slide-1.png',
+      '/images/healf-zone2/slides/slide-2.png',
+      '/images/healf-zone2/slides/slide-3.png',
+      '/images/healf-zone2/slides/slide-4.png',
+      '/images/healf-zone2/slides/slide-5.png',
+      '/images/healf-zone2/slides/slide-6.png',
     ],
   },
 ];
@@ -197,7 +200,7 @@ export default function Work() {
 
           <button
             onClick={() => setAscending((a) => !a)}
-            className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors flex-shrink-0 self-end mb-1"
+            className="flex items-center gap-2 border border-[var(--border-md)] text-[var(--text-400)] px-5 py-2.5 rounded-lg text-sm font-medium hover:text-[var(--text)] hover:border-[var(--text-400)] transition-colors flex-shrink-0 self-end mb-1"
             title={ascending ? 'Sort descending' : 'Sort ascending'}
           >
             {ascending ? <ArrowUpNarrowWide size={15} /> : <ArrowDownNarrowWide size={15} />}
