@@ -166,7 +166,7 @@ export default function CaseStudyHealf() {
                   {
                     num: '02',
                     title: 'Healf Zone Buried',
-                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £189/year product that needs context to make sense.',
+                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £289/year product that needs context to make sense.',
                   },
                   {
                     num: '03',
@@ -359,7 +359,7 @@ export default function CaseStudyHealf() {
               <div className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-5">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Insight</p>
                 <p className="text-sm text-[var(--text-300)] leading-relaxed">
-                  Healf has a strong product that competitors can't match, including a £189/year blood testing service most wellness apps
+                  Healf has a strong product that competitors can't match, including a £289/year blood testing service most wellness apps
                   don't offer. The product was all there on first launch — but without an intentional first-run experience, users had
                   no guidance to help them understand the full picture of what they'd just signed up for.
                 </p>
@@ -390,7 +390,7 @@ export default function CaseStudyHealf() {
                   {[
                     'Progressive onboarding increases signup completion by 20–40% vs minimal flows',
                     'Wellness apps with personalised onboarding see 35% higher engagement and 25% higher retention',
-                    'Healf Zone\'s premium positioning (£189/year) requires trust-building that minimal onboarding cannot provide',
+                    'Healf Zone\'s premium positioning (£289/year) requires trust-building that minimal onboarding cannot provide',
                     'Users who understand key features during onboarding use them 3× more than those who discover them later',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
@@ -413,7 +413,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '02',
                   title: 'Strategic Feature Positioning',
-                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £189/year. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
+                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £289/year. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
                 },
                 {
                   num: '03',
@@ -503,7 +503,7 @@ export default function CaseStudyHealf() {
                 },
                 {
                   question: 'Why a dedicated Healf Zone screen?',
-                  answer: 'At-home blood testing isn\'t intuitive and costs £189/year. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them — screen real estate signals value.',
+                  answer: 'At-home blood testing isn\'t intuitive and costs £289/year. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them — screen real estate signals value.',
                 },
                 {
                   question: 'Why move account creation to the end?',
@@ -566,7 +566,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '02',
                   title: 'Healf Zone awareness',
-                  body: 'A dedicated onboarding screen guarantees every new user sees what Healf Zone is and why it matters. Currently it surfaces only through exploration — which most users won\'t do without prior context for a £189/year product.',
+                  body: 'A dedicated onboarding screen guarantees every new user sees what Healf Zone is and why it matters. Currently it surfaces only through exploration — which most users won\'t do without prior context for a £289/year product.',
                 },
                 {
                   num: '03',
