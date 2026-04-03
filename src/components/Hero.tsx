@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
-              I design product experiences mostly in fintech, health tech, and EdTech. The brief is usually clear. The actual problem usually isn't. I spend a lot of time in that gap.
+              I design product experiences mostly in fintech, health tech, and EdTech. The brief is usually clear. The actual problem usually isn't. I spend a lot of time in that gap — that's where the real work happens.
             </p>
 
             <div className="flex flex-wrap gap-3">

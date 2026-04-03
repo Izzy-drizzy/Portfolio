@@ -16,6 +16,12 @@ const images = [
   '/images/hobpay/slide-6.png',
 ];
 
+const keyScreens = [
+  '/images/hobpay/case-study/key-screen-1.png',
+  '/images/hobpay/case-study/key-screen-2.png',
+  '/images/hobpay/case-study/key-screen-3.png',
+];
+
 const tags = ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'];
 
 const fadeUp = {
@@ -511,16 +517,12 @@ export default function CaseStudyHobpay() {
             <motion.div variants={fadeUp} className="mb-4">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
             </motion.div>
-            <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-3">
               {[
                 '/images/hobpay/process/lofi/lofi-1.png',
                 '/images/hobpay/process/lofi/lofi-2.png',
                 '/images/hobpay/process/lofi/lofi-3.png',
                 '/images/hobpay/process/lofi/lofi-4.png',
-                '/images/hobpay/process/lofi/lofi-5.png',
-                '/images/hobpay/process/lofi/lofi-6.png',
-                '/images/hobpay/process/lofi/lofi-7.png',
-                '/images/hobpay/process/lofi/lofi-8.png',
               ].map((src, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={src} alt={`Wireframe ${i + 1}`} className="w-full object-cover" />
@@ -548,7 +550,7 @@ export default function CaseStudyHobpay() {
                   num: '01',
                   title: 'Balancing Feature Accessibility with Simplification',
                   problem: 'Hobpay had investments (Rintegra), bill payments, insurance, and loans (Careplan). Hiding too much killed discovery. Showing everything caused the original overload.',
-                  solution: 'Built a "Quick Actions" strip for frequent tasks and a "Services" section sorted by user goals, not internal names. Details expand when someone actually needs them.',
+                  solution: 'Built a "Quick Actions" strip for frequent tasks and a "Services" section that kept the internal product names but paired each with clear descriptions — so users understood what they were looking at without needing to already know. Details expand when someone actually needs them.',
                 },
                 {
                   num: '02',
@@ -676,10 +678,10 @@ export default function CaseStudyHobpay() {
               <SectionLabel>Screens</SectionLabel>
               <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {images.map((src, i) => (
-                <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] aspect-[4/3]">
-                  <ImageZoom src={src} alt={`Hobpay screen ${i + 1}`} className="w-full h-full object-cover" />
+            <div className="grid grid-cols-1 gap-4">
+              {keyScreens.map((src, i) => (
+                <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)]">
+                  <ImageZoom src={src} alt={`Hobpay screen ${i + 1}`} className="w-full h-auto object-contain" />
                 </motion.div>
               ))}
             </div>
@@ -751,20 +753,6 @@ export default function CaseStudyHobpay() {
                 </motion.div>
               ))}
             </div>
-
-            {/* User quotes */}
-            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-              {[
-                '"I can finally use Hobpay on my iPhone! The web version is actually better than the old Android app."',
-                '"It\'s so much clearer now. I found the loan service (Careplan) immediately instead of searching through menus."',
-                '"Bill payments are way faster. I use Hobpay way more now for electricity and cable."',
-              ].map((quote, i) => (
-                <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
-                  <p className="text-sm text-[var(--text-300)] leading-relaxed italic">{quote}</p>
-                  <p className="text-xs text-[var(--text-600)] mt-4">— Hobpay user, post-launch feedback</p>
-                </div>
-              ))}
-            </motion.div>
 
             {/* Long-term impact */}
             <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
