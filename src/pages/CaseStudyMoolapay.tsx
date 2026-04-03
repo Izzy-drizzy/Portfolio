@@ -91,7 +91,7 @@ export default function CaseStudyMoolapay() {
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              A payments app built for Nigerian users that existing fintech apps weren't designed for — varying literacy levels, unreliable connectivity, and genuine distrust of crypto after years of scams. 92% task completion in testing. 78% of testers said it felt made for them.
+              A payments app built for Nigerian users that existing fintech apps weren't designed for — varying literacy levels, unreliable connectivity, and genuine distrust of crypto after years of scams.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>2022</span>
@@ -120,10 +120,10 @@ export default function CaseStudyMoolapay() {
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
-              { stat: '85%', label: 'Users understood core features without explanation' },
-              { stat: '92%', label: 'Task completion rate across usability tests' },
-              { stat: '78%', label: 'Nigerian testers said it "felt designed for them"' },
-              { stat: '7→3', label: 'Steps to send crypto, down from typical wallet' },
+              { stat: '7→3', label: 'Steps to send crypto, reduced from the typical wallet experience' },
+              { stat: '3', label: 'Core jobs addressed — send/receive, save, track spending' },
+              { stat: '4', label: 'Literacy levels designed for, from icon-only to power users' },
+              { stat: '0', label: 'Jargon in the interface — blockchain, keys, confirmations replaced throughout' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
@@ -154,17 +154,17 @@ export default function CaseStudyMoolapay() {
                   {
                     num: '01',
                     title: 'Crypto Complexity Barrier',
-                    body: 'Existing crypto wallets assume users know about public/private keys, blockchain confirmations, network fees, and wallet addresses. 68% of survey respondents found cryptocurrency "too complicated" — not because they weren\'t interested, but because the interfaces weren\'t built for them.',
+                    body: 'Existing crypto wallets assume users know about public/private keys, blockchain confirmations, network fees, and wallet addresses. Most users in this demographic found crypto "too complicated" — not because they weren\'t interested, but because the interfaces weren\'t built for them.',
                   },
                   {
                     num: '02',
                     title: 'Money Management Invisibility',
-                    body: "Traditional expense tracking apps need manual categorisation, receipt scanning, or elaborate budget setup. Most users just stop. 73% of respondents said they couldn't keep track of spending, with 'too much effort' as the main reason.",
+                    body: "Traditional expense tracking apps need manual categorisation, receipt scanning, or elaborate budget setup. Most users just stop. Users consistently cited 'too much effort' as the reason spending was invisible to them.",
                   },
                   {
                     num: '03',
                     title: 'Savings Failure',
-                    body: "When there's no system working in the background, money gets spent. 65% of respondents said they wanted to save but couldn't follow through — not because they lacked motivation, but because nothing made it easy to start.",
+                    body: "When there's no system working in the background, money gets spent. Users wanted to save but couldn't follow through — not because they lacked motivation, but because nothing made it easy to start.",
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 space-y-3">
@@ -178,8 +178,8 @@ export default function CaseStudyMoolapay() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { val: '68%', label: 'Found crypto "too complicated" despite interest' },
-                  { val: '54%', label: 'Abandoned financial apps due to complexity' },
+                  { val: 'Complexity', label: 'The primary barrier — not lack of interest in crypto or finance' },
+                  { val: 'Abandonment', label: 'The consistent pattern across existing financial apps in this market' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
@@ -484,7 +484,7 @@ export default function CaseStudyMoolapay() {
                   num: '02',
                   title: 'Designing for Varying Literacy Levels',
                   problem: 'The same interface needs to work for someone navigating by icons alone, someone who needs light guidance, and someone who just wants to get in and out fast.',
-                  solution: 'Icon + text pattern for every action (redundant communication builds confidence). Universal colour language: green = money in, red = money out, blue = savings. Visual feedback via animations confirms actions. Simplified language: "Send money" not "Transfer funds," "Save automatically" not "Configure auto-debit." Testing validated: users with limited literacy completed core tasks 85% of the time using icons alone.',
+                  solution: 'Icon + text pattern for every action (redundant communication builds confidence). Universal colour language: green = money in, red = money out, blue = savings. Visual feedback via animations confirms actions. Simplified language: "Send money" not "Transfer funds," "Save automatically" not "Configure auto-debit."',
                 },
                 {
                   num: '03',
@@ -556,7 +556,7 @@ export default function CaseStudyMoolapay() {
                   title: 'Expenses',
                   tag: 'Automated tracking',
                   description: 'App automatically categorises transactions using merchant data. Visual spending chart with colour-coded categories (Food, Transport, Bills). Weekly/monthly toggle. One-tap to correct a category. Automated insights: "You spent 40% less on food this week!"',
-                  why: 'Manual expense tracking has 12% adoption. Automated tracking has 78% engagement. The benefit is there without requiring any habit change from the user.',
+                  why: 'Manual expense tracking fails because it requires a habit change most users won\'t make. Automating it entirely removes the barrier — the benefit is there without asking anything of the user.',
                 },
               ].map((feature) => (
                 <motion.div key={feature.num} variants={fadeUp}
@@ -645,8 +645,6 @@ export default function CaseStudyMoolapay() {
                   <div className="lg:col-span-5">
                     <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Task {i + 1}</p>
                     <p className="text-sm font-medium text-[var(--text-300)] mb-3">{t.task}</p>
-                    <p className="text-3xl font-medium text-[#F45D01]">{t.success}</p>
-                    <p className="text-xs text-[var(--text-500)] mt-1">success rate</p>
                   </div>
                   <div className="lg:col-span-6 lg:col-start-7 space-y-4">
                     <div>
@@ -751,10 +749,10 @@ export default function CaseStudyMoolapay() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {[
-                { stat: '85%', label: 'Feature comprehension without explanation', sub: 'Send, receive, save understood immediately' },
-                { stat: '92%', label: 'Primary task completion', sub: 'Send money, view balance, track expenses' },
-                { stat: '78%', label: 'Nigerian testers: "designed for us"', sub: 'Cultural resonance validated' },
-                { stat: '7→3', label: 'Steps to send crypto', sub: 'Down from typical wallet experience' },
+                { stat: '7→3', label: 'Steps to send crypto', sub: 'Down from the typical wallet experience' },
+                { stat: '3', label: 'Core jobs designed for', sub: 'Send/receive, save, track spending' },
+                { stat: '4', label: 'Literacy levels supported', sub: 'From icon-only to power users' },
+                { stat: '0', label: 'Jargon in the interface', sub: 'Blockchain, keys, confirmations replaced throughout' },
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                   <p className="text-3xl font-medium text-[#F45D01] mb-1">{item.stat}</p>

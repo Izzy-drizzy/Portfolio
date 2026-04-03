@@ -108,15 +108,15 @@ export default function CaseStudyEdusmart() {
               </motion.div>
 
               <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-6">
-                Preventing £5M revenue loss through stakeholder validation
+                Stakeholder validation that changed the entire product direction
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and protected £5M in contracts.
+                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and gave three at-risk contracts a reason to stay.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
-                <span>2026 (Ongoing)</span>
+                <span>2026 — 3-week design sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Product Design Consultant @ Amdari</span>
               </motion.div>
@@ -152,7 +152,7 @@ export default function CaseStudyEdusmart() {
               { val: '15/22', label: 'Assumptions rejected through stakeholder validation' },
               { val: '66%', label: 'Scope reduction — 58 features down to 20 validated' },
               { val: '88%', label: 'Task completion rate in usability testing' },
-              { val: '£5M', label: 'Annual contracts protected through focused delivery' },
+              { val: '£5M', label: 'Annual contracts at risk — the business case that shaped every scope decision' },
             ].map((s) => (
               <motion.div key={s.val} variants={fadeUp}
                 className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -169,7 +169,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Problem Framing</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">A £5M crisis hiding inside a reporting lag</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A £5M exposure hiding inside a reporting lag</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 EduSmart Analytics — founded 2017, serving 200+ institutions with 6% UK market share — faced a post-COVID inflection point. 48-hour reporting delays were preventing early student intervention, and three major university clients were actively evaluating competitors.
               </p>
@@ -207,7 +207,7 @@ export default function CaseStudyEdusmart() {
               className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-6 md:p-8">
               <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">The Critical Discovery</p>
               <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-3xl">
-                Through stakeholder validation workshops with 15 participants, I discovered 15 out of 22 initial product assumptions were wrong. We weren't just over-designing — we were building the wrong product entirely. The pivot: cut scope from 58 to 20 validated features and shift focus from student self-monitoring to faculty intervention.
+                Through validation workshops with the project's BAs, PMs, and client stakeholders, I discovered 15 out of 22 initial product assumptions were wrong. We weren't just over-designing — we were building the wrong product entirely. The pivot: cut scope from 58 to 20 validated features and shift focus from student self-monitoring to faculty intervention.
               </p>
             </motion.div>
           </motion.div>
@@ -221,7 +221,7 @@ export default function CaseStudyEdusmart() {
               <SectionLabel>Role & Team</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
-                Engaged as the sole UX/UI lead within a cross-functional Scrum team — working alongside a Project Manager and Business Analyst in 2-week sprints, with weekly reviews involving EduSmart's product and engineering stakeholders.
+                Engaged as the sole UX/UI lead within a cross-functional team — working alongside a Project Manager and Business Analyst across a 3-week design sprint, with regular reviews involving EduSmart's product and engineering stakeholders.
               </p>
               <p className="text-sm text-[var(--text-500)] leading-relaxed max-w-2xl mt-3">
                 I used Claude throughout the project as a thinking partner — synthesising interview notes into patterns, pressure-testing the assumption validation framework, and working through IA decisions before committing them to Figma. It helped me move faster without skipping the thinking.
@@ -233,9 +233,9 @@ export default function CaseStudyEdusmart() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">My Responsibilities</p>
                 <ul className="space-y-2.5">
                   {[
-                    'Journey mapping workshops — 2 flows, 12 participants',
+                    'Journey mapping workshops — 2 flows mapped with BAs, PMs, and client stakeholders',
                     'Created 4 validated user personas across 3 role types',
-                    'Led stakeholder validation workshops (15 participants, 22 assumptions tested)',
+                    'Led assumption-testing workshops (22 assumptions tested with BAs, PMs, and stakeholders)',
                     'Wireframed 58 initial features, then streamlined to 20',
                     'Hi-fi designs for 3 dashboards + 6 secondary pages',
                     'Interactive Figma prototypes for usability testing',
@@ -271,14 +271,14 @@ export default function CaseStudyEdusmart() {
                     <ul className="space-y-1.5">
                       {[
                         'Product & Engineering teams (weekly sprint reviews)',
-                        '15 validation workshop participants (5 students, 5 faculty, 5 admins)',
-                        '12 journey mapping workshop participants',
+                        'Validation workshops — BAs, PMs, and client stakeholders',
+                        'Journey mapping workshops — BAs, PMs, and client stakeholders',
                       ].map((s) => (
                         <li key={s} className="text-xs text-[var(--text-400)]">– {s}</li>
                       ))}
                     </ul>
                   </div>
-                  <p className="text-xs text-[var(--text-600)] pt-1">Methodology: Agile/Scrum — 2-week sprints, daily standups</p>
+                  <p className="text-xs text-[var(--text-600)] pt-1">Methodology: 3-week design sprint — research, validation, design, and usability testing</p>
                 </div>
               </motion.div>
             </div>
@@ -291,7 +291,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Research & Approach</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">A 9-phase validation-first process</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A 3-week validation-first sprint</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 Before touching wireframes or visual design, I built a process to test every assumption with real stakeholders. Uncover real problems, test assumptions, design only validated solutions, then iterate through usability testing.
               </p>
@@ -301,25 +301,25 @@ export default function CaseStudyEdusmart() {
             <div className="space-y-4 mb-12">
               {[
                 {
-                  phase: 'Phase 1–2',
+                  phase: 'Week 1',
                   title: 'Journey Mapping & Persona Creation',
-                  detail: 'Ran workshops with 12 participants to map two flows: the student lifecycle and the faculty intervention workflow. Findings produced 4 personas — Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, 280 students, Excel-dependent), David Robertson (admin, GDPR anxiety).',
+                  detail: 'Ran workshops with the project\'s BAs, PMs, and client stakeholders to map two flows: the student lifecycle and the faculty intervention workflow. Findings produced 4 personas — Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, Excel-dependent), David Robertson (admin, GDPR anxiety).',
                   quote: '"With 280 students, I can\'t monitor everyone by hand. I need to know WHO to help WHEN." — Dr. Sarah Chen',
                 },
                 {
-                  phase: 'Phase 3–4',
+                  phase: 'Week 1–2',
                   title: 'UX Recommendations & Stakeholder Validation',
                   detail: 'Documented recommendations — then the BA and PM flagged a contradiction: we were recommending more analytics transparency while users said analytics were already too complex. That conflict shaped the validation framework: 22 assumptions across 3 user types, tested in 2-hour structured workshops.',
                   quote: 'Result: 15 of 22 assumptions REJECTED. We were building the wrong product.',
                 },
                 {
-                  phase: 'Phase 5–7',
+                  phase: 'Week 2–3',
                   title: 'Wireframes → Hi-Fi → Prototype',
                   detail: 'Cut from 58 features to 20 validated ones. Designed 3 dashboards (Student, Instructor, Admin) and 6 secondary pages — desktop-first, because the research confirmed faculty work at desks, not on mobile. Built interactive Figma prototypes across 3 user flows for usability testing.',
                   quote: null,
                 },
                 {
-                  phase: 'Phase 8–9',
+                  phase: 'Week 3',
                   title: 'Usability Testing & Success Metrics',
                   detail: '15 participants (5 per persona), 5 tasks each, unmoderated remote via Maze. Results: 88% task completion (target >80%), 4.2/5 satisfaction (target 4+), zero P0 bugs. Success metrics and handoff specs documented for the development team.',
                   quote: '"This is exactly what I need. Simple, fast, and tells me who to contact." — Instructor participant',
@@ -401,7 +401,7 @@ export default function CaseStudyEdusmart() {
                   n: '01',
                   title: 'Reducing scope by 66% based on shared findings',
                   challenge: 'When validation rejected 15/22 assumptions, the question became which 38 features to cut. The risk was that features mentioned in interviews would feel hard to remove, even when they failed structured validation.',
-                  solution: 'Built a Feature Validation Matrix that mapped every feature to its interview mentions and workshop outcome. Reviewed it with the PM, BA, and client as a team — they had all been in the workshops, so the data wasn\'t new to them. "At-risk student list": mentioned by 5/5 faculty, validated — keep. "AI explainability dashboard": mentioned once, not validated — cut. The shared context meant scope decisions came from the evidence, not from debate.',
+                  solution: 'Built a Feature Validation Matrix that mapped every feature to its workshop mentions and validation outcome. Reviewed it with the PM, BA, and client as a team — they had all been in the workshops, so the data wasn\'t new to them. "At-risk student list": flagged as critical by all stakeholders, validated — keep. "AI explainability dashboard": mentioned once, not validated — cut. The shared context meant scope decisions came from the evidence, not from debate.',
                 },
                 {
                   n: '02',
@@ -646,9 +646,9 @@ export default function CaseStudyEdusmart() {
             {/* Business impact cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '£5M', label: 'Annual contracts retained', sub: '3 major universities stayed engaged after seeing the validated roadmap' },
+                { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors — the validated roadmap gave them a reason to stay' },
                 { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features removed before any code was written' },
-                { val: '15 months', label: 'Of misdirected development avoided', sub: 'Testing assumptions first stopped the team from building the wrong product' },
+                { val: '3 weeks', label: 'From brief to validated, tested design', sub: 'Research, stakeholder validation, full design system, and usability testing — one sprint' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">

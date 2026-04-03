@@ -71,7 +71,7 @@ const projects = [
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
-      'AI-powered student analytics platform for 200+ UK/Canadian universities. Stakeholder validation revealed 15/22 product assumptions were wrong — pivoting from student self-monitoring to a faculty intervention tool protected £5M in at-risk contracts and cut scope 66%.',
+      'AI-powered student analytics platform for 200+ UK/Canadian universities. Stakeholder validation revealed 15/22 product assumptions were wrong — pivoting from student self-monitoring to a faculty intervention tool addressed £5M in at-risk contracts and cut scope 66%.',
     collaboration: 'Amdari',
     href: '/work/Edusmart',
     images: [
