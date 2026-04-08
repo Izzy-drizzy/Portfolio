@@ -24,11 +24,11 @@ const tools = [
     href: 'https://code.visualstudio.com',
   },
   {
-    name: 'Webflow',
-    description: 'Visual web builder tool',
-    icon: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/webflow.svg',
+    name: 'Claude Code',
+    description: 'AI pair programmer in the terminal',
+    icon: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/claude.svg',
     iconBg: '#1E1E1E',
-    href: 'https://webflow.com',
+    href: 'https://claude.com/claude-code',
   },
   {
     name: 'React',
