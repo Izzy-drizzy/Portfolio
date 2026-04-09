@@ -12,8 +12,8 @@ export default function Preloader() {
   );
 
   useEffect(() => {
-    const duration = 2800;
-    const tickMs = 30;
+    const duration = 900;
+    const tickMs = 20;
     const totalTicks = duration / tickMs;
     let tick = 0;
 
@@ -37,7 +37,7 @@ export default function Preloader() {
       if (tick >= totalTicks) {
         clearInterval(timer);
         setDisplayText(TARGET);
-        setTimeout(() => setIsLoading(false), 400);
+        setTimeout(() => setIsLoading(false), 150);
       }
     }, tickMs);
 
@@ -49,7 +49,7 @@ export default function Preloader() {
       {isLoading && (
         <motion.div
           initial={{ y: 0 }}
-          exit={{ y: '-100%', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
+          exit={{ y: '-100%', transition: { duration: 0.45, ease: [0.76, 0, 0.24, 1] } }}
           className="fixed inset-0 z-[100] bg-[#141414] flex items-center justify-center"
         >
           <motion.div
