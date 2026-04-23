@@ -12,6 +12,7 @@ import CaseStudyHealf from './pages/CaseStudyHealf.tsx';
 import CaseStudyLeadTrader from './pages/CaseStudyLeadTrader.tsx';
 import CaseStudyEdusmart from './pages/CaseStudyEdusmart.tsx';
 import CaseStudyHealfZone2 from './pages/CaseStudyHealfZone2.tsx';
+import CaseStudyUrbanNest from './pages/CaseStudyUrbanNest.tsx';
 import './index.css';
 
 function ScrollToTop() {
@@ -36,6 +37,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/work/LeadTrader" element={<CaseStudyLeadTrader />} />
           <Route path="/work/Edusmart" element={<CaseStudyEdusmart />} />
           <Route path="/work/healf-zone-2" element={<CaseStudyHealfZone2 />} />
+          <Route path="/work/UrbanNest" element={<CaseStudyUrbanNest />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

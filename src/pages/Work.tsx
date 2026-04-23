@@ -86,6 +86,22 @@ const projects = [
   },
   {
     number: '006',
+    title: 'UrbanNest',
+    tags: ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'],
+    description:
+      'Mobile-first property search platform for UK renters. Worked with PMs and BAs to scope the Sprint 1 MVP around three high-pain problems: commute checks happening outside the app, filters that don\'t work on mobile, and no personalisation on first use. 8 screens delivered across a 4-week sprint.',
+    collaboration: 'Amdari',
+    href: '/work/UrbanNest',
+    images: [
+      '/images/urbannest/slides/slide-1.png',
+      '/images/urbannest/slides/slide-2.png',
+      '/images/urbannest/slides/slide-3.png',
+      '/images/urbannest/slides/slide-4.png',
+      '/images/urbannest/slides/slide-5.png',
+    ],
+  },
+  {
+    number: '007',
     title: 'Healf Zone 2.0',
     tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
     description:
