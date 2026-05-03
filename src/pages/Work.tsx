@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide, Lock } from 'lucide-react';
+import SEO from '../components/SEO';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
@@ -198,6 +199,11 @@ export default function Work() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
+      <SEO
+        title="Work"
+        description="Case studies across fintech, health tech, edtech, and proptech. Product design from research through shipped screens."
+        path="/work"
+      />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28">

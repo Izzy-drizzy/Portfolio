@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/leadtrader/slide-1.png',
@@ -74,6 +75,7 @@ export default function CaseStudyLeadTrader() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="LeadTrader Case Study" description="UX audit and redesign prototype for a stock trading app. Identified visual hierarchy issues and redesigned core flows with progressive disclosure." path="/work/LeadTrader" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
       <main>
 

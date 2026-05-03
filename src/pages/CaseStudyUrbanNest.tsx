@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/urbannest/slides/slide-1.png',
@@ -88,6 +89,7 @@ export default function CaseStudyUrbanNest() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="UrbanNest Case Study" description="Mobile-first property search platform for UK renters. Commute data on every card, 30+ filter system, and 3-question onboarding built across a 4-week sprint." path="/work/UrbanNest" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>

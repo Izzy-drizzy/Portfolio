@@ -4,6 +4,7 @@
  */
 
 import { useState } from 'react';
+import SEO from './components/SEO';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
+      <SEO path="/" />
       <Preloader />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
       <main>

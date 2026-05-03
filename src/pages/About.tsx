@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
+import SEO from '../components/SEO';
 
 const expertise = [
   {
@@ -77,6 +78,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
+      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. 4+ years across fintech, health tech, and edtech." path="/about" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28 px-7 md:px-10">

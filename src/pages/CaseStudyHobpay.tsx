@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/hobpay/slide-1.png',
@@ -108,6 +109,7 @@ export default function CaseStudyHobpay() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="Hobpay Case Study" description="Cross-platform fintech redesign serving 10K+ users. Web-first strategy, restructured navigation, and progressive disclosure lifted satisfaction from 3.2 to 4.2/5." path="/work/Hobpay" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
 
       <main>

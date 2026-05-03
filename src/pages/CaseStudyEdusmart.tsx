@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/edusmart/slide-1.png',
@@ -91,6 +92,7 @@ export default function CaseStudyEdusmart() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="EduSmart Case Study" description="AI-powered student analytics platform for 200+ universities. Stakeholder validation rejected 15/22 assumptions and changed the entire product direction." path="/work/Edusmart" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>

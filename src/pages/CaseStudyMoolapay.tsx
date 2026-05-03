@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/moolapay/slide-1.png',
@@ -75,6 +76,7 @@ export default function CaseStudyMoolapay() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="Moolapay Case Study" description="Mobile cryptocurrency payments app designed for underserved Nigerian users. Visual-first interaction design supporting 4 literacy levels with zero jargon." path="/work/Moolapay" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
       <main>
 

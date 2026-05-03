@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const slides = [
   '/images/healf-zone2/slides/slide-1.png',
@@ -78,6 +79,7 @@ export default function CaseStudyHealfZone2() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="Healf Zone 2.0 Case Study" description="14-day design sprint interpreting Healf's wellbeing intelligence vision. 5 micro-experiences across the full test-to-retest lifecycle." path="/work/healf-zone-2" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
       <main>
 

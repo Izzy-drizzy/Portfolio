@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import SEO from '../components/SEO';
 
 const images = [
   '/images/healf/slide-1.png',
@@ -83,6 +84,7 @@ export default function CaseStudyHealf() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <SEO title="Healf Onboarding Case Study" description="Unsolicited redesign of Healf's mobile app onboarding. Introduced the full ecosystem before account creation using the Four Pillars framework." path="/work/healf" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
       <main>
 
