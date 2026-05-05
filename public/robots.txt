@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bukunmi-isijola.com/sitemap.xml
+Sitemap: https://www.bukunmi-isijola.com/sitemap.xml
