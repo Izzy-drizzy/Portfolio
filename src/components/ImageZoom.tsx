@@ -23,6 +23,7 @@ export default function ImageZoom({ src, alt, className }: ImageZoomProps) {
       <img
         src={src}
         alt={alt}
+        loading="lazy"
         className={`${className} cursor-zoom-in`}
         onClick={() => setOpen(true)}
       />

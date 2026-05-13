@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide, Lock } from 'lucide-react';
+import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -9,66 +10,6 @@ import ContactModal from '../components/ContactModal';
 const projects = [
   {
     number: '001',
-    title: 'Hobpay',
-    tags: ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'],
-    description:
-      'Strategic web-first redesign eliminating platform barriers for Nigerian fintech serving 10K+ users. Simplified navigation, streamlined service access, and progressive disclosure increased satisfaction 30% while recovering iOS-blocked users.',
-    collaboration: null,
-    href: '/work/Hobpay',
-    images: [
-      '/images/hobpay/slide-1.png',
-      '/images/hobpay/slide-2.png',
-      '/images/hobpay/slide-3.png',
-      '/images/hobpay/slide-4.png',
-      '/images/hobpay/slide-5.png',
-      '/images/hobpay/slide-6.png',
-    ],
-  },
-  {
-    number: '002',
-    title: 'Moolapay',
-    tags: ['Product Design', 'Crypocurrency', 'Financial Inclusion', 'Low digital Literacy', 'Inclusive UX'],
-    description:
-      "Financial inclusion platform connecting underserved Nigerian communities to cryptocurrency and digital payments. Designed simplified navigation and visual language transcending literacy barriers, with trust-building elements and culturally-aware interface patterns.",
-    collaboration: null,
-    href: '/work/Moolapay',
-    images: [
-      '/images/moolapay/slide-1.png',
-      '/images/moolapay/slide-2.png',
-      '/images/moolapay/slide-3.png',
-      '/images/moolapay/slide-4.png',
-    ],
-  },
-  {
-    number: '003',
-    title: 'Healf App Onboarding',
-    tags: ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'],
-    description:
-      "Redesigned Healf's onboarding flow to improve user discovery and engagement. Focused on creating a personalized first-run experience that connects users to the right wellness content faster.",
-    collaboration: null,
-    href: '/work/healf',
-    images: [
-      '/images/healf/slide-1.png',
-      '/images/healf/slide-2.png',
-      '/images/healf/slide-3.png',
-    ],
-  },
-  {
-    number: '004',
-    title: 'Lead Trader',
-    tags: ['Product Design', 'Stock Trading', 'Mobile Design', 'Reduced Cognitive Load', 'High Stress UX'],
-    description:
-      "Strategic demo redesign for parent company evaluating product overhaul. Identified critical UX issues; visual hierarchy chaos, data visualization gaps, expert-only assumptions, and redesigned core flows with progressive disclosure, performance indicators, and organized quick actions serving both novice and expert traders",
-    collaboration: 'Artbox Studio',
-    href: '/work/LeadTrader',
-    images: [
-      '/images/leadtrader/slide-1.png',
-      '/images/leadtrader/slide-2.png',
-      '/images/leadtrader/slide-3.png',
-    ],
-  },
-  {
-    number: '005',
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
@@ -86,7 +27,41 @@ const projects = [
     ],
   },
   {
-    number: '006',
+    number: '002',
+    title: 'Hobpay',
+    tags: ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'],
+    description:
+      'Strategic web-first redesign eliminating platform barriers for Nigerian fintech serving 10K+ users. Simplified navigation, streamlined service access, and progressive disclosure increased satisfaction 30% while recovering iOS-blocked users.',
+    collaboration: null,
+    href: '/work/Hobpay',
+    images: [
+      '/images/hobpay/slide-1.png',
+      '/images/hobpay/slide-2.png',
+      '/images/hobpay/slide-3.png',
+      '/images/hobpay/slide-4.png',
+      '/images/hobpay/slide-5.png',
+      '/images/hobpay/slide-6.png',
+    ],
+  },
+  {
+    number: '003',
+    title: 'Healf Zone 2.0',
+    tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
+    description:
+      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
+    collaboration: null,
+    href: '/work/healf-zone-2',
+    images: [
+      '/images/healf-zone2/slides/slide-1.png',
+      '/images/healf-zone2/slides/slide-2.png',
+      '/images/healf-zone2/slides/slide-3.png',
+      '/images/healf-zone2/slides/slide-4.png',
+      '/images/healf-zone2/slides/slide-5.png',
+      '/images/healf-zone2/slides/slide-6.png',
+    ],
+  },
+  {
+    number: '004',
     title: 'UrbanNest',
     tags: ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'],
     description:
@@ -102,20 +77,46 @@ const projects = [
     ],
   },
   {
-    number: '007',
-    title: 'Healf Zone 2.0',
-    tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
+    number: '005',
+    title: 'Moolapay',
+    tags: ['Product Design', 'Cryptocurrency', 'Financial Inclusion', 'Low Digital Literacy', 'Inclusive UX'],
     description:
-      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
+      "Financial inclusion platform connecting underserved Nigerian communities to cryptocurrency and digital payments. Designed simplified navigation and visual language transcending literacy barriers, with trust-building elements and culturally-aware interface patterns.",
     collaboration: null,
-    href: '/work/healf-zone-2',
+    href: '/work/Moolapay',
     images: [
-      '/images/healf-zone2/slides/slide-1.png',
-      '/images/healf-zone2/slides/slide-2.png',
-      '/images/healf-zone2/slides/slide-3.png',
-      '/images/healf-zone2/slides/slide-4.png',
-      '/images/healf-zone2/slides/slide-5.png',
-      '/images/healf-zone2/slides/slide-6.png',
+      '/images/moolapay/slide-1.png',
+      '/images/moolapay/slide-2.png',
+      '/images/moolapay/slide-3.png',
+      '/images/moolapay/slide-4.png',
+    ],
+  },
+  {
+    number: '006',
+    title: 'Healf App Onboarding',
+    tags: ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'],
+    description:
+      "Redesigned Healf's onboarding flow to improve user discovery and engagement. Focused on creating a personalized first-run experience that connects users to the right wellness content faster.",
+    collaboration: null,
+    href: '/work/healf',
+    images: [
+      '/images/healf/slide-1.png',
+      '/images/healf/slide-2.png',
+      '/images/healf/slide-3.png',
+    ],
+  },
+  {
+    number: '007',
+    title: 'Lead Trader',
+    tags: ['Product Design', 'Stock Trading', 'Mobile Design', 'Reduced Cognitive Load', 'High Stress UX'],
+    description:
+      "Strategic demo redesign for parent company evaluating product overhaul. Identified critical UX issues; visual hierarchy chaos, data visualization gaps, expert-only assumptions, and redesigned core flows with progressive disclosure, performance indicators, and organized quick actions serving both novice and expert traders",
+    collaboration: 'Artbox Studio',
+    href: '/work/LeadTrader',
+    images: [
+      '/images/leadtrader/slide-1.png',
+      '/images/leadtrader/slide-2.png',
+      '/images/leadtrader/slide-3.png',
     ],
   },
 ];
@@ -147,6 +148,7 @@ function MobileSlider({ images }: { images: string[] }) {
           key={i}
           src={src}
           alt=""
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         />
@@ -155,6 +157,7 @@ function MobileSlider({ images }: { images: string[] }) {
         {images.map((_, i) => (
           <button
             key={i}
+            aria-label={`Go to slide ${i + 1}`}
             onClick={() => {
               setCurrent(i);
               if (timerRef.current) clearInterval(timerRef.current);
@@ -182,7 +185,7 @@ function ImageMarquee({ images }: { images: string[] }) {
             className="flex-shrink-0 rounded-xl overflow-hidden bg-[var(--surface)]"
             style={{ width: '42vw', height: '52vh' }}
           >
-            <img src={src} alt="" className="w-full h-full object-cover" />
+            <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
           </div>
         ))}
       </div>
@@ -276,27 +279,15 @@ export default function Work() {
               </motion.div>
 
               {/* View Case Study */}
-              {project.locked ? (
-                <motion.div
-                  variants={fadeUp}
-                  custom={1}
-                  className="flex items-center gap-2 border border-[var(--border-md)] text-[var(--text-500)] px-5 py-2.5 rounded-lg text-sm self-start flex-shrink-0 md:mt-1 cursor-default select-none"
-                  title="Access restricted — available via direct link"
-                >
-                  <Lock size={13} />
-                  Private
-                </motion.div>
-              ) : (
-                <motion.a
-                  href={project.href}
-                  variants={fadeUp}
-                  custom={1}
-                  className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors self-start flex-shrink-0 md:mt-1"
+              <motion.div variants={fadeUp} custom={1} className="self-start flex-shrink-0 md:mt-1">
+                <Link
+                  to={project.href}
+                  className="flex items-center gap-2 bg-[var(--btn-bg)] text-[var(--btn-text)] px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
                 >
                   <ArrowRight size={15} />
                   View Case Study
-                </motion.a>
-              )}
+                </Link>
+              </motion.div>
             </div>
 
             {/* Images — full-width slider on mobile, marquee on desktop */}

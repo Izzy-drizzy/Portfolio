@@ -1,11 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
@@ -50,56 +51,6 @@ function ImageSlot({ label, aspect = 'aspect-video' }: { label: string; aspect?:
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
       </div>
       <p className="text-xs text-[var(--text-600)] max-w-xs">{label}</p>
-    </div>
-  );
-}
-
-function ImageCarousel() {
-  const [current, setCurrent] = useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const resetTimer = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setCurrent((c) => (c + 1) % images.length);
-    }, 3500);
-  };
-
-  useEffect(() => {
-    resetTimer();
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, []);
-
-  const prev = () => { setCurrent((c) => (c - 1 + images.length) % images.length); resetTimer(); };
-  const next = () => { setCurrent((c) => (c + 1) % images.length); resetTimer(); };
-  const goTo = (i: number) => { setCurrent(i); resetTimer(); };
-
-  return (
-    <div className="relative w-full h-full rounded-xl overflow-hidden group">
-      {images.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`Hobpay mockup ${i + 1}`}
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-          style={{ opacity: i === current ? 1 : 0 }}
-        />
-      ))}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--bg)] to-transparent pointer-events-none" />
-      <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button onClick={prev} className="w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center hover:bg-black/80 transition-colors">
-          <ArrowLeft size={14} />
-        </button>
-        <span className="text-xs text-[var(--text-400)]">{current + 1} / {images.length}</span>
-        <button onClick={next} className="w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center hover:bg-black/80 transition-colors">
-          <ArrowRight size={14} />
-        </button>
-      </div>
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
-        {images.map((_, i) => (
-          <button key={i} onClick={() => goTo(i)} className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'bg-white w-4' : 'bg-white/30 w-1.5'}`} />
-        ))}
-      </div>
     </div>
   );
 }
@@ -156,7 +107,7 @@ export default function CaseStudyHobpay() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <ImageCarousel />
+            <ImageCarousel images={images} alt="Hobpay mockup" />
           </motion.div>
         </section>
 
@@ -608,6 +559,7 @@ export default function CaseStudyHobpay() {
               <img
                 src="/images/hobpay/case-study/new-ia.png"
                 alt="Hobpay information architecture diagram"
+                loading="lazy"
                 className="w-full h-auto object-contain"
               />
             </motion.div>
@@ -618,13 +570,13 @@ export default function CaseStudyHobpay() {
                 <div className="px-4 pt-4 flex items-center gap-2">
                   <span className="text-xs text-[var(--text-600)] uppercase tracking-widest">Before</span>
                 </div>
-                <img src="/images/hobpay/case-study/old-dashboard.png" alt="Old Hobpay dashboard" className="w-full h-auto object-contain" />
+                <img src="/images/hobpay/case-study/old-dashboard.png" alt="Old Hobpay dashboard" loading="lazy" className="w-full h-auto object-contain" />
               </div>
               <div className="rounded-xl overflow-hidden border border-[#F45D01]/20 space-y-2">
                 <div className="px-4 pt-4 flex items-center gap-2">
                   <span className="text-xs text-[#F45D01] uppercase tracking-widest">After</span>
                 </div>
-                <img src="/images/hobpay/case-study/new-dashboard.png" alt="Redesigned Hobpay dashboard" className="w-full h-auto object-contain" />
+                <img src="/images/hobpay/case-study/new-dashboard.png" alt="Redesigned Hobpay dashboard" loading="lazy" className="w-full h-auto object-contain" />
               </div>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

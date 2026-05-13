@@ -87,6 +87,7 @@ export default function Stack() {
               <img
                 src={tool.icon}
                 alt={tool.name}
+                loading="lazy"
                 className="w-6 h-6 invert"
               />
             </div>

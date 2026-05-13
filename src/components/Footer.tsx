@@ -48,7 +48,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="grid grid-cols-3 items-center text-sm text-[var(--text-500)] border-t border-[var(--border)] pt-8">
           <span>© {new Date().getFullYear()} Bukunmi Isijola. All Rights Reserved.</span>
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-[var(--text-300)] transition-colors text-center">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top" className="hover:text-[var(--text-300)] transition-colors text-center">
             Back to top
           </button>
           <div className="flex justify-end">
@@ -58,7 +58,7 @@ export default function Footer() {
 
         {/* Big Logo */}
         <div className="mt-24 flex justify-center">
-          <img src="/logo.svg" alt="Bukunmi Isijola" className="w-[60vw] max-w-3xl opacity-10 select-none" />
+          <img src="/logo.svg" alt="Bukunmi Isijola" loading="lazy" className="w-[60vw] max-w-3xl opacity-10 select-none" />
         </div>
       </div>
     </footer>

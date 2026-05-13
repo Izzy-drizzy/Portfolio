@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 interface NavigationProps {
@@ -23,13 +24,13 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-7 md:px-10 py-4 bg-[var(--bg)]/80 backdrop-blur-md text-[var(--text)] border-b border-[var(--border)]/50">
       <div className="flex items-center justify-between">
-        <a href="/" className="transition-transform duration-300 hover:scale-105 inline-block">
+        <Link to="/" className="transition-transform duration-300 hover:scale-105 inline-block">
           <img src="/logo.svg" alt="Logo" className="h-7 w-auto" />
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 group/nav">
-          <a href="/work" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>Work</SlideText></a>
-          <a href="/about" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>About</SlideText></a>
+          <Link to="/work" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>Work</SlideText></Link>
+          <Link to="/about" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>About</SlideText></Link>
           <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>CV</SlideText></a>
         </nav>
 
@@ -53,6 +54,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         <button
           className="md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -65,8 +67,8 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
           animate={{ opacity: 1, y: 0 }}
           className="absolute top-full left-0 right-0 bg-[var(--bg)] text-[var(--text)] p-6 flex flex-col gap-6 md:hidden"
         >
-          <a href="/work" className="text-2xl font-normal">Work</a>
-          <a href="/about" className="text-2xl font-normal">About</a>
+          <Link to="/work" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>Work</Link>
+          <Link to="/about" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>About</Link>
           <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
           {/* Theme toggle — hidden until light mode is ready */}
           <button
