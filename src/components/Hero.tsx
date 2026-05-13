@@ -96,7 +96,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           </motion.a>
 
           <motion.a
-            href="/work/Hobpay"
+            href="/work/healf-zone-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
@@ -104,17 +104,17 @@ export default function Hero({ onOpenContact }: HeroProps) {
           >
             <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
               <img
-                src="/images/hobpay/slide-1.png"
-                alt="Hobpay Case Study"
+                src="/images/healf-zone2/slides/slide-1.png"
+                alt="Healf Zone 2.0 Case Study"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
             <div className="p-4">
               <h2 className="text-base font-medium mb-2 leading-snug">
-                Cross-platform fintech redesign recovering 28% of blocked users
+                Interpreting Healf's wellbeing intelligence vision
               </h2>
               <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                Hobpay had no iOS app. 28% of potential users couldn't log in at all. Built a web-first platform to fix access, then redesigned the whole UX. Satisfaction went from 3.2 to 4.2.
+                14-day design sprint turning Healf Zone from a twice-yearly blood test into a continuous companion across the full test-to-retest lifecycle.
               </p>
               <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                 <ArrowRight size={13} />

@@ -108,7 +108,6 @@ const projects = [
     description:
       'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
     collaboration: null,
-    locked: true,
     href: '/work/healf-zone-2',
     images: [
       '/images/healf-zone2/slides/slide-1.png',
