@@ -10,6 +10,24 @@ import ContactModal from '../components/ContactModal';
 const projects = [
   {
     number: '001',
+    title: 'FreshRoute',
+    tags: ['Product Design', 'Grocery & Delivery', 'Accessibility', 'WCAG 2.2 AA', 'UX Strategy', 'Design Leadership'],
+    description:
+      'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested mid-fidelity prototype targeting £46M in recoverable revenue — from a slot grid 22% of shoppers abandoned to a personalised, accessible booking flow.',
+    collaboration: 'Amdari',
+    href: '/work/FreshRoute',
+    images: [
+      '/images/freshroute/slides/slide-1.png',
+      '/images/freshroute/slides/slide-2.png',
+      '/images/freshroute/slides/slide-3.png',
+      '/images/freshroute/slides/slide-4.png',
+      '/images/freshroute/slides/slide-5.png',
+      '/images/freshroute/slides/slide-6.png',
+      '/images/freshroute/slides/slide-7.png',
+    ],
+  },
+  {
+    number: '002',
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
@@ -27,7 +45,7 @@ const projects = [
     ],
   },
   {
-    number: '002',
+    number: '003',
     title: 'Hobpay',
     tags: ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'],
     description:
@@ -44,7 +62,7 @@ const projects = [
     ],
   },
   {
-    number: '003',
+    number: '004',
     title: 'Healf Zone 2.0',
     tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
     description:
@@ -61,7 +79,7 @@ const projects = [
     ],
   },
   {
-    number: '004',
+    number: '005',
     title: 'UrbanNest',
     tags: ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'],
     description:
@@ -77,7 +95,7 @@ const projects = [
     ],
   },
   {
-    number: '005',
+    number: '006',
     title: 'Moolapay',
     tags: ['Product Design', 'Cryptocurrency', 'Financial Inclusion', 'Low Digital Literacy', 'Inclusive UX'],
     description:
@@ -92,7 +110,7 @@ const projects = [
     ],
   },
   {
-    number: '006',
+    number: '007',
     title: 'Healf App Onboarding',
     tags: ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'],
     description:
@@ -106,7 +124,7 @@ const projects = [
     ],
   },
   {
-    number: '007',
+    number: '008',
     title: 'Lead Trader',
     tags: ['Product Design', 'Stock Trading', 'Mobile Design', 'Reduced Cognitive Load', 'High Stress UX'],
     description:
@@ -229,7 +247,7 @@ export default function Work() {
             title={ascending ? 'Sort descending' : 'Sort ascending'}
           >
             {ascending ? <ArrowUpNarrowWide size={15} /> : <ArrowDownNarrowWide size={15} />}
-            <span className="hidden sm:inline">{ascending ? '001 → 00' + projects.length : '00' + projects.length + ' → 001'}</span>
+            <span className="hidden sm:inline">{ascending ? '001 → 0' + ('0' + projects.length).slice(-2) : '0' + ('0' + projects.length).slice(-2) + ' → 001'}</span>
           </button>
         </motion.div>
 
