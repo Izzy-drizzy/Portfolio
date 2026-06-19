@@ -1,6 +1,6 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -63,87 +63,13 @@ function SectionLabel({ children }: { children: string }) {
   return <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-3">{children}</p>;
 }
 
-function FinalDesignsCarousel() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const checkScroll = useCallback(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 8);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
-  }, []);
-
-  const scroll = useCallback((dir: 'left' | 'right') => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const cardWidth = el.querySelector<HTMLElement>('[data-card]')?.offsetWidth ?? 320;
-    el.scrollBy({ left: dir === 'left' ? -cardWidth - 16 : cardWidth + 16, behavior: 'smooth' });
-  }, []);
-
-  return (
-    <section className="py-16 border-t border-[var(--border)]">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
-        variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
-        <motion.div variants={fadeUp} className="px-4 md:px-10 mb-8 flex items-end justify-between gap-4">
-          <div>
-            <SectionLabel>Final Designs</SectionLabel>
-            <h2 className="text-2xl md:text-3xl font-medium">12 screens across two core flows</h2>
-          </div>
-          <div className="flex gap-2 flex-shrink-0">
-            <button
-              onClick={() => scroll('left')}
-              disabled={!canScrollLeft}
-              aria-label="Previous screen"
-              className="p-2.5 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--text-400)] transition-colors disabled:opacity-20 disabled:cursor-default disabled:hover:text-[var(--text-400)] disabled:hover:border-[var(--border)]"
-            >
-              <ArrowLeft size={18} />
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              disabled={!canScrollRight}
-              aria-label="Next screen"
-              className="p-2.5 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--text-400)] transition-colors disabled:opacity-20 disabled:cursor-default disabled:hover:text-[var(--text-400)] disabled:hover:border-[var(--border)]"
-            >
-              <ArrowRight size={18} />
-            </button>
-          </div>
-        </motion.div>
-
-        <motion.div variants={fadeUp}>
-          <div
-            ref={scrollRef}
-            onScroll={checkScroll}
-            className="flex gap-4 overflow-x-auto px-4 md:px-10 pb-4 snap-x snap-mandatory scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {finalDesigns.map((img, i) => (
-              <div
-                key={i}
-                data-card
-                className="flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw] xl:w-[24vw] snap-start rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] group cursor-pointer"
-              >
-                <ImageZoom src={img.src} alt={img.label}
-                  className="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-500" />
-                <div className="px-4 py-3">
-                  <p className="text-xs text-[var(--text-500)]">{img.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-}
 
 export default function CaseStudyFreshRoute() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SEO title="FreshRoute Case Study" description="Redesigned slot booking and substitutions for a UK grocery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested mid-fidelity prototype targeting £46M in recoverable revenue." path="/work/FreshRoute" />
+      <SEO title="FreshRoute Case Study" description="Redesigned slot booking and substitutions for a UK grocery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue." path="/work/FreshRoute" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>
@@ -162,7 +88,7 @@ export default function CaseStudyFreshRoute() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                FreshRoute is a UK grocery delivery platform losing money in two specific places: a slot grid that 22% of shoppers abandoned before booking, and a substitution system that generated £3.2M a year in complaint-driven support costs. I led the redesign of both flows across a five-week sprint, from research synthesis through to a tested mid-fidelity prototype.
+                FreshRoute is a UK grocery delivery platform losing money in two specific places: a slot grid that 22% of shoppers abandoned before booking, and a substitution system that generated £3.2M a year in complaint-driven support costs. I led the redesign of both flows across a five-week sprint, from research synthesis through to a tested high-fidelity prototype.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
@@ -326,7 +252,7 @@ export default function CaseStudyFreshRoute() {
                       ))}
                     </ul>
                   </div>
-                  <p className="text-xs text-[var(--text-600)] pt-1">5-week sprint — research synthesis through tested mid-fidelity prototype</p>
+                  <p className="text-xs text-[var(--text-600)] pt-1">5-week sprint — research synthesis through tested high-fidelity prototype</p>
                 </div>
               </motion.div>
             </div>
@@ -578,7 +504,28 @@ export default function CaseStudyFreshRoute() {
         </section>
 
         {/* ── FINAL DESIGNS ── */}
-        <FinalDesignsCarousel />
+        <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
+            <motion.div variants={fadeUp} className="mb-8">
+              <SectionLabel>Final Designs</SectionLabel>
+              <h2 className="text-2xl md:text-3xl font-medium">12 screens across two core flows</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {finalDesigns.map((img, i) => (
+                <motion.div key={i} variants={fadeUp}
+                  className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] group cursor-pointer">
+                  <ImageZoom src={img.src} alt={img.label}
+                    className="w-full object-contain group-hover:scale-[1.02] transition-transform duration-500" />
+                  <div className="px-4 py-3">
+                    <p className="text-xs text-[var(--text-500)]">{img.label}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
 
         {/* ── LIVE PROTOTYPE ── */}
         <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
@@ -588,7 +535,7 @@ export default function CaseStudyFreshRoute() {
               <SectionLabel>Interactive Prototype</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Try the prototype</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-xl mx-auto">
-                This is the live mid-fidelity prototype tested with real shoppers. Tap through the slot booking flow, explore the substitution tiers, and see how the accessibility mode works.
+                This is the live high-fidelity prototype tested with real shoppers. Tap through the slot booking flow, explore the substitution tiers, and see how the accessibility mode works.
               </p>
             </motion.div>
 

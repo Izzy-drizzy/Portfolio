@@ -13,7 +13,7 @@ const projects = [
     title: 'FreshRoute',
     tags: ['Product Design', 'Grocery & Delivery', 'Accessibility', 'WCAG 2.2 AA', 'UX Strategy', 'Design Leadership'],
     description:
-      'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested mid-fidelity prototype targeting £46M in recoverable revenue — from a slot grid 22% of shoppers abandoned to a personalised, accessible booking flow.',
+      'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue — from a slot grid 22% of shoppers abandoned to a personalised, accessible booking flow.',
     collaboration: 'Amdari',
     href: '/work/FreshRoute',
     images: [

@@ -73,22 +73,22 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
             <Link
-              to="/work/Edusmart"
+              to="/work/FreshRoute"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
               <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
                 <img
-                  src="/images/edusmart/slide-1.png"
-                  alt="EduSmart Analytics"
+                  src="/images/freshroute/slides/slide-1.png"
+                  alt="FreshRoute Case Study"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Preventing £5M revenue loss through stakeholder validation
+                  Cutting £46M in lost revenue by fixing two screens
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything — 15 of 22 were wrong. That discovery protected £5M in contracts.
+                  UK grocery platform losing shoppers to a broken slot grid and surprise substitutions. Redesigned both flows across a five-week sprint with a tested high-fidelity prototype.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
@@ -104,22 +104,22 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           >
             <Link
-              to="/work/healf-zone-2"
+              to="/work/Edusmart"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
               <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
                 <img
-                  src="/images/healf-zone2/slides/slide-1.png"
-                  alt="Healf Zone 2.0 Case Study"
+                  src="/images/edusmart/slide-1.png"
+                  alt="EduSmart Analytics Case Study"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Interpreting Healf's wellbeing intelligence vision
+                  Preventing £5M revenue loss through stakeholder validation
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  14-day design sprint turning Healf Zone from a twice-yearly blood test into a continuous companion across the full test-to-retest lifecycle.
+                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything — 15 of 22 were wrong. That discovery protected £5M in contracts.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
