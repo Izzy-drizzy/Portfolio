@@ -80,6 +80,20 @@ const projects = [
   },
   {
     number: '005',
+    title: 'Nexora',
+    tags: ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI Screening', 'Coded Prototype', 'Agile'],
+    description:
+      'Designed a two-sided recruitment platform for a 14,000-person enterprise across 22 countries. Recruiter dashboard and candidate portal as one connected system — 14 screens, prototyped in code, with AI-assisted screening and a self-closing scheduling loop.',
+    collaboration: 'Amdari',
+    href: '/work/Nexora',
+    images: [
+      '/images/nexora/slides/slide-1.png',
+      '/images/nexora/slides/slide-2.png',
+      '/images/nexora/slides/slide-3.png',
+    ],
+  },
+  {
+    number: '006',
     title: 'UrbanNest',
     tags: ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'],
     description:
@@ -95,7 +109,7 @@ const projects = [
     ],
   },
   {
-    number: '006',
+    number: '007',
     title: 'Moolapay',
     tags: ['Product Design', 'Cryptocurrency', 'Financial Inclusion', 'Low Digital Literacy', 'Inclusive UX'],
     description:
@@ -110,7 +124,7 @@ const projects = [
     ],
   },
   {
-    number: '007',
+    number: '008',
     title: 'Healf App Onboarding',
     tags: ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'],
     description:
@@ -124,7 +138,7 @@ const projects = [
     ],
   },
   {
-    number: '008',
+    number: '009',
     title: 'Lead Trader',
     tags: ['Product Design', 'Stock Trading', 'Mobile Design', 'Reduced Cognitive Load', 'High Stress UX'],
     description:
