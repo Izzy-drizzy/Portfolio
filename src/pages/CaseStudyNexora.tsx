@@ -457,7 +457,7 @@ export default function CaseStudyNexora() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10 text-center">
               <SectionLabel>Interactive Prototype</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">Try the coded prototype</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Try the prototype</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-xl mx-auto">
                 Built with Claude Code as a working HTML prototype rather than static frames. Click through the recruiter dashboard, pipeline board, and candidate portal to see how the two sides connect.
               </p>
