@@ -16,23 +16,23 @@ const images = [
 ];
 
 const recruiterScreens = [
-  { src: '/images/nexora/wireframes/r1-login.png', label: 'R1 — Login' },
-  { src: '/images/nexora/wireframes/r2-dashboard.png', label: 'R2 — Recruiter Dashboard' },
-  { src: '/images/nexora/wireframes/r3-job-listings.png', label: 'R3 — Job Listings' },
-  { src: '/images/nexora/wireframes/r4-candidate-list.png', label: 'R4 — Candidate List (per role)' },
-  { src: '/images/nexora/wireframes/r5-applicant-profile.png', label: 'R5 — Applicant Profile & Screening' },
-  { src: '/images/nexora/wireframes/r6-schedule-interview.png', label: 'R6 — Schedule Interview' },
-  { src: '/images/nexora/wireframes/r7-pipeline-board.png', label: 'R7 — Pipeline Board (Kanban)' },
-  { src: '/images/nexora/wireframes/r8-offer-management.png', label: 'R8 — Offer Management' },
-  { src: '/images/nexora/wireframes/r9-analytics.png', label: 'R9 — Analytics & KPI Dashboard' },
+  { src: '/images/nexora/wireframes/r1-login.png', label: 'R1 - Login' },
+  { src: '/images/nexora/wireframes/r2-dashboard.png', label: 'R2 - Recruiter Dashboard' },
+  { src: '/images/nexora/wireframes/r3-job-listings.png', label: 'R3 - Job Listings' },
+  { src: '/images/nexora/wireframes/r4-candidate-list.png', label: 'R4 - Candidate List (per role)' },
+  { src: '/images/nexora/wireframes/r5-applicant-profile.png', label: 'R5 - Applicant Profile & Screening' },
+  { src: '/images/nexora/wireframes/r6-schedule-interview.png', label: 'R6 - Schedule Interview' },
+  { src: '/images/nexora/wireframes/r7-pipeline-board.png', label: 'R7 - Pipeline Board (Kanban)' },
+  { src: '/images/nexora/wireframes/r8-offer-management.png', label: 'R8 - Offer Management' },
+  { src: '/images/nexora/wireframes/r9-analytics.png', label: 'R9 - Analytics & KPI Dashboard' },
 ];
 
 const candidateScreens = [
-  { src: '/images/nexora/wireframes/c1-public-listings.png', label: 'C1 — Public Job Listings' },
-  { src: '/images/nexora/wireframes/c2-application-form.png', label: 'C2 — Application Form' },
-  { src: '/images/nexora/wireframes/c3-confirmation.png', label: 'C3 — Application Submitted' },
-  { src: '/images/nexora/wireframes/c4-status-tracker.png', label: 'C4 — Application Status Tracker' },
-  { src: '/images/nexora/wireframes/c5-book-interview.png', label: 'C5 — Book Interview Slot' },
+  { src: '/images/nexora/wireframes/c1-public-listings.png', label: 'C1 - Public Job Listings' },
+  { src: '/images/nexora/wireframes/c2-application-form.png', label: 'C2 - Application Form' },
+  { src: '/images/nexora/wireframes/c3-confirmation.png', label: 'C3 - Application Submitted' },
+  { src: '/images/nexora/wireframes/c4-status-tracker.png', label: 'C4 - Application Status Tracker' },
+  { src: '/images/nexora/wireframes/c5-book-interview.png', label: 'C5 - Book Interview Slot' },
 ];
 
 const tags = ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI Screening', 'Coded Prototype', 'Agile'];
@@ -54,7 +54,7 @@ export default function CaseStudyNexora() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SEO title="Nexora Case Study" description="Designed a two-sided recruitment platform for a 14,000-person enterprise — recruiter dashboard and candidate portal as one connected system, prototyped in code across 14 screens." path="/work/Nexora" />
+      <SEO title="Nexora Case Study" description="Designed a two-sided recruitment platform for a 14,000-person enterprise: recruiter dashboard and candidate portal as one connected system, prototyped in code across 14 screens." path="/work/Nexora" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>
@@ -73,11 +73,11 @@ export default function CaseStudyNexora() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                Nexora Solutions is a Toronto enterprise tech consultancy with 14,000+ staff across 22 countries. Hiring at that scale ran on spreadsheets and inbox archaeology. I designed a recruiter platform and candidate portal as one connected system — 14 screens, prototyped in code, scoped honestly to what a sprint can deliver.
+                Nexora Solutions is a Toronto enterprise tech consultancy with 14,000+ staff across 22 countries. Hiring at that scale ran on spreadsheets and inbox archaeology. I designed a recruiter platform and candidate portal as one connected system: 14 screens, prototyped in code, scoped honestly to what a sprint can deliver.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
-                <span>2026 — PRD-anchored sprint</span>
+                <span>2026 - PRD-anchored sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Product Design Consultant @ Amdari</span>
               </motion.div>
@@ -130,7 +130,7 @@ export default function CaseStudyNexora() {
               <SectionLabel>Problem Framing</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Five pain points from the PRD</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
-                The PRD did the diagnosis — a luxury you don't always get. At Nexora's scale, every small friction multiplied across 22 countries. A scheduling delay that costs a day in one office costs a week across a chain of them.
+                The PRD did the diagnosis, a luxury you don't always get. At Nexora's scale, every small friction multiplied across 22 countries. A scheduling delay that costs a day in one office costs a week across a chain of them.
               </p>
             </motion.div>
 
@@ -149,7 +149,7 @@ export default function CaseStudyNexora() {
                 {
                   n: '03',
                   title: 'Candidate Silence',
-                  body: 'Candidates who hit submit heard nothing. That silence drove a poor experience and mid-process abandonment — nobody trusted the process to go anywhere.',
+                  body: 'Candidates who hit submit heard nothing. That silence drove a poor experience and mid-process abandonment, because nobody trusted the process to go anywhere.',
                 },
               ].map((p) => (
                 <motion.div key={p.n} variants={fadeUp}
@@ -182,7 +182,7 @@ export default function CaseStudyNexora() {
                   {[
                     'Information architecture for the full 14-screen system',
                     'Screen mapping for two user types (recruiter + candidate)',
-                    'Three wireframe iterations — lo-fi through to coded prototype',
+                    'Three wireframe iterations, lo-fi through to coded prototype',
                     'Annotations tying every screen to a PRD pain point',
                     'Built working HTML prototype using Claude Code',
                   ].map((s) => (
@@ -218,7 +218,7 @@ export default function CaseStudyNexora() {
 
             <motion.div variants={fadeUp} className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Sprint Timeline</p>
-              <p className="text-xs text-[var(--text-600)] pt-1">PRD-anchored sprint — three wireframe iterations, from 5 screens to 14, rebuilt from scratch on the third pass</p>
+              <p className="text-xs text-[var(--text-600)] pt-1">PRD-anchored sprint. Three wireframe iterations, from 5 screens to 14, rebuilt from scratch on the third pass</p>
             </motion.div>
           </motion.div>
         </section>
@@ -247,13 +247,13 @@ export default function CaseStudyNexora() {
                   n: '02',
                   title: 'Moving a card sends the message',
                   reasoning: 'On the pipeline board (R7), moving a candidate\'s card from one stage to the next triggers an automated update to that candidate. The recruiter doesn\'t write anything or remember to send anything. The status tracker on the candidate side (C4) updates from the same event.',
-                  insight: 'Silence gets fixed as a byproduct of normal recruiter behaviour — the only kind of fix that survives a busy week.',
+                  insight: 'Silence gets fixed as a byproduct of normal recruiter behaviour, the only kind of fix that survives a busy week.',
                 },
                 {
                   n: '03',
                   title: 'AI screens, the recruiter decides',
                   reasoning: 'The applicant profile screen (R5) leads with an AI match score and a generated summary of the candidate against the role, then puts Advance and Reject as the primary actions for a human to take. The AI does the reading. The recruiter makes the call and can override the score whenever they disagree.',
-                  insight: 'Augmentation with the judgment left where it belongs — the framing that makes the time saving real without asking anyone to trust a black box.',
+                  insight: 'Augmentation with the judgment left where it belongs. That framing makes the time saving real without asking anyone to trust a black box.',
                 },
                 {
                   n: '04',
@@ -305,7 +305,7 @@ export default function CaseStudyNexora() {
                   n: '02',
                   title: 'Knowing when to stop iterating',
                   challenge: 'Three versions is the right number here, but it could easily have been six. Iteration without a stopping rule is just decoration.',
-                  solution: 'The PRD scope was the stopping rule: when every in-scope deliverable had a screen and every screen answered a pain point, the prototype was finished — regardless of how much more I could have added.',
+                  solution: 'The PRD scope was the stopping rule: when every in-scope deliverable had a screen and every screen answered a pain point, the prototype was finished, regardless of how much more I could have added.',
                 },
                 {
                   n: '03',
@@ -351,7 +351,7 @@ export default function CaseStudyNexora() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden">
                 <div className="px-5 py-4 border-b border-[var(--border)]">
-                  <p className="font-semibold text-sm">Recruiter Platform — 9 screens</p>
+                  <p className="font-semibold text-sm">Recruiter Platform - 9 screens</p>
                   <p className="text-xs text-[var(--text-500)] mt-0.5">nexora.internal</p>
                 </div>
                 <div className="p-5 space-y-4">
@@ -377,7 +377,7 @@ export default function CaseStudyNexora() {
 
               <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden">
                 <div className="px-5 py-4 border-b border-[var(--border)]">
-                  <p className="font-semibold text-sm">Candidate Portal — 5 screens</p>
+                  <p className="font-semibold text-sm">Candidate Portal - 5 screens</p>
                   <p className="text-xs text-[var(--text-500)] mt-0.5">careers.nexora.com</p>
                 </div>
                 <div className="p-5 space-y-4">
@@ -386,7 +386,7 @@ export default function CaseStudyNexora() {
                     <ul className="space-y-1.5">
                       {[
                         'Browse roles with clear requirements and team context',
-                        'Short, progressive application form — CV upload triggers AI parsing',
+                        'Short, progressive application form. CV upload triggers AI parsing',
                         'Immediate confirmation with real expectations',
                         'Status tracker updating from recruiter pipeline actions',
                         'Self-service interview booking into recruiter\'s actual availability',
@@ -403,12 +403,12 @@ export default function CaseStudyNexora() {
           </motion.div>
         </section>
 
-        {/* ── WIREFRAMES — RECRUITER ── */}
+        {/* ── WIREFRAMES - RECRUITER ── */}
         <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
-              <SectionLabel>Wireframes — Recruiter Flow</SectionLabel>
+              <SectionLabel>Wireframes - Recruiter Flow</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium">9 screens from login to analytics</h2>
             </motion.div>
 
@@ -427,12 +427,12 @@ export default function CaseStudyNexora() {
           </motion.div>
         </section>
 
-        {/* ── WIREFRAMES — CANDIDATE ── */}
+        {/* ── WIREFRAMES - CANDIDATE ── */}
         <section className="px-4 md:px-10 py-16 border-t border-[var(--border)]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
-              <SectionLabel>Wireframes — Candidate Flow</SectionLabel>
+              <SectionLabel>Wireframes - Candidate Flow</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium">5 screens from browse to booked interview</h2>
             </motion.div>
 
@@ -497,7 +497,7 @@ export default function CaseStudyNexora() {
                 { title: 'Stakeholder review', desc: 'With the client\'s PMs and BAs, then incorporating that feedback into the design.' },
                 { title: 'Mid-fidelity push', desc: 'If the lo-fi structure holds up under review, elevate the visual fidelity.' },
                 { title: 'Figma rebuild', desc: 'Formal Phase 4 handoff artefact for the engineering team.' },
-                { title: 'Usability testing', desc: 'Against the three PRD targets once there is a testable build — none of the numbers mean anything until real users move through real flows.' },
+                { title: 'Usability testing', desc: 'Against the three PRD targets once there is a testable build. None of the numbers mean anything until real users move through real flows.' },
               ].map((s) => (
                 <motion.div key={s.title} variants={fadeUp}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -517,7 +517,7 @@ export default function CaseStudyNexora() {
               <SectionLabel>Reflection</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-6">Systems, not screens</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed mb-4">
-                The decisions I'm proudest of — the scheduling loop and the move-a-card-send-a-message pattern — are not really about how anything looks. They're about two screens behaving as one mechanism. The best fix for the candidate's experience lived inside the recruiter's workflow, and I would have missed it if I had designed the two flows separately instead of as halves of the same thing.
+                The decisions I'm proudest of, the scheduling loop and the move-a-card-send-a-message pattern, are not really about how anything looks. They're about two screens behaving as one mechanism. The best fix for the candidate's experience lived inside the recruiter's workflow, and I would have missed it if I had designed the two flows separately instead of as halves of the same thing.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
                 Prototyping in code with Claude Code let me work faster than I could have otherwise, and being open that two of my three iterations were partly wrong, and that this is a phase deliverable rather than a shipped product, costs me nothing and makes the work easier to trust.

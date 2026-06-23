@@ -33,7 +33,7 @@ export default function CaseStudyFriendMTS() {
               <span className="text-gray-300">FriendMTS</span>
             </motion.div>
             <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
-              Building a dynamic digital identity for a global <span className="text-[#F45D01]">anti-piracy</span> technology leader
+              Redesigning the web presence for a global <span className="text-[#F45D01]">anti-piracy</span> technology company
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-gray-400 leading-relaxed max-w-md">
               Friend MTS tackles video piracy for sports and media clients worldwide. Rebuilt the information architecture,
@@ -54,7 +54,7 @@ export default function CaseStudyFriendMTS() {
             </motion.div>
           </motion.div>
 
-          {/* Right — placeholder until images are added */}
+          {/* Right - placeholder until images are added */}
           <motion.div className="lg:col-span-7 h-[55vh] lg:h-[80vh]"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>

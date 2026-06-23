@@ -60,7 +60,7 @@ export default function CaseStudyHealf() {
               Making Healf's onboarding as intentional as the ecosystem behind it
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              Healf's mobile app onboarding wasn't doing justice to the full ecosystem behind it. This was an unsolicited audit — I redesigned the first-run experience to be more intentional, ensuring it communicated the breadth and value of everything Healf offers from the very first interaction.
+              Healf's mobile app onboarding wasn't doing justice to the full ecosystem behind it. This was an unsolicited audit. I redesigned the first-run experience to show what Healf actually offers, right from the first screen.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>2025</span>
@@ -89,10 +89,10 @@ export default function CaseStudyHealf() {
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
-              { stat: '4 screens', label: 'Redesigned first-run flow — from zero to full ecosystem introduction' },
+              { stat: '4 screens', label: 'Redesigned first-run flow: from zero to full ecosystem introduction' },
               { stat: '0 → 1', label: 'Dedicated Healf Zone introduction screen added to onboarding' },
               { stat: '4 pillars', label: 'Personalisation captured upfront using Healf\'s own EAT, MOVE, MIND, SLEEP framework' },
-              { stat: 'Last', label: 'Where account creation now sits — after value is shown, not before' },
+              { stat: 'Last', label: 'Where account creation now sits: after value is shown, not before' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
@@ -114,7 +114,7 @@ export default function CaseStudyHealf() {
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-10">
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
                 Healf's wellness platform covers supplements, personalised insights, and Healf Zone blood testing. When I downloaded the app,
-                the home page was visually strong — but there was no guided first-run experience to frame what I was looking at. Users arrived
+                the home page was visually strong, but there was no guided first-run experience to frame what I was looking at. Users arrived
                 at a well-designed product without any intentional introduction to the ecosystem behind it.
               </p>
               <div className="space-y-6">
@@ -122,17 +122,17 @@ export default function CaseStudyHealf() {
                   {
                     num: '01',
                     title: 'Unguided First Impression',
-                    body: 'Users were dropped straight into the home page — products on display, visuals well put together — but with no guided introduction to frame what they were looking at. The breadth of Healf\'s ecosystem (Supplements, Insights, Healf Zone) was all there, just with no intentional first-run experience to connect it for the user.',
+                    body: 'Users were dropped straight into the home page. Products on display, visuals well put together, but with no guided introduction to frame what they were looking at. The breadth of Healf\'s ecosystem (Supplements, Insights, Healf Zone) was all there, just with no intentional first-run experience to connect it for the user.',
                   },
                   {
                     num: '02',
                     title: 'Healf Zone Buried',
-                    body: 'Healf Zone — at-home blood testing with personalised supplement recommendations — is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £289/year product that needs context to make sense.',
+                    body: 'Healf Zone, at-home blood testing with personalised supplement recommendations, is their main differentiator and likely their highest-margin product. It\'s not mentioned during onboarding. Users have to find it on their own, which almost nobody does with a £289/year product that needs context to make sense.',
                   },
                   {
                     num: '03',
                     title: 'No Personalisation Capture',
-                    body: 'No goals or preferences are captured during onboarding. Every user gets the same experience regardless of whether they care about sleep, fitness, nutrition, or mental health. The result is generic product recommendations and a missed window — first sessions have the highest engagement of any session.',
+                    body: 'No goals or preferences are captured during onboarding. Every user gets the same experience regardless of whether they care about sleep, fitness, nutrition, or mental health. The result is generic product recommendations and a missed window. First sessions have the highest engagement of any session.',
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 space-y-3">
@@ -147,7 +147,7 @@ export default function CaseStudyHealf() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { val: '0 screens', label: 'Dedicated to introducing Healf\'s ecosystem before the user reaches the home page' },
-                  { val: 'Post-signup', label: 'When Healf Zone first becomes visible — with no framing or explanation at first launch' },
+                  { val: 'Post-signup', label: 'When Healf Zone first becomes visible, with no framing or explanation at first launch' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="text-2xl font-medium text-white mb-2">{m.val}</p>
@@ -165,7 +165,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp} className="mb-8">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-3">Original State</p>
-              <h2 className="text-2xl font-medium">The existing flow — annotated</h2>
+              <h2 className="text-2xl font-medium">The existing flow, annotated</h2>
               <p className="text-sm text-[var(--text-400)] mt-3 max-w-2xl">
                 Screenshots of the original Healf onboarding in sequence, with friction points marked. These are the screens the redesign was responding to.
               </p>
@@ -179,7 +179,7 @@ export default function CaseStudyHealf() {
                 { src: '/images/healf/before/before-5.png', label: 'Step 5' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-                  <ImageZoom src={img.src} alt={`Original Healf screen — ${img.label}`} className="w-full object-cover" />
+                  <ImageZoom src={img.src} alt={`Original Healf screen - ${img.label}`} className="w-full object-cover" />
                   <p className="text-xs text-[var(--text-600)] px-3 py-2">{img.label}</p>
                 </div>
               ))}
@@ -209,7 +209,7 @@ export default function CaseStudyHealf() {
                 ))}
               </div>
               <p className="text-sm text-[var(--text-400)] leading-relaxed mb-4">
-                I'd been following Healf for a while before this — genuinely. I use their supplements personally and have a lot of
+                I'd been following Healf for a while before this, genuinely. I use their supplements personally and have a lot of
                 respect for what they're building. So when I noticed the gap between how strong the product is and how the app's
                 first-run experience represented it, I couldn't not do something about it. This wasn't a cold audit of a random app;
                 it was an attempt to solve a real problem in a product I actually care about.
@@ -231,7 +231,7 @@ export default function CaseStudyHealf() {
               <h2 className="text-2xl font-medium mb-10">Research & Strategy</h2>
             </motion.div>
 
-            {/* Competitive analysis — native */}
+            {/* Competitive analysis - native */}
             <motion.div variants={fadeUp} className="mb-10 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
@@ -288,7 +288,7 @@ export default function CaseStudyHealf() {
                   <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">Industry Patterns</p>
                   <ul className="space-y-2">
                     {[
-                      '90% use progressive disclosure — value first, signup last',
+                      '90% use progressive disclosure: value first, signup last',
                       '75% capture personalisation data (goals, preferences) during onboarding',
                       '100% of blood testing apps dedicate a screen to explaining testing value',
                       'Average 3–4 screens before account creation',
@@ -303,7 +303,7 @@ export default function CaseStudyHealf() {
                   <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Healf's Approach</p>
                   <ul className="space-y-2">
                     {[
-                      'Users land directly on the home page — no guided first-run introduction',
+                      'Users land directly on the home page with no guided first-run introduction',
                       'Ecosystem context left to the user to piece together through exploration',
                       'Healf Zone present in the app but not surfaced or explained during first launch',
                       'No personalisation or goal capture at any point',
@@ -321,7 +321,7 @@ export default function CaseStudyHealf() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Insight</p>
                 <p className="text-sm text-[var(--text-300)] leading-relaxed">
                   Healf has a strong product that competitors can't match, including a £289/year blood testing service most wellness apps
-                  don't offer. The product was all there on first launch — but without an intentional first-run experience, users had
+                  don't offer. The product was all there on first launch, but without an intentional first-run experience, users had
                   no guidance to help them understand the full picture of what they'd just signed up for.
                 </p>
               </div>
@@ -340,7 +340,7 @@ export default function CaseStudyHealf() {
                   ].map((r, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
                       <span className="text-[#F45D01] font-mono text-xs mt-0.5 shrink-0">0{i + 1}</span>
-                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]"> — {r.detail}</span></span>
+                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]">: {r.detail}</span></span>
                     </li>
                   ))}
                 </ul>
@@ -369,17 +369,17 @@ export default function CaseStudyHealf() {
                 {
                   num: '01',
                   title: 'Value-First Approach',
-                  body: 'Show users what they\'re getting before asking for account creation. Research consistently shows users are more likely to sign up after seeing value first — progressive onboarding averages 20–40% higher conversion than minimal flows.',
+                  body: 'Show users what they\'re getting before asking for account creation. Research consistently shows users are more likely to sign up after seeing value first. Progressive onboarding averages 20–40% higher conversion than minimal flows.',
                 },
                 {
                   num: '02',
                   title: 'Strategic Feature Positioning',
-                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £289/year. It needs explanation before users will consider it. A dedicated screen also signals that this is important — the same logic all premium-feature apps use.',
+                  body: 'Dedicate a full screen to Healf Zone. At-home blood testing is complex and costs £289/year. It needs explanation before users will consider it. A dedicated screen also signals that this is important, the same logic all premium-feature apps use.',
                 },
                 {
                   num: '03',
                   title: 'Immediate Personalisation',
-                  body: "Capture goals using Healf's existing Four Pillars framework (EAT, MOVE, MIND, SLEEP). The data immediately feeds into product recommendations and content filtering — so the experience feels relevant from the first session.",
+                  body: "Capture goals using Healf's existing Four Pillars framework (EAT, MOVE, MIND, SLEEP). The data immediately feeds into product recommendations and content filtering, so the experience feels relevant from the first session.",
                 },
               ].map((p) => (
                 <div key={p.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -401,7 +401,7 @@ export default function CaseStudyHealf() {
               <h2 className="text-2xl font-medium mb-4">Progressive 4-Screen Onboarding</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl mb-10">
                 A strategic redesign that explains the ecosystem upfront, dedicates a full screen to Healf Zone's unique value,
-                captures wellness goals through Four Pillars selection, and moves account creation to the end — after value is demonstrated.
+                captures wellness goals through Four Pillars selection, and moves account creation to the end, after value is demonstrated.
                 Every screen includes a subtle "Skip introduction" path for power users who want immediate access.
               </p>
             </motion.div>
@@ -425,7 +425,7 @@ export default function CaseStudyHealf() {
                 {
                   num: 'Screen 03',
                   title: 'Four Pillars Personalisation',
-                  description: 'Multi-select goal capture using Healf\'s existing framework — EAT, MOVE, MIND, SLEEP. Visual selection (icon + label) is low friction. Continue button activates only when at least one pillar is selected.',
+                  description: 'Multi-select goal capture using Healf\'s existing framework: EAT, MOVE, MIND, SLEEP. Visual selection (icon + label) is low friction. Continue button activates only when at least one pillar is selected.',
                   why: "Most users care about 2–3 pillars, not just one. Multi-select captures that honestly. The data drives personalised recommendations from the moment they hit the home screen.",
                   tag: 'Personalisation',
                 },
@@ -433,7 +433,7 @@ export default function CaseStudyHealf() {
                   num: 'Screen 04',
                   title: 'Account Creation',
                   description: 'Standard signup form with email, password, and optional name. Social login options (Google, Apple) reduce friction. Subheadline reminds users why they\'re signing up: "Get personalised recommendations based on your goals."',
-                  why: 'Asking for commitment before showing value is the main reason users drop out. Moving signup to the end — after personalisation — also gives users a reason to create an account: saving their goals.',
+                  why: 'Asking for commitment before showing value is the main reason users drop out. Moving signup to the end, after personalisation, also gives users a reason to create an account: saving their goals.',
                   tag: 'Commitment last',
                 },
               ].map((screen) => (
@@ -464,7 +464,7 @@ export default function CaseStudyHealf() {
                 },
                 {
                   question: 'Why a dedicated Healf Zone screen?',
-                  answer: 'At-home blood testing isn\'t intuitive and costs £289/year. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them — screen real estate signals value.',
+                  answer: 'At-home blood testing isn\'t intuitive and costs £289/year. It requires trust-building that a brief mention in an overview card cannot achieve. Competitors with premium features always dedicate space to them. Screen real estate signals value.',
                 },
                 {
                   question: 'Why move account creation to the end?',
@@ -511,7 +511,7 @@ export default function CaseStudyHealf() {
               <SectionLabel>Expected Impact</SectionLabel>
               <h2 className="text-2xl font-medium mb-2">What This Redesign Is Built to Move</h2>
               <p className="text-sm text-[var(--text-500)] leading-relaxed max-w-xl mb-8">
-                Without access to Healf's internal data, specific numbers aren't something I can honestly claim. Instead — here's the
+                Without access to Healf's internal data, specific numbers aren't something I can honestly claim. Instead, here's the
                 reasoning behind each design decision and what it's intended to improve.
               </p>
             </motion.div>
@@ -522,12 +522,12 @@ export default function CaseStudyHealf() {
                 {
                   num: '01',
                   title: 'Signup completion',
-                  body: 'Moving account creation to the end — after value is shown and goals are captured — removes the ask-before-give drop-off point. Users arrive at signup with a reason to complete it: their personalisation needs to be saved.',
+                  body: 'Moving account creation to the end, after value is shown and goals are captured, removes the ask-before-give drop-off point. Users arrive at signup with a reason to complete it: their personalisation needs to be saved.',
                 },
                 {
                   num: '02',
                   title: 'Healf Zone awareness',
-                  body: 'A dedicated onboarding screen guarantees every new user sees what Healf Zone is and why it matters. Currently it surfaces only through exploration — which most users won\'t do without prior context for a £289/year product.',
+                  body: 'A dedicated onboarding screen guarantees every new user sees what Healf Zone is and why it matters. Currently it surfaces only through exploration, which most users won\'t do without prior context for a £289/year product.',
                 },
                 {
                   num: '03',
@@ -537,7 +537,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '04',
                   title: 'Feature engagement',
-                  body: 'Users introduced to a feature during onboarding engage with it more than those who discover it later — the introduction creates intent. Without it, Healf Zone and Insights remain features users stumble across rather than seek out.',
+                  body: 'Users introduced to a feature during onboarding engage with it more than those who discover it later. The introduction creates intent. Without it, Healf Zone and Insights remain features users stumble across rather than seek out.',
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -556,11 +556,11 @@ export default function CaseStudyHealf() {
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'A/B test current vs new onboarding across 10% of new users — measure signup completion and Four Pillars selection rate',
-                  'Post-onboarding survey: "Do you understand what Healf offers?" — success if 90%+ can articulate all three pillars',
-                  'Track Healf Zone click-through from the dedicated onboarding screen — target 25%+ exploring further',
+                  'A/B test current vs new onboarding across 10% of new users. Measure signup completion and Four Pillars selection rate',
+                  'Post-onboarding survey: "Do you understand what Healf offers?" Success if 90%+ can articulate all three pillars',
+                  'Track Healf Zone click-through from the dedicated onboarding screen. Target 25%+ exploring further',
                   'Monitor 7-day and 30-day retention for cohorts that completed personalisation vs skipped',
-                  'Measure time to first purchase — expect reduction as users arrive with clearer intent',
+                  'Measure time to first purchase. Expect reduction as users arrive with clearer intent',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
                     <span className="text-[#F45D01] mt-1 shrink-0">—</span>

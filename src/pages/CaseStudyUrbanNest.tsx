@@ -19,10 +19,10 @@ const images = [
 
 const finalDesigns = [
   { src: '/images/urbannest/final/final-1.png', label: 'Welcome Screen' },
-  { src: '/images/urbannest/final/final-2.png', label: 'Onboarding — Budget' },
-  { src: '/images/urbannest/final/final-3.png', label: 'Onboarding — Workplace' },
-  { src: '/images/urbannest/final/final-4.png', label: 'Onboarding — Priorities' },
-  { src: '/images/urbannest/final/final-5.png', label: 'Home — Top 10 Picks' },
+  { src: '/images/urbannest/final/final-2.png', label: 'Onboarding - Budget' },
+  { src: '/images/urbannest/final/final-3.png', label: 'Onboarding - Workplace' },
+  { src: '/images/urbannest/final/final-4.png', label: 'Onboarding - Priorities' },
+  { src: '/images/urbannest/final/final-5.png', label: 'Home - Top 10 Picks' },
   { src: '/images/urbannest/final/final-6.png', label: 'Search Results' },
   { src: '/images/urbannest/final/final-7.png', label: 'Property Detail' },
   { src: '/images/urbannest/final/final-8.png', label: 'Advanced Filters' },
@@ -54,7 +54,7 @@ export default function CaseStudyUrbanNest() {
         {/* ── HERO ── */}
         <section className="min-h-screen pt-28 pb-16 px-4 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
-          {/* Left — text */}
+          {/* Left - text */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28">
             <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
 
@@ -73,7 +73,7 @@ export default function CaseStudyUrbanNest() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
-                <span>2026 — 4-week sprint</span>
+                <span>2026 - 4-week sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Product Design Consultant @ Amdari</span>
               </motion.div>
@@ -86,7 +86,7 @@ export default function CaseStudyUrbanNest() {
             </motion.div>
           </div>
 
-          {/* Right — carousel */}
+          {/* Right - carousel */}
           <motion.div
             className="lg:col-span-7 rounded-xl overflow-hidden bg-[var(--surface)]"
             style={{ height: '65vh' }}
@@ -107,7 +107,7 @@ export default function CaseStudyUrbanNest() {
           >
             {[
               { val: '8', label: 'Screens designed for Sprint 1 MVP' },
-              { val: '3', label: 'Core features designed — onboarding, commute, filters' },
+              { val: '3', label: 'Core features designed: onboarding, commute, filters' },
               { val: '30+', label: 'Filter options organised into 9 sections with 3 UI patterns' },
               { val: '3', label: 'User personas driving every design decision' },
             ].map((s) => (
@@ -136,7 +136,7 @@ export default function CaseStudyUrbanNest() {
               {[
                 {
                   n: '01',
-                  title: 'Commute is the top priority — but lives outside the app',
+                  title: 'Commute is the top priority, but lives outside the app',
                   body: 'Commute time came up as the top deciding factor in research, but renters have to leave the platform and check Google Maps for every property they look at. That back-and-forth adds up across dozens of listings.',
                 },
                 {
@@ -253,7 +253,7 @@ export default function CaseStudyUrbanNest() {
                 {
                   n: '02',
                   title: 'Onboarding that personalises without creating friction',
-                  challenge: 'Users want relevant results from the first screen, but lengthy onboarding flows have high drop-off. The temptation is to ask everything upfront — budget, location, commute, lifestyle, move-in date — which turns onboarding into a form.',
+                  challenge: 'Users want relevant results from the first screen, but lengthy onboarding flows have high drop-off. The temptation is to ask everything upfront (budget, location, commute, lifestyle, move-in date) which turns onboarding into a form.',
                   solution: 'Cut it to 3 questions, all skippable: Budget range, Workplace location (for commute), and Priorities (price, commute, or neighbourhood). Progress indicators show 1/3, 2/3, 3/3. Answers feed the "Top 10 Picks" on the home screen right away. Users who skip still get a working experience with trending listings instead.',
                 },
                 {
@@ -298,9 +298,9 @@ export default function CaseStudyUrbanNest() {
             <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 { src: '/images/urbannest/process/midfi/midfi-1.png', label: 'Welcome Screen' },
-                { src: '/images/urbannest/process/midfi/midfi-2.png', label: 'Onboarding — Budget' },
-                { src: '/images/urbannest/process/midfi/midfi-3.png', label: 'Onboarding — Workplace' },
-                { src: '/images/urbannest/process/midfi/midfi-4.png', label: 'Onboarding — Priorities' },
+                { src: '/images/urbannest/process/midfi/midfi-2.png', label: 'Onboarding - Budget' },
+                { src: '/images/urbannest/process/midfi/midfi-3.png', label: 'Onboarding - Workplace' },
+                { src: '/images/urbannest/process/midfi/midfi-4.png', label: 'Onboarding - Priorities' },
                 { src: '/images/urbannest/process/midfi/midfi-5.png', label: 'Home' },
                 { src: '/images/urbannest/process/midfi/midfi-6.png', label: 'Search Results' },
                 { src: '/images/urbannest/process/midfi/midfi-7.png', label: 'Property Detail' },
@@ -320,7 +320,7 @@ export default function CaseStudyUrbanNest() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">Sprint 1 MVP — 8 screens, 3 core features</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Sprint 1 MVP: 8 screens, 3 core features</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 The full vision includes viewing bookings, agent messaging, and comparison tools, but the PM and I agreed Sprint 1 should only cover the three features that address the highest-pain problems: guided onboarding, commute-integrated search, and structured filtering. Everything else is scoped for later.
               </p>
@@ -334,7 +334,7 @@ export default function CaseStudyUrbanNest() {
                   details: [
                     'Budget range with slider (min/max)',
                     'Workplace location for commute calculation',
-                    'Priority picker — price, commute, or neighbourhood',
+                    'Priority picker: price, commute, or neighbourhood',
                     'All steps skippable with progress indicator',
                     'Answers feed "Top 10 Picks" on home screen',
                   ],
@@ -478,7 +478,7 @@ export default function CaseStudyUrbanNest() {
                 {
                   n: '02',
                   title: 'Mobile-first is a design constraint, not a viewport',
-                  body: 'Starting at 375px meant every decision went through a "does this work with one thumb?" check. Bottom navigation, persistent filter bars, compact cards — all of that came from the constraint itself, not from scaling down a desktop layout.',
+                  body: 'Starting at 375px meant every decision went through a "does this work with one thumb?" check. Bottom navigation, persistent filter bars, compact cards, all of that came from the constraint itself, not from scaling down a desktop layout.',
                 },
                 {
                   n: '03',

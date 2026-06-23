@@ -58,12 +58,12 @@ export default function Preloader() {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className="flex items-start gap-4"
           >
-            {/* Left — Logo, same height as name text */}
+            {/* Left - Logo, same height as name text */}
             <div className="flex items-center h-[18px] md:h-[26px]">
               <img src="/logo.svg" alt="Logo" className="h-full w-auto opacity-80" />
             </div>
 
-            {/* Right — Name + progress percentage below */}
+            {/* Right - Name + progress percentage below */}
             <div>
               <h1 className="text-[18px] md:text-[26px] font-semibold tracking-tight text-[#E4E3E0] leading-none">
                 {displayText}

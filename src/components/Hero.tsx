@@ -25,7 +25,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
       <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end">
 
-        {/* Left Column — narrower */}
+        {/* Left Column - narrower */}
         <div className="lg:col-span-5 h-full flex flex-col justify-between gap-10 lg:gap-0">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]"
           >
-            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products that drive measurable business impact
+            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products with real impact for real people
           </motion.h1>
 
           <motion.div
@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
-              I design product experiences mostly in fintech, health tech, and EdTech. The brief is usually clear. The actual problem usually isn't. I spend a lot of time in that gap — that's where the real work happens.
+              5+ years designing SaaS and ecommerce products across early-stage fintech, edtech, and health tech. I focus on product strategy and end-to-end design, and I'm most useful at the stage where the real problem hasn't been found yet.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -65,7 +65,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Right Column — wider, cards side by side */}
+        {/* Right Column - wider, cards side by side */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:col-span-6 lg:col-start-7">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
                   Preventing £5M revenue loss through stakeholder validation
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything — 15 of 22 were wrong. That discovery protected £5M in contracts.
+                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything. 15 of 22 were wrong. That discovery protected £5M in contracts.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />

@@ -26,8 +26,8 @@ const finalDesigns = [
   { src: '/images/freshroute/final/final-4.png', label: 'Rank Your Top 3 (Optional)' },
   { src: '/images/freshroute/final/final-5.png', label: 'Onboarding Complete' },
   { src: '/images/freshroute/final/final-6.png', label: 'Slot Selection Landing (Personalised)' },
-  { src: '/images/freshroute/final/final-7.png', label: 'Slot Grid — 2-Hour Default' },
-  { src: '/images/freshroute/final/final-8.png', label: 'Slot Grid — 1-Hour Toggle' },
+  { src: '/images/freshroute/final/final-7.png', label: 'Slot Grid - 2-Hour Default' },
+  { src: '/images/freshroute/final/final-8.png', label: 'Slot Grid - 1-Hour Toggle' },
   { src: '/images/freshroute/final/final-9.png', label: 'Filters Panel (Mobile)' },
   { src: '/images/freshroute/final/final-10.png', label: 'Slot Confirmation' },
   { src: '/images/freshroute/final/final-11.png', label: 'Slot Unavailable Error' },
@@ -41,8 +41,8 @@ const lofiDesigns = [
   { src: '/images/freshroute/lofi/lofi-4.jpg', label: 'Rank Your Top 3' },
   { src: '/images/freshroute/lofi/lofi-5.jpg', label: 'Onboarding Complete' },
   { src: '/images/freshroute/lofi/lofi-6.jpg', label: 'Slot Selection Landing' },
-  { src: '/images/freshroute/lofi/lofi-7.jpg', label: 'Slot Grid — 2-Hour' },
-  { src: '/images/freshroute/lofi/lofi-8.jpg', label: 'Slot Grid — 1-Hour' },
+  { src: '/images/freshroute/lofi/lofi-7.jpg', label: 'Slot Grid - 2-Hour' },
+  { src: '/images/freshroute/lofi/lofi-8.jpg', label: 'Slot Grid - 1-Hour' },
   { src: '/images/freshroute/lofi/lofi-9.jpg', label: 'Filters Panel' },
   { src: '/images/freshroute/lofi/lofi-10.jpg', label: 'Slot Unavailable' },
   { src: '/images/freshroute/lofi/lofi-11.jpg', label: 'Accessibility Mode' },
@@ -92,7 +92,7 @@ export default function CaseStudyFreshRoute() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
-                <span>2026 — 5-week design sprint</span>
+                <span>2026 - 5-week design sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Lead Product Designer @ Amdari</span>
               </motion.div>
@@ -165,7 +165,7 @@ export default function CaseStudyFreshRoute() {
                 {
                   n: '03',
                   title: 'Accessibility Exposure',
-                  body: 'The product carried 23 WCAG 2.2 AA failures — the kind of thing that stays invisible until a regulator or a lawsuit makes it visible.',
+                  body: 'The product carried 23 WCAG 2.2 AA failures, the kind of thing that stays invisible until a regulator or a lawsuit makes it visible.',
                 },
               ].map((p) => (
                 <motion.div key={p.n} variants={fadeUp}
@@ -181,7 +181,7 @@ export default function CaseStudyFreshRoute() {
               className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-6 md:p-8">
               <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">Competitive Analysis</p>
               <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-3xl mb-4">
-                I ran a competitive teardown of six UK platforms — Ocado, Tesco, Sainsbury's, Amazon Fresh, Waitrose, and Gopuff — scoring each across slot UX, substitution control, mobile experience, pricing, and accessibility. The pattern was consistent: everyone built slot grids in 30-minute or 1-hour increments, which produces 15 to 30 rows of tiny cells. On a phone, that is a wall of grey "fully booked" boxes with no shortcut to the first open slot.
+                I ran a competitive teardown of six UK platforms: Ocado, Tesco, Sainsbury's, Amazon Fresh, Waitrose, and Gopuff, scoring each across slot UX, substitution control, mobile experience, pricing, and accessibility. The pattern was consistent: everyone built slot grids in 30-minute or 1-hour increments, which produces 15 to 30 rows of tiny cells. On a phone, that is a wall of grey "fully booked" boxes with no shortcut to the first open slot.
               </p>
               <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-3xl">
                 Substitutions were worse, because nobody had solved them. Five of six platforms offered a single binary toggle: allow substitutions, or don't. No one let a shopper say "swap my vegetables if you have to, but never touch the dairy."
@@ -207,13 +207,13 @@ export default function CaseStudyFreshRoute() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">My Responsibilities</p>
                 <ul className="space-y-2.5">
                   {[
-                    'Competitive analysis — 6 UK grocery platforms scored across 7 criteria',
-                    'Information architecture — 52-screen inventory mapped end to end',
+                    'Competitive analysis: 6 UK grocery platforms scored across 7 criteria',
+                    'Information architecture: 52-screen inventory mapped end to end',
                     'Lo-fi wireframes in HTML for device-native testing before visual design',
-                    'Design system — base components, spacing, and patterns for cross-flow consistency',
-                    'Mid-fidelity prototype — tested with real shoppers',
+                    'Design system: base components, spacing, and patterns for cross-flow consistency',
+                    'Mid-fidelity prototype: tested with real shoppers',
                     'Design direction and review for junior designer\'s Flow 3',
-                    'Accessibility audit — cleared all 23 WCAG 2.2 AA failures',
+                    'Accessibility audit: cleared all 23 WCAG 2.2 AA failures',
                   ].map((r) => (
                     <li key={r} className="flex gap-2.5 text-xs text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-0.5 flex-shrink-0">+</span>
@@ -230,11 +230,11 @@ export default function CaseStudyFreshRoute() {
                     <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Design Team</p>
                     <ul className="space-y-1.5">
                       {[
-                        ['Bukunmi (Me)', 'Lead Product Designer — Flow 1 (Slots), Flow 2 (Substitutions), design system, design direction'],
-                        ['Junior Designer', 'Flow 3 (Account & Order History) — using shared design system and patterns'],
+                        ['Bukunmi (Me)', 'Lead Product Designer - Flow 1 (Slots), Flow 2 (Substitutions), design system, design direction'],
+                        ['Junior Designer', 'Flow 3 (Account & Order History) - using shared design system and patterns'],
                       ].map(([name, role]) => (
                         <li key={name} className="text-xs text-[var(--text-400)]">
-                          <span className="text-[var(--text-300)] font-medium">{name}</span> — {role}
+                          <span className="text-[var(--text-300)] font-medium">{name}</span>: {role}
                         </li>
                       ))}
                     </ul>
@@ -252,7 +252,7 @@ export default function CaseStudyFreshRoute() {
                       ))}
                     </ul>
                   </div>
-                  <p className="text-xs text-[var(--text-600)] pt-1">5-week sprint — research synthesis through tested high-fidelity prototype</p>
+                  <p className="text-xs text-[var(--text-600)] pt-1">5-week sprint - research synthesis through tested high-fidelity prototype</p>
                 </div>
               </motion.div>
             </div>
@@ -282,8 +282,8 @@ export default function CaseStudyFreshRoute() {
                 {
                   n: '02',
                   title: '"Next available" always visible',
-                  reasoning: 'No competitor showed shoppers where the first open slot was. They all made you hunt for it. I put a persistent banner at the top of the grid — tappable, scrolling straight to the slot and pre-selecting it.',
-                  insight: 'This turns the most common abandonment moment — "I can\'t find anything open" — into a one-tap action. It reframes a fully booked early week from a dead end into a clear "here\'s your real first option."',
+                  reasoning: 'No competitor showed shoppers where the first open slot was. They all made you hunt for it. I put a persistent banner at the top of the grid, tappable, scrolling straight to the slot and pre-selecting it.',
+                  insight: 'This turns the most common abandonment moment, "I can\'t find anything open," into a one-tap action. It reframes a fully booked early week from a dead end into a clear "here\'s your real first option."',
                 },
                 {
                   n: '03',
@@ -295,7 +295,7 @@ export default function CaseStudyFreshRoute() {
                   n: '04',
                   title: 'Accessibility as a first-class mode, not a retrofit',
                   reasoning: 'The 23 WCAG failures were not going to be fixed by nudging contrast ratios. I built a dedicated accessibility mode: larger touch targets, 7:1 contrast ratio against the 4.5:1 minimum, a simplified layout, and a "book my usual" shortcut for routine weekly orders.',
-                  insight: 'I designed this against a specific persona — an older shopper with a fixed weekly routine — rather than an abstract compliance checklist. Designing for her cleared the failures as a byproduct of designing something genuinely usable.',
+                  insight: 'I designed this against a specific persona, an older shopper with a fixed weekly routine, rather than an abstract compliance checklist. Designing for her cleared the failures as a byproduct of designing something genuinely usable.',
                 },
               ].map((d) => (
                 <motion.div key={d.n} variants={fadeUp}
@@ -335,7 +335,7 @@ export default function CaseStudyFreshRoute() {
                   n: '01',
                   title: 'The heatmap that had to die',
                   challenge: 'I spent real time on a slot demand heatmap, colour-coding the grid by how busy each window was, inspired by a feature Getir had run before they exited the UK. It tested badly.',
-                  solution: 'On desktop it added information. On a phone it added colour noise that competed with the availability states the shopper actually needed to read. I cut it and kept a lighter version — simple "filling fast" and "X slots left" labels on individual slots. A good idea on the wrong surface is still the wrong idea.',
+                  solution: 'On desktop it added information. On a phone it added colour noise that competed with the availability states the shopper actually needed to read. I cut it and kept a lighter version: simple "filling fast" and "X slots left" labels on individual slots. A good idea on the wrong surface is still the wrong idea.',
                 },
                 {
                   n: '02',
@@ -347,7 +347,7 @@ export default function CaseStudyFreshRoute() {
                   n: '03',
                   title: 'Keeping a junior designer\'s flow consistent with mine',
                   challenge: 'Flow 3 was not mine to build, but it had to feel like the same product. Components, spacing, and interaction patterns all needed to carry across without me designing every screen.',
-                  solution: 'Setting up the design system early — with documented components and spacing — did most of the work. The rest was review. Leading design is partly about making good decisions easy for other people to inherit.',
+                  solution: 'Setting up the design system early, with documented components and spacing, did most of the work. The rest was review. Leading design is partly about making good decisions easy for other people to inherit.',
                 },
               ].map((c) => (
                 <motion.div key={c.n} variants={fadeUp}
@@ -408,10 +408,10 @@ export default function CaseStudyFreshRoute() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/freshroute/process/user-flow-1.jpg', label: 'Flow 1 — Slot Booking' },
-                { src: '/images/freshroute/process/user-flow-2.jpg', label: 'Flow 2 — Category-Level Substitution Setup' },
-                { src: '/images/freshroute/process/user-flow-3.jpg', label: 'Flow 3 — Real-Time Substitution Approval' },
-                { src: '/images/freshroute/process/user-flow-4.jpg', label: 'Flow 4 — Accessible Slot Booking for Elderly Users' },
+                { src: '/images/freshroute/process/user-flow-1.jpg', label: 'Flow 1 - Slot Booking' },
+                { src: '/images/freshroute/process/user-flow-2.jpg', label: 'Flow 2 - Category-Level Substitution Setup' },
+                { src: '/images/freshroute/process/user-flow-3.jpg', label: 'Flow 3 - Real-Time Substitution Approval' },
+                { src: '/images/freshroute/process/user-flow-4.jpg', label: 'Flow 4 - Accessible Slot Booking for Elderly Users' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -460,7 +460,7 @@ export default function CaseStudyFreshRoute() {
                       {[
                         'Short optional onboarding captures preferred days and times',
                         '2-hour default grid (6 rows vs 15), with 1-hour toggle for precision',
-                        '"Next available" banner pinned at top — one-tap booking',
+                        '"Next available" banner pinned at top for one-tap booking',
                         'Hold timer on confirmation so nobody loses their slot mid-checkout',
                         '4-hour saver tier for price-sensitive shoppers',
                       ].map((s) => (
@@ -483,9 +483,9 @@ export default function CaseStudyFreshRoute() {
                     <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">The Three Tiers</p>
                     <ul className="space-y-1.5">
                       {[
-                        'No substitutions — guaranteed items or nothing, built for dietary restrictions',
-                        'Category-level — swap produce, never touch dairy (the gap nobody filled)',
-                        'Real-time approval — 30-minute pre-packing window, approve/reject each swap via push notification',
+                        'No substitutions: guaranteed items or nothing, built for dietary restrictions',
+                        'Category-level: swap produce, never touch dairy (the gap nobody filled)',
+                        'Real-time approval: 30-minute pre-packing window, approve/reject each swap via push notification',
                       ].map((s) => (
                         <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
                           <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
@@ -573,7 +573,7 @@ export default function CaseStudyFreshRoute() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
                 { val: '~£45M', label: 'At-risk revenue recovered', sub: 'Tesco\'s "Smart Slot" feature cut abandonment 19% in six months on its own. The clean grid, next-available banner, and personalised landing target a similar or better result.' },
-                { val: '~£2.5M', label: 'Support & waste cost reduction', sub: 'Moving substitution decisions to a point where shoppers still have agency addresses the root cause directly — taking the £3.2M support cost toward £1.76M and cutting £1.9M food-waste cost roughly in half.' },
+                { val: '~£2.5M', label: 'Support & waste cost reduction', sub: 'Moving substitution decisions to a point where shoppers still have agency addresses the root cause directly, taking the £3.2M support cost toward £1.76M and cutting £1.9M food-waste cost roughly in half.' },
                 { val: '23 → 0', label: 'WCAG failures cleared', sub: 'The accessibility mode and contrast-first design system close the legal exposure and make the product usable for shoppers who couldn\'t get through it before.' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
@@ -587,7 +587,7 @@ export default function CaseStudyFreshRoute() {
 
             <motion.div variants={fadeUp}
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 text-xs text-[var(--text-600)] leading-relaxed">
-              Total projected annual impact lands around £46M of the £47.34M the brief had flagged as at-risk or wasted. These numbers are design targets informed by research and market benchmarks — not measured outcomes from a live product.
+              Total projected annual impact lands around £46M of the £47.34M the brief had flagged as at-risk or wasted. These numbers are design targets informed by research and market benchmarks, not measured outcomes from a live product.
             </motion.div>
           </motion.div>
         </section>
@@ -604,7 +604,7 @@ export default function CaseStudyFreshRoute() {
                   Most of this redesign was subtraction. The temptation in a brief like this is to add: more filters, more views, a clever heatmap, richer settings. Almost every real improvement came from removing something. Fewer grid rows. Fewer decisions surfaced at once. One fewer moment of surprise at the door.
                 </p>
                 <p className="text-sm text-[var(--text-400)] leading-relaxed">
-                  The substitution work taught me the most. It would have been easy to copy Gopuff and just refuse to substitute — call it bold and move on. The harder and better answer was to figure out what people were actually upset about, which turned out to be timing and control, not the swap itself, and design for that. Matching the right problem to the right fix is most of the job.
+                  The substitution work taught me the most. It would have been easy to copy Gopuff and just refuse to substitute, call it bold and move on. The harder and better answer was to figure out what people were actually upset about, which turned out to be timing and control, not the swap itself, and design for that. Matching the right problem to the right fix is most of the job.
                 </p>
               </div>
             </motion.div>

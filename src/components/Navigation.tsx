@@ -35,7 +35,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          {/* Theme toggle — hidden until light mode is ready */}
+          {/* Theme toggle - hidden until light mode is ready */}
           <button
             onClick={toggle}
             className="hidden p-2 rounded-lg border border-[var(--border)] text-[var(--text-400)] hover:text-[var(--text)] hover:border-[var(--border-md)] transition-colors"
@@ -70,7 +70,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
           <Link to="/work" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>Work</Link>
           <Link to="/about" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>About</Link>
           <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
-          {/* Theme toggle — hidden until light mode is ready */}
+          {/* Theme toggle - hidden until light mode is ready */}
           <button
             onClick={() => {
               setIsOpen(false);

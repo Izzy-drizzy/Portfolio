@@ -52,7 +52,7 @@ export default function CaseStudyMoolapay() {
               Designing financial inclusion for communities left behind by traditional banking
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              A payments app built for Nigerian users that existing fintech apps weren't designed for — varying literacy levels, unreliable connectivity, and genuine distrust of crypto after years of scams.
+              A payments app built for Nigerian users that existing fintech apps weren't designed for: varying literacy levels, unreliable connectivity, and genuine distrust of crypto after years of scams.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>2022</span>
@@ -82,9 +82,9 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
               { stat: '7→3', label: 'Steps to send crypto, reduced from the typical wallet experience' },
-              { stat: '3', label: 'Core jobs addressed — send/receive, save, track spending' },
+              { stat: '3', label: 'Core jobs addressed: send/receive, save, track spending' },
               { stat: '4', label: 'Literacy levels designed for, from icon-only to power users' },
-              { stat: '0', label: 'Jargon in the interface — blockchain, keys, confirmations replaced throughout' },
+              { stat: '0', label: 'Jargon in the interface: blockchain, keys, confirmations replaced throughout' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
@@ -115,7 +115,7 @@ export default function CaseStudyMoolapay() {
                   {
                     num: '01',
                     title: 'Crypto Complexity Barrier',
-                    body: 'Existing crypto wallets assume users know about public/private keys, blockchain confirmations, network fees, and wallet addresses. Most users in this demographic found crypto "too complicated" — not because they weren\'t interested, but because the interfaces weren\'t built for them.',
+                    body: 'Existing crypto wallets assume users know about public/private keys, blockchain confirmations, network fees, and wallet addresses. Most users in this demographic found crypto "too complicated," not because they weren\'t interested, but because the interfaces weren\'t built for them.',
                   },
                   {
                     num: '02',
@@ -125,7 +125,7 @@ export default function CaseStudyMoolapay() {
                   {
                     num: '03',
                     title: 'Savings Failure',
-                    body: "When there's no system working in the background, money gets spent. Users wanted to save but couldn't follow through — not because they lacked motivation, but because nothing made it easy to start.",
+                    body: "When there's no system working in the background, money gets spent. Users wanted to save but couldn't follow through, not because they lacked motivation, but because nothing made it easy to start.",
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 space-y-3">
@@ -139,7 +139,7 @@ export default function CaseStudyMoolapay() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { val: 'Complexity', label: 'The primary barrier — not lack of interest in crypto or finance' },
+                  { val: 'Complexity', label: 'The primary barrier, not lack of interest in crypto or finance' },
                   { val: 'Abandonment', label: 'The consistent pattern across existing financial apps in this market' },
                 ].map((m, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -167,7 +167,7 @@ export default function CaseStudyMoolapay() {
                   { label: 'Role', value: 'UX Research, UI Design, User Testing, Design System' },
                   { label: 'Platform', value: 'Mobile App (iOS/Android)' },
                   { label: 'Team', value: 'Founder, Product Managers, Engineers' },
-                  { label: 'Engagement', value: 'Contract — concluded after deliverables' },
+                  { label: 'Engagement', value: 'Contract, concluded after deliverables' },
                 ].map((item, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">{item.label}</p>
@@ -179,11 +179,11 @@ export default function CaseStudyMoolapay() {
                 I was brought in as a contract designer working directly with the Moolapay founder, product managers, and engineering team. I owned the full design process: user research, information architecture, interaction design, visual design, and the design system. The engagement ended after design deliverables were handed off to the development team.
               </p>
               <p className="text-sm text-[var(--text-500)] leading-relaxed mt-3">
-                I used Claude to help synthesise community interview notes and brainstorm culturally-aware design patterns — particularly for trust signals and how to frame financial concepts for users with varying literacy levels.
+                I used Claude to help synthesise community interview notes and brainstorm culturally-aware design patterns, particularly for trust signals and how to frame financial concepts for users with varying literacy levels.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
                 Research was conducted through community interviews and observational studies with participants across Lagos,
-                Abuja, and Port Harcourt — grounding every design decision in real behaviour rather than assumptions.
+                Abuja, and Port Harcourt, grounding every design decision in real behaviour rather than assumptions.
               </p>
             </motion.div>
           </motion.div>
@@ -204,14 +204,14 @@ export default function CaseStudyMoolapay() {
                 <h3 className="text-base font-semibold">Research Methods</h3>
                 <ul className="space-y-3">
                   {[
-                    { method: 'User interviews', detail: '21 participants — informal sector workers, small business owners, students' },
+                    { method: 'User interviews', detail: '21 participants: informal sector workers, small business owners, students' },
                     { method: 'Questionnaires', detail: '150+ respondents quantifying pain points across demographics' },
                     { method: 'Observational studies', detail: '8 participants shadowed attempting real fintech tasks' },
-                    { method: 'Competitive analysis', detail: 'Kuda, PiggyVest, Cowrywise, Flutterwave — patterns and failure modes' },
+                    { method: 'Competitive analysis', detail: 'Kuda, PiggyVest, Cowrywise, Flutterwave: patterns and failure modes' },
                   ].map((r, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
                       <span className="text-[#F45D01] font-mono text-xs mt-0.5 shrink-0">0{i + 1}</span>
-                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]"> — {r.detail}</span></span>
+                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]">: {r.detail}</span></span>
                     </li>
                   ))}
                 </ul>
@@ -220,9 +220,9 @@ export default function CaseStudyMoolapay() {
                 <h3 className="text-base font-semibold">Observational Insights</h3>
                 <ul className="space-y-3">
                   {[
-                    'Users relied heavily on icons over text for navigation — visual pattern-matching, not reading',
-                    'Error messages caused immediate panic and abandonment — no recovery behaviour',
-                    'Too much information upfront triggered paralysis — progressive disclosure essential',
+                    'Users relied heavily on icons over text for navigation. Visual pattern-matching, not reading',
+                    'Error messages caused immediate panic and abandonment. No recovery behaviour',
+                    'Too much information upfront triggered paralysis. Progressive disclosure essential',
                     'Visual confirmation (animation, colour change) was trusted far more than text confirmation',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
@@ -243,7 +243,7 @@ export default function CaseStudyMoolapay() {
                     name: 'Peace, 21',
                     role: 'Corp Member, Lawyer',
                     location: 'F.C.T State, Nigeria',
-                    bio: 'First-class Law graduate working with a law firm in Abuja. Also an entrepreneur with two businesses — prefers an e-wallet to track expenses, sales and income.',
+                    bio: 'First-class Law graduate working with a law firm in Abuja. Also an entrepreneur with two businesses who prefers an e-wallet to track expenses, sales and income.',
                     traits: ['Smart money woman', 'Ambivert', 'Intelligent', 'Money conscious'],
                     goals: [
                       'Transfer money without being charged',
@@ -251,7 +251,7 @@ export default function CaseStudyMoolapay() {
                       'Login notifications for security when her phone is out of sight',
                     ],
                     pains: [
-                      'Needs internet for every transaction — wants USSD fallback for connectivity issues',
+                      'Needs internet for every transaction, wants USSD fallback for connectivity issues',
                       'Having to restart transactions when OTP arrives late',
                     ],
                     status: 'Courting',
@@ -260,7 +260,7 @@ export default function CaseStudyMoolapay() {
                     name: 'Kemi, 28',
                     role: 'HR Manager, Online Business Owner',
                     location: 'Lagos, Nigeria',
-                    bio: 'HR professional who also runs an online business. Has two kids and a very busy schedule — needs financial tools that work without friction.',
+                    bio: 'HR professional who also runs an online business. Has two kids and a very busy schedule and needs financial tools that work without friction.',
                     traits: ['Money conscious', 'Hardworking', 'Social', 'Techy'],
                     goals: [
                       'Link credit cards to a single wallet for easy access',
@@ -280,7 +280,7 @@ export default function CaseStudyMoolapay() {
                     bio: 'Computer science student in final year, working as a freelance developer remotely. Prefers an e-wallet over carrying cash.',
                     traits: ['Techy', 'Introverted', 'Intelligent', 'Money conscious'],
                     goals: [
-                      'Send and receive payments in any currency seamlessly',
+                      'Send and receive payments in any currency without friction',
                       'All-in-one wallet connected to bank accounts to reduce app-switching',
                       'Track spending and manage budget',
                     ],
@@ -389,23 +389,23 @@ export default function CaseStudyMoolapay() {
               <p className="text-sm text-[var(--text-400)] mt-3 max-w-2xl">User flows, journey maps, and wireframe sketches from before the hi-fi screens were made.</p>
             </motion.div>
 
-            {/* User Flow & IA — full width */}
+            {/* User Flow & IA - full width */}
             <motion.div variants={fadeUp} className="mb-3">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Flow & Information Architecture</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)] mb-12">
               <ImageZoom src="/images/moolapay/process/user-flow-ia.png" alt="User flow and IA diagram" className="w-full object-cover" />
-              <p className="text-xs text-[var(--text-600)] px-4 py-2">User flow & IA — full app structure</p>
+              <p className="text-xs text-[var(--text-600)] px-4 py-2">User flow & IA - full app structure</p>
             </motion.div>
 
-            {/* Journey Maps — 2 col */}
+            {/* Journey Maps - 2 col */}
             <motion.div variants={fadeUp} className="mb-3">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Journey Maps</p>
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/moolapay/process/journey-fund-transfer.png', label: 'Journey map — Fund Transfer' },
-                { src: '/images/moolapay/process/journey-scan-to-pay.png', label: 'Journey map — Scan to Pay' },
+                { src: '/images/moolapay/process/journey-fund-transfer.png', label: 'Journey map - Fund Transfer' },
+                { src: '/images/moolapay/process/journey-scan-to-pay.png', label: 'Journey map - Scan to Pay' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -414,7 +414,7 @@ export default function CaseStudyMoolapay() {
               ))}
             </motion.div>
 
-            {/* Wireframes — full width */}
+            {/* Wireframes - full width */}
             <motion.div variants={fadeUp} className="mb-3">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Wireframes & IA Sketches</p>
             </motion.div>
@@ -451,7 +451,7 @@ export default function CaseStudyMoolapay() {
                   num: '03',
                   title: 'Trust-Building in a Crypto-Sceptical Market',
                   problem: 'Crypto scams are common in Nigeria. Many of the users this was built for had already been burned. A polished UI doesn\'t fix that on its own.',
-                  solution: 'Every fee is shown before the transaction goes through. A visual preview shows exactly where money is going. Security information isn\'t buried in settings — it\'s shown where users actually need to see it.',
+                  solution: 'Every fee is shown before the transaction goes through. A visual preview shows exactly where money is going. Security information isn\'t buried in settings. It\'s shown where users actually need to see it.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp}
@@ -484,7 +484,7 @@ export default function CaseStudyMoolapay() {
               <SectionLabel>Solution</SectionLabel>
               <h2 className="text-2xl font-medium mb-4">A Visual-First Social Finance Platform</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl mb-10">
-                Splash → minimal onboarding (3 screens) → main dashboard. Navigation organised around what users actually do —
+                Splash → minimal onboarding (3 screens) → main dashboard. Navigation organised around what users actually do,
                 not technical service names. Five focused tabs: Home, Transfers, Wallets, Expenses, Profile.
               </p>
             </motion.div>
@@ -495,7 +495,7 @@ export default function CaseStudyMoolapay() {
                   num: 'Feature 01',
                   title: 'Dashboard',
                   tag: 'Visual-first',
-                  description: 'Large, prominent balance overview with visual breakdown (Cash vs Crypto vs Savings). Four Quick Action icons front and centre: Send Money, Receive Cash, Buy Airtime, Save Now. Visual transaction timeline with colour-coded icons — green up arrow (money in), red down arrow (money out).',
+                  description: 'Large, prominent balance overview with visual breakdown (Cash vs Crypto vs Savings). Four Quick Action icons front and centre: Send Money, Receive Cash, Buy Airtime, Save Now. Visual transaction timeline with colour-coded icons: green up arrow (money in), red down arrow (money out).',
                   why: 'Readable in 3 seconds. Icons carry meaning without text. The most-used actions are front and centre, so users aren\'t hunting through menus.',
                 },
                 {
@@ -503,13 +503,13 @@ export default function CaseStudyMoolapay() {
                   title: 'Transfers',
                   tag: 'Phone numbers not wallets',
                   description: "Simplified 3-step send flow: select recipient by phone number (not wallet address) → enter amount in Naira or crypto (app handles conversion) → visual confirmation preview showing money moving between accounts. SMS + in-app confirmation on success.",
-                  why: "Nigerians already send money using phone numbers through mobile banking. Removing wallet addresses removes the single biggest technical barrier — the app handles the lookup, users never see it.",
+                  why: "Nigerians already send money using phone numbers through mobile banking. Removing wallet addresses removes the single biggest technical barrier. The app handles the lookup, users never see it.",
                 },
                 {
                   num: 'Feature 03',
                   title: 'Wallets',
                   tag: 'Crypto made approachable',
-                  description: '"Your Bitcoin vault" instead of "BTC wallet." Balance shown in both crypto and Naira equivalents. Simple "Convert to Naira" button for swapping. Advanced users can tap "View address" to see technical details — beginners never need to see it.',
+                  description: '"Your Bitcoin vault" instead of "BTC wallet." Balance shown in both crypto and Naira equivalents. Simple "Convert to Naira" button for swapping. Advanced users can tap "View address" to see technical details. Beginners never need to see it.',
                   why: "Power users get full control. Novice users get simplicity. Neither group is penalised for the other's needs.",
                 },
                 {
@@ -517,7 +517,7 @@ export default function CaseStudyMoolapay() {
                   title: 'Expenses',
                   tag: 'Automated tracking',
                   description: 'App automatically categorises transactions using merchant data. Visual spending chart with colour-coded categories (Food, Transport, Bills). Weekly/monthly toggle. One-tap to correct a category. Automated insights: "You spent 40% less on food this week!"',
-                  why: 'Manual expense tracking fails because it requires a habit change most users won\'t make. Automating it entirely removes the barrier — the benefit is there without asking anything of the user.',
+                  why: 'Manual expense tracking fails because it requires a habit change most users won\'t make. Automating it entirely removes the barrier. The benefit is there without asking anything of the user.',
                 },
               ].map((feature) => (
                 <motion.div key={feature.num} variants={fadeUp}
@@ -544,7 +544,7 @@ export default function CaseStudyMoolapay() {
               {[
                 {
                   question: 'Why phone numbers instead of wallet addresses?',
-                  answer: '"Enter wallet address: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D" creates immediate anxiety and drop-off. Phone numbers are how Nigerians already think about sending money. The app handles wallet lookup invisibly — users never need to know it exists.',
+                  answer: '"Enter wallet address: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D" creates immediate anxiety and drop-off. Phone numbers are how Nigerians already think about sending money. The app handles wallet lookup invisibly. Users never need to know it exists.',
                 },
                 {
                   question: 'Why minimal onboarding (3 screens) rather than a full tutorial?',
@@ -586,12 +586,12 @@ export default function CaseStudyMoolapay() {
                   task: 'Send ₦5,000 to a contact by phone number',
                   success: '83%',
                   insight: '2 failures occurred because users didn\'t know how to add a recipient to contacts first',
-                  iteration: 'Added "Send to new number" option directly in the flow — eliminating the prerequisite step',
+                  iteration: 'Added "Send to new number" option directly in the flow, eliminating the prerequisite step',
                 },
                 {
                   task: 'View Bitcoin balance and convert to Naira',
                   success: '75%',
-                  insight: '3 users confused by "Swap" terminology — expected "Convert" or "Change to Naira"',
+                  insight: '3 users confused by "Swap" terminology, expected "Convert" or "Change to Naira"',
                   iteration: 'Changed button text to "Convert to Naira" with "Swap" as secondary label for power users',
                 },
                 {
@@ -631,18 +631,18 @@ export default function CaseStudyMoolapay() {
                 },
                 {
                   title: 'Increased touch target sizes',
-                  before: '40px buttons — barely met minimum guidelines',
-                  after: '48px minimum, 56px for primary actions — comfortable for less-experienced smartphone users',
+                  before: '40px buttons, barely met minimum guidelines',
+                  after: '48px minimum, 56px for primary actions, comfortable for less-experienced smartphone users',
                 },
                 {
                   title: 'Improved colour contrast',
-                  before: 'Secondary text at 3.8:1 contrast ratio — unreadable in Nigerian sunlight',
-                  after: 'Secondary text at 4.7:1 — WCAG AA compliant, readable outdoors',
+                  before: 'Secondary text at 3.8:1 contrast ratio, unreadable in Nigerian sunlight',
+                  after: 'Secondary text at 4.7:1, WCAG AA compliant, readable outdoors',
                 },
                 {
                   title: 'Streamlined crypto flow',
                   before: 'Select crypto → enter wallet address → confirm (7 steps total)',
-                  after: 'Enter phone number → amount → confirm (3 steps — app handles wallet lookup invisibly)',
+                  after: 'Enter phone number → amount → confirm (3 steps, app handles wallet lookup invisibly)',
                 },
               ].map((change, i) => (
                 <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 space-y-3">
@@ -669,7 +669,7 @@ export default function CaseStudyMoolapay() {
               <SectionLabel>Screens</SectionLabel>
               <h2 className="text-2xl font-medium mb-10">Final Designs</h2>
             </motion.div>
-            {/* First row — 3 columns */}
+            {/* First row - 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               {[
                 '/images/moolapay/final-1.png',
@@ -682,7 +682,7 @@ export default function CaseStudyMoolapay() {
                 </motion.div>
               ))}
             </div>
-            {/* Second row — 4 columns */}
+            {/* Second row - 4 columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 '/images/moolapay/final-4.png',
@@ -705,7 +705,7 @@ export default function CaseStudyMoolapay() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-medium mb-8">Measurable Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-8">What the redesign moved</h2>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -731,11 +731,11 @@ export default function CaseStudyMoolapay() {
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'The design system supports new features — bill payments, savings goals, investments — without needing a redesign',
+                  'The design system supports new features (bill payments, savings goals, investments) without needing a redesign',
                   'Visual-first patterns work for any new cryptocurrency (same card structure, different icon)',
                   'The localisation approach can be adapted for other African markets without starting from scratch',
                   'Accessibility is built into the component layer, so new features inherit it by default',
-                  'Performance constraints are documented and shared — new features don\'t accidentally break the low-bandwidth experience',
+                  'Performance constraints are documented and shared, so new features don\'t accidentally break the low-bandwidth experience',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
                     <span className="text-[#F45D01] mt-1 shrink-0">—</span>

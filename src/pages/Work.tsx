@@ -13,7 +13,7 @@ const projects = [
     title: 'FreshRoute',
     tags: ['Product Design', 'Grocery & Delivery', 'Accessibility', 'WCAG 2.2 AA', 'UX Strategy', 'Design Leadership'],
     description:
-      'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue — from a slot grid 22% of shoppers abandoned to a personalised, accessible booking flow.',
+      'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue. Took a slot grid 22% of shoppers abandoned and turned it into a personalised, accessible booking flow.',
     collaboration: 'Amdari',
     href: '/work/FreshRoute',
     images: [
@@ -31,7 +31,7 @@ const projects = [
     title: 'EduSmart Analytics',
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
-      'AI-powered student analytics platform for 200+ UK/Canadian universities. Stakeholder validation revealed 15/22 product assumptions were wrong — pivoting from student self-monitoring to a faculty intervention tool addressed £5M in at-risk contracts and cut scope 66%.',
+      'AI-powered student analytics platform for 200+ UK/Canadian universities. Stakeholder validation revealed 15/22 product assumptions were wrong. Pivoting from student self-monitoring to a faculty intervention tool addressed £5M in at-risk contracts and cut scope 66%.',
     collaboration: 'Amdari',
     href: '/work/Edusmart',
     images: [
@@ -49,7 +49,7 @@ const projects = [
     title: 'Hobpay',
     tags: ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'],
     description:
-      'Strategic web-first redesign eliminating platform barriers for Nigerian fintech serving 10K+ users. Simplified navigation, streamlined service access, and progressive disclosure increased satisfaction 30% while recovering iOS-blocked users.',
+      'Web-first redesign of a Nigerian fintech platform serving 10K+ users. The iOS app was blocked from the App Store, so I moved the core experience to web. Simplified navigation and progressive disclosure brought satisfaction from 3.2 to 4.2/5.',
     collaboration: null,
     href: '/work/Hobpay',
     images: [
@@ -66,7 +66,7 @@ const projects = [
     title: 'Healf Zone 2.0',
     tags: ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'],
     description:
-      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. A blueprint for Healf\'s wellbeing intelligence vision — transforming Zone from a twice-yearly testing service into a continuous companion that interprets biomarkers, guides adaptive protocols, and integrates commerce as a natural extension of care.',
+      'Unsolicited case study for Healf\'s Founding Lead Product Designer role. Designed the product vision for evolving Zone from a twice-yearly testing service into something users come back to between tests: biomarker interpretation, adaptive protocols, and commerce tied to what their results actually say.',
     collaboration: null,
     href: '/work/healf-zone-2',
     images: [
@@ -83,7 +83,7 @@ const projects = [
     title: 'Nexora',
     tags: ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI Screening', 'Coded Prototype', 'Agile'],
     description:
-      'Designed a two-sided recruitment platform for a 14,000-person enterprise across 22 countries. Recruiter dashboard and candidate portal as one connected system — 14 screens, prototyped in code, with AI-assisted screening and a self-closing scheduling loop.',
+      'Designed a two-sided recruitment platform for a 14,000-person enterprise across 22 countries. Recruiter dashboard and candidate portal as one connected system. 14 screens, prototyped in code, with AI-assisted screening and a self-closing scheduling loop.',
     collaboration: 'Amdari',
     href: '/work/Nexora',
     images: [
@@ -113,7 +113,7 @@ const projects = [
     title: 'Moolapay',
     tags: ['Product Design', 'Cryptocurrency', 'Financial Inclusion', 'Low Digital Literacy', 'Inclusive UX'],
     description:
-      "Financial inclusion platform connecting underserved Nigerian communities to cryptocurrency and digital payments. Designed simplified navigation and visual language transcending literacy barriers, with trust-building elements and culturally-aware interface patterns.",
+      "Cryptocurrency payments app for users in Nigeria with low digital literacy. Designed a visual-first interface that works across 4 literacy levels, using icons over text, progressive onboarding, and culturally relevant trust patterns to reduce drop-off.",
     collaboration: null,
     href: '/work/Moolapay',
     images: [
@@ -128,7 +128,7 @@ const projects = [
     title: 'Healf App Onboarding',
     tags: ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'],
     description:
-      "Redesigned Healf's onboarding flow to improve user discovery and engagement. Focused on creating a personalized first-run experience that connects users to the right wellness content faster.",
+      "Unsolicited audit of Healf's mobile onboarding. The existing flow dumped users into a home screen with no context. Redesigned it around Healf's Four Pillars framework so new users understand the ecosystem before they create an account.",
     collaboration: null,
     href: '/work/healf',
     images: [
@@ -142,7 +142,7 @@ const projects = [
     title: 'Lead Trader',
     tags: ['Product Design', 'Stock Trading', 'Mobile Design', 'Reduced Cognitive Load', 'High Stress UX'],
     description:
-      "Strategic demo redesign for parent company evaluating product overhaul. Identified critical UX issues; visual hierarchy chaos, data visualization gaps, expert-only assumptions, and redesigned core flows with progressive disclosure, performance indicators, and organized quick actions serving both novice and expert traders",
+      "Demo redesign for a parent company deciding whether to invest in a full product overhaul. Audited the existing trading app, found visual hierarchy problems and an interface that only worked for expert traders. Redesigned 5 core screens with progressive disclosure so both novice and expert users could navigate the same product.",
     collaboration: 'Artbox Studio',
     href: '/work/LeadTrader',
     images: [
@@ -322,7 +322,7 @@ export default function Work() {
               </motion.div>
             </div>
 
-            {/* Images — full-width slider on mobile, marquee on desktop */}
+            {/* Images - full-width slider on mobile, marquee on desktop */}
             <motion.div variants={fadeUp} custom={2}>
               <div className="block md:hidden px-5 pb-2">
                 <MobileSlider images={project.images} />

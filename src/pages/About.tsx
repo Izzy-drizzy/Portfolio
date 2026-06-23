@@ -12,8 +12,8 @@ const expertise = [
     icon: '/icons/design-white.svg',
     link: { label: 'View Behance', href: 'https://www.behance.net/bukunmiisijola' },
     body: [
-      "Here's what separates me from other designers: I prototype in code, not just Figma. This means I'm thinking about API constraints, loading states, and mobile performance while designing, not after. My approach combines thorough user research with rapid prototyping, always keeping business goals in focus.",
-      "I've specialized in fintech and SaaS products, where complex information needs to be digestible and trustworthy. Recent work includes transforming an investment platform with 30% satisfaction improvements and redesigning trading applications for both novice and expert users. What excites me most is turning complex problems into simple, elegant solutions that users intuitively understand.",
+      "What I bring that most designers don't: I prototype in code, not just Figma. This means I'm thinking about API constraints, loading states, and mobile performance while designing, not after. I research before I design and prototype before I commit, and the business goal stays on the table throughout.",
+      "I've specialized in fintech and SaaS products, where complex information needs to be digestible and trustworthy. Recent work includes an investment platform redesign that moved user satisfaction by 30%, and trading applications designed for both first-time and experienced investors. The most interesting part of the job is taking something that feels complicated and finding the version that makes sense on first use.",
     ],
   },
   {
@@ -21,8 +21,8 @@ const expertise = [
     icon: '/icons/code-white.svg',
     link: { label: 'View GitHub', href: 'https://github.com/Izzy-drizzy' },
     body: [
-      "My development expertise is my competitive advantage. With front-end experience and a solid understanding of technical constraints, I create designs that developers can actually build efficiently. This technical perspective helps me make smarter design decisions early, reducing back-and-forth and ensuring pixel-perfect implementations.",
-      "I've built responsive web applications, contributed to complex API integration, and optimised user interfaces for performance. This dual expertise means I can prototype functional solutions, not just pretty mockups. When I hand off designs, developers don't come back with 'this is impossible' — they come back with shipping dates.",
+      "My development background shapes how I design. With front-end experience and a solid understanding of technical constraints, I create designs that developers can actually build efficiently. This technical perspective helps me make smarter design decisions early, reducing back-and-forth and getting closer to pixel-perfect implementations.",
+      "I've built responsive web applications, contributed to complex API integration, and optimised user interfaces for performance. That means I can prototype working solutions, not mockups that fall apart in production. When I hand off designs, developers don't come back with 'this is impossible.' They come back with shipping dates.",
     ],
   },
   {
@@ -30,8 +30,8 @@ const expertise = [
     icon: '/icons/pen-white.svg',
     link: { label: 'View Artbox', href: 'https://artbox-studio.com' },
     body: [
-      "In November 2024, I launched Artbox Studio to stay sharp while seeking the right full-time UX role. Running my own consultancy has taught me project management, stakeholder communication, and the importance of delivering work that drives real business results, not just wins design awards.",
-      "While I've enjoyed the entrepreneurial experience, I'm specifically looking for a UX role at an established company where I can focus on product work, collaborate with strong teams, and contribute to meaningful growth.",
+      "In November 2024, I launched Artbox Studio to stay sharp while seeking the right full-time UX role. Running my own consultancy has taught me project management, stakeholder communication, and what it takes to deliver work that actually moves the needle for a business.",
+      "While I've enjoyed the entrepreneurial experience, I'm looking for a product design role at a company where the work matters, the team is strong, and I can go deep on one product instead of context-switching across client engagements.",
     ],
   },
 ];
@@ -40,22 +40,22 @@ const reads = [
   {
     title: 'Google UX Design Certificate',
     date: 'March 2022',
-    body: "Google's comprehensive UX program that taught me the fundamentals of user-centered design thinking. This course solidified my understanding of design research, wireframing, prototyping, and testing methodologies. What I loved most was the emphasis on real-world application and iterative design processes that I still use in every project today.",
+    body: "Where I learned to stop designing from assumptions. The research and testing methods from this course still shape how I start every project: talk to users first, prototype cheap, test before committing.",
   },
   {
     title: 'Complete Web & Mobile Designer: UI/UX, Figma by Andrei Neagoie',
     date: 'April 2024',
-    body: "An in-depth course that elevated my Figma skills and design system thinking. Neagoie's practical approach to both web and mobile design helped me understand responsive design principles and component-based design workflows. The course's focus on real-world projects and industry best practices directly improved how I approach design handoffs and maintain consistency across platforms.",
+    body: "This is where my Figma skills went from functional to fluent. Neagoie's approach to component systems and responsive layouts changed how I structure files for handoff. I stopped treating mobile as a scaled-down desktop after this one.",
   },
   {
     title: 'Motion Design with Figma: Animations, Motion Graphics, UX/UI by Andrei Neagoie',
     date: 'April 2024',
-    body: "This course transformed how I think about micro-interactions and animation in user interfaces. Learning to create meaningful motion graphics and transitions in Figma helped me communicate user flows more effectively and add polish to my designs. The skills from this course now influence how I prototype interactions and collaborate with developers on animation specifications.",
+    body: "Before this course, I used animation to make things look nice. After it, I started using motion to show users where they are and what just happened. The prototyping techniques also made it much easier to spec animations for developers.",
   },
   {
     title: "Don't Make Me Think by Steve Krug",
     date: 'January 2025',
-    body: "The classic usability bible that changed how I approach web design. Krug's principles of intuitive navigation and reducing cognitive load became core to my design philosophy. This book taught me that the best interfaces are invisible — users should accomplish their goals without having to think about how to use the interface itself.",
+    body: "Krug's whole point is that if someone has to think about how to use your interface, you've already lost. I re-read the chapter on navigation every time I'm stuck on an information architecture problem.",
   },
   {
     title: 'Learning new stuff 😊',
@@ -78,7 +78,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
-      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. 4+ years across fintech, health tech, and edtech." path="/about" />
+      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. 5+ years across fintech, health tech, and edtech." path="/about" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28 px-7 md:px-10">
@@ -105,13 +105,13 @@ export default function About() {
         >
           <div className="space-y-5 text-[var(--text-300)] text-base leading-relaxed">
             <p>
-              Hi, I'm Bukunmi — Oluwabukunmi David Isijola if we're being formal. I've been a creator for as long as I can remember. Growing up, I was the kid always scribbling something; drawing comic books with my brother, filling entire notebooks with stories to share with friends who'd eagerly await the next chapter. That early love for visual storytelling shaped everything that came after.
+              Hi, I'm Bukunmi (Oluwabukunmi David Isijola if we're being formal). I've been a creator for as long as I can remember. Growing up, I was the kid always scribbling something; drawing comic books with my brother, filling entire notebooks with stories to share with friends who'd eagerly await the next chapter. That early love for visual storytelling shaped everything that came after.
             </p>
             <p>
-              As I got older, my canvas evolved. I moved from paper to pixels, teaching myself tools like Illustrator and Photoshop to create and tell stories digitally. Then came university and a Computer Science degree, where I discovered I could express creativity through code — HTML, CSS, JavaScript, React. Frontend development wasn't just technical; it was another form of creative expression.
+              As I got older, my canvas evolved. I moved from paper to pixels, teaching myself tools like Illustrator and Photoshop to create and tell stories digitally. Then came university and a Computer Science degree, where I discovered I could express creativity through code: HTML, CSS, JavaScript, React. Frontend development wasn't just technical; it was another form of creative expression.
             </p>
             <p>
-              Fast forward through a Master's in Computer Science and 4+ years designing fintech and SaaS products, and here I am: a Product Designer who bridges design and development. I understand what users need and what engineers can build, which means I create experiences that don't just look good — they work, they scale, and they drive measurable business impact.
+              Fast forward through a Master's in Computer Science and 5+ years designing fintech and SaaS products, and here I am: a Product Designer who bridges design and development. I understand what users need and what engineers can build, so the things I design actually ship and hold up in production.
             </p>
             <p className="text-[var(--text-400)]">
               Currently running Artbox Studio while exploring Senior Product Designer opportunities at companies building products that matter.

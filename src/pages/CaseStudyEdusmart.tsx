@@ -20,15 +20,15 @@ const images = [
 ];
 
 const finalDesigns = [
-  { src: '/images/edusmart/final-1.png', label: 'Student Onboarding — Step 1' },
-  { src: '/images/edusmart/final-2.png', label: 'Student Onboarding — Step 2 (Consent)' },
+  { src: '/images/edusmart/final-1.png', label: 'Student Onboarding - Step 1' },
+  { src: '/images/edusmart/final-2.png', label: 'Student Onboarding - Step 2 (Consent)' },
   { src: '/images/edusmart/final-3.png', label: 'Student Dashboard' },
   { src: '/images/edusmart/final-4.png', label: 'Student Settings' },
   { src: '/images/edusmart/final-5.png', label: 'Instructor Dashboard' },
-  { src: '/images/edusmart/final-6.png', label: 'Instructor — At-Risk Students List' },
+  { src: '/images/edusmart/final-6.png', label: 'Instructor - At-Risk Students List' },
   { src: '/images/edusmart/final-7.png', label: 'Admin Dashboard' },
-  { src: '/images/edusmart/final-8.png', label: 'Admin — Compliance Dashboard' },
-  { src: '/images/edusmart/final-9.png', label: 'Admin — Data Integration Status' },
+  { src: '/images/edusmart/final-8.png', label: 'Admin - Compliance Dashboard' },
+  { src: '/images/edusmart/final-9.png', label: 'Admin - Data Integration Status' },
 ];
 
 const tags = ['EdTech', 'AI-Powered', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'];
@@ -57,7 +57,7 @@ export default function CaseStudyEdusmart() {
         {/* ── HERO ── */}
         <section className="min-h-screen pt-28 pb-16 px-4 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
-          {/* Left — text */}
+          {/* Left - text */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28">
             <motion.div initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}>
 
@@ -72,11 +72,11 @@ export default function CaseStudyEdusmart() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops — 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and gave three at-risk contracts a reason to stay.
+                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops. 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and gave three at-risk contracts a reason to stay.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
-                <span>2026 — 3-week design sprint</span>
+                <span>2026 - 3-week design sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
                 <span>Product Design Consultant @ Amdari</span>
               </motion.div>
@@ -89,7 +89,7 @@ export default function CaseStudyEdusmart() {
             </motion.div>
           </div>
 
-          {/* Right — carousel */}
+          {/* Right - carousel */}
           <motion.div
             className="lg:col-span-7 rounded-xl overflow-hidden bg-[var(--surface)]"
             style={{ height: '65vh' }}
@@ -110,9 +110,9 @@ export default function CaseStudyEdusmart() {
           >
             {[
               { val: '15/22', label: 'Assumptions rejected through stakeholder validation' },
-              { val: '66%', label: 'Scope reduction — 58 features down to 20 validated' },
+              { val: '66%', label: 'Scope reduction: 58 features down to 20 validated' },
               { val: '88%', label: 'Task completion rate in usability testing' },
-              { val: '£5M', label: 'Annual contracts at risk — the business case that shaped every scope decision' },
+              { val: '£5M', label: 'Annual contracts at risk, the business case that shaped every scope decision' },
             ].map((s) => (
               <motion.div key={s.val} variants={fadeUp}
                 className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -131,7 +131,7 @@ export default function CaseStudyEdusmart() {
               <SectionLabel>Problem Framing</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">A £5M exposure hiding inside a reporting lag</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
-                EduSmart Analytics — founded 2017, serving 200+ institutions with 6% UK market share — faced a post-COVID inflection point. 48-hour reporting delays were preventing early student intervention, and three major university clients were actively evaluating competitors.
+                EduSmart Analytics, founded 2017, serving 200+ institutions with 6% UK market share, faced a post-COVID inflection point. 48-hour reporting delays were preventing early student intervention, and three major university clients were actively evaluating competitors.
               </p>
             </motion.div>
 
@@ -167,7 +167,7 @@ export default function CaseStudyEdusmart() {
               className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-6 md:p-8">
               <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-3">The Critical Discovery</p>
               <p className="text-sm text-[var(--text-300)] leading-relaxed max-w-3xl">
-                Through validation workshops with the project's BAs, PMs, and client stakeholders, I discovered 15 out of 22 initial product assumptions were wrong. We weren't just over-designing — we were building the wrong product entirely. The pivot: cut scope from 58 to 20 validated features and shift focus from student self-monitoring to faculty intervention.
+                Through validation workshops with the project's BAs, PMs, and client stakeholders, I discovered 15 out of 22 initial product assumptions were wrong. We weren't just over-designing. We were building the wrong product entirely. The pivot: cut scope from 58 to 20 validated features and shift focus from student self-monitoring to faculty intervention.
               </p>
             </motion.div>
           </motion.div>
@@ -181,10 +181,10 @@ export default function CaseStudyEdusmart() {
               <SectionLabel>Role & Team</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
-                Engaged as the sole UX/UI lead within a cross-functional team — working alongside a Project Manager and Business Analyst across a 3-week design sprint, with regular reviews involving EduSmart's product and engineering stakeholders.
+                I was the sole UX/UI lead, working alongside a Project Manager and Business Analyst across a 3-week design sprint, with regular reviews from EduSmart's product and engineering stakeholders.
               </p>
               <p className="text-sm text-[var(--text-500)] leading-relaxed max-w-2xl mt-3">
-                I used Claude throughout the project as a thinking partner — synthesising interview notes into patterns, pressure-testing the assumption validation framework, and working through IA decisions before committing them to Figma. It helped me move faster without skipping the thinking.
+                I used Claude throughout the project as a thinking partner, synthesising interview notes into patterns, pressure-testing the assumption validation framework, and working through IA decisions before committing them to Figma. It helped me move faster without skipping the thinking.
               </p>
             </motion.div>
 
@@ -193,13 +193,13 @@ export default function CaseStudyEdusmart() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">My Responsibilities</p>
                 <ul className="space-y-2.5">
                   {[
-                    'Journey mapping workshops — 2 flows mapped with BAs, PMs, and client stakeholders',
+                    'Journey mapping workshops: 2 flows mapped with BAs, PMs, and client stakeholders',
                     'Created 4 validated user personas across 3 role types',
                     'Led assumption-testing workshops (22 assumptions tested with BAs, PMs, and stakeholders)',
                     'Wireframed 58 initial features, then streamlined to 20',
                     'Hi-fi designs for 3 dashboards + 6 secondary pages',
                     'Interactive Figma prototypes for usability testing',
-                    'Recruited and tested with 15 users — 88% task completion',
+                    'Recruited and tested with 15 users, 88% task completion',
                   ].map((r) => (
                     <li key={r} className="flex gap-2.5 text-xs text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-0.5 flex-shrink-0">+</span>
@@ -216,12 +216,12 @@ export default function CaseStudyEdusmart() {
                     <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Consulting Team</p>
                     <ul className="space-y-1.5">
                       {[
-                        ['Bukunmi (Me)', 'Product Design Consultant — full UX/UI ownership'],
+                        ['Bukunmi (Me)', 'Product Design Consultant - full UX/UI ownership'],
                         ['Project Manager', 'Scrum facilitation, sprint planning, stakeholder management'],
                         ['Business Analyst', 'Requirements gathering, feature prioritisation, acceptance criteria'],
                       ].map(([name, role]) => (
                         <li key={name} className="text-xs text-[var(--text-400)]">
-                          <span className="text-[var(--text-300)] font-medium">{name}</span> — {role}
+                          <span className="text-[var(--text-300)] font-medium">{name}</span>: {role}
                         </li>
                       ))}
                     </ul>
@@ -231,14 +231,14 @@ export default function CaseStudyEdusmart() {
                     <ul className="space-y-1.5">
                       {[
                         'Product & Engineering teams (weekly sprint reviews)',
-                        'Validation workshops — BAs, PMs, and client stakeholders',
-                        'Journey mapping workshops — BAs, PMs, and client stakeholders',
+                        'Validation workshops: BAs, PMs, and client stakeholders',
+                        'Journey mapping workshops: BAs, PMs, and client stakeholders',
                       ].map((s) => (
                         <li key={s} className="text-xs text-[var(--text-400)]">– {s}</li>
                       ))}
                     </ul>
                   </div>
-                  <p className="text-xs text-[var(--text-600)] pt-1">Methodology: 3-week design sprint — research, validation, design, and usability testing</p>
+                  <p className="text-xs text-[var(--text-600)] pt-1">Methodology: 3-week design sprint. Research, validation, design, and usability testing</p>
                 </div>
               </motion.div>
             </div>
@@ -263,26 +263,26 @@ export default function CaseStudyEdusmart() {
                 {
                   phase: 'Week 1',
                   title: 'Journey Mapping & Persona Creation',
-                  detail: 'Ran workshops with the project\'s BAs, PMs, and client stakeholders to map two flows: the student lifecycle and the faculty intervention workflow. Findings produced 4 personas — Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, Excel-dependent), David Robertson (admin, GDPR anxiety).',
-                  quote: '"With 280 students, I can\'t monitor everyone by hand. I need to know WHO to help WHEN." — Dr. Sarah Chen',
+                  detail: 'Ran workshops with the project\'s BAs, PMs, and client stakeholders to map two flows: the student lifecycle and the faculty intervention workflow. Findings produced 4 personas: Maya Thompson (student, data-conscious), James Okafor (at-risk student), Dr. Sarah Chen (instructor, Excel-dependent), David Robertson (admin, GDPR anxiety).',
+                  quote: '"With 280 students, I can\'t monitor everyone by hand. I need to know WHO to help WHEN." - Dr. Sarah Chen',
                 },
                 {
                   phase: 'Week 1–2',
                   title: 'UX Recommendations & Stakeholder Validation',
-                  detail: 'Documented recommendations — then the BA and PM flagged a contradiction: we were recommending more analytics transparency while users said analytics were already too complex. That conflict shaped the validation framework: 22 assumptions across 3 user types, tested in 2-hour structured workshops.',
+                  detail: 'Documented recommendations, then the BA and PM flagged a contradiction: we were recommending more analytics transparency while users said analytics were already too complex. That conflict shaped the validation framework: 22 assumptions across 3 user types, tested in 2-hour structured workshops.',
                   quote: 'Result: 15 of 22 assumptions REJECTED. We were building the wrong product.',
                 },
                 {
                   phase: 'Week 2–3',
                   title: 'Wireframes → Hi-Fi → Prototype',
-                  detail: 'Cut from 58 features to 20 validated ones. Designed 3 dashboards (Student, Instructor, Admin) and 6 secondary pages — desktop-first, because the research confirmed faculty work at desks, not on mobile. Built interactive Figma prototypes across 3 user flows for usability testing.',
+                  detail: 'Cut from 58 features to 20 validated ones. Designed 3 dashboards (Student, Instructor, Admin) and 6 secondary pages, desktop-first, because the research confirmed faculty work at desks, not on mobile. Built interactive Figma prototypes across 3 user flows for usability testing.',
                   quote: null,
                 },
                 {
                   phase: 'Week 3',
                   title: 'Usability Testing & Success Metrics',
                   detail: '15 participants (5 per persona), 5 tasks each, unmoderated remote via Maze. Results: 88% task completion (target >80%), 4.2/5 satisfaction (target 4+), zero P0 bugs. Success metrics and handoff specs documented for the development team.',
-                  quote: '"This is exactly what I need. Simple, fast, and tells me who to contact." — Instructor participant',
+                  quote: '"This is exactly what I need. Simple, fast, and tells me who to contact." - Instructor participant',
                 },
               ].map((p) => (
                 <motion.div key={p.phase} variants={fadeUp}
@@ -311,13 +311,13 @@ export default function CaseStudyEdusmart() {
                   n: '01',
                   title: 'Analytics Complexity vs Transparency',
                   before: 'We were designing more analytics transparency features',
-                  after: 'Stakeholders said analytics were already too complex — would have made the problem worse',
+                  after: 'Stakeholders said analytics were already too complex, would have made the problem worse',
                 },
                 {
                   n: '02',
                   title: 'Student Self-Monitoring vs Faculty Intervention',
                   before: 'We designed student self-monitoring as the primary workflow',
-                  after: 'Students don\'t check dashboards weekly — faculty need to see who\'s struggling. Wrong primary user = wrong product',
+                  after: 'Students don\'t check dashboards weekly. Faculty need to see who\'s struggling. Wrong primary user = wrong product',
                 },
                 {
                   n: '03',
@@ -352,7 +352,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Challenges</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium">What I had to overcome</h2>
+              <h2 className="text-2xl md:text-3xl font-medium">What I had to work through</h2>
             </motion.div>
 
             <div className="space-y-4">
@@ -361,11 +361,11 @@ export default function CaseStudyEdusmart() {
                   n: '01',
                   title: 'Reducing scope by 66% based on shared findings',
                   challenge: 'When validation rejected 15/22 assumptions, the question became which 38 features to cut. The risk was that features mentioned in interviews would feel hard to remove, even when they failed structured validation.',
-                  solution: 'Built a Feature Validation Matrix that mapped every feature to its workshop mentions and validation outcome. Reviewed it with the PM, BA, and client as a team — they had all been in the workshops, so the data wasn\'t new to them. "At-risk student list": flagged as critical by all stakeholders, validated — keep. "AI explainability dashboard": mentioned once, not validated — cut. The shared context meant scope decisions came from the evidence, not from debate.',
+                  solution: 'Built a Feature Validation Matrix that mapped every feature to its workshop mentions and validation outcome. Reviewed it with the PM, BA, and client as a team. They had all been in the workshops, so the data wasn\'t new to them. "At-risk student list": flagged as critical by all stakeholders, validated, keep. "AI explainability dashboard": mentioned once, not validated, cut. The shared context meant scope decisions came from the evidence, not from debate.',
                 },
                 {
                   n: '02',
-                  title: 'Cross-functional coordination in Scrum as a consultant',
+                  title: 'Coordinating across roles in Scrum as a consultant',
                   challenge: 'The BA had already written acceptance criteria for 58 features before validation showed 38 were unnecessary. Two-week sprint timelines didn\'t fit the longer validation cycles.',
                   solution: 'Proposed marking unvalidated features as "pending validation" so the BA could defer criteria without blocking progress. Design tasks were written as user stories for sprint planning. By Sprint 4 the team had a workable rhythm: BA on confirmed requirements, PM building workshop time into sprint planning, me delivering wireframes only for validated features.',
                 },
@@ -408,7 +408,7 @@ export default function CaseStudyEdusmart() {
               <p className="text-sm text-[var(--text-400)] mt-3 max-w-2xl">User personas, journey maps, and lo-fi wireframes from before a single hi-fi screen was produced.</p>
             </motion.div>
 
-            {/* User Personas — 2x2 grid */}
+            {/* User Personas - 2x2 grid */}
             <motion.div variants={fadeUp} className="mb-4">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Personas</p>
             </motion.div>
@@ -426,7 +426,7 @@ export default function CaseStudyEdusmart() {
               ))}
             </motion.div>
 
-            {/* Journey Maps — 2 col */}
+            {/* Journey Maps - 2 col */}
             <motion.div variants={fadeUp} className="mb-4">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Journey Maps</p>
             </motion.div>
@@ -442,15 +442,15 @@ export default function CaseStudyEdusmart() {
               ))}
             </motion.div>
 
-            {/* Lo-fi Wireframes — 3 col */}
+            {/* Lo-fi Wireframes - 3 col */}
             <motion.div variants={fadeUp} className="mb-4">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Lo-fi Wireframes</p>
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {[
-                { src: '/images/edusmart/process/lofi/lofi-student.png', label: 'Student Dashboard — wireframe' },
-                { src: '/images/edusmart/process/lofi/lofi-instructor.png', label: 'Instructor Dashboard — wireframe' },
-                { src: '/images/edusmart/process/lofi/lofi-admin.png', label: 'Admin Dashboard — wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-student.png', label: 'Student Dashboard - wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-instructor.png', label: 'Instructor Dashboard - wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-admin.png', label: 'Admin Dashboard - wireframe' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -467,7 +467,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Solution</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">A faculty intervention tool — not a student monitoring platform</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">A faculty intervention tool, not a student monitoring platform</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 Validation showed we had the primary user wrong. The redesign centred on one finding: retention value comes from faculty identifying and contacting struggling students early. Students checking their own dashboards didn't move the needle.
               </p>
@@ -480,7 +480,7 @@ export default function CaseStudyEdusmart() {
                 {[
                   {
                     title: 'At-Risk Classification',
-                    body: 'ML model continuously scores students based on grade trajectory, attendance patterns, and LMS engagement. Outputs a risk tier (High / Medium / Watch) surfaced directly to instructors — no manual triage.',
+                    body: 'ML model continuously scores students based on grade trajectory, attendance patterns, and LMS engagement. Outputs a risk tier (High / Medium / Watch) surfaced directly to instructors, no manual triage.',
                   },
                   {
                     title: 'Dashboard Insights',
@@ -488,7 +488,7 @@ export default function CaseStudyEdusmart() {
                   },
                   {
                     title: 'Design challenge: AI trust',
-                    body: 'Non-technical faculty don\'t trust black-box scores. The core design decision was showing risk factors alongside the classification — not just a red label, but why a student is flagged, so instructors act with confidence rather than anxiety.',
+                    body: 'Non-technical faculty don\'t trust black-box scores. The core design decision was showing risk factors alongside the classification, not just a red label, but why a student is flagged, so instructors act with confidence rather than anxiety.',
                   },
                 ].map((item, i) => (
                   <div key={i}>
@@ -504,20 +504,20 @@ export default function CaseStudyEdusmart() {
                 {
                   user: 'Students',
                   count: '8 features',
-                  screens: ['2-step onboarding (down from 5)', 'Simple dashboard — GPA, class rank, at-risk courses, Email Instructor CTA', 'Single consent toggle + data transparency (not 4 granular controls)'],
-                  decision: 'Desktop-first — the mobile usage assumption was rejected in validation. Alerts are action-oriented: students want to know what to do, not just what\'s happening.',
+                  screens: ['2-step onboarding (down from 5)', 'Simple dashboard: GPA, class rank, at-risk courses, Email Instructor CTA', 'Single consent toggle + data transparency (not 4 granular controls)'],
+                  decision: 'Desktop-first. The mobile usage assumption was rejected in validation. Alerts are action-oriented: students want to know what to do, not just what\'s happening.',
                 },
                 {
                   user: 'Instructors',
                   count: '8 features (primary focus)',
-                  screens: ['Dashboard: AI-flagged at-risk count (12), contacted this week (8), priority alerts', 'AI-classified student list — red (High Risk), amber (Medium), blue (Watch) with visible risk factors', 'Student detail view: why they were flagged, pre-written email template, Mark as Contacted'],
-                  decision: 'Showing the AI\'s reasoning (not just the label) was the key trust decision. Instructors act on "missed 4 sessions + grade drop" — they don\'t act on a red dot alone. Pre-written email templates reduce the friction from seeing a flagged student to actually reaching out.',
+                  screens: ['Dashboard: AI-flagged at-risk count (12), contacted this week (8), priority alerts', 'AI-classified student list: red (High Risk), amber (Medium), blue (Watch) with visible risk factors', 'Student detail view: why they were flagged, pre-written email template, Mark as Contacted'],
+                  decision: 'Showing the AI\'s reasoning (not just the label) was the key trust decision. Instructors act on "missed 4 sessions + grade drop." They don\'t act on a red dot alone. Pre-written email templates reduce the friction from seeing a flagged student to actually reaching out.',
                 },
                 {
                   user: 'Admins',
                   count: '4 features',
-                  screens: ['Dashboard: students monitored (15,000), flagged (47), GDPR PASS, consent 85%', 'Compliance dashboard: GDPR checklist (6 items), consent donut chart', 'Integration status: LMS 98% green, SIS 81% amber — Fix Issue CTA'],
-                  decision: 'PASS/FAIL compliance status — admins need to know everything is fine, not to configure anything. Drill-down is available when something isn\'t.',
+                  screens: ['Dashboard: students monitored (15,000), flagged (47), GDPR PASS, consent 85%', 'Compliance dashboard: GDPR checklist (6 items), consent donut chart', 'Integration status: LMS 98% green, SIS 81% amber, Fix Issue CTA'],
+                  decision: 'PASS/FAIL compliance status. Admins need to know everything is fine, not to configure anything. Drill-down is available when something isn\'t.',
                 },
               ].map((u) => (
                 <motion.div key={u.user} variants={fadeUp}
@@ -578,7 +578,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium">Validated design, measurable outcomes</h2>
+              <h2 className="text-2xl md:text-3xl font-medium">What the design delivered</h2>
             </motion.div>
 
             {/* Usability metrics table */}
@@ -606,9 +606,9 @@ export default function CaseStudyEdusmart() {
             {/* Business impact cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors — the validated roadmap gave them a reason to stay' },
+                { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors. The validated roadmap gave them a reason to stay' },
                 { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features removed before any code was written' },
-                { val: '3 weeks', label: 'From brief to validated, tested design', sub: 'Research, stakeholder validation, full design system, and usability testing — one sprint' },
+                { val: '3 weeks', label: 'From brief to validated, tested design', sub: 'Research, stakeholder validation, full design system, and usability testing, one sprint' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">

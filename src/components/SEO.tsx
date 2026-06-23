@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://www.bukunmi-isijola.com';
-const DEFAULT_TITLE = 'Bukunmi Isijola — Product Designer';
-const DEFAULT_DESCRIPTION = 'Product designer with a CS background, building 0-to-1 products across fintech, health tech, and edtech.';
+const DEFAULT_TITLE = 'Bukunmi Isijola | Product Designer';
+const DEFAULT_DESCRIPTION = 'Product designer building 0-to-1 SaaS products with real impact. 5+ years across fintech, health tech, and edtech.';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface SEOProps {
@@ -13,7 +13,7 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, path = '', ogImage }: SEOProps) {
-  const pageTitle = title ? `${title} — Bukunmi Isijola` : DEFAULT_TITLE;
+  const pageTitle = title ? `${title} | Bukunmi Isijola` : DEFAULT_TITLE;
   const pageDescription = description || DEFAULT_DESCRIPTION;
   const canonicalUrl = `${SITE_URL}${path}`;
   const ogImg = ogImage || DEFAULT_OG_IMAGE;

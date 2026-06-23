@@ -34,7 +34,7 @@ export default function CaseStudyLeadTrader() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SEO title="LeadTrader Case Study" description="UX audit and redesign prototype for a stock trading app. Identified visual hierarchy issues and redesigned core flows with progressive disclosure." path="/work/LeadTrader" />
+      <SEO title="LeadTrader Case Study" description="Demo redesign of a stock trading app for its parent company. Audited 5 core screens, fixed visual hierarchy and data visualisation gaps, and delivered a prototype that secured the investment case for a full overhaul." path="/work/LeadTrader" />
       <Navigation onOpenContact={() => setContactOpen(true)} />
       <main>
 
@@ -82,7 +82,7 @@ export default function CaseStudyLeadTrader() {
             {[
               { stat: '9+→6', label: 'Competing CTAs reorganised into clear hierarchy' },
               { stat: '<3s', label: 'Portfolio health scannable with trend indicator' },
-              { stat: '100%', label: 'Of successful trading apps feature data visualisation — Lead Trader had zero' },
+              { stat: '100%', label: 'Of successful trading apps feature data visualisation, yet Lead Trader had zero' },
               { stat: '3wks', label: 'From audit to polished demo greenlit for full development' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -128,12 +128,12 @@ export default function CaseStudyLeadTrader() {
                   {
                     num: '04',
                     title: 'Transaction Complexity',
-                    body: 'The fund booking screen showed 6 pricing fields simultaneously — NAV, Bid Price, Offer Price, Current Bid, Yield — all with equal visual weight and no explanations. Financial jargon with no progressive disclosure served expert users only, alienating the novice segment entirely.',
+                    body: 'The fund booking screen showed 6 pricing fields simultaneously: NAV, Bid Price, Offer Price, Current Bid, Yield. All with equal visual weight and no explanations. Financial jargon with no progressive disclosure served expert users only, alienating the novice segment entirely.',
                   },
                   {
                     num: '05',
                     title: 'Inconsistent Branding',
-                    body: 'Different screens showed different branding — First Milli in one place, Silent Mode provider logos in another. The app felt like several unrelated products stitched together.',
+                    body: 'Different screens showed different branding. First Milli in one place, Silent Mode provider logos in another. The app felt like several unrelated products stitched together.',
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 space-y-3">
@@ -161,7 +161,7 @@ export default function CaseStudyLeadTrader() {
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {[
-                  { label: 'Role', value: 'Solo UX/UI Designer — UX Audit, UI Redesign, Interaction Design' },
+                  { label: 'Role', value: 'Solo UX/UI Designer: UX Audit, UI Redesign, Interaction Design' },
                   { label: 'Platform', value: 'Mobile App (iOS/Android)' },
                 ].map((item, i) => (
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
@@ -172,7 +172,7 @@ export default function CaseStudyLeadTrader() {
               </div>
               <p className="text-sm text-[var(--text-400)] leading-relaxed mb-4">
                 The parent company needed to see transformation, not imagine it. So instead of wireframes, I delivered complete,
-                polished screens — a strategic decision to make the business case as clear as possible. The 3-week constraint forced
+                polished screens, a strategic decision to make the business case as clear as possible. The 3-week constraint forced
                 focus on the highest-impact screens with the most dramatic before/after potential.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
@@ -199,14 +199,14 @@ export default function CaseStudyLeadTrader() {
                 <h3 className="text-base font-semibold">Research Methods</h3>
                 <ul className="space-y-3">
                   {[
-                    { method: 'Heuristic evaluation', detail: "Nielsen's 10 heuristics applied to the existing app — 5 violations found" },
-                    { method: 'Competitive analysis', detail: 'Robinhood, eToro, Trading 212, Revolut — industry patterns and gaps' },
+                    { method: 'Heuristic evaluation', detail: "Nielsen's 10 heuristics applied to the existing app, 5 violations found" },
+                    { method: 'Competitive analysis', detail: 'Robinhood, eToro, Trading 212, Revolut, industry patterns and gaps' },
                     { method: 'User flow analysis', detail: '3 critical journeys mapped: portfolio check, execute trade, find stock' },
-                    { method: 'Technical feasibility', detail: 'Development-aware design — confirmed no backend changes required' },
+                    { method: 'Technical feasibility', detail: 'Development-aware design, confirmed no backend changes required' },
                   ].map((r, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
                       <span className="text-[#F45D01] font-mono text-xs mt-0.5 shrink-0">0{i + 1}</span>
-                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]"> — {r.detail}</span></span>
+                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]">: {r.detail}</span></span>
                     </li>
                   ))}
                 </ul>
@@ -215,10 +215,10 @@ export default function CaseStudyLeadTrader() {
                 <h3 className="text-base font-semibold">Competitive Patterns</h3>
                 <ul className="space-y-3">
                   {[
-                    '100% of successful trading apps feature prominent data visualisation (charts, trends, badges) — Lead Trader had none',
-                    '90% use progressive disclosure — simple default view, advanced data on-demand',
-                    '80% employ colour coding — green for gains, red for losses, instantly readable',
-                    '70% offer contextual education — tooltips and guides without interrupting the flow',
+                    '100% of successful trading apps feature prominent data visualisation (charts, trends, badges), yet Lead Trader had none',
+                    '90% use progressive disclosure: simple default view, advanced data on-demand',
+                    '80% employ colour coding: green for gains, red for losses, instantly readable',
+                    '70% offer contextual education: tooltips and guides without interrupting the flow',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-1 shrink-0">—</span>
@@ -235,7 +235,7 @@ export default function CaseStudyLeadTrader() {
                 {
                   num: '01',
                   title: 'Information Hierarchy',
-                  body: 'The most important data — portfolio performance, market trends, quick actions — gets prominence. Secondary information is available but doesn\'t compete for attention on the main screen.',
+                  body: 'The most important data (portfolio performance, market trends, quick actions) gets prominence. Secondary information is available but doesn\'t compete for attention on the main screen.',
                 },
                 {
                   num: '02',
@@ -282,7 +282,7 @@ export default function CaseStudyLeadTrader() {
                   num: '01',
                   title: 'Balancing Novice and Expert Needs',
                   problem: 'Trading apps serve two very different users: novices who need guidance and a simple interface, and experts who need detailed data and speed. Building two separate apps doubles the cost and splits the user base.',
-                  solution: 'A simplified default view for novices — the portfolio shows +6.7%, which anyone can read. Experts tap through to cost basis, realised vs unrealised gains. Neither user is made worse off by what the other needs.',
+                  solution: 'A simplified default view for novices. The portfolio shows +6.7%, which anyone can read. Experts tap through to cost basis, realised vs unrealised gains. Neither user is made worse off by what the other needs.',
                 },
                 {
                   num: '02',
@@ -294,7 +294,7 @@ export default function CaseStudyLeadTrader() {
                   num: '03',
                   title: 'Designing Without User Access',
                   problem: 'Hired for a demo, not ongoing work. No user research, no analytics, no support tickets to review, no testing participants. Every design decision had to be made without direct user input.',
-                  solution: 'Used proxy data: competitive analysis for user preferences, heuristic evaluation as a stand-in for usability testing, and trading app industry research. I also used Claude to rapidly synthesise patterns across 4 competitors and surface common friction points — compressing what would have been a full research phase into a structured brief I could design against. The limitation was stated clearly in the deliverable.',
+                  solution: 'Used proxy data: competitive analysis for user preferences, heuristic evaluation as a stand-in for usability testing, and trading app industry research. I also used Claude to rapidly synthesise patterns across 4 competitors and surface common friction points, compressing what would have been a full research phase into a structured brief I could design against. The limitation was stated clearly in the deliverable.',
                 },
               ].map((c) => (
                 <motion.div key={c.num} variants={fadeUp}
@@ -348,8 +348,8 @@ export default function CaseStudyLeadTrader() {
                   num: 'Screen 02',
                   title: 'Portfolio View',
                   tag: 'Performance visible',
-                  before: 'List of portfolios with just name and value. 70%+ wasted white space. No performance indicators — gaining or losing? No visual differentiation between winners and losers. Empty screens for £0.00 balances.',
-                  after: 'Card-based layout with clear visual hierarchy. Performance badges — green ↑7.2% for gains, red ↓7.2% for losses. Profit/loss displayed alongside portfolio value. Colour-coded cards (green winners, red losers). Empty state shows £0.00 with explanation and CTA — not a blank screen.',
+                  before: 'List of portfolios with just name and value. 70%+ wasted white space. No performance indicators, gaining or losing? No visual differentiation between winners and losers. Empty screens for £0.00 balances.',
+                  after: 'Card-based layout with clear visual hierarchy. Performance badges: green ↑7.2% for gains, red ↓7.2% for losses. Profit/loss displayed alongside portfolio value. Colour-coded cards (green winners, red losers). Empty state shows £0.00 with explanation and CTA, not a blank screen.',
                   beforeImg: '/images/leadtrader/screens/portfolio-before.png',
                   afterImg: '/images/leadtrader/screens/portfolio-after.png',
                 },
@@ -357,8 +357,8 @@ export default function CaseStudyLeadTrader() {
                   num: 'Screen 03',
                   title: 'Transaction Flow',
                   tag: 'Jargon removed',
-                  before: '6 pricing fields shown simultaneously with equal visual weight — NAV, Bid Price, Offer Price, Current Bid, Yield. No explanation of what each field means. No guidance on which price matters for the user\'s transaction. Financial jargon with no progressive disclosure.',
-                  after: 'Cleaner form with placeholder text guiding input. NAV prominent at top (the price that matters). Secondary pricing (Bid/Offer) in organised table below for those who need it. Contextual info icon (ⓘ) explains terms on demand — education available, never forced.',
+                  before: '6 pricing fields shown simultaneously with equal visual weight: NAV, Bid Price, Offer Price, Current Bid, Yield. No explanation of what each field means. No guidance on which price matters for the user\'s transaction. Financial jargon with no progressive disclosure.',
+                  after: 'Cleaner form with placeholder text guiding input. NAV prominent at top (the price that matters). Secondary pricing (Bid/Offer) in organised table below for those who need it. Contextual info icon (ⓘ) explains terms on demand. Education available, never forced.',
                   beforeImg: '/images/leadtrader/screens/transaction-before.png',
                   afterImg: '/images/leadtrader/screens/transaction-after.png',
                 },
@@ -366,7 +366,7 @@ export default function CaseStudyLeadTrader() {
                   num: 'Screen 04',
                   title: 'Stocklist',
                   tag: 'Brand unified',
-                  before: 'Search bar detached from header. Simple list — company name and price only. No trend indicators (price going up or down?). No daily percentage change. All items look identical. No quick actions from the list.',
+                  before: 'Search bar detached from header. Simple list with company name and price only. No trend indicators (price going up or down?). No daily percentage change. All items look identical. No quick actions from the list.',
                   after: 'Integrated header unifying search, bookmarks, and favourites. Consistent card design matching the home screen aesthetic. Company logos for quick visual identification. Unified colour scheme throughout. Optimised touch targets. Future iterations to add trend arrows and Buy/Sell quick actions.',
                   beforeImg: '/images/leadtrader/screens/stocklist-before.png',
                   afterImg: '/images/leadtrader/screens/stocklist-after.png',
@@ -376,14 +376,14 @@ export default function CaseStudyLeadTrader() {
                   title: 'Profile & Settings',
                   tag: 'Organised hierarchy',
                   before: 'Settings scattered without clear grouping. No visual differentiation between primary and secondary actions. Inconsistent iconography. Logout easy to miss or accidentally tap.',
-                  after: 'User identity card (name, ID, photo) at top. Primary trading actions grouped in a unified card. Secondary actions listed below in consistent format. Prominent logout in distinct red styling — important, hard to miss, hard to misfire. Every action has icon + label.',
+                  after: 'User identity card (name, ID, photo) at top. Primary trading actions grouped in a unified card. Secondary actions listed below in consistent format. Prominent logout in distinct red styling, important, hard to miss, hard to misfire. Every action has icon + label.',
                   beforeImg: null,
                   afterImg: '/images/leadtrader/screens/profile.png',
                 },
               ].map((screen) => (
                 <motion.div key={screen.num} variants={fadeUp}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 md:p-8 space-y-6">
-                  {/* Top row — label + before/after text */}
+                  {/* Top row - label + before/after text */}
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     <div className="lg:col-span-3">
                       <span className="text-xs text-[#F45D01] font-mono block mb-1">{screen.num}</span>
@@ -401,7 +401,7 @@ export default function CaseStudyLeadTrader() {
                       </div>
                     </div>
                   </div>
-                  {/* Bottom row — screen images */}
+                  {/* Bottom row - screen images */}
                   {screen.beforeImg ? (
                     <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[var(--border)]/60">
                       <div>
@@ -465,9 +465,9 @@ export default function CaseStudyLeadTrader() {
                 <h3 className="text-base font-semibold">For the Parent Company</h3>
                 <ul className="space-y-3">
                   {[
-                    { label: 'Clear evidence', detail: 'Transformation potential visible — before/after speaks without words' },
+                    { label: 'Clear evidence', detail: 'Transformation potential visible. Before/after speaks without words' },
                     { label: 'Reduced risk', detail: 'Validated design approach before committing full resources to development' },
-                    { label: 'Technical feasibility', detail: 'Development-aware design confirmed — no backend changes required' },
+                    { label: 'Technical feasibility', detail: 'Development-aware design confirmed. No backend changes required' },
                     { label: 'Implementation roadmap', detail: 'Phased rollout: core screens → features → optimisation' },
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
@@ -481,10 +481,10 @@ export default function CaseStudyLeadTrader() {
                 <h3 className="text-base font-semibold">UX Improvements</h3>
                 <ul className="space-y-3">
                   {[
-                    { label: 'Cognitive load', detail: 'Competing CTAs reduced from 9+ to organised 6 — 40% fewer decisions upfront' },
+                    { label: 'Cognitive load', detail: 'Competing CTAs reduced from 9+ to organised 6, 40% fewer decisions upfront' },
                     { label: 'Portfolio clarity', detail: 'Performance scannable in under 3 seconds via trend indicator and badge system' },
                     { label: 'Data visualisation', detail: 'Introduced charts and real-time indicators absent from the original entirely' },
-                    { label: 'Brand consistency', detail: 'Unified visual language across all screens — feels like one trusted platform' },
+                    { label: 'Brand consistency', detail: 'Unified visual language across all screens. Feels like one trusted platform' },
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
                       <span className="text-[#F45D01] mt-0.5 shrink-0">—</span>
@@ -503,10 +503,10 @@ export default function CaseStudyLeadTrader() {
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'Polished screens removed ambiguity from the investment decision — stakeholders could see the before/after rather than imagine it',
+                  'Polished screens removed ambiguity from the investment decision. Stakeholders could see the before/after rather than imagine it',
                   'The design system means new features can be built with consistent quality from the start',
-                  'Visual design now sits at the level of Robinhood and Trading 212 — competitors where design communicates trustworthiness',
-                  'The architecture scales — expert features can be added later without disrupting the novice experience',
+                  'Visual design now sits at the level of Robinhood and Trading 212, competitors where design communicates trustworthiness',
+                  'The architecture scales. Expert features can be added later without disrupting the novice experience',
                   'Documenting the limitations honestly (no user testing completed) built more trust with the client than claiming otherwise',
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">

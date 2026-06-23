@@ -42,7 +42,7 @@ export default function ImageZoom({ src, alt, className }: ImageZoomProps) {
               {/* Backdrop */}
               <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
 
-              {/* Framed image — stop propagation so clicking the image doesn't close */}
+              {/* Framed image - stop propagation so clicking the image doesn't close */}
               <motion.div
                 className="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl cursor-zoom-out"
                 style={{ maxWidth: '82vw', maxHeight: '82vh' }}

@@ -50,7 +50,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-        {/* Left — Accordion */}
+        {/* Left - Accordion */}
         <motion.div variants={fadeUp} custom={1} className="space-y-0">
           {accordionData.map((item, index) => (
             <div key={index} className="border-b border-[var(--border)]">
@@ -85,7 +85,7 @@ export default function About() {
           ))}
         </motion.div>
 
-        {/* Right — Text */}
+        {/* Right - Text */}
         <motion.div variants={fadeUp} custom={2} className="flex flex-col justify-between gap-10">
           <div className="text-[var(--text-400)] space-y-6 text-sm leading-relaxed">
             <p>

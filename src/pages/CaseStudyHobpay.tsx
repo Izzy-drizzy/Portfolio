@@ -82,7 +82,7 @@ export default function CaseStudyHobpay() {
               Cross-platform fintech redesign recovering 28% of blocked users
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              Hobpay ran on Android only — no iOS, no web. 28% of potential users simply couldn't get in. What started as a platform access fix turned into a full UX overhaul. Satisfaction went from 3.2 to 4.2. Bill payment completion went from 45% to 85%.
+              Hobpay ran on Android only, with no iOS and no web. 28% of potential users simply couldn't get in. What started as a platform access fix turned into a full UX overhaul. Satisfaction went from 3.2 to 4.2. Bill payment completion went from 45% to 85%.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>2023</span>
@@ -168,7 +168,7 @@ export default function CaseStudyHobpay() {
                 <h3 className="text-sm font-semibold text-[var(--text-300)] uppercase tracking-wide">UX Issues</h3>
                 <ul className="space-y-2">
                   {[
-                    'No visual hierarchy — everything competed for attention at once',
+                    'No visual hierarchy. Everything competed for attention at once',
                     'Too many options shown at once with no way to prioritise',
                     'Inconsistent design language across screens',
                     'Poor accessibility on older Android devices',
@@ -222,10 +222,10 @@ export default function CaseStudyHobpay() {
                 ))}
               </div>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
-                Solo designer working directly with the product manager and engineering team. My dual design-development perspective allowed me to design within technical constraints — understanding API limitations and mobile network realities in Nigeria informed decisions early, avoiding typical designer-developer back-and-forth.
+                Solo designer working directly with the product manager and engineering team. My dual design-development perspective allowed me to design within technical constraints. Understanding API limitations and mobile network realities in Nigeria informed decisions early, avoiding typical designer-developer back-and-forth.
               </p>
               <p className="text-sm text-[var(--text-500)] leading-relaxed mt-3">
-                I used Claude as a thinking partner through the research phase — working through how to structure findings from the multi-platform audit and stress-testing the IA before committing to a direction in Figma.
+                I used Claude as a thinking partner through the research phase, working through how to structure findings from the multi-platform audit and stress-testing the IA before committing to a direction in Figma.
               </p>
             </motion.div>
           </motion.div>
@@ -255,7 +255,7 @@ export default function CaseStudyHobpay() {
                       'High-trust security messaging throughout',
                     ],
                     weaknesses: [
-                      'Limited customisation — savings plans feel rigid for diverse user goals',
+                      'Limited customisation: savings plans feel rigid for diverse user goals',
                       'Slow load times on 2G/3G networks hurt retention',
                       'Investment options not accessible to low-income first-time users',
                     ],
@@ -268,7 +268,7 @@ export default function CaseStudyHobpay() {
                       'Familiar mobile banking UX patterns users recognise',
                     ],
                     weaknesses: [
-                      'UX feels feature-heavy — new users are overwhelmed quickly',
+                      'UX feels feature-heavy, and new users are overwhelmed quickly',
                       'Limited investment and savings functionality vs competitors',
                       'Technical glitches reported frequently in user reviews',
                     ],
@@ -282,7 +282,7 @@ export default function CaseStudyHobpay() {
                     ],
                     weaknesses: [
                       'Withdrawal restrictions frustrate users needing liquidity',
-                      'No cross-platform web experience — mobile-only limits reach',
+                      'No cross-platform web experience, so mobile-only limits reach',
                       'Customer support slow to resolve transaction issues',
                     ],
                   },
@@ -357,7 +357,7 @@ export default function CaseStudyHobpay() {
               <div className="rounded-xl border border-[#F45D01]/20 bg-[#F45D01]/5 p-5">
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-2">Key Insight</p>
                 <p className="text-sm text-[var(--text-300)] leading-relaxed">
-                  Successful Nigerian fintech apps consistently prioritise quick actions for frequent tasks and use clear visual hierarchy to reduce cognitive load — especially critical for users on 2G/3G networks. Hobpay's redesign needed to adopt these patterns while solving the platform access problem none of these competitors had faced.
+                  Successful Nigerian fintech apps consistently prioritise quick actions for frequent tasks and use clear visual hierarchy to reduce cognitive load, especially critical for users on 2G/3G networks. Hobpay's redesign needed to adopt these patterns while solving the platform access problem none of these competitors had faced.
                 </p>
               </div>
             </motion.div>
@@ -373,7 +373,7 @@ export default function CaseStudyHobpay() {
                   ].map((r, i) => (
                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
                       <span className="text-[#F45D01] font-mono text-xs mt-0.5 shrink-0">0{i + 1}</span>
-                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]"> — {r.detail}</span></span>
+                      <span><span className="text-[var(--text-300)]">{r.method}</span><span className="text-[var(--text-500)]">: {r.detail}</span></span>
                     </li>
                   ))}
                 </ul>
@@ -384,7 +384,7 @@ export default function CaseStudyHobpay() {
                   {[
                     'Bill payments were 43% of all usage, yet the nav treated them the same as every other service',
                     'Careplan loans were popular with frequent users but almost impossible to find',
-                    'Users described the interface as overwhelming — too many options, no clear path',
+                    'Users described the interface as overwhelming: too many options, no clear path',
                     'Competing apps on slower networks all had one thing in common: quick actions front and centre',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
@@ -405,7 +405,7 @@ export default function CaseStudyHobpay() {
                 {
                   num: '02',
                   title: 'Task-Oriented Architecture',
-                  body: "Group things by what users are trying to do, not by internal product names. Nobody searched for 'Rintegra' — they searched for 'invest.'",
+                  body: "Group things by what users are trying to do, not by internal product names. Nobody searched for 'Rintegra.' They searched for 'invest.'",
                 },
                 {
                   num: '03',
@@ -456,8 +456,8 @@ export default function CaseStudyHobpay() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/hobpay/process/personas/persona-1.png', label: 'User persona — primary' },
-                { src: '/images/hobpay/process/personas/persona-2.png', label: 'User persona — secondary' },
+                { src: '/images/hobpay/process/personas/persona-1.png', label: 'User persona - primary' },
+                { src: '/images/hobpay/process/personas/persona-2.png', label: 'User persona - secondary' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -503,7 +503,7 @@ export default function CaseStudyHobpay() {
                   num: '01',
                   title: 'Balancing Feature Accessibility with Simplification',
                   problem: 'Hobpay had investments (Rintegra), bill payments, insurance, and loans (Careplan). Hiding too much killed discovery. Showing everything caused the original overload.',
-                  solution: 'Built a "Quick Actions" strip for frequent tasks and a "Services" section that kept the internal product names but paired each with clear descriptions — so users understood what they were looking at without needing to already know. Details expand when someone actually needs them.',
+                  solution: 'Built a "Quick Actions" strip for frequent tasks and a "Services" section that kept the internal product names but paired each with clear descriptions, so users understood what they were looking at without needing to already know. Details expand when someone actually needs them.',
                 },
                 {
                   num: '02',
@@ -554,7 +554,7 @@ export default function CaseStudyHobpay() {
                 Shifted from a service-based structure (Rintegra, Careplan, Bills, Wallet) to a user-goal-based structure: Dashboard → Quick Actions → Services → Wallet.
               </p>
             </motion.div>
-            {/* IA Diagram — image */}
+            {/* IA Diagram - image */}
             <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-white overflow-hidden mb-6">
               <img
                 src="/images/hobpay/case-study/new-ia.png"
@@ -588,7 +588,7 @@ export default function CaseStudyHobpay() {
                 },
                 {
                   title: 'Investment Section (Rintegra)',
-                  before: '"Unclear what Rintegra is," "investment options too complex" — 0/5 users found it clearly in testing',
+                  before: '"Unclear what Rintegra is," "investment options too complex." 0/5 users found it clearly in testing',
                   after: 'Renamed "Invest Your Money" for clarity. Simplified flow with ROI information upfront. Progressive disclosure from basic info to details to commitment. 2/5 users found it clear in re-test',
                 },
                 {
@@ -652,9 +652,9 @@ export default function CaseStudyHobpay() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Results & Impact</SectionLabel>
-              <h2 className="text-2xl font-medium mb-6">Measurable Outcomes</h2>
+              <h2 className="text-2xl font-medium mb-6">What the redesign moved</h2>
             </motion.div>
-            {/* Metrics chart — native */}
+            {/* Metrics chart - native */}
             <motion.div variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 mb-8 space-y-5">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-2">Before → After</p>
               {[
@@ -716,7 +716,7 @@ export default function CaseStudyHobpay() {
               </div>
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
-                  'The web platform became the base for all mobile app updates — components and patterns reused directly',
+                  'The web platform became the base for all mobile app updates, with components and patterns reused directly',
                   'The company hit investor transaction milestones it had been missing',
                   'Mobile development moved faster because the hard decisions were already settled',
                   'The design system built for this project is still in use',

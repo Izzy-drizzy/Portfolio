@@ -35,14 +35,14 @@ export default function PrivacyPolicy() {
             <section className="border-t border-[var(--border)] pt-8">
               <h2 className="text-lg font-semibold mb-4">1. What information is collected</h2>
               <p className="text-[var(--text-400)]">
-                When you submit the contact form, I collect only the information you provide — your name, email address, phone number (if given), enquiry type, and your message.
+                When you submit the contact form, I collect only the information you provide: your name, email address, phone number (if given), enquiry type, and your message.
               </p>
             </section>
 
             <section className="border-t border-[var(--border)] pt-8">
               <h2 className="text-lg font-semibold mb-4">2. How your information is used</h2>
               <p className="text-[var(--text-400)]">
-                Your information is used solely to respond to your enquiry. I will only contact you in direct relation to what you have reached out about — nothing else. Your details will not be used for marketing, newsletters, or any unsolicited communication.
+                Your information is used solely to respond to your enquiry. I will only contact you in direct relation to what you have reached out about. Nothing else. Your details will not be used for marketing, newsletters, or any unsolicited communication.
               </p>
             </section>
 
