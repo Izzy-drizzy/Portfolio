@@ -31,7 +31,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         <nav className="hidden md:flex items-center gap-8 group/nav">
           <Link to="/work" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>Work</SlideText></Link>
           <Link to="/about" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>About</SlideText></Link>
-          <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>CV</SlideText></a>
+          <a href="https://docs.google.com/document/d/1QWxy0iapPW59kMUUqWnkEkKFl-4cpVZjHXhAJRQpGNI/edit?usp=sharing" target="_blank" rel="noreferrer" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>CV</SlideText></a>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -69,7 +69,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         >
           <Link to="/work" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>Work</Link>
           <Link to="/about" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>About</Link>
-          <a href="https://docs.google.com/document/d/1sO4h2zYp6yU316K9S-F-0Vii_5qq-BzFzus7vO969j0/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
+          <a href="https://docs.google.com/document/d/1QWxy0iapPW59kMUUqWnkEkKFl-4cpVZjHXhAJRQpGNI/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
           {/* Theme toggle - hidden until light mode is ready */}
           <button
             onClick={() => {

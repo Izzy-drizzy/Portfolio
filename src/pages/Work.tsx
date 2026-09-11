@@ -14,7 +14,7 @@ const projects = [
     tags: ['Product Design', 'Grocery & Delivery', 'Accessibility', 'WCAG 2.2 AA', 'UX Strategy', 'Design Leadership'],
     description:
       'Redesigned slot booking and substitutions for a UK grocery delivery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue. Took a slot grid 22% of shoppers abandoned and turned it into a personalised, accessible booking flow.',
-    collaboration: 'Amdari',
+    collaboration: 'Amdari Industry Programme',
     href: '/work/FreshRoute',
     images: [
       '/images/freshroute/slides/slide-1.png',
@@ -32,7 +32,7 @@ const projects = [
     tags: ['EdTech', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'],
     description:
       'AI-powered student analytics platform for 200+ UK/Canadian universities. Stakeholder validation revealed 15/22 product assumptions were wrong. Pivoting from student self-monitoring to a faculty intervention tool addressed £5M in at-risk contracts and cut scope 66%.',
-    collaboration: 'Amdari',
+    collaboration: 'Amdari Industry Programme',
     href: '/work/Edusmart',
     images: [
       '/images/edusmart/slide-1.png',
@@ -49,7 +49,7 @@ const projects = [
     title: 'Hobpay',
     tags: ['Product Design', 'Fintech', 'Cross Platform', 'Regulatory Compliance', 'Investment'],
     description:
-      'Web-first redesign of a Nigerian fintech platform serving 10K+ users. The iOS app was blocked from the App Store, so I moved the core experience to web. Simplified navigation and progressive disclosure brought satisfaction from 3.2 to 4.2/5.',
+      'Web-first redesign of a Nigerian fintech platform serving 10K+ users. The app ran on Android only with the iOS build delayed, so I moved the core experience to web. Simplified navigation and progressive disclosure brought satisfaction from 3.2 to 4.2/5.',
     collaboration: null,
     href: '/work/Hobpay',
     images: [
@@ -84,7 +84,7 @@ const projects = [
     tags: ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI Screening', 'Coded Prototype', 'Agile'],
     description:
       'Designed a two-sided recruitment platform for a 14,000-person enterprise across 22 countries. Recruiter dashboard and candidate portal as one connected system. 14 screens, prototyped in code, with AI-assisted screening and a self-closing scheduling loop.',
-    collaboration: 'Amdari',
+    collaboration: 'Amdari Industry Programme',
     href: '/work/Nexora',
     images: [
       '/images/nexora/slides/slide-1.png',
@@ -98,7 +98,7 @@ const projects = [
     tags: ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'],
     description:
       'Mobile-first property search platform for UK renters. Worked with PMs and BAs to scope the Sprint 1 MVP around three high-pain problems: commute checks happening outside the app, filters that don\'t work on mobile, and no personalisation on first use. 8 screens delivered across a 4-week sprint.',
-    collaboration: 'Amdari',
+    collaboration: 'Amdari Industry Programme',
     href: '/work/UrbanNest',
     images: [
       '/images/urbannest/slides/slide-1.png',

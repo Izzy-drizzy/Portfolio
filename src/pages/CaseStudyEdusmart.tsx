@@ -72,14 +72,18 @@ export default function CaseStudyEdusmart() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops. 15 of 22 assumptions were wrong. That discovery changed the entire product direction, and gave three at-risk contracts a reason to stay.
+                AI-powered student analytics platform for 200+ universities across the UK and Canada. The platform uses machine learning to classify at-risk students and surface intervention insights to faculty. Before a single screen was designed, we ran assumption-testing workshops. 15 of 22 assumptions were wrong. That discovery changed the entire product direction before a line of code was written.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
                 <span>2026 - 3-week design sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
-                <span>Product Design Consultant @ Amdari</span>
+                <span>Product Designer, Amdari Industry Programme</span>
               </motion.div>
+
+              <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
+                Amdari is a structured industry programme delivering real client briefs alongside BAs, PMs and client stakeholders. Financial figures on this page are modelled opportunity sizes from discovery research, not delivered revenue.
+              </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 {tags.map((t) => (
@@ -179,7 +183,7 @@ export default function CaseStudyEdusmart() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Designer, Amdari Industry Programme</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 I was the sole UX/UI lead, working alongside a Project Manager and Business Analyst across a 3-week design sprint, with regular reviews from EduSmart's product and engineering stakeholders.
               </p>
@@ -213,10 +217,10 @@ export default function CaseStudyEdusmart() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">Team Structure</p>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Consulting Team</p>
+                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Programme Team</p>
                     <ul className="space-y-1.5">
                       {[
-                        ['Bukunmi (Me)', 'Product Design Consultant - full UX/UI ownership'],
+                        ['Bukunmi (Me)', 'Product Designer - full UX/UI ownership'],
                         ['Project Manager', 'Scrum facilitation, sprint planning, stakeholder management'],
                         ['Business Analyst', 'Requirements gathering, feature prioritisation, acceptance criteria'],
                       ].map(([name, role]) => (
@@ -606,7 +610,7 @@ export default function CaseStudyEdusmart() {
             {/* Business impact cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors. The validated roadmap gave them a reason to stay' },
+                { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors, which is what made getting the product wrong expensive' },
                 { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features removed before any code was written' },
                 { val: '3 weeks', label: 'From brief to validated, tested design', sub: 'Research, stakeholder validation, full design system, and usability testing, one sprint' },
               ].map((s) => (

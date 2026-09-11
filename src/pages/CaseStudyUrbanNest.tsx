@@ -75,8 +75,12 @@ export default function CaseStudyUrbanNest() {
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
                 <span>2026 - 4-week sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
-                <span>Product Design Consultant @ Amdari</span>
+                <span>Product Designer, Amdari Industry Programme</span>
               </motion.div>
+
+              <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
+                Amdari is a structured industry programme delivering real client briefs alongside BAs, PMs and client stakeholders.
+              </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 {tags.map((t) => (

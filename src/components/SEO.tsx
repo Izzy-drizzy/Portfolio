@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://www.bukunmi-isijola.com';
 const DEFAULT_TITLE = 'Bukunmi Isijola | Product Designer';
-const DEFAULT_DESCRIPTION = 'Product designer building 0-to-1 SaaS products with real impact. 5+ years across fintech, health tech, and edtech.';
+const DEFAULT_DESCRIPTION = 'Product designer building 0-to-1 SaaS products with real impact. Five years, most of it in fintech.';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface SEOProps {

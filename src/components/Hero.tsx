@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
-              5+ years designing SaaS and ecommerce products across early-stage fintech, edtech, and health tech. I focus on product strategy and end-to-end design, and I'm most useful at the stage where the real problem hasn't been found yet.
+              Five years designing SaaS and ecommerce products, most of it in early-stage fintech. I focus on product strategy and end-to-end design, and I'm most useful at the stage where the real problem hasn't been found yet.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -85,10 +85,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Cutting £46M in lost revenue by fixing two screens
+                  Finding £46M in recoverable revenue behind two screens
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  UK grocery platform losing shoppers to a broken slot grid and surprise substitutions. Redesigned both flows across a five-week sprint with a tested high-fidelity prototype.
+                  UK grocery platform losing shoppers to a broken slot grid and surprise substitutions. Redesigned both flows across a five-week sprint, ending in a usability-tested prototype. Figure is modelled from discovery research.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
@@ -116,10 +116,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Preventing £5M revenue loss through stakeholder validation
+                  Killing 15 of 22 assumptions before anyone wrote code
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything. 15 of 22 were wrong. That discovery protected £5M in contracts.
+                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything. 15 of 22 were wrong, including the one the product was built on.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />

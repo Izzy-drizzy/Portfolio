@@ -94,8 +94,12 @@ export default function CaseStudyFreshRoute() {
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
                 <span>2026 - 5-week design sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
-                <span>Lead Product Designer @ Amdari</span>
+                <span>Product Designer, Amdari Industry Programme</span>
               </motion.div>
+
+              <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
+                Amdari is a structured industry programme delivering real client briefs alongside BAs, PMs and client stakeholders. Financial figures on this page are modelled opportunity sizes from discovery research, not delivered revenue.
+              </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 {tags.map((t) => (
@@ -196,7 +200,7 @@ export default function CaseStudyFreshRoute() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">Lead Product Designer, Amdari</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Designer, Amdari Industry Programme</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 I owned the two flows that carried the business problems: slot selection and booking (Flow 1) and substitution management (Flow 2). A junior designer handled the account and order-history flow (Flow 3) using the patterns and design system I set up, so I also did the design direction and review for that work.
               </p>
@@ -227,10 +231,10 @@ export default function CaseStudyFreshRoute() {
                 <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">Team & Timeline</p>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Design Team</p>
+                    <p className="text-xs font-semibold text-[var(--text-300)] mb-1.5">Amdari Programme Team</p>
                     <ul className="space-y-1.5">
                       {[
-                        ['Bukunmi (Me)', 'Lead Product Designer - Flow 1 (Slots), Flow 2 (Substitutions), design system, design direction'],
+                        ['Bukunmi (Me)', 'Product Designer - Flow 1 (Slots), Flow 2 (Substitutions), design system, design direction'],
                         ['Junior Designer', 'Flow 3 (Account & Order History) - using shared design system and patterns'],
                       ].map(([name, role]) => (
                         <li key={name} className="text-xs text-[var(--text-400)]">

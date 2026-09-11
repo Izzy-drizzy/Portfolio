@@ -78,7 +78,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
-      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. 5+ years across fintech, health tech, and edtech." path="/about" />
+      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. Five years, most of it in fintech." path="/about" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28 px-7 md:px-10">

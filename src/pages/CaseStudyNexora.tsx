@@ -79,8 +79,12 @@ export default function CaseStudyNexora() {
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
                 <span>2026 - PRD-anchored sprint</span>
                 <span className="w-1 h-1 rounded-full bg-gray-700" />
-                <span>Product Design Consultant @ Amdari</span>
+                <span>Product Designer, Amdari Industry Programme</span>
               </motion.div>
+
+              <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
+                Amdari is a structured industry programme delivering real client briefs alongside BAs, PMs and client stakeholders.
+              </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
                 {tags.map((t) => (
@@ -169,7 +173,7 @@ export default function CaseStudyNexora() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}>
             <motion.div variants={fadeUp} className="mb-10">
               <SectionLabel>Role & Team</SectionLabel>
-              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Design Consultant, Amdari</h2>
+              <h2 className="text-2xl md:text-3xl font-medium mb-4">Product Designer, Amdari Industry Programme</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-2xl">
                 I owned the design end of the ideation and prototyping phase: information architecture, the full screen map for both user types, the lo-fi prototype, and the annotations that tied every screen back to a PRD pain point. Working alongside the client's PMs and BAs in an Agile setup.
               </p>
