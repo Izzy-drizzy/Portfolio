@@ -105,7 +105,7 @@ export default function CaseStudyLeadTrader() {
             <motion.div variants={fadeUp} className="lg:col-span-7 lg:col-start-6 space-y-8">
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
                 Lead Trader's parent company was deciding whether a full redesign was worth the investment, or whether incremental
-                changes would do. They needed evidence, not opinion. A UX audit of the existing app turned up five distinct problems
+                changes would do. They needed evidence. A UX audit of the existing app turned up five distinct problems
                 that made the case.
               </p>
               <div className="space-y-4">
@@ -171,8 +171,8 @@ export default function CaseStudyLeadTrader() {
                 ))}
               </div>
               <p className="text-sm text-[var(--text-400)] leading-relaxed mb-4">
-                The parent company needed to see transformation, not imagine it. So instead of wireframes, I delivered complete,
-                polished screens, a strategic decision to make the business case as clear as possible. The 3-week constraint forced
+                The parent company needed to see the change for themselves, so instead of wireframes I delivered complete,
+                polished screens that made the business case easy to read. The 3-week constraint forced
                 focus on the highest-impact screens with the most dramatic before/after potential.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
@@ -288,7 +288,7 @@ export default function CaseStudyLeadTrader() {
                   num: '02',
                   title: 'Three-Week Timeline Constraint',
                   problem: 'A full redesign could take 3–6 months of research, design, testing, and iteration. This project had 3 weeks to demonstrate enough transformation potential to justify that investment.',
-                  solution: 'Focused on the 5 screens with the most dramatic before/after: Home, Portfolio, Transaction, Stocklist, Profile. Delivered polished, complete screens rather than wireframes, because the parent company needed to see the difference, not imagine it.',
+                  solution: 'Focused on the 5 screens with the most dramatic before/after: Home, Portfolio, Transaction, Stocklist, Profile. Delivered polished, complete screens rather than wireframes, so the parent company could see the difference without having to picture it.',
                 },
                 {
                   num: '03',

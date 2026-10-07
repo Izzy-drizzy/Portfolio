@@ -68,7 +68,7 @@ export default function Stack() {
           My stack<span className="text-[#F45D01]">.</span>
         </h2>
         <p className="text-sm text-[var(--text-400)] mt-3">
-          I am committed to staying updated with the best design and development tools and techniques.
+          What I use day to day to design, prototype and build.
         </p>
       </motion.div>
 

@@ -331,7 +331,7 @@ export default function CaseStudyHealfZone2() {
                   num: '02',
                   title: 'Commerce Without the Sales-Funnel Feel',
                   problem: 'Healf\'s revenue depends on product sales, but 42% of users in my research distrust health app recommendations. They see them as sales funnels, not guidance. Recommending a single product directly felt pushy and removed user choice.',
-                  solution: 'Three-layer architecture: Insight (intelligence) → Protocol (bridge) → Shop (5–10 curated options). Intelligence and transaction are fully separated. Users choose based on values and budget, so commerce feels inevitable, not opportunistic.',
+                  solution: 'Three-layer architecture: Insight (intelligence) → Protocol (bridge) → Shop (5–10 curated options). Intelligence and transaction are fully separated. Users choose based on their values and budget, so the shop reads as the next step after the advice.',
                 },
                 {
                   num: '03',
@@ -486,7 +486,7 @@ export default function CaseStudyHealfZone2() {
                 {
                   number: '01',
                   title: 'Presence without burden',
-                  body: 'The check-in system keeps Healf relevant across the 6 months between tests. It is optional, low-effort, and skippable by design. Engagement is earned through relevance, not demanded through streaks or daily reminders.',
+                  body: 'The check-in system keeps Healf relevant across the 6 months between tests. It is optional, low-effort, and skippable by design. There are no streaks or daily reminders; people come back when a check-in is relevant to them.',
                 },
                 {
                   number: '02',
@@ -527,12 +527,12 @@ export default function CaseStudyHealfZone2() {
                 {
                   num: '01',
                   title: 'Restraint is a design skill',
-                  body: 'I initially wanted to design everything: daily tracking, social features, gamification, AI chat, family accounts. Research showed users are fatigued by complexity. The hardest design decision was what not to include. Intelligence works because it\'s passive. The best design here is invisible support, not visible features.',
+                  body: 'I initially wanted to design everything: daily tracking, social features, gamification, AI chat, family accounts. Research showed users are fatigued by complexity. The hardest decision was what to leave out. The insight layer works because it runs in the background and asks very little of the user.',
                 },
                 {
                   num: '02',
                   title: 'Commerce integration requires delicacy',
-                  body: 'Separation creates trust. Insight → Protocol → Shop. Never Insight → Buy Now. Users know Healf sells products. They just want to feel like the platform cares about their health first, then offers solutions. Commerce works when it feels inevitable, not opportunistic.',
+                  body: 'Keeping the steps separate builds trust: Insight → Protocol → Shop, never Insight → Buy Now. Users know Healf sells products. They just want to feel like the platform cares about their health first, then offers solutions. Selling works when it follows from the advice.',
                 },
                 {
                   num: '03',

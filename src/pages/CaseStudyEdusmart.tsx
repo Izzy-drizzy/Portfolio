@@ -492,7 +492,7 @@ export default function CaseStudyEdusmart() {
                   },
                   {
                     title: 'Design challenge: AI trust',
-                    body: 'Non-technical faculty don\'t trust black-box scores. The core design decision was showing risk factors alongside the classification, not just a red label, but why a student is flagged, so instructors act with confidence rather than anxiety.',
+                    body: 'Non-technical faculty don\'t trust black-box scores. So each classification shows the risk factors behind it, explaining why a student was flagged instead of showing a bare red label. Instructors can then act on it with confidence.',
                   },
                 ].map((item, i) => (
                   <div key={i}>

@@ -5,19 +5,19 @@ import { Plus } from 'lucide-react';
 const accordionData = [
   {
     title: "Strategy",
-    content: "Briefs are a starting point. Before Figma, I'm asking what users keep running into, what the team has already tried, and what success actually looks like for the business. The real problem usually comes out in those conversations."
+    content: "Briefs are a starting point. Before Figma, I'm asking what users keep running into, what the team has already tried, and what success actually looks like for the business. That's usually where the actual problem shows up."
   },
   {
     title: "User Experience",
-    content: "I map how users actually move through a product, not how we expect them to, and wireframe from there. Flows and structure get figured out before any visual work starts. Visual polish on a broken flow is just expensive debt."
+    content: "I map how people actually move through a product and wireframe from there. Flows and structure get settled before any visual work starts, because polishing a broken flow only makes it more expensive to fix later."
   },
   {
     title: "Design",
-    content: "I work from rough sketches to production-ready UI. Component systems, responsive layouts, design tokens, all set up so engineering can pick it up without a back-and-forth. It looks right and holds together in production."
+    content: "I work from rough sketches to production-ready UI. I set up component systems, responsive layouts and design tokens so engineering can pick the work up without a lot of back-and-forth."
   },
   {
     title: "Interaction",
-    content: "Every animation has a job. I use motion to orient users and confirm actions, not to add polish. If it doesn't make something clearer, it comes out."
+    content: "I use motion to show people where they are and confirm what just happened. If an animation doesn't make something clearer, I take it out."
   }
 ];
 
@@ -89,10 +89,10 @@ export default function About() {
         <motion.div variants={fadeUp} custom={2} className="flex flex-col justify-between gap-10">
           <div className="text-[var(--text-400)] space-y-6 text-sm leading-relaxed">
             <p>
-              I design SaaS products that have to work for the person using it, the stakeholder who owns the outcome, the business metric it needs to move, and the engineer building it. A design that can't be shipped isn't a solution. One that ships but misses the problem isn't either.
+              The SaaS products I design have to work for the person using them, the stakeholder who owns the outcome and the engineer building them, and they have to move a number the business cares about. If a design can't ship, or ships and misses the problem, the job isn't done.
             </p>
             <p>
-              Most briefs get me 70% of the way there. The rest comes from questions that weren't in the document: what broke last time, what engineering won't build, what the PM and the stakeholder actually disagree on. That's usually where the real design problem lives.
+              Most briefs get me 70% of the way there. The rest comes from questions that weren't in the document: what broke last time, what engineering won't build, what the PM and the stakeholder actually disagree on. That's usually where I find the problem worth designing for.
             </p>
           </div>
         </motion.div>

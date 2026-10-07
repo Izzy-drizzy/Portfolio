@@ -125,7 +125,7 @@ export default function CaseStudyMoolapay() {
                   {
                     num: '03',
                     title: 'Savings Failure',
-                    body: "When there's no system working in the background, money gets spent. Users wanted to save but couldn't follow through, not because they lacked motivation, but because nothing made it easy to start.",
+                    body: "When there's no system working in the background, money gets spent. Users wanted to save, but nothing made it easy to start, so they didn't follow through.",
                   },
                 ].map((issue) => (
                   <div key={issue.num} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 space-y-3">

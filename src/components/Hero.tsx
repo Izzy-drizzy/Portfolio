@@ -33,7 +33,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]"
           >
-            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS Products with real impact for real people
+            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS products grounded in research
           </motion.h1>
 
           <motion.div
@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
-              Five years designing SaaS and ecommerce products, most of it in early-stage fintech. I focus on product strategy and end-to-end design, and I'm most useful at the stage where the real problem hasn't been found yet.
+              Five years designing SaaS and ecommerce products, most of it in early-stage fintech. I work across product strategy and end-to-end design, and I'm most useful early, before anyone is sure what the problem is.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -85,10 +85,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Finding £46M in recoverable revenue behind two screens
+                  Two grocery screens behind a projected £46M loss
                 </h2>
-                <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  UK grocery platform losing shoppers to a broken slot grid and surprise substitutions. Redesigned both flows across a five-week sprint, ending in a usability-tested prototype. Figure is modelled from discovery research.
+                <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
+                  22% of shoppers quit at the slot grid, and substitutions drove 28% of support contacts. I redesigned both flows and tested them.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
@@ -116,10 +116,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Killing 15 of 22 assumptions before anyone wrote code
+                  Finding out 15 of 22 assumptions were wrong before building
                 </h2>
-                <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-2">
-                  Student analytics platform for 200+ universities. Ran assumption-testing workshops before building anything. 15 of 22 were wrong, including the one the product was built on.
+                <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
+                  An analytics platform for 200+ universities, planned around students. Workshops showed faculty were the real users, so we cut scope by 66%.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />

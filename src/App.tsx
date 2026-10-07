@@ -9,7 +9,7 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
 import Stack from './components/Stack';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
@@ -27,7 +27,7 @@ export default function App() {
         <Hero onOpenContact={() => setIsContactModalOpen(true)} />
         <About />
         <Stack />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CTA onOpenContact={() => setIsContactModalOpen(true)} />
       </main>
       <Footer />
