@@ -576,7 +576,7 @@ export default function CaseStudyFreshRoute() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '~£45M', label: 'At-risk revenue recovered', sub: 'Tesco\'s "Smart Slot" feature cut abandonment 19% in six months on its own. The clean grid, next-available banner, and personalised landing target a similar or better result.' },
+                { val: '~£46M', label: 'At-risk revenue recovered', sub: 'Tesco\'s "Smart Slot" feature cut abandonment 19% in six months on its own. The clean grid, next-available banner, and personalised landing target a similar or better result.' },
                 { val: '~£2.5M', label: 'Support & waste cost reduction', sub: 'Moving substitution decisions to a point where shoppers still have agency addresses the root cause directly, taking the £3.2M support cost toward £1.76M and cutting £1.9M food-waste cost roughly in half.' },
                 { val: '23 → 0', label: 'WCAG failures cleared', sub: 'The accessibility mode and contrast-first design system close the legal exposure and make the product usable for shoppers who couldn\'t get through it before.' },
               ].map((s) => (

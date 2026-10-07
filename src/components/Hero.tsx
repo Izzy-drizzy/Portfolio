@@ -85,7 +85,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Two grocery screens behind a projected £46M loss
+                  Recovering a projected £46M for a UK grocery delivery platform
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
                   22% of shoppers quit at the slot grid, and substitutions drove 28% of support contacts. I redesigned both flows and tested them.
@@ -116,10 +116,10 @@ export default function Hero({ onOpenContact }: HeroProps) {
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Finding out 15 of 22 assumptions were wrong before building
+                  Cutting scope by 66% to protect £5M in university contracts
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
-                  An analytics platform for 200+ universities, planned around students. Workshops showed faculty were the real users, so we cut scope by 66%.
+                  Workshops showed 15 of 22 product assumptions were wrong. The platform was planned around students, but faculty turned out to be the real users.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
