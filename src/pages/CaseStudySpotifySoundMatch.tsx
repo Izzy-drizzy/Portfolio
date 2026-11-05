@@ -466,6 +466,9 @@ export default function CaseStudySpotifySoundMatch() {
                 </motion.div>
               ))}
             </div>
+            <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] mt-6 max-w-3xl leading-relaxed">
+              All artists, tracks and artwork shown in these screens are fictional and were created for this concept.
+            </motion.p>
           </motion.div>
         </section>
 
@@ -580,7 +583,7 @@ export default function CaseStudySpotifySoundMatch() {
               ))}
             </ul>
             <p className="text-xs text-[var(--text-600)] mt-6 max-w-3xl leading-relaxed">
-              Spotify is a trademark of Spotify AB. This is an independent concept made for my portfolio. It is not affiliated with or endorsed by Spotify.
+              Spotify is a trademark of Spotify AB. This is an independent concept made for my portfolio. It is not affiliated with or endorsed by Spotify. All artists, tracks and artwork in the screens are fictional and were created for this concept.
             </p>
           </motion.div>
         </section>

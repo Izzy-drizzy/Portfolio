@@ -104,22 +104,22 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           >
             <Link
-              to="/work/Edusmart"
+              to="/work/spotify-sound-match"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
               <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
                 <img
-                  src="/images/edusmart/slide-1.png"
-                  alt="EduSmart Analytics Case Study"
+                  src="/images/spotify-sound-match/slides/slide-1.png"
+                  alt="Spotify Sound Match Concept"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-4">
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Cutting scope by 66% to protect £5M in university contracts
+                  Turning a song you hear into a playlist that sounds like it
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
-                  Workshops showed 15 of 22 product assumptions were wrong. The platform was planned around students, but faculty turned out to be the real users.
+                  Concept for Spotify, unsolicited and not affiliated. Sound Match names the song, shows what it heard, and builds a playlist on the sound, not your history.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
