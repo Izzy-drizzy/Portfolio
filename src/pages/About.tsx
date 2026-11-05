@@ -30,8 +30,8 @@ const expertise = [
     icon: '/icons/pen-white.svg',
     link: { label: 'View Artbox', href: 'https://artbox-studio.com' },
     body: [
-      "In November 2024, I launched Artbox Studio to stay sharp while seeking the right full-time UX role. Running my own consultancy has taught me project management, stakeholder communication, and how to deliver work a business can measure.",
-      "While I've enjoyed the entrepreneurial experience, I want to go deep on one product with a strong team instead of switching between client projects.",
+      "I launched Artbox Studio in November 2024. Running it has taught me project management, stakeholder communication, and how to deliver work a business can measure.",
+      "These days it's where I take on ambitious projects, including designing and building AI tools for local businesses, from the first sketch to working software.",
     ],
   },
 ];
