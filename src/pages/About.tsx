@@ -36,6 +36,25 @@ const expertise = [
   },
 ];
 
+// DRAFT (artbox-now branch): wording waits on Bukunmi's OK; see Portfolio-notes/artbox-update.md.
+const building = [
+  {
+    title: 'Artbox HQ',
+    status: 'In use',
+    body: "Artbox's own CRM. It finds and scores leads, runs a health check on each one's website and reviews, and builds a private audit page per prospect. Underneath it sits a truth rule: a finding only reaches a prospect if our data proves it.",
+  },
+  {
+    title: 'Client dashboard',
+    status: 'Demo',
+    body: 'The app clients will use to see how the work Artbox does for them is performing: new leads, conversations, booked appointments, ad results and a monthly report, on desktop and phone. It runs on labelled sample data until the first client is live.',
+  },
+  {
+    title: 'AI sales assistant',
+    status: 'In progress',
+    body: "One of the services Artbox delivers: an assistant that replies to new enquiries as they come in, asks the business's own qualifying questions and books appointments into their calendar, handing over to a person when it should.",
+  },
+];
+
 const reads = [
   {
     title: 'Google UX Design Certificate',
@@ -156,6 +175,45 @@ export default function About() {
             </motion.div>
           ))}
         </div>
+
+        {/* Currently building at Artbox */}
+        <motion.div
+          className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 mb-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          variants={fadeUp}
+        >
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-3">Now</p>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
+                Currently building at Artbox<span className="text-[#F45D01]">.</span>
+              </h2>
+            </div>
+            <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
+              Alongside the design work, I'm designing and building AI tools for local businesses. Case studies follow once they've earned them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {building.map((b, i) => (
+              <motion.div
+                key={b.title}
+                variants={fadeUp}
+                custom={i}
+                className="rounded-xl border border-[var(--border)] bg-[var(--bg)] p-6 flex flex-col gap-3"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-xs text-[#F45D01] font-mono">0{i + 1}</span>
+                  <span className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{b.status}</span>
+                </div>
+                <h3 className="text-base font-semibold">{b.title}</h3>
+                <p className="text-sm text-[var(--text-400)] leading-relaxed">{b.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* My Reads */}
         <motion.div
