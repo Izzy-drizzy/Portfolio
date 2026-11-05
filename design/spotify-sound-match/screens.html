@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound Match screens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #121212; --elev: #1f1f1f; --elev2: #2a2a2a; --elev3: #3e3e3e;
+    --text: #ffffff; --sub: #b3b3b3; --mute: #7a7a7a;
+    --green: #1ed760; --green-dark: #1db954; --blue: #3d91f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0a; font-family: 'Figtree', system-ui, sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
+  .board { display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+  body.single .board { padding: 0; gap: 0; }
+  body.single .phone { display: none; }
+  body.single .phone.on { display: block; }
+  .phone { width: 390px; height: 844px; background: var(--bg); position: relative; overflow: hidden; flex-shrink: 0; }
+  svg.i { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  svg.f { fill: currentColor; stroke: none; }
+
+  /* status bar */
+  .sb { height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 0 30px 0 36px; font-weight: 600; font-size: 16px; position: relative; z-index: 5; }
+  .sb .r { display: flex; gap: 6px; align-items: center; }
+  .sb .bat { width: 25px; height: 12px; border: 1.5px solid currentColor; border-radius: 4px; position: relative; opacity: .95; }
+  .sb .bat::after { content: ''; position: absolute; inset: 1.5px; right: 5px; background: currentColor; border-radius: 1.5px; }
+  .home-ind { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 134px; height: 5px; border-radius: 3px; background: #fff; z-index: 30; }
+
+  /* nav + mini player */
+  .nav { position: absolute; left: 0; right: 0; bottom: 0; height: 88px; padding: 10px 10px 0; display: grid; grid-template-columns: repeat(4, 1fr); background: linear-gradient(to top, #000 55%, rgba(0,0,0,.85) 80%, rgba(0,0,0,0)); z-index: 20; }
+  .nav div { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 11px; color: var(--sub); font-weight: 500; }
+  .nav div.on { color: #fff; }
+  .mini { position: absolute; left: 8px; right: 8px; bottom: 90px; height: 56px; border-radius: 8px; display: flex; align-items: center; gap: 10px; padding: 8px; z-index: 21; overflow: hidden; }
+  .mini .t { flex: 1; min-width: 0; }
+  .mini .t b { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .mini .t span { font-size: 13px; color: rgba(255,255,255,.7); }
+  .mini .prog { position: absolute; left: 8px; right: 8px; bottom: 0; height: 2px; background: rgba(255,255,255,.25); border-radius: 2px; }
+  .mini .prog i { display: block; height: 100%; width: 38%; background: #fff; border-radius: 2px; }
+
+  /* album art */
+  .art { border-radius: 4px; position: relative; overflow: hidden; flex-shrink: 0; }
+  .a1 { background: radial-gradient(circle at 30% 70%, #f3b26b 0 18%, transparent 19%), radial-gradient(circle at 65% 35%, #c9573a 0 26%, transparent 27%), linear-gradient(160deg, #4a1f1a, #12080a); }
+  .a2 { background: linear-gradient(0deg, transparent 48%, #e7d8c4 48% 52%, transparent 52%), linear-gradient(135deg, #2c4b5e, #0e1a24); }
+  .a3 { background: radial-gradient(circle at 50% 50%, #ffd66b 0 22%, #ff8a3d 23% 40%, #6b1d5c 41%); }
+  .a4 { background: repeating-linear-gradient(90deg, #1d3b2f 0 10%, #2f6b4f 10% 20%), #1d3b2f; }
+  .a5 { background: conic-gradient(from 210deg at 60% 60%, #b7a1ff, #5b3fd1, #1a1240, #b7a1ff); }
+  .a6 { background: radial-gradient(ellipse at 50% 110%, #ff5f6d 0 40%, transparent 41%), linear-gradient(#17202e, #2b1530); }
+  .a7 { background: linear-gradient(45deg, #d9c9a3 25%, #8a6f3d 25% 50%, #d9c9a3 50% 75%, #8a6f3d 75%); background-size: 40% 40%; }
+  .a8 { background: radial-gradient(circle at 70% 30%, #9ee7d8 0 15%, transparent 16%), linear-gradient(200deg, #0f5c5a, #062221); }
+  .a9 { background: linear-gradient(135deg, #3a3a3a, #141414); }
+
+  .pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-weight: 700; font-size: 15px; height: 48px; padding: 0 28px; }
+  .pill.g { background: var(--green); color: #000; }
+  .pill.w { background: #fff; color: #000; }
+  .pill.o { border: 1px solid #7c7c7c; color: #fff; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; border-radius: 999px; background: var(--elev2); font-size: 13px; font-weight: 500; color: #fff; white-space: nowrap; }
+  .chip.sel { background: var(--green); color: #000; font-weight: 600; }
+  .chip.line { background: transparent; border: 1px solid #727272; }
+  .h2 { font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
+  .sub { color: var(--sub); }
+  .row { display: flex; align-items: center; }
+  .track { display: flex; align-items: center; gap: 12px; padding: 7px 16px; }
+  .track .t { flex: 1; min-width: 0; }
+  .track .t b { display: block; font-size: 15px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .track .t > span { display: block; font-size: 13px; color: var(--sub); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .why { color: #c9f7d9; }
+  .dim { position: absolute; inset: 0; background: rgba(0,0,0,.62); z-index: 40; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #282828; border-radius: 14px 14px 0 0; z-index: 41; padding: 10px 20px 40px; }
+  .sheet .handle { width: 36px; height: 4px; border-radius: 2px; background: #5e5e5e; margin: 0 auto 18px; }
+  .toggle { width: 44px; height: 26px; border-radius: 13px; background: #727272; position: relative; flex-shrink: 0; }
+  .toggle::after { content: ''; position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #fff; top: 2px; left: 2px; }
+  .toggle.on { background: var(--green); }
+  .toggle.on::after { left: 20px; }
+  .listen-btn { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; position: relative; }
+
+  /* lock screen */
+  .lock { background: radial-gradient(ellipse at 30% 20%, #4c3a8f 0, transparent 55%), radial-gradient(ellipse at 80% 75%, #0f6b5c 0, transparent 50%), linear-gradient(180deg, #1b1640, #0b1c2a 70%, #08131c); }
+  .lock .time { text-align: center; font-size: 92px; font-weight: 700; letter-spacing: -.02em; line-height: 1; margin-top: 6px; color: rgba(255,255,255,.94); }
+  .lock .date { text-align: center; font-size: 19px; font-weight: 600; color: rgba(255,255,255,.85); margin-top: 22px; }
+  .glass { background: rgba(255,255,255,.14); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .lockbtn { position: absolute; bottom: 58px; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; }
+
+  /* listening */
+  .rings { position: relative; width: 300px; height: 300px; margin: 0 auto; display: grid; place-items: center; }
+  .rings i { position: absolute; border-radius: 50%; border: 1.5px solid rgba(30,215,96,.35); }
+  .bars { display: flex; align-items: center; gap: 5px; height: 40px; justify-content: center; }
+  .bars i { width: 4px; border-radius: 2px; background: var(--green); display: block; }
+  .note { font-size: 12px; color: var(--mute); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M12 2.8 2.5 11h2.8v10h5.2v-6.2h3V21h5.2V11h2.8z"/></symbol>
+    <symbol id="i-home-o" viewBox="0 0 24 24"><path d="M12 3.5 3.5 11v9.5h5.7v-6h5.6v6h5.7V11z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16.2 16.2 4.8 4.8"/></symbol>
+    <symbol id="i-lib" viewBox="0 0 24 24"><path d="M4 3v18M9.5 3v18M14.5 3.5l5.5 17"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2l1.6-2h5.8l1.6 2h2A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5z"/><circle cx="12" cy="12.5" r="3.8"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3.5 10.5v3M7.5 7v10M12 3.5v17M16.5 7v10M20.5 10.5v3"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+    <symbol id="i-addc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v9M7.5 12h9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 4h4v4M4 19.5 20 4M20 16v4h-4M14.5 14.5 20 20M4 4.5l5 5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7.5A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V12"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v9M8.5 12.5 12 16l3.5-3.5"/></symbol>
+    <symbol id="i-wifioff" viewBox="0 0 24 24"><path d="M3 3l18 18M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2.7M14 10.3A10 10 0 0 1 19 13M2 9.5a15 15 0 0 1 4.5-2.8M10.5 5.6A15 15 0 0 1 22 9.5"/><circle cx="12" cy="20" r=".6"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-story" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6"/></symbol>
+    <symbol id="i-vol" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4zM16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-lockic" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-torch" viewBox="0 0 24 24"><path d="M8 3h8l-1 6H9zM9 9h6v10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M12 13v2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1ed760"/><path d="M6.6 9.3c3.8-1.1 7.9-.8 11 1.1M7.2 12.6c3.1-.9 6.3-.6 9 1M7.9 15.7c2.4-.6 4.8-.4 6.9.8" stroke="#000" stroke-width="1.7" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><rect x="2" y="15" width="3.6" height="5" rx="1"/><rect x="7.4" y="11.5" width="3.6" height="8.5" rx="1"/><rect x="12.8" y="8" width="3.6" height="12" rx="1"/><rect x="18.2" y="4.5" width="3.6" height="15.5" rx="1"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 19.5l2.6-3.1a4 4 0 0 0-5.2 0zM12 6.5a14 14 0 0 1 9.6 3.8l-1.9 2.3A11 11 0 0 0 12 9.5a11 11 0 0 0-7.7 3.1l-1.9-2.3A14 14 0 0 1 12 6.5zm0 4.6a9.4 9.4 0 0 1 6.4 2.5l-1.9 2.3a6.4 6.4 0 0 0-9 0l-1.9-2.3A9.4 9.4 0 0 1 12 11.1z"/></symbol>
+  </defs>
+</svg>
+
+<div class="board">
+
+<!-- ============ 01 Search tab entry point ============ -->
+<section class="phone" id="s01">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:6px 16px 0;gap:12px">
+    <div style="width:32px;height:32px;border-radius:50%;background:#e8a33d;color:#000;display:grid;place-items:center;font-weight:800;font-size:14px">B</div>
+    <div style="font-size:24px;font-weight:800;flex:1;letter-spacing:-.01em">Search</div>
+    <div class="listen-btn" style="background:#fff;color:#000"><svg class="i" style="width:19px;height:19px;stroke-width:2.4"><use href="#i-wave"/></svg></div>
+    <svg class="i" style="width:26px;height:26px;margin-left:6px"><use href="#i-cam"/></svg>
+  </div>
+  <div style="margin:16px 16px 0;height:48px;border-radius:6px;background:#fff;color:#121212;display:flex;align-items:center;gap:12px;padding:0 14px;font-size:15.5px;font-weight:600"><svg class="i" style="width:24px;stroke-width:2.4"><use href="#i-search"/></svg><span style="color:#535353">What do you want to listen to?</span></div>
+
+  <!-- coachmark -->
+  <div style="position:absolute;top:104px;right:52px;z-index:10">
+    <div style="position:absolute;top:-7px;right:20px;width:14px;height:14px;background:#3d91f4;transform:rotate(45deg);border-radius:2px"></div>
+    <div style="position:relative;width:258px;background:#3d91f4;border-radius:10px;padding:14px 16px 12px;color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.45)">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.85">New · Sound Match</div>
+      <div style="font-size:16px;font-weight:700;margin-top:6px">Hear a song you like?</div>
+      <div style="font-size:13.5px;line-height:1.4;margin-top:4px;opacity:.95">Tap to name it, then get a playlist of songs that sound like it.</div>
+      <div style="text-align:right;font-size:13px;font-weight:700;margin-top:10px">Got it</div>
+    </div>
+  </div>
+
+  <div style="padding:26px 16px 0">
+    <div style="font-size:16px;font-weight:700;margin-bottom:12px">Start browsing</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="height:56px;border-radius:6px;background:#dc148c;padding:12px;font-weight:700">Music</div>
+      <div style="height:56px;border-radius:6px;background:#006450;padding:12px;font-weight:700">Podcasts</div>
+      <div style="height:56px;border-radius:6px;background:#8400e7;padding:12px;font-weight:700">Live Events</div>
+      <div style="height:56px;border-radius:6px;background:#1e3264;padding:12px;font-weight:700">Audiobooks</div>
+    </div>
+    <div style="font-size:16px;font-weight:700;margin:24px 0 12px">Browse all</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="height:98px;border-radius:6px;background:#e8115b;padding:12px;font-weight:700;position:relative;overflow:hidden">Made For You<div class="art a5" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+      <div style="height:98px;border-radius:6px;background:#148a08;padding:12px;font-weight:700;position:relative;overflow:hidden">New Releases<div class="art a3" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+      <div style="height:98px;border-radius:6px;background:#bc5900;padding:12px;font-weight:700;position:relative;overflow:hidden">Soul<div class="art a1" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+      <div style="height:98px;border-radius:6px;background:#477d95;padding:12px;font-weight:700;position:relative;overflow:hidden">Chill<div class="art a8" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+      <div style="height:98px;border-radius:6px;background:#509bf5;padding:12px;font-weight:700;position:relative;overflow:hidden">Indie<div class="art a2" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+      <div style="height:98px;border-radius:6px;background:#8d67ab;padding:12px;font-weight:700;position:relative;overflow:hidden">R&amp;B<div class="art a6" style="position:absolute;width:62px;height:62px;right:-12px;bottom:-6px;transform:rotate(25deg)"></div></div>
+    </div>
+  </div>
+  <div class="mini" style="background:#5b3a23"><div class="art a4" style="width:40px;height:40px"></div><div class="t"><b>Glasshouse</b><span>Odun Ade</span></div><svg class="i" style="color:#fff;margin-right:12px"><use href="#i-addc"/></svg><svg class="i f" style="margin-right:6px"><use href="#i-play"/></svg><div class="prog"><i></i></div></div>
+  <div class="nav"><div><svg class="i f"><use href="#i-home-o"/></svg>Home</div><div class="on"><svg class="i" style="stroke-width:2.6"><use href="#i-search"/></svg>Search</div><div><svg class="i"><use href="#i-lib"/></svg>Your Library</div><div><svg class="i"><use href="#i-plus"/></svg>Create</div></div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 02 Lock screen widgets + control ============ -->
+<section class="phone lock" id="s02">
+  <div class="sb"><span></span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div style="text-align:center;margin-top:2px"><svg class="i" style="width:18px;height:18px;opacity:.9"><use href="#i-lockic"/></svg></div>
+  <div class="date" style="margin-top:6px">Thursday 5 November</div>
+  <div class="time">21:47</div>
+  <div class="row" style="justify-content:center;gap:12px;margin-top:20px">
+    <div class="glass" style="width:72px;height:72px;border-radius:50%;display:grid;place-items:center;color:#fff">
+      <div style="text-align:center"><svg class="i" style="width:26px;height:26px;stroke-width:2.4"><use href="#i-wave"/></svg><div style="font-size:10px;font-weight:700;margin-top:1px">Match</div></div>
+    </div>
+    <div class="glass" style="width:158px;height:72px;border-radius:20px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center">
+      <div class="row" style="gap:6px;font-size:12px;font-weight:700"><svg class="i" style="width:15px;height:15px"><use href="#i-logo"/></svg>Sound Match</div>
+      <div style="font-size:12.5px;line-height:1.3;margin-top:4px;opacity:.92">Last: <b>Slow Honey</b><br>30-song playlist ready</div>
+    </div>
+  </div>
+
+  <div class="glass" style="position:absolute;left:14px;right:14px;bottom:150px;border-radius:22px;padding:14px">
+    <div class="row" style="gap:10px"><svg class="i" style="width:20px;height:20px"><use href="#i-logo"/></svg><div style="font-size:13px;font-weight:700;flex:1">SPOTIFY</div><div style="font-size:12px;opacity:.75">now</div></div>
+    <div style="font-size:14.5px;font-weight:700;margin-top:8px">Tap the Match button whenever you hear something</div>
+    <div style="font-size:13.5px;opacity:.88;margin-top:2px;line-height:1.35">It works from your lock screen. Spotify listens for up to 15 seconds, then stops.</div>
+  </div>
+
+  <div class="lockbtn glass" style="left:46px;color:#fff"><svg class="i" style="width:24px;stroke-width:2.4"><use href="#i-wave"/></svg></div>
+  <div class="lockbtn glass" style="right:46px"><svg class="i"><use href="#i-cam"/></svg></div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 03 Lock screen Live Activity result ============ -->
+<section class="phone lock" id="s03">
+  <div style="position:absolute;top:11px;left:50%;transform:translateX(-50%);width:150px;height:37px;border-radius:20px;background:#000;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:0 12px">
+    <div class="art a1" style="width:22px;height:22px;border-radius:6px"></div>
+    <div class="bars" style="height:18px;gap:3px"><i style="height:8px;width:3px"></i><i style="height:14px;width:3px"></i><i style="height:18px;width:3px"></i><i style="height:11px;width:3px"></i><i style="height:6px;width:3px"></i></div>
+  </div>
+  <div class="sb"><span></span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="date" style="margin-top:22px">Thursday 5 November</div>
+  <div class="time">21:48</div>
+
+  <div style="position:absolute;left:12px;right:12px;bottom:142px;border-radius:24px;background:rgba(18,18,18,.82);backdrop-filter:blur(24px);padding:16px">
+    <div class="row" style="gap:8px;font-size:12.5px;font-weight:700;color:var(--green)"><svg class="i" style="width:18px;height:18px"><use href="#i-logo"/></svg>Matched in 6 seconds</div>
+    <div class="row" style="gap:12px;margin-top:12px">
+      <div class="art a1" style="width:64px;height:64px;border-radius:8px"></div>
+      <div style="flex:1;min-width:0"><div style="font-size:18px;font-weight:700">Slow Honey</div><div class="sub" style="font-size:14px">Maren Vale</div>
+        <div class="row" style="gap:6px;margin-top:7px"><span style="font-size:11.5px;padding:3px 8px;border-radius:999px;background:#2a2a2a">Rhodes keys</span><span style="font-size:11.5px;padding:3px 8px;border-radius:999px;background:#2a2a2a">Falsetto</span><span style="font-size:11.5px;padding:3px 8px;border-radius:999px;background:#2a2a2a">92 BPM</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:8px;margin-top:14px">
+      <div class="pill o" style="height:40px;font-size:14px;padding:0"><svg class="i f" style="width:16px"><use href="#i-play"/></svg>Play</div>
+      <div class="pill g" style="height:40px;font-size:14px;padding:0"><svg class="i" style="width:18px;stroke-width:2.6"><use href="#i-wave"/></svg>Songs like this</div>
+    </div>
+  </div>
+  <div class="lockbtn glass" style="left:46px"><svg class="i" style="width:24px;stroke-width:2.4"><use href="#i-wave"/></svg></div>
+  <div class="lockbtn glass" style="right:46px"><svg class="i"><use href="#i-cam"/></svg></div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 04 Mic permission primer ============ -->
+<section class="phone" id="s04" style="background:#121212">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div style="padding:8px 16px"><svg class="i" style="width:26px;height:26px"><use href="#i-x"/></svg></div>
+  <div style="margin-top:40px;display:grid;place-items:center">
+    <div style="width:180px;height:180px;border-radius:50%;background:radial-gradient(circle, rgba(30,215,96,.25), rgba(30,215,96,0) 70%);display:grid;place-items:center">
+      <div style="width:104px;height:104px;border-radius:50%;background:var(--green);color:#000;display:grid;place-items:center"><svg class="i" style="width:46px;height:46px;stroke-width:2.2"><use href="#i-mic"/></svg></div>
+    </div>
+  </div>
+  <div style="padding:22px 28px 0;text-align:center">
+    <div style="font-size:26px;font-weight:800;letter-spacing:-.015em;line-height:1.15">Let Spotify listen for a few seconds</div>
+    <div class="sub" style="font-size:15px;line-height:1.45;margin-top:12px">To name a song and match its sound, Spotify needs your microphone.</div>
+  </div>
+  <div style="margin:28px 24px 0;display:flex;flex-direction:column;gap:18px">
+    <div class="row" style="gap:14px;align-items:flex-start"><svg class="i" style="color:var(--green);margin-top:1px"><use href="#i-wave"/></svg><div style="font-size:14.5px;line-height:1.4"><b>Only when you tap.</b> <span class="sub">Spotify never listens in the background.</span></div></div>
+    <div class="row" style="gap:14px;align-items:flex-start"><svg class="i" style="color:var(--green);margin-top:1px"><use href="#i-clock"/></svg><div style="font-size:14.5px;line-height:1.4"><b>15 seconds at most.</b> <span class="sub">It stops as soon as there's a match.</span></div></div>
+    <div class="row" style="gap:14px;align-items:flex-start"><svg class="i" style="color:var(--green);margin-top:1px"><use href="#i-lockic"/></svg><div style="font-size:14.5px;line-height:1.4"><b>No recordings kept.</b> <span class="sub">The audio becomes a sound fingerprint on your phone, then it's discarded.</span></div></div>
+  </div>
+  <div style="position:absolute;left:24px;right:24px;bottom:56px;display:flex;flex-direction:column;gap:10px">
+    <div class="pill g" style="width:100%">Continue</div>
+    <div class="pill" style="width:100%;color:#fff">Not now</div>
+  </div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 05 Listening ============ -->
+<section class="phone" id="s05" style="background:radial-gradient(ellipse at 50% 40%, #0f3d24 0, #121212 62%)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:8px 16px;justify-content:space-between"><svg class="i" style="width:26px;height:26px"><use href="#i-x"/></svg><div style="font-size:13px;font-weight:700">Sound Match</div><div style="width:26px"></div></div>
+  <div class="rings" style="margin-top:92px">
+    <i style="width:300px;height:300px;border-color:rgba(30,215,96,.12)"></i>
+    <i style="width:236px;height:236px;border-color:rgba(30,215,96,.22)"></i>
+    <i style="width:176px;height:176px;border-color:rgba(30,215,96,.38)"></i>
+    <svg width="148" height="148" viewBox="0 0 148 148" style="position:absolute"><circle cx="74" cy="74" r="70" stroke="rgba(255,255,255,.12)" stroke-width="4" fill="none"/><circle cx="74" cy="74" r="70" stroke="#1ed760" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="440" stroke-dashoffset="300" transform="rotate(-90 74 74)"/></svg>
+    <div style="width:124px;height:124px;border-radius:50%;background:var(--green);color:#000;display:grid;place-items:center;position:relative"><svg class="i" style="width:52px;height:52px;stroke-width:2.4"><use href="#i-wave"/></svg></div>
+  </div>
+  <div style="text-align:center;margin-top:44px">
+    <div style="font-size:28px;font-weight:800;letter-spacing:-.015em">Listening…</div>
+    <div class="sub" style="font-size:15px;margin-top:8px">Hold your phone near the music</div>
+  </div>
+  <div class="bars" style="margin-top:34px">
+    <i style="height:10px"></i><i style="height:18px"></i><i style="height:28px"></i><i style="height:22px"></i><i style="height:36px"></i><i style="height:26px"></i><i style="height:14px"></i><i style="height:30px"></i><i style="height:20px"></i><i style="height:34px"></i><i style="height:16px"></i><i style="height:24px"></i><i style="height:12px"></i><i style="height:8px"></i>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:60px;text-align:center" class="note">Stops automatically after 15 seconds</div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 06 Result + sound profile ============ -->
+<section class="phone" id="s06" style="background:linear-gradient(180deg, #7a3424 0, #3a1c16 34%, #121212 58%)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:4px 16px;justify-content:space-between"><svg class="i" style="width:26px;height:26px"><use href="#i-down"/></svg><div style="text-align:center"><div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.75">Heard just now</div><div style="font-size:13px;font-weight:700">Sound Match</div></div><svg class="i"><use href="#i-dots"/></svg></div>
+  <div class="art a1" style="width:236px;height:236px;margin:20px auto 0;box-shadow:0 18px 40px rgba(0,0,0,.5)"></div>
+  <div class="row" style="padding:22px 20px 0;gap:12px">
+    <div style="flex:1"><div style="font-size:24px;font-weight:800;letter-spacing:-.015em">Slow Honey</div><div class="sub" style="font-size:15px;margin-top:2px">Maren Vale · Low Light (2025)</div></div>
+    <svg class="i" style="width:28px;height:28px;color:#b3b3b3"><use href="#i-addc"/></svg>
+    <div style="width:52px;height:52px;border-radius:50%;background:var(--green);color:#000;display:grid;place-items:center"><svg class="i f" style="width:22px;margin-left:3px"><use href="#i-play"/></svg></div>
+  </div>
+  <div style="padding:22px 20px 0">
+    <div class="row" style="justify-content:space-between"><div style="font-size:15px;font-weight:700">What we heard</div><svg class="i" style="width:18px;color:#b3b3b3"><use href="#i-info"/></svg></div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+      <span class="chip">Warm Rhodes keys</span><span class="chip">Breathy falsetto</span><span class="chip">Laid-back live drums</span><span class="chip">92 BPM</span><span class="chip">Tape warmth</span><span class="chip">Late-night mood</span>
+    </div>
+  </div>
+  <div style="margin:22px 16px 0;padding:16px;border-radius:10px;background:#1f1f1f">
+    <div style="font-size:15px;font-weight:700">Want more of this sound?</div>
+    <div class="sub" style="font-size:13.5px;margin-top:3px;line-height:1.4">30 songs matched on how it sounds. Your listening history is left out.</div>
+    <div class="row" style="gap:10px;margin-top:14px">
+      <div class="pill g" style="flex:1;height:44px;font-size:14.5px;padding:0"><svg class="i" style="width:19px;stroke-width:2.6"><use href="#i-wave"/></svg>Make playlist</div>
+      <div class="pill o" style="height:44px;width:44px;padding:0"><svg class="i" style="width:20px"><use href="#i-sliders"/></svg></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:16px;font-size:13px;font-weight:600" class="sub">or go to song radio</div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 07 Tune the match ============ -->
+<section class="phone" id="s07" style="background:linear-gradient(180deg, #7a3424 0, #3a1c16 34%, #121212 58%)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="art a1" style="width:236px;height:236px;margin:58px auto 0"></div>
+  <div class="dim"></div>
+  <div class="sheet" style="padding-bottom:36px">
+    <div class="handle"></div>
+    <div class="row" style="justify-content:space-between"><div style="font-size:20px;font-weight:800">Tune your match</div><div style="font-size:13px;font-weight:700" class="sub">Reset</div></div>
+    <div class="sub" style="font-size:13.5px;margin-top:4px">Tap what you want to keep. Untick the rest.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px">
+      <span class="chip sel"><svg class="i" style="width:15px;stroke-width:3"><use href="#i-check"/></svg>Warm Rhodes keys</span>
+      <span class="chip sel"><svg class="i" style="width:15px;stroke-width:3"><use href="#i-check"/></svg>Breathy falsetto</span>
+      <span class="chip sel"><svg class="i" style="width:15px;stroke-width:3"><use href="#i-check"/></svg>Laid-back live drums</span>
+      <span class="chip line">92 BPM</span>
+      <span class="chip sel"><svg class="i" style="width:15px;stroke-width:3"><use href="#i-check"/></svg>Tape warmth</span>
+      <span class="chip line">Late-night mood</span>
+    </div>
+    <div style="margin-top:24px">
+      <div style="font-size:15px;font-weight:700">Match closer to</div>
+      <div style="position:relative;height:28px;margin-top:12px">
+        <div style="position:absolute;top:12px;left:0;right:0;height:4px;border-radius:2px;background:#5e5e5e"></div>
+        <div style="position:absolute;top:12px;left:0;width:24%;height:4px;border-radius:2px;background:#fff"></div>
+        <div style="position:absolute;top:4px;left:calc(24% - 10px);width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.4)"></div>
+      </div>
+      <div class="row" style="justify-content:space-between;font-size:13px;font-weight:600"><span>The sound</span><span class="sub">The artist</span></div>
+    </div>
+    <div style="margin-top:22px;display:flex;flex-direction:column;gap:16px">
+      <div class="row" style="gap:12px"><div style="flex:1"><div style="font-size:15px;font-weight:600">Leave out my listening history</div><div class="sub" style="font-size:13px;margin-top:2px">Matches won't lean on what you already play</div></div><div class="toggle on"></div></div>
+      <div class="row" style="gap:12px"><div style="flex:1"><div style="font-size:15px;font-weight:600">Only songs I haven't played</div></div><div class="toggle on"></div></div>
+      <div class="row" style="gap:12px"><div style="flex:1"><div style="font-size:15px;font-weight:600">Include more Maren Vale</div></div><div class="toggle"></div></div>
+    </div>
+    <div class="pill w" style="width:100%;margin-top:26px">Make playlist · 30 songs</div>
+  </div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 08 Generated playlist ============ -->
+<section class="phone" id="s08" style="background:linear-gradient(180deg, #6b2e20 0, #2c1611 300px, #121212 420px)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div style="padding:4px 16px"><svg class="i" style="width:26px;height:26px"><use href="#i-left"/></svg></div>
+  <div style="width:196px;height:196px;margin:8px auto 0;border-radius:4px;position:relative;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.5)" class="a1">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.55))"></div>
+    <svg class="i" style="position:absolute;left:14px;top:14px;width:22px;height:22px"><use href="#i-logo"/></svg>
+    <div style="position:absolute;left:14px;bottom:14px;right:14px"><div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.9">Sound Match</div><div style="font-size:22px;font-weight:800;line-height:1.05;margin-top:3px">Slow Honey</div></div>
+  </div>
+  <div style="padding:18px 16px 0">
+    <div style="font-size:22px;font-weight:800;letter-spacing:-.01em">Sound Match: Slow Honey</div>
+    <div class="sub" style="font-size:13.5px;line-height:1.4;margin-top:6px">Matched on warm Rhodes keys, breathy falsetto, laid-back live drums and tape warmth. Your history left out.</div>
+    <div class="row" style="gap:6px;margin-top:10px;font-size:13px"><svg class="i" style="width:18px;height:18px"><use href="#i-logo"/></svg><b>Made for Bukunmi</b><span class="sub">· 30 songs, 1 hr 52 min</span></div>
+    <div class="row" style="margin-top:12px;gap:18px;color:#b3b3b3">
+      <svg class="i" style="width:26px;height:26px"><use href="#i-addc"/></svg><svg class="i" style="width:26px;height:26px"><use href="#i-dl"/></svg><svg class="i" style="width:24px;height:24px"><use href="#i-sliders"/></svg><svg class="i" style="width:24px;height:24px"><use href="#i-dots"/></svg>
+      <div style="flex:1"></div>
+      <svg class="i" style="width:26px;height:26px;color:var(--green)"><use href="#i-shuffle"/></svg>
+      <div style="width:52px;height:52px;border-radius:50%;background:var(--green);color:#000;display:grid;place-items:center"><svg class="i f" style="width:20px"><use href="#i-pause"/></svg></div>
+    </div>
+  </div>
+  <div style="margin-top:8px">
+    <div class="track"><div class="art a2" style="width:48px;height:48px"></div><div class="t"><b style="color:var(--green)">Paper Lanterns</b><span><span class="why">Rhodes + falsetto</span> · Ines Okafor</span></div><svg class="i" style="color:#b3b3b3;width:20px"><use href="#i-dots"/></svg></div>
+    <div class="track"><div class="art a6" style="width:48px;height:48px"></div><div class="t"><b>After Hours, Again</b><span><span class="why">Same drum feel, 90 BPM</span> · The Velvet Hours</span></div><svg class="i" style="color:#b3b3b3;width:20px"><use href="#i-dots"/></svg></div>
+    <div class="track"><div class="art a7" style="width:48px;height:48px"></div><div class="t"><b>Lowlight</b><span><span class="why">Tape warmth, breathy vocal</span> · Sol Akande</span></div><svg class="i" style="color:#b3b3b3;width:20px"><use href="#i-dots"/></svg></div>
+    <div class="track"><div class="art a8" style="width:48px;height:48px"></div><div class="t"><b>Second Nature</b><span><span class="why">Rhodes, live kit</span> · June Marlowe</span></div><svg class="i" style="color:#b3b3b3;width:20px"><use href="#i-dots"/></svg></div>
+  </div>
+  <div class="mini" style="background:#5c2b1f"><div class="art a2" style="width:40px;height:40px"></div><div class="t"><b>Paper Lanterns</b><span>Ines Okafor</span></div><svg class="i" style="color:var(--green);margin-right:12px"><use href="#i-check"/></svg><svg class="i f" style="margin-right:6px"><use href="#i-pause"/></svg><div class="prog"><i style="width:12%"></i></div></div>
+  <div class="nav"><div><svg class="i f"><use href="#i-home-o"/></svg>Home</div><div class="on"><svg class="i" style="stroke-width:2.6"><use href="#i-search"/></svg>Search</div><div><svg class="i"><use href="#i-lib"/></svg>Your Library</div><div><svg class="i"><use href="#i-plus"/></svg>Create</div></div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 09 Saved + share ============ -->
+<section class="phone" id="s09" style="background:linear-gradient(180deg, #6b2e20 0, #2c1611 300px, #121212 420px)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div style="width:196px;height:196px;margin:46px auto 0" class="art a1"></div>
+  <div class="dim" style="background:rgba(0,0,0,.72)"></div>
+  <div style="position:absolute;top:92px;left:50%;transform:translateX(-50%);z-index:42;width:250px;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#8b3a27,#2a1210);box-shadow:0 24px 60px rgba(0,0,0,.6)">
+    <div style="padding:20px 20px 0" class="row"><svg class="i" style="width:22px;height:22px"><use href="#i-logo"/></svg><span style="font-size:12px;font-weight:700;margin-left:8px;letter-spacing:.06em">SOUND MATCH</span></div>
+    <div class="art a1" style="width:150px;height:150px;margin:18px auto 0;box-shadow:0 10px 30px rgba(0,0,0,.45)"></div>
+    <div style="padding:16px 20px 22px;text-align:center">
+      <div style="font-size:13px;opacity:.8">I heard</div>
+      <div style="font-size:20px;font-weight:800;margin-top:2px">Slow Honey</div>
+      <div style="font-size:13px;opacity:.8;margin-top:6px;line-height:1.35">and found 30 songs that sound just like it</div>
+    </div>
+  </div>
+  <div style="position:absolute;top:470px;left:50%;transform:translateX(-50%);z-index:42" class="row">
+    <div class="row" style="gap:8px;background:#fff;color:#000;border-radius:8px;padding:10px 14px;font-size:13.5px;font-weight:700;white-space:nowrap"><svg class="i" style="width:18px;height:18px;color:var(--green-dark);stroke-width:3"><use href="#i-check"/></svg>Saved to Your Library</div>
+  </div>
+  <div class="sheet" style="padding-bottom:44px">
+    <div class="handle"></div>
+    <div style="font-size:17px;font-weight:700;text-align:center;margin-bottom:20px">Share</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;font-size:12px">
+      <div><div style="width:56px;height:56px;border-radius:50%;background:#3e3e3e;display:grid;place-items:center;margin:0 auto 8px"><svg class="i"><use href="#i-link"/></svg></div>Copy link</div>
+      <div><div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(45deg,#f9a03f,#d62976,#7a2fd0);display:grid;place-items:center;margin:0 auto 8px"><svg class="i"><use href="#i-story"/></svg></div>Stories</div>
+      <div><div style="width:56px;height:56px;border-radius:50%;background:#34c759;display:grid;place-items:center;margin:0 auto 8px"><svg class="i"><use href="#i-msg"/></svg></div>Messages</div>
+      <div><div style="width:56px;height:56px;border-radius:50%;background:#3e3e3e;display:grid;place-items:center;margin:0 auto 8px"><svg class="i"><use href="#i-dots"/></svg></div>More</div>
+    </div>
+  </div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 10 No match ============ -->
+<section class="phone" id="s10" style="background:radial-gradient(ellipse at 50% 30%, #2b2b2b 0, #121212 60%)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:8px 16px;justify-content:space-between"><svg class="i" style="width:26px;height:26px"><use href="#i-x"/></svg><div style="font-size:13px;font-weight:700">Sound Match</div><div style="width:26px"></div></div>
+  <div style="margin:70px auto 0;width:132px;height:132px;border-radius:50%;background:#2a2a2a;display:grid;place-items:center;position:relative">
+    <svg class="i" style="width:54px;height:54px;color:#b3b3b3;stroke-width:2.2"><use href="#i-wave"/></svg>
+    <div style="position:absolute;right:4px;bottom:6px;width:36px;height:36px;border-radius:50%;background:#121212;display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;border:3px solid #2a2a2a">?</div>
+  </div>
+  <div style="padding:28px 30px 0;text-align:center">
+    <div style="font-size:25px;font-weight:800;letter-spacing:-.015em;line-height:1.15">We couldn't name this one</div>
+    <div class="sub" style="font-size:15px;line-height:1.45;margin-top:10px">It might be unreleased, a live version or a DJ edit. We can still find songs that sound like it.</div>
+  </div>
+  <div style="margin:26px 20px 0;padding:16px;border-radius:10px;background:#1f1f1f">
+    <div style="font-size:14px;font-weight:700">What we heard</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"><span class="chip">Deep sub bass</span><span class="chip">Four-on-the-floor kick</span><span class="chip">Chopped vocal</span><span class="chip">124 BPM</span></div>
+  </div>
+  <div style="position:absolute;left:24px;right:24px;bottom:56px;display:flex;flex-direction:column;gap:10px">
+    <div class="pill g" style="width:100%"><svg class="i" style="width:19px;stroke-width:2.6"><use href="#i-wave"/></svg>Match the sound anyway</div>
+    <div class="pill o" style="width:100%">Listen again</div>
+  </div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 11 Noisy ============ -->
+<section class="phone" id="s11" style="background:radial-gradient(ellipse at 50% 40%, #3d2c0b 0, #121212 62%)">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i f" style="width:17px;height:17px"><use href="#i-wifi"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:8px 16px;justify-content:space-between"><svg class="i" style="width:26px;height:26px"><use href="#i-x"/></svg><div style="font-size:13px;font-weight:700">Sound Match</div><div style="width:26px"></div></div>
+  <div class="rings" style="margin-top:92px">
+    <i style="width:300px;height:300px;border-color:rgba(255,193,64,.12)"></i>
+    <i style="width:236px;height:236px;border-color:rgba(255,193,64,.22)"></i>
+    <i style="width:176px;height:176px;border-color:rgba(255,193,64,.36)"></i>
+    <svg width="148" height="148" viewBox="0 0 148 148" style="position:absolute"><circle cx="74" cy="74" r="70" stroke="rgba(255,255,255,.12)" stroke-width="4" fill="none"/><circle cx="74" cy="74" r="70" stroke="#1ed760" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="440" stroke-dashoffset="190" transform="rotate(-90 74 74)"/></svg>
+    <div style="width:124px;height:124px;border-radius:50%;background:#ffc140;color:#000;display:grid;place-items:center"><svg class="i" style="width:50px;height:50px;stroke-width:2.2"><use href="#i-vol"/></svg></div>
+  </div>
+  <div style="text-align:center;margin-top:44px;padding:0 30px">
+    <div style="font-size:26px;font-weight:800;letter-spacing:-.015em">It's loud in here</div>
+    <div class="sub" style="font-size:15px;margin-top:8px;line-height:1.45">Move closer to the speaker. We'll keep listening.</div>
+  </div>
+  <div style="margin:30px 40px 0">
+    <div class="row" style="justify-content:space-between;font-size:12px;font-weight:600"><span class="sub">Music</span><span style="color:#ffc140">Crowd noise</span></div>
+    <div style="height:6px;border-radius:3px;background:#2a2a2a;margin-top:8px;overflow:hidden;display:flex"><i style="display:block;width:34%;background:var(--green)"></i><i style="display:block;width:66%;background:#ffc140"></i></div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:60px;text-align:center" class="note">8 seconds left</div>
+  <div class="home-ind"></div>
+</section>
+
+<!-- ============ 12 Offline ============ -->
+<section class="phone" id="s12">
+  <div class="sb"><span>9:41</span><span class="r"><svg class="i f" style="width:17px;height:17px"><use href="#i-signal"/></svg><svg class="i" style="width:17px;height:17px"><use href="#i-wifioff"/></svg><span class="bat"></span></span></div>
+  <div class="row" style="padding:8px 16px;justify-content:space-between"><svg class="i" style="width:26px;height:26px"><use href="#i-x"/></svg><div style="font-size:13px;font-weight:700">Sound Match</div><div style="width:26px"></div></div>
+  <div style="margin:62px auto 0;width:124px;height:124px;border-radius:50%;background:#2a2a2a;display:grid;place-items:center"><svg class="i" style="width:50px;height:50px;color:#b3b3b3;stroke-width:2"><use href="#i-wifioff"/></svg></div>
+  <div style="padding:28px 30px 0;text-align:center">
+    <div style="font-size:25px;font-weight:800;letter-spacing:-.015em;line-height:1.15">You're offline, but we caught it</div>
+    <div class="sub" style="font-size:15px;line-height:1.45;margin-top:10px">We saved the sound fingerprint. We'll name it and build your playlist when you're back online.</div>
+  </div>
+  <div style="margin:28px 16px 0">
+    <div style="font-size:15px;font-weight:700;margin:0 4px 10px">Waiting to match</div>
+    <div class="row" style="gap:12px;padding:12px;border-radius:10px;background:#1f1f1f">
+      <div style="width:48px;height:48px;border-radius:6px;background:#2a2a2a;display:grid;place-items:center;color:var(--green)"><svg class="i"><use href="#i-wave"/></svg></div>
+      <div style="flex:1"><div style="font-size:15px;font-weight:600">Heard at 21:47</div><div class="sub" style="font-size:13px;margin-top:2px">12 seconds captured</div></div>
+      <svg class="i" style="color:#b3b3b3"><use href="#i-clock"/></svg>
+    </div>
+    <div class="row" style="gap:12px;padding:16px 4px 0"><svg class="i" style="color:#b3b3b3"><use href="#i-bell"/></svg><div style="flex:1;font-size:15px;font-weight:600">Notify me when it's ready</div><div class="toggle on"></div></div>
+  </div>
+  <div style="position:absolute;left:24px;right:24px;bottom:56px"><div class="pill w" style="width:100%">Done</div></div>
+  <div class="home-ind"></div>
+</section>
+
+</div>
+<script>
+  const id = location.hash.slice(1);
+  if (id) {
+    document.body.classList.add('single');
+    const el = document.getElementById(id);
+    if (el) el.classList.add('on');
+  }
+</script>
+</body>
+</html>

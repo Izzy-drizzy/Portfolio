@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sound Match slides</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Figtree', system-ui, sans-serif; color: #fff; background: #000; -webkit-font-smoothing: antialiased; }
+  .slide { width: 2000px; height: 1500px; position: relative; overflow: hidden; display: none; }
+  .slide.on { display: block; }
+  .bg-green { background: radial-gradient(ellipse at 20% 15%, rgba(30,215,96,.28), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(30,215,96,.16), transparent 50%), #0b0f0c; }
+  .bg-ember { background: radial-gradient(ellipse at 70% 20%, rgba(201,87,58,.35), transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(243,178,107,.16), transparent 50%), #100a09; }
+  .bg-night { background: radial-gradient(ellipse at 25% 20%, rgba(76,58,143,.45), transparent 55%), radial-gradient(ellipse at 80% 85%, rgba(15,107,92,.32), transparent 50%), #07090f; }
+  .bg-grey { background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.08), transparent 60%), #0d0d0d; }
+  .waves { position: absolute; inset: 0; opacity: .5; }
+  .phones { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 80px; }
+  .ph { width: 470px; height: 1017px; border-radius: 70px; padding: 13px; background: #050505; box-shadow: 0 0 0 2px #2b2b2b, 0 50px 120px rgba(0,0,0,.7); flex-shrink: 0; position: relative; }
+  .ph img { width: 100%; height: 100%; border-radius: 58px; display: block; }
+  .ph.up { transform: translateY(-60px); }
+  .ph.down { transform: translateY(60px); }
+  .ph.big { width: 540px; height: 1169px; border-radius: 80px; padding: 15px; }
+  .ph.big img { border-radius: 66px; }
+  .cap { position: absolute; left: 90px; top: 80px; font-size: 26px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); display: flex; align-items: center; gap: 14px; }
+  .cap i { width: 12px; height: 12px; border-radius: 50%; background: #1ed760; display: block; }
+
+  /* flow diagram */
+  .flow { width: 1800px; height: 820px; display: none; background: #121212; position: relative; padding: 70px 80px; }
+  .flow.on { display: block; }
+  .flow h1 { font-size: 34px; font-weight: 800; letter-spacing: -.01em; }
+  .flow p.lede { font-size: 20px; color: #9a9a9a; margin-top: 8px; }
+  .col { position: absolute; top: 210px; display: flex; flex-direction: column; gap: 18px; }
+  .lab { font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 2px; }
+  .node { border-radius: 14px; background: #1f1f1f; border: 1.5px solid #2f2f2f; padding: 18px 20px; font-size: 20px; font-weight: 700; }
+  .node small { display: block; font-size: 15.5px; font-weight: 500; color: #a7a7a7; margin-top: 5px; line-height: 1.35; }
+  .node.g { border-color: #1ed760; background: rgba(30,215,96,.09); }
+  .node.y { border-color: #ffc140; background: rgba(255,193,64,.07); }
+  .node.s { border-style: dashed; }
+  svg.lines { position: absolute; inset: 0; pointer-events: none; }
+</style>
+</head>
+<body>
+
+<!-- 1: hero -->
+<section class="slide bg-ember" id="slide-1">
+  <div class="phones">
+    <div class="ph down"><img src="out/s05.png"></div>
+    <div class="ph big"><img src="out/s06.png"></div>
+    <div class="ph down"><img src="out/s08.png"></div>
+  </div>
+</section>
+
+<!-- 2: entry points -->
+<section class="slide bg-night" id="slide-2">
+
+  <div class="phones">
+    <div class="ph"><img src="out/s01.png"></div>
+    <div class="ph up"><img src="out/s02.png"></div>
+    <div class="ph"><img src="out/s03.png"></div>
+  </div>
+</section>
+
+<!-- 3: capture -->
+<section class="slide bg-green" id="slide-3">
+
+  <div class="phones">
+    <div class="ph"><img src="out/s04.png"></div>
+    <div class="ph up"><img src="out/s05.png"></div>
+    <div class="ph"><img src="out/s06.png"></div>
+  </div>
+</section>
+
+<!-- 4: match -->
+<section class="slide bg-ember" id="slide-4">
+
+  <div class="phones">
+    <div class="ph"><img src="out/s07.png"></div>
+    <div class="ph up"><img src="out/s08.png"></div>
+    <div class="ph"><img src="out/s09.png"></div>
+  </div>
+</section>
+
+<!-- 5: edge states -->
+<section class="slide bg-grey" id="slide-5">
+
+  <div class="phones">
+    <div class="ph"><img src="out/s10.png"></div>
+    <div class="ph up"><img src="out/s11.png"></div>
+    <div class="ph"><img src="out/s12.png"></div>
+  </div>
+</section>
+
+<!-- flow -->
+<section class="flow" id="flow">
+  <h1>Sound Match: user flow</h1>
+  <p class="lede">Four ways in, one capture moment, and a fallback for every way it can fail.</p>
+
+  <div class="col" style="left:80px;width:330px">
+    <div class="lab">Entry points</div>
+    <div id="e1" class="node">Search tab<small>Listen button next to the camera</small></div>
+    <div id="e2" class="node">Lock screen control<small>Also Action button and Control Center</small></div>
+    <div id="e3" class="node">Widget<small>Home or lock screen, shows the last match</small></div>
+    <div id="e4" class="node">Android Quick Settings tile<small>Same capture sheet</small></div>
+  </div>
+
+  <div class="col" style="left:520px;width:300px;top:300px">
+    <div class="lab">First time only</div>
+    <div id="prim" class="node s">Microphone primer<small>Then the system permission prompt</small></div>
+    <div class="lab" style="margin-top:34px">Capture</div>
+    <div id="lis" class="node g">Listening<small>Up to 15 seconds, stops on a match</small></div>
+  </div>
+
+  <div class="col" style="left:930px;width:330px">
+    <div class="lab">Outcome</div>
+    <div id="m" class="node g">Matched<small>Song plus what we heard</small></div>
+    <div id="nn" class="node y">Couldn't name it<small>Offer to match the sound anyway</small></div>
+    <div id="noisy" class="node y">Too noisy<small>Coach, keep listening</small></div>
+    <div id="off" class="node y">Offline<small>Save the fingerprint, notify later</small></div>
+  </div>
+
+  <div class="col" style="left:1370px;width:350px">
+    <div class="lab">Keep it</div>
+    <div id="tune" class="node">Tune the match<small>Traits, sound vs. artist, history on or off</small></div>
+    <div id="pl" class="node g">Sound Match playlist<small>Each track says why it's there</small></div>
+    <div id="save" class="node">Save or share<small>Nothing is saved until you ask</small></div>
+  </div>
+
+  <svg class="lines" id="lines" viewBox="0 0 1800 1000"></svg>
+</section>
+
+<script>
+  const id = location.hash.slice(1);
+  const el = document.getElementById(id) || document.getElementById('slide-1');
+  el.classList.add('on');
+
+  if (id === 'flow') {
+    const svg = document.getElementById('lines'), root = document.getElementById('flow').getBoundingClientRect();
+    const R = (n) => { const r = document.getElementById(n).getBoundingClientRect(); return { l: r.left - root.left, r: r.right - root.left, t: r.top - root.top, b: r.bottom - root.top, cx: (r.left + r.right) / 2 - root.left, cy: (r.top + r.bottom) / 2 - root.top }; };
+    svg.innerHTML = '<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5a5a5a"/></marker><marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1ed760"/></marker></defs>';
+    const add = (d, green, dash, label) => { svg.insertAdjacentHTML('beforeend', `<path d="${d}" fill="none" stroke="${green ? '#1ed760' : '#4a4a4a'}" stroke-width="2.5" ${dash ? 'stroke-dasharray="7 7"' : ''} marker-end="url(#${green ? 'arg' : 'ar'})"/>`); };
+    const h = (a, b, green, dy = 0) => { const A = R(a), B = R(b), x1 = A.r, y1 = A.cy, x2 = B.l - 2, y2 = B.cy + dy, mx = (x1 + x2) / 2; add(`M${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`, green); };
+    const v = (a, b, green) => { const A = R(a), B = R(b); add(`M${A.cx} ${A.b} L ${A.cx} ${B.t - 2}`, green); };
+    ['e1','e2'].forEach((e, k) => h(e, 'prim', false, k * 10 - 5));
+    ['e3','e4'].forEach((e, k) => h(e, 'lis', false, k * 10 - 5));
+    v('prim', 'lis');
+    h('lis', 'm', true); h('lis', 'nn'); h('lis', 'noisy'); h('lis', 'off');
+    h('m', 'pl', true); h('nn', 'pl', false, 10);
+    const T = R('tune'), M = R('m');
+    add(`M${M.r} ${M.t + 16} C ${M.r + 50} ${M.t + 16}, ${T.l - 50} ${T.cy}, ${T.l - 2} ${T.cy}`, false, true);
+    v('pl', 'save');
+    const N = R('noisy'), L = R('lis');
+    add(`M${N.l} ${N.cy + 18} C ${N.l - 60} ${N.cy + 30}, ${L.r + 40} ${L.b + 40}, ${L.cx + 60} ${L.b + 2}`, false, true);
+    svg.insertAdjacentHTML('beforeend', `<text x="${L.r + 4}" y="${L.b + 52}" fill="#7a7a7a" font-size="15" font-family="Figtree">keeps listening</text>`);
+    const O = R('off'), P = R('pl');
+    add(`M${O.r} ${O.cy} C ${O.r + 70} ${O.cy}, ${P.l - 40} ${P.b + 40}, ${P.l + 40} ${P.b + 2}`, false, true);
+    svg.insertAdjacentHTML('beforeend', `<text x="${O.r + 18}" y="${O.cy + 30}" fill="#7a7a7a" font-size="15" font-family="Figtree">when back online</text>`);
+  }
+</script>
+</body>
+</html>

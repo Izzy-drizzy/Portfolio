@@ -16,6 +16,7 @@ import CaseStudyHealfZone2 from './pages/CaseStudyHealfZone2.tsx';
 import CaseStudyUrbanNest from './pages/CaseStudyUrbanNest.tsx';
 import CaseStudyFreshRoute from './pages/CaseStudyFreshRoute.tsx';
 import CaseStudyNexora from './pages/CaseStudyNexora.tsx';
+import CaseStudySpotifySoundMatch from './pages/CaseStudySpotifySoundMatch.tsx';
 import './index.css';
 
 function ScrollToTop() {
@@ -44,6 +45,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/work/UrbanNest" element={<CaseStudyUrbanNest />} />
           <Route path="/work/FreshRoute" element={<CaseStudyFreshRoute />} />
           <Route path="/work/Nexora" element={<CaseStudyNexora />} />
+          <Route path="/work/spotify-sound-match" element={<CaseStudySpotifySoundMatch />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

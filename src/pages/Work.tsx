@@ -151,6 +151,22 @@ const projects = [
       '/images/leadtrader/slide-3.png',
     ],
   },
+  {
+    number: '010',
+    title: 'Spotify Sound Match',
+    tags: ['Product Design', 'Music Streaming', 'Mobile Design', 'Audio Discovery', 'Unsolicited Concept'],
+    description:
+      "Unsolicited concept for Spotify, not affiliated with the company. You hear a song out in the world, Spotify names it, shows what it heard, and builds a playlist matched on the sound itself rather than your listening history. Four entry points, a 15-second capture and a fallback for every way it can fail.",
+    collaboration: null,
+    href: '/work/spotify-sound-match',
+    images: [
+      '/images/spotify-sound-match/slides/slide-1.png',
+      '/images/spotify-sound-match/slides/slide-2.png',
+      '/images/spotify-sound-match/slides/slide-3.png',
+      '/images/spotify-sound-match/slides/slide-4.png',
+      '/images/spotify-sound-match/slides/slide-5.png',
+    ],
+  },
 ];
 
 const fadeUp = {
