@@ -5,16 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
-import ImageCarousel from '../components/ImageCarousel';
+import HeroVideo from '../components/HeroVideo';
 import SEO from '../components/SEO';
 
-const slides = [
-  '/images/spotify-sound-match/slides/slide-1.png',
-  '/images/spotify-sound-match/slides/slide-2.png',
-  '/images/spotify-sound-match/slides/slide-3.png',
-  '/images/spotify-sound-match/slides/slide-4.png',
-  '/images/spotify-sound-match/slides/slide-5.png',
-];
 
 const tags = ['Product Design', 'Music Streaming', 'Mobile Design', 'Audio Discovery', 'Unsolicited Concept'];
 
@@ -72,10 +65,10 @@ export default function CaseStudySpotifySoundMatch() {
             </motion.div>
           </motion.div>
 
-          <motion.div className="lg:col-span-7 h-[55vh] lg:h-[80vh]"
+          <motion.div className="lg:col-span-7 lg:pl-10"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>
-            <ImageCarousel images={slides} alt="Spotify Sound Match concept screens" />
+            <HeroVideo src="/images/spotify-sound-match/video/sound-match.mp4" label="Spotify Sound Match concept launch video" />
           </motion.div>
         </section>
 

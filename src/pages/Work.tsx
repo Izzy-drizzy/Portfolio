@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ArrowUpNarrowWide, ArrowDownNarrowWide } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
+import AutoVideo, { isVideo, prefersReducedMotion } from '../components/AutoVideo';
 
 const projects = [
   {
@@ -160,6 +161,7 @@ const projects = [
     collaboration: null,
     href: '/work/spotify-sound-match',
     images: [
+      '/images/spotify-sound-match/video/sound-match-preview.mp4',
       '/images/spotify-sound-match/slides/slide-1.png',
       '/images/spotify-sound-match/slides/slide-2.png',
       '/images/spotify-sound-match/slides/slide-3.png',
@@ -178,39 +180,45 @@ const fadeUp = {
   }),
 };
 
+// Video slides stay up longer so the clip gets a moment to play.
+const dwell = (src: string) => (isVideo(src) ? 9000 : 3500);
+
 function MobileSlider({ images }: { images: string[] }) {
   const [current, setCurrent] = useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    timerRef.current = setInterval(() => {
-      setCurrent((c) => (c + 1) % images.length);
-    }, 3500);
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [images.length]);
+    const t = setTimeout(() => setCurrent((c) => (c + 1) % images.length), dwell(images[current]));
+    return () => clearTimeout(t);
+  }, [current, images]);
 
   return (
     <div className="mt-8 relative overflow-hidden rounded-xl" style={{ height: '56vw' }}>
-      {images.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt=""
-          loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-          style={{ opacity: i === current ? 1 : 0 }}
-        />
-      ))}
+      {images.map((src, i) =>
+        isVideo(src) ? (
+          <div
+            key={i}
+            className="absolute inset-0 bg-[#06060b] transition-opacity duration-700"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <AutoVideo src={src} paused={i !== current || prefersReducedMotion()} className="w-full h-full object-cover" />
+          </div>
+        ) : (
+          <img
+            key={i}
+            src={src}
+            alt=""
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+            style={{ opacity: i === current ? 1 : 0 }}
+          />
+        ),
+      )}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
         {images.map((_, i) => (
           <button
             key={i}
             aria-label={`Go to slide ${i + 1}`}
-            onClick={() => {
-              setCurrent(i);
-              if (timerRef.current) clearInterval(timerRef.current);
-              timerRef.current = setInterval(() => setCurrent((c) => (c + 1) % images.length), 3500);
-            }}
+            onClick={() => setCurrent(i)}
             className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'bg-white w-4' : 'bg-white/30 w-1.5'}`}
           />
         ))}
@@ -230,10 +238,15 @@ function ImageMarquee({ images }: { images: string[] }) {
         {doubled.map((src, i) => (
           <div
             key={i}
-            className="flex-shrink-0 rounded-xl overflow-hidden bg-[var(--surface)]"
-            style={{ width: '42vw', height: '52vh' }}
+            className={`flex-shrink-0 rounded-xl overflow-hidden ${isVideo(src) ? 'bg-[#06060b]' : 'bg-[var(--surface)]'}`}
+            // A video tile keeps the video's own 16:9 shape, so nothing is cropped or letterboxed.
+            style={{ width: isVideo(src) ? 'calc(52vh * 16 / 9)' : '42vw', height: '52vh' }}
           >
-            <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
+            {isVideo(src) ? (
+              <AutoVideo src={src} className="w-full h-full object-cover" />
+            ) : (
+              <img src={src} alt="" loading="lazy" className="w-full h-full object-cover" />
+            )}
           </div>
         ))}
       </div>

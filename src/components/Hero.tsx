@@ -1,13 +1,18 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Pause, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Clock from './Clock';
+import AutoVideo, { prefersReducedMotion } from './AutoVideo';
 
 interface HeroProps {
   onOpenContact: () => void;
 }
 
 export default function Hero({ onOpenContact }: HeroProps) {
+  // The Sound Match preview plays silently; people who ask for reduced motion start on the poster.
+  const [previewPaused, setPreviewPaused] = useState(prefersReducedMotion);
+
   return (
     <section className="relative min-h-screen pt-28 pb-8 px-7 md:px-10 flex flex-col overflow-hidden">
 
@@ -99,6 +104,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           </motion.div>
 
           <motion.div
+            className="relative"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
@@ -107,10 +113,11 @@ export default function Hero({ onOpenContact }: HeroProps) {
               to="/work/spotify-sound-match"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
-              <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
-                <img
-                  src="/images/spotify-sound-match/slides/slide-1.png"
-                  alt="Spotify Sound Match Concept"
+              <div className="aspect-[5/3] overflow-hidden bg-[#06060b]">
+                <AutoVideo
+                  src="/images/spotify-sound-match/video/sound-match-preview.mp4"
+                  paused={previewPaused}
+                  label="Spotify Sound Match concept launch video"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
@@ -127,6 +134,17 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 </div>
               </div>
             </Link>
+            {/* Pause sits over the video but outside the link, so it never opens the case study. */}
+            <div className="absolute inset-x-0 top-0 aspect-[5/3] pointer-events-none">
+              <button
+                type="button"
+                onClick={() => setPreviewPaused((p) => !p)}
+                aria-label={previewPaused ? 'Play preview video' : 'Pause preview video'}
+                className="pointer-events-auto absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/60 border border-white/15 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/80 transition-colors"
+              >
+                {previewPaused ? <Play size={13} fill="currentColor" /> : <Pause size={13} fill="currentColor" />}
+              </button>
+            </div>
           </motion.div>
         </div>
 
