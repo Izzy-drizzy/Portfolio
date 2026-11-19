@@ -31,8 +31,7 @@ const items: BuiltItem[] = [
     description:
       'A dashboard for UK home-improvement businesses: new leads, conversations, booked appointments, ad results and a monthly report, on desktop and phone. It runs on made-up sample data and says so on every screen.',
     builtWith: 'React, TypeScript, Vite, Cloudflare Workers',
-    live: { label: 'Live demo', href: 'https://artbox-platform.artbox-hq.workers.dev/demo' },
-    note: 'Source is private.',
+    note: 'No public link at the moment. Source is private.',
   },
   {
     name: 'Nexora recruitment platform',
