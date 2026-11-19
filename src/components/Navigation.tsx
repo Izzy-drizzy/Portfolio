@@ -25,13 +25,13 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
     <header className="fixed top-0 left-0 right-0 z-50 px-7 md:px-10 py-4 bg-[var(--bg)]/80 backdrop-blur-md text-[var(--text)] border-b border-[var(--border)]/50">
       <div className="flex items-center justify-between">
         <Link to="/" className="transition-transform duration-300 hover:scale-105 inline-block">
-          <img src="/logo.svg" alt="Logo" className="h-7 w-auto" />
+          <img src="/logo.svg" alt="Bukunmi Isijola, home" className="h-7 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 group/nav">
           <Link to="/work" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>Work</SlideText></Link>
           <Link to="/about" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>About</SlideText></Link>
-          <a href="https://docs.google.com/document/d/1QWxy0iapPW59kMUUqWnkEkKFl-4cpVZjHXhAJRQpGNI/edit?usp=sharing" target="_blank" rel="noreferrer" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>CV</SlideText></a>
+          <a href="/Bukunmi-Isijola-CV.pdf" target="_blank" rel="noreferrer" className="group text-base font-normal transition-opacity duration-200 group-hover/nav:opacity-40 hover:!opacity-100 overflow-hidden"><SlideText>CV</SlideText></a>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -69,7 +69,7 @@ export default function Navigation({ onOpenContact }: NavigationProps) {
         >
           <Link to="/work" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>Work</Link>
           <Link to="/about" className="text-2xl font-normal" onClick={() => setIsOpen(false)}>About</Link>
-          <a href="https://docs.google.com/document/d/1QWxy0iapPW59kMUUqWnkEkKFl-4cpVZjHXhAJRQpGNI/edit?usp=sharing" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
+          <a href="/Bukunmi-Isijola-CV.pdf" target="_blank" rel="noreferrer" className="text-2xl font-normal">CV</a>
           {/* Theme toggle - hidden until light mode is ready */}
           <button
             onClick={() => {

@@ -30,7 +30,7 @@ export default function Clock() {
   const isOnline = isBusinessHours();
 
   return (
-    <div className="flex items-center gap-2 text-sm font-mono text-gray-500">
+    <div className="flex items-center gap-2 text-sm font-mono text-[var(--text-500)]">
       <span className={isOnline ? "text-green-600" : "text-gray-400"}>
         ({isOnline ? 'Online' : 'Offline'})
       </span>

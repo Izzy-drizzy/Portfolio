@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,18 +11,18 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/healf/slide-1.png',
-  '/images/healf/slide-2.png',
-  '/images/healf/slide-3.png',
-  '/images/healf/slide-4.png',
-  '/images/healf/slide-5.png',
+  '/images/healf/slide-1.webp',
+  '/images/healf/slide-2.webp',
+  '/images/healf/slide-3.webp',
+  '/images/healf/slide-4.webp',
+  '/images/healf/slide-5.webp',
 ];
 
 const finalDesigns = [
-  '/images/healf/final/final-1.jpg',
-  '/images/healf/final/final-2.jpg',
-  '/images/healf/final/final-3.jpg',
-  '/images/healf/final/final-4.jpg',
+  '/images/healf/final/final-1.webp',
+  '/images/healf/final/final-2.webp',
+  '/images/healf/final/final-3.webp',
+  '/images/healf/final/final-4.webp',
 ];
 
 const tags = ['Product Design', 'UX Audit', 'Mobile Design', 'Onboarding', 'Health & Wellness'];
@@ -70,6 +71,7 @@ export default function CaseStudyHealf() {
             <motion.div variants={fadeUp} custom={4} className="flex flex-col gap-3">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest">Project Tags</p>
               <div className="flex flex-wrap gap-2">
+                <WorkLabel kind="Unsolicited concept" />
                 {tags.map((tag) => (
                   <span key={tag} className="text-xs px-3 py-1.5 rounded-full border border-[var(--border-md)] text-[var(--text-300)] bg-[var(--surface)]">{tag}</span>
                 ))}
@@ -79,7 +81,7 @@ export default function CaseStudyHealf() {
           <motion.div className="lg:col-span-7 h-[55vh] lg:h-[80vh]"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>
-            <ImageCarousel images={images} alt="Healf mockup" />
+            <ImageCarousel images={images} alt="Phone mockups of the redesigned Healf onboarding screens" />
           </motion.div>
         </section>
 
@@ -90,7 +92,7 @@ export default function CaseStudyHealf() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
               { stat: '4 screens', label: 'Redesigned first-run flow: from zero to full ecosystem introduction' },
-              { stat: '0 → 1', label: 'Dedicated Healf Zone introduction screen added to onboarding' },
+              { stat: '+1', label: 'Dedicated Healf Zone introduction screen added to onboarding' },
               { stat: '4 pillars', label: 'Personalisation captured upfront using Healf\'s own EAT, MOVE, MIND, SLEEP framework' },
               { stat: 'Last', label: 'Where account creation now sits: after value is shown, not before' },
             ].map((item, i) => (
@@ -172,11 +174,11 @@ export default function CaseStudyHealf() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
               {[
-                { src: '/images/healf/before/before-1.png', label: 'Step 1' },
-                { src: '/images/healf/before/before-2.png', label: 'Step 2' },
-                { src: '/images/healf/before/before-3.png', label: 'Step 3' },
-                { src: '/images/healf/before/before-4.png', label: 'Step 4' },
-                { src: '/images/healf/before/before-5.png', label: 'Step 5' },
+                { src: '/images/healf/before/before-1.webp', label: 'Step 1' },
+                { src: '/images/healf/before/before-2.webp', label: 'Step 2' },
+                { src: '/images/healf/before/before-3.webp', label: 'Step 3' },
+                { src: '/images/healf/before/before-4.webp', label: 'Step 4' },
+                { src: '/images/healf/before/before-5.webp', label: 'Step 5' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={`Original Healf screen - ${img.label}`} className="w-full object-cover" />
@@ -273,7 +275,7 @@ export default function CaseStudyHealf() {
                       <ul className="space-y-2">
                         {c.strengths.map((s, i) => (
                           <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                            <span className="text-[var(--border-md)] mt-0.5 shrink-0">+</span>{s}
+                            <span className="text-[var(--text-600)] mt-0.5 shrink-0">+</span>{s}
                           </li>
                         ))}
                       </ul>
@@ -288,10 +290,10 @@ export default function CaseStudyHealf() {
                   <p className="text-xs text-[#F45D01] uppercase tracking-widest mb-4">Industry Patterns</p>
                   <ul className="space-y-2">
                     {[
-                      '90% use progressive disclosure: value first, signup last',
-                      '75% capture personalisation data (goals, preferences) during onboarding',
-                      '100% of blood testing apps dedicate a screen to explaining testing value',
-                      'Average 3–4 screens before account creation',
+                      'Each group of apps reviewed above shows value first and asks for signup last',
+                      'Headspace, Calm and the supplement brands capture personalisation goals during onboarding',
+                      'Everlywell, the blood testing app reviewed, dedicates its onboarding to explaining testing value',
+                      'Headspace and Calm use 3–4 screens before account creation',
                     ].map((o, i) => (
                       <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
                         <span className="text-[#F45D01] mt-0.5 shrink-0">+</span>{o}
@@ -309,7 +311,7 @@ export default function CaseStudyHealf() {
                       'No personalisation or goal capture at any point',
                     ].map((t, i) => (
                       <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                        <span className="text-[var(--border-md)] mt-0.5 shrink-0">—</span>{t}
+                        <span className="text-[var(--text-600)] mt-0.5 shrink-0">—</span>{t}
                       </li>
                     ))}
                   </ul>
@@ -349,10 +351,10 @@ export default function CaseStudyHealf() {
                 <h3 className="text-base font-semibold">Key Findings</h3>
                 <ul className="space-y-3">
                   {[
-                    'Progressive onboarding increases signup completion by 20–40% vs minimal flows',
-                    'Wellness apps with personalised onboarding see 35% higher engagement and 25% higher retention',
+                    'The apps reviewed show value before asking for account creation',
+                    'Personalised onboarding lets the home screen feel relevant from the first session',
                     'Healf Zone\'s premium positioning (£289/year) requires trust-building that minimal onboarding cannot provide',
-                    'Users who understand key features during onboarding use them 3× more than those who discover them later',
+                    'A feature introduced during onboarding is harder to miss than one users have to find themselves',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-1 shrink-0">—</span>
@@ -369,7 +371,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '01',
                   title: 'Value-First Approach',
-                  body: 'Show users what they\'re getting before asking for account creation. Research consistently shows users are more likely to sign up after seeing value first. Progressive onboarding averages 20–40% higher conversion than minimal flows.',
+                  body: 'Show users what they\'re getting before asking for account creation. The apps reviewed in the research show value first, and I followed that pattern. Seeing something worth keeping gives people a reason to create an account.',
                 },
                 {
                   num: '02',
@@ -496,7 +498,7 @@ export default function CaseStudyHealf() {
               {finalDesigns.map((src, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i}
                   className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)]">
-                  <ImageZoom src={src} alt={`Healf final design ${i + 1}`} className="w-full h-full object-cover" />
+                  <ImageZoom src={src} alt={`Redesigned Healf onboarding screen ${i + 1}`} className="w-full h-full object-cover" />
                 </motion.div>
               ))}
             </div>
@@ -537,7 +539,7 @@ export default function CaseStudyHealf() {
                 {
                   num: '04',
                   title: 'Feature engagement',
-                  body: 'Users introduced to a feature during onboarding engage with it more than those who discover it later. The introduction creates intent. Without it, Healf Zone and Insights remain features users stumble across rather than seek out.',
+                  body: 'Users introduced to a feature during onboarding are likely to engage with it more than those who discover it later. The introduction creates intent. Without it, Healf Zone and Insights remain features users stumble across rather than seek out.',
                 },
               ].map((item, i) => (
                 <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -557,7 +559,7 @@ export default function CaseStudyHealf() {
               <div className="lg:col-span-7 lg:col-start-6 space-y-3">
                 {[
                   'A/B test current vs new onboarding across 10% of new users. Measure signup completion and Four Pillars selection rate',
-                  'Post-onboarding survey: "Do you understand what Healf offers?" Success if 90%+ can articulate all three pillars',
+                  'Post-onboarding survey: "Do you understand what Healf offers?" Success if 90%+ can articulate all four pillars',
                   'Track Healf Zone click-through from the dedicated onboarding screen. Target 25%+ exploring further',
                   'Monitor 7-day and 30-day retention for cohorts that completed personalisation vs skipped',
                   'Measure time to first purchase. Expect reduction as users arrive with clearer intent',

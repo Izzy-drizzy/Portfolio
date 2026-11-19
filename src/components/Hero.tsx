@@ -1,18 +1,14 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight, ArrowRight, Pause, Play } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Clock from './Clock';
-import AutoVideo, { prefersReducedMotion } from './AutoVideo';
+import WorkLabel from './WorkLabel';
 
 interface HeroProps {
   onOpenContact: () => void;
 }
 
 export default function Hero({ onOpenContact }: HeroProps) {
-  // The Sound Match preview plays silently; people who ask for reduced motion start on the poster.
-  const [previewPaused, setPreviewPaused] = useState(prefersReducedMotion);
-
   return (
     <section className="relative min-h-screen pt-28 pb-8 px-7 md:px-10 flex flex-col overflow-hidden">
 
@@ -32,14 +28,31 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
         {/* Left Column - narrower */}
         <div className="lg:col-span-5 h-full flex flex-col justify-between gap-10 lg:gap-0">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]"
-          >
-            Product designer building <br className="hidden md:block" /> <span className="whitespace-nowrap">0<img src="/arrow.svg" alt="→" className="inline-block w-8 h-8 mx-0.5 align-middle" />1</span> SaaS products grounded in research
-          </motion.h1>
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-sm text-[var(--text-400)] mb-4"
+            >
+              Senior Product Designer
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15] [text-wrap:balance]"
+            >
+              I'm a product designer who{' '}
+              <span
+                className="px-0.5 -mx-0.5"
+                style={{ backgroundImage: 'linear-gradient(transparent 60%, rgb(244 93 1 / 0.7) 60%, rgb(244 93 1 / 0.7) 94%, transparent 94%)' }}
+              >
+                builds
+              </span>{' '}
+              what I design.
+            </motion.h1>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +64,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
             </div>
 
             <p className="text-sm text-[var(--text-400)] max-w-sm mb-6 leading-relaxed">
-              Five years designing SaaS and ecommerce products, most of it in early-stage fintech. I work across product strategy and end-to-end design, and I'm most useful early, before anyone is sure what the problem is.
+              I work in Figma and build in React and TypeScript, with a BSc and MSc in Computer Science. At Hobpay I owned design for a live consumer fintech product, working with three engineers, a product manager and the founder.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -78,22 +91,23 @@ export default function Hero({ onOpenContact }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
             <Link
-              to="/work/FreshRoute"
+              to="/work/Hobpay"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
               <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
                 <img
-                  src="/images/freshroute/slides/slide-1.png"
-                  alt="FreshRoute Case Study"
+                  src="/images/hobpay/slide-1.webp"
+                  alt="Hobpay app screens on two phones, from the redesigned wallet and transaction flows"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-4">
+                <WorkLabel kind="Shipped product, in-house team" className="mb-3" />
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Recovering a projected £46M for a UK grocery delivery platform
+                  Redesigning the core flows of a live consumer fintech product
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
-                  22% of shoppers quit at the slot grid, and substitutions drove 28% of support contacts. I redesigned both flows and tested them.
+                  Lead product designer on a platform serving 10,000+ users. I rebuilt the transaction flows and led a web build for the 28% of potential users the Android-only app could not reach.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
@@ -104,29 +118,28 @@ export default function Hero({ onOpenContact }: HeroProps) {
           </motion.div>
 
           <motion.div
-            className="relative"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           >
             <Link
-              to="/work/spotify-sound-match"
+              to="/work/artbox-hq"
               className="group block relative rounded-xl overflow-hidden bg-[var(--surface)] shadow-sm hover:shadow-md transition-shadow border border-[var(--border)]"
             >
-              <div className="aspect-[5/3] overflow-hidden bg-[#06060b]">
-                <AutoVideo
-                  src="/images/spotify-sound-match/video/sound-match-preview.mp4"
-                  paused={previewPaused}
-                  label="Spotify Sound Match concept launch video"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              <div className="aspect-[5/3] overflow-hidden bg-[var(--surface-input)]">
+                <img
+                  src="/images/artbox-hq/leads-card.webp"
+                  alt="Artbox HQ lead list on sample data, with each invented business scored and sorted by priority"
+                  className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-4">
+                <WorkLabel kind="Internal tool" className="mb-3" />
                 <h2 className="text-base font-medium mb-2 leading-snug">
-                  Turning a song you hear into a playlist that sounds like it
+                  Artbox HQ: the CRM my studio runs on
                 </h2>
                 <p className="text-xs text-[var(--text-400)] mb-3 line-clamp-3">
-                  Concept for Spotify, unsolicited and not affiliated. Sound Match names the song, shows what it heard, and builds a playlist on the sound, not your history.
+                  I designed and built it in React and Supabase. It finds and scores leads, checks each prospect's website and reviews, and builds a private audit page for each one.
                 </p>
                 <div className="flex items-center gap-1.5 text-xs font-medium border-t border-[var(--border)] pt-3 mt-1 pb-1">
                   <ArrowRight size={13} />
@@ -134,17 +147,6 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 </div>
               </div>
             </Link>
-            {/* Pause sits over the video but outside the link, so it never opens the case study. */}
-            <div className="absolute inset-x-0 top-0 aspect-[5/3] pointer-events-none">
-              <button
-                type="button"
-                onClick={() => setPreviewPaused((p) => !p)}
-                aria-label={previewPaused ? 'Play preview video' : 'Pause preview video'}
-                className="pointer-events-auto absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/60 border border-white/15 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/80 transition-colors"
-              >
-                {previewPaused ? <Play size={13} fill="currentColor" /> : <Pause size={13} fill="currentColor" />}
-              </button>
-            </div>
           </motion.div>
         </div>
 

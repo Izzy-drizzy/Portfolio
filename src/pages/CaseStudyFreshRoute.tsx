@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,43 +11,43 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/freshroute/slides/slide-1.png',
-  '/images/freshroute/slides/slide-2.png',
-  '/images/freshroute/slides/slide-3.png',
-  '/images/freshroute/slides/slide-4.png',
-  '/images/freshroute/slides/slide-5.png',
-  '/images/freshroute/slides/slide-6.png',
-  '/images/freshroute/slides/slide-7.png',
+  '/images/freshroute/slides/slide-1.webp',
+  '/images/freshroute/slides/slide-2.webp',
+  '/images/freshroute/slides/slide-3.webp',
+  '/images/freshroute/slides/slide-4.webp',
+  '/images/freshroute/slides/slide-5.webp',
+  '/images/freshroute/slides/slide-6.webp',
+  '/images/freshroute/slides/slide-7.webp',
 ];
 
 const finalDesigns = [
-  { src: '/images/freshroute/final/final-1.png', label: 'Welcome to Personalisation' },
-  { src: '/images/freshroute/final/final-2.png', label: 'Choose Preferred Days' },
-  { src: '/images/freshroute/final/final-3.png', label: 'Choose Preferred Times' },
-  { src: '/images/freshroute/final/final-4.png', label: 'Rank Your Top 3 (Optional)' },
-  { src: '/images/freshroute/final/final-5.png', label: 'Onboarding Complete' },
-  { src: '/images/freshroute/final/final-6.png', label: 'Slot Selection Landing (Personalised)' },
-  { src: '/images/freshroute/final/final-7.png', label: 'Slot Grid - 2-Hour Default' },
-  { src: '/images/freshroute/final/final-8.png', label: 'Slot Grid - 1-Hour Toggle' },
-  { src: '/images/freshroute/final/final-9.png', label: 'Filters Panel (Mobile)' },
-  { src: '/images/freshroute/final/final-10.png', label: 'Slot Confirmation' },
-  { src: '/images/freshroute/final/final-11.png', label: 'Slot Unavailable Error' },
-  { src: '/images/freshroute/final/final-12.png', label: 'Auto-Learning Notification' },
+  { src: '/images/freshroute/final/final-1.webp', label: 'Welcome to Personalisation' },
+  { src: '/images/freshroute/final/final-2.webp', label: 'Choose Preferred Days' },
+  { src: '/images/freshroute/final/final-3.webp', label: 'Choose Preferred Times' },
+  { src: '/images/freshroute/final/final-4.webp', label: 'Rank Your Top 3 (Optional)' },
+  { src: '/images/freshroute/final/final-5.webp', label: 'Onboarding Complete' },
+  { src: '/images/freshroute/final/final-6.webp', label: 'Slot Selection Landing (Personalised)' },
+  { src: '/images/freshroute/final/final-7.webp', label: 'Slot Grid - 2-Hour Default' },
+  { src: '/images/freshroute/final/final-8.webp', label: 'Slot Grid - 1-Hour Toggle' },
+  { src: '/images/freshroute/final/final-9.webp', label: 'Filters Panel (Mobile)' },
+  { src: '/images/freshroute/final/final-10.webp', label: 'Slot Confirmation' },
+  { src: '/images/freshroute/final/final-11.webp', label: 'Slot Unavailable Error' },
+  { src: '/images/freshroute/final/final-12.webp', label: 'Auto-Learning Notification' },
 ];
 
 const lofiDesigns = [
-  { src: '/images/freshroute/lofi/lofi-1.jpg', label: 'Welcome to Personalisation' },
-  { src: '/images/freshroute/lofi/lofi-2.jpg', label: 'Choose Preferred Days' },
-  { src: '/images/freshroute/lofi/lofi-3.jpg', label: 'Choose Preferred Times' },
-  { src: '/images/freshroute/lofi/lofi-4.jpg', label: 'Rank Your Top 3' },
-  { src: '/images/freshroute/lofi/lofi-5.jpg', label: 'Onboarding Complete' },
-  { src: '/images/freshroute/lofi/lofi-6.jpg', label: 'Slot Selection Landing' },
-  { src: '/images/freshroute/lofi/lofi-7.jpg', label: 'Slot Grid - 2-Hour' },
-  { src: '/images/freshroute/lofi/lofi-8.jpg', label: 'Slot Grid - 1-Hour' },
-  { src: '/images/freshroute/lofi/lofi-9.jpg', label: 'Filters Panel' },
-  { src: '/images/freshroute/lofi/lofi-10.jpg', label: 'Slot Unavailable' },
-  { src: '/images/freshroute/lofi/lofi-11.jpg', label: 'Accessibility Mode' },
-  { src: '/images/freshroute/lofi/lofi-12.jpg', label: 'Auto-Learning' },
+  { src: '/images/freshroute/lofi/lofi-1.webp', label: 'Welcome to Personalisation' },
+  { src: '/images/freshroute/lofi/lofi-2.webp', label: 'Choose Preferred Days' },
+  { src: '/images/freshroute/lofi/lofi-3.webp', label: 'Choose Preferred Times' },
+  { src: '/images/freshroute/lofi/lofi-4.webp', label: 'Rank Your Top 3' },
+  { src: '/images/freshroute/lofi/lofi-5.webp', label: 'Onboarding Complete' },
+  { src: '/images/freshroute/lofi/lofi-6.webp', label: 'Slot Selection Landing' },
+  { src: '/images/freshroute/lofi/lofi-7.webp', label: 'Slot Grid - 2-Hour' },
+  { src: '/images/freshroute/lofi/lofi-8.webp', label: 'Slot Grid - 1-Hour' },
+  { src: '/images/freshroute/lofi/lofi-9.webp', label: 'Filters Panel' },
+  { src: '/images/freshroute/lofi/lofi-10.webp', label: 'Slot Unavailable' },
+  { src: '/images/freshroute/lofi/lofi-11.webp', label: 'Accessibility Mode' },
+  { src: '/images/freshroute/lofi/lofi-12.webp', label: 'Auto-Learning' },
 ];
 
 const tags = ['Product Design', 'Grocery & Delivery', 'Accessibility', 'WCAG 2.2 AA', 'UX Strategy', 'Design Leadership'];
@@ -69,7 +70,7 @@ export default function CaseStudyFreshRoute() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SEO title="FreshRoute Case Study" description="Redesigned slot booking and substitutions for a UK grocery platform. Competitive analysis across 6 platforms, 15 research interviews, and a tested high-fidelity prototype targeting £46M in recoverable revenue." path="/work/FreshRoute" />
+      <SEO title="FreshRoute Case Study" description="Redesigned slot booking and substitutions for a UK grocery platform. Competitive analysis across 6 platforms and a tested high-fidelity prototype for slot booking and substitutions. Financial figures are modelled, not measured." path="/work/FreshRoute" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>
@@ -84,7 +85,7 @@ export default function CaseStudyFreshRoute() {
               </motion.div>
 
               <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-6">
-                Cutting a projected £46M in lost revenue by fixing two screens
+                Redesigning slot booking and substitutions for a UK grocery delivery platform
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
@@ -97,11 +98,12 @@ export default function CaseStudyFreshRoute() {
                 <span>Product Designer, Amdari Industry Programme</span>
               </motion.div>
 
-              <motion.p variants={fadeUp} className="text-xs text-[var(--text-500)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
+              <motion.p variants={fadeUp} className="text-xs text-[var(--text-400)] leading-relaxed mb-8 border-l-2 border-[var(--border-md)] pl-3">
                 Amdari is a structured industry programme delivering real client briefs alongside BAs, PMs and client stakeholders. Financial figures on this page are modelled opportunity sizes from discovery research, not delivered revenue.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                <WorkLabel kind="Programme project" />
                 {tags.map((t) => (
                   <span key={t} className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{t}</span>
                 ))}
@@ -116,7 +118,7 @@ export default function CaseStudyFreshRoute() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <ImageCarousel images={images} alt="FreshRoute mockup" />
+            <ImageCarousel images={images} alt="Phone mockups of the FreshRoute slot booking and substitution screens" />
           </motion.div>
         </section>
 
@@ -128,10 +130,10 @@ export default function CaseStudyFreshRoute() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           >
             {[
-              { val: '~£46M', label: 'Projected annual revenue recovered across slot abandonment and substitution complaints' },
+              { val: '£47.34M', label: 'Modelled pool the brief flagged as at-risk or wasted. Modelled, not measured; no recovered amount is claimed' },
               { val: '22% → ~15%', label: 'Slot abandonment reduction target through simplified grid and next-available shortcut' },
               { val: '~45%', label: 'Projected substitution complaint reduction by moving decisions from doorstep to pre-packing' },
-              { val: '23 → 0', label: 'WCAG 2.2 AA failures cleared through accessibility-first design, not retrofitting' },
+              { val: '23 → 0', label: 'WCAG 2.2 AA failures in the brief that the redesign is built to clear (design target)' },
             ].map((s) => (
               <motion.div key={s.val} variants={fadeUp}
                 className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -159,7 +161,7 @@ export default function CaseStudyFreshRoute() {
                 {
                   n: '01',
                   title: 'Slot Abandonment',
-                  body: '22% of shoppers started booking a delivery slot and gave up before confirming. That abandonment mapped to £149M of at-risk revenue across the platform.',
+                  body: '22% of shoppers started booking a delivery slot and gave up before confirming. The brief flagged £47.34M as at-risk or wasted across both problems (modelled, not measured).',
                 },
                 {
                   n: '02',
@@ -215,7 +217,7 @@ export default function CaseStudyFreshRoute() {
                     'Information architecture: 52-screen inventory mapped end to end',
                     'Lo-fi wireframes in HTML for device-native testing before visual design',
                     'Design system: base components, spacing, and patterns for cross-flow consistency',
-                    'Mid-fidelity prototype: tested with real shoppers',
+                    'Mid-fidelity prototype: usability tested',
                     'Design direction and review for junior designer\'s Flow 3',
                     'Accessibility audit: cleared all 23 WCAG 2.2 AA failures',
                   ].map((r) => (
@@ -392,7 +394,7 @@ export default function CaseStudyFreshRoute() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 gap-3 mb-12">
               <div className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-                <ImageZoom src="/images/freshroute/process/personas.jpg" alt="User Personas" className="w-full object-cover" />
+                <ImageZoom src="/images/freshroute/process/personas.webp" alt="User Personas" className="w-full object-cover" />
               </div>
             </motion.div>
 
@@ -402,7 +404,7 @@ export default function CaseStudyFreshRoute() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 gap-3 mb-12">
               <div className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-                <ImageZoom src="/images/freshroute/process/journey-maps.jpg" alt="User Journey Maps" className="w-full object-cover" />
+                <ImageZoom src="/images/freshroute/process/journey-maps.webp" alt="User Journey Maps" className="w-full object-cover" />
               </div>
             </motion.div>
 
@@ -412,10 +414,10 @@ export default function CaseStudyFreshRoute() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/freshroute/process/user-flow-1.jpg', label: 'Flow 1 - Slot Booking' },
-                { src: '/images/freshroute/process/user-flow-2.jpg', label: 'Flow 2 - Category-Level Substitution Setup' },
-                { src: '/images/freshroute/process/user-flow-3.jpg', label: 'Flow 3 - Real-Time Substitution Approval' },
-                { src: '/images/freshroute/process/user-flow-4.jpg', label: 'Flow 4 - Accessible Slot Booking for Elderly Users' },
+                { src: '/images/freshroute/process/user-flow-1.webp', label: 'Flow 1 - Slot Booking' },
+                { src: '/images/freshroute/process/user-flow-2.webp', label: 'Flow 2 - Category-Level Substitution Setup' },
+                { src: '/images/freshroute/process/user-flow-3.webp', label: 'Flow 3 - Real-Time Substitution Approval' },
+                { src: '/images/freshroute/process/user-flow-4.webp', label: 'Flow 4 - Accessible Slot Booking for Elderly Users' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -469,7 +471,7 @@ export default function CaseStudyFreshRoute() {
                         '4-hour saver tier for price-sensitive shoppers',
                       ].map((s) => (
                         <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                          <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                          <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                         </li>
                       ))}
                     </ul>
@@ -492,7 +494,7 @@ export default function CaseStudyFreshRoute() {
                         'Real-time approval: 30-minute pre-packing window, approve/reject each swap via push notification',
                       ].map((s) => (
                         <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                          <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                          <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                         </li>
                       ))}
                     </ul>
@@ -539,7 +541,7 @@ export default function CaseStudyFreshRoute() {
               <SectionLabel>Interactive Prototype</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Try the prototype</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-xl mx-auto">
-                This is the live high-fidelity prototype tested with real shoppers. Tap through the slot booking flow, explore the substitution tiers, and see how the accessibility mode works.
+                This is the live high-fidelity prototype. Tap through the slot booking flow, explore the substitution tiers, and see how the accessibility mode works.
               </p>
             </motion.div>
 
@@ -576,9 +578,9 @@ export default function CaseStudyFreshRoute() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
-                { val: '~£46M', label: 'At-risk revenue recovered', sub: 'Tesco\'s "Smart Slot" feature cut abandonment 19% in six months on its own. The clean grid, next-available banner, and personalised landing target a similar or better result.' },
-                { val: '~£2.5M', label: 'Support & waste cost reduction', sub: 'Moving substitution decisions to a point where shoppers still have agency addresses the root cause directly, taking the £3.2M support cost toward £1.76M and cutting £1.9M food-waste cost roughly in half.' },
-                { val: '23 → 0', label: 'WCAG failures cleared', sub: 'The accessibility mode and contrast-first design system close the legal exposure and make the product usable for shoppers who couldn\'t get through it before.' },
+                { val: '£47.34M', label: 'Modelled pool, at-risk or wasted', sub: 'From the brief. Modelled, not measured, and the amount this design would recover is not modelled. The target is slot abandonment from 22% to about 15%. Benchmark cited in the research: the Tesco Smart Slot feature cut abandonment 19% in six months.' },
+                { val: '~£2.4M', label: 'Support & waste cost reduction (modelled)', sub: 'Moving substitution decisions to a point where shoppers still have agency addresses the root cause directly, taking the £3.2M support cost toward £1.76M (£1.44M less) and cutting the £1.9M food-waste cost roughly in half (about £0.95M less).' },
+                { val: '23 → 0', label: 'WCAG failures the design targets', sub: 'The accessibility mode and contrast-first design system are built to close the 23 failures in the brief and make the product usable for shoppers who couldn\'t get through it before. Design target, not an audit result.' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
@@ -590,8 +592,8 @@ export default function CaseStudyFreshRoute() {
             </div>
 
             <motion.div variants={fadeUp}
-              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 text-xs text-[var(--text-600)] leading-relaxed">
-              Total projected annual impact lands around £46M of the £47.34M the brief had flagged as at-risk or wasted. These numbers are design targets informed by research and market benchmarks, not measured outcomes from a live product.
+              className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 text-xs text-[var(--text-400)] leading-relaxed">
+              The £47.34M is the brief's figure for what was at-risk or wasted across both problems. The ~£2.4M is the two substitution reductions above added together. The pool and the targets are modelled from research and market benchmarks. They are not measured outcomes from a live product, and this page does not claim how much of the pool the design would recover.
             </motion.div>
           </motion.div>
         </section>

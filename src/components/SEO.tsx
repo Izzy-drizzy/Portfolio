@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
+import { OG_IMAGES } from '../lib/ogImages';
 
 const SITE_URL = 'https://www.bukunmi-isijola.com';
 const DEFAULT_TITLE = 'Bukunmi Isijola | Product Designer';
-const DEFAULT_DESCRIPTION = 'Product designer taking SaaS products from 0 to 1. Five years of experience, most of it in fintech.';
+const DEFAULT_DESCRIPTION = 'Product designer working in Figma and building in React and TypeScript, with a BSc and MSc in Computer Science. Owned design for a live consumer fintech product.';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface SEOProps {
@@ -10,19 +11,21 @@ interface SEOProps {
   description?: string;
   path?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-export default function SEO({ title, description, path = '', ogImage }: SEOProps) {
+export default function SEO({ title, description, path = '', ogImage, noindex = false }: SEOProps) {
   const pageTitle = title ? `${title} | Bukunmi Isijola` : DEFAULT_TITLE;
   const pageDescription = description || DEFAULT_DESCRIPTION;
   const canonicalUrl = `${SITE_URL}${path}`;
-  const ogImg = ogImage || DEFAULT_OG_IMAGE;
+  const ogImg = ogImage || (OG_IMAGES[path] ? `${SITE_URL}${OG_IMAGES[path]}` : DEFAULT_OG_IMAGE);
 
   return (
     <Helmet>
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <link rel="canonical" href={canonicalUrl} />
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,32 +11,32 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/nexora/slides/slide-1.png',
-  '/images/nexora/slides/slide-2.png',
-  '/images/nexora/slides/slide-3.png',
+  '/images/nexora/slides/slide-1.webp',
+  '/images/nexora/slides/slide-2.webp',
+  '/images/nexora/slides/slide-3.webp',
 ];
 
 const recruiterScreens = [
-  { src: '/images/nexora/wireframes/r1-login.png', label: 'R1 - Login' },
-  { src: '/images/nexora/wireframes/r2-dashboard.png', label: 'R2 - Recruiter Dashboard' },
-  { src: '/images/nexora/wireframes/r3-job-listings.png', label: 'R3 - Job Listings' },
-  { src: '/images/nexora/wireframes/r4-candidate-list.png', label: 'R4 - Candidate List (per role)' },
-  { src: '/images/nexora/wireframes/r5-applicant-profile.png', label: 'R5 - Applicant Profile & Screening' },
-  { src: '/images/nexora/wireframes/r6-schedule-interview.png', label: 'R6 - Schedule Interview' },
-  { src: '/images/nexora/wireframes/r7-pipeline-board.png', label: 'R7 - Pipeline Board (Kanban)' },
-  { src: '/images/nexora/wireframes/r8-offer-management.png', label: 'R8 - Offer Management' },
-  { src: '/images/nexora/wireframes/r9-analytics.png', label: 'R9 - Analytics & KPI Dashboard' },
+  { src: '/images/nexora/wireframes/r1-login.webp', label: 'R1 - Login' },
+  { src: '/images/nexora/wireframes/r2-dashboard.webp', label: 'R2 - Recruiter Dashboard' },
+  { src: '/images/nexora/wireframes/r3-job-listings.webp', label: 'R3 - Job Listings' },
+  { src: '/images/nexora/wireframes/r4-candidate-list.webp', label: 'R4 - Candidate List (per role)' },
+  { src: '/images/nexora/wireframes/r5-applicant-profile.webp', label: 'R5 - Applicant Profile & Screening' },
+  { src: '/images/nexora/wireframes/r6-schedule-interview.webp', label: 'R6 - Schedule Interview' },
+  { src: '/images/nexora/wireframes/r7-pipeline-board.webp', label: 'R7 - Pipeline Board (Kanban)' },
+  { src: '/images/nexora/wireframes/r8-offer-management.webp', label: 'R8 - Offer Management' },
+  { src: '/images/nexora/wireframes/r9-analytics.webp', label: 'R9 - Analytics & KPI Dashboard' },
 ];
 
 const candidateScreens = [
-  { src: '/images/nexora/wireframes/c1-public-listings.png', label: 'C1 - Public Job Listings' },
-  { src: '/images/nexora/wireframes/c2-application-form.png', label: 'C2 - Application Form' },
-  { src: '/images/nexora/wireframes/c3-confirmation.png', label: 'C3 - Application Submitted' },
-  { src: '/images/nexora/wireframes/c4-status-tracker.png', label: 'C4 - Application Status Tracker' },
-  { src: '/images/nexora/wireframes/c5-book-interview.png', label: 'C5 - Book Interview Slot' },
+  { src: '/images/nexora/wireframes/c1-public-listings.webp', label: 'C1 - Public Job Listings' },
+  { src: '/images/nexora/wireframes/c2-application-form.webp', label: 'C2 - Application Form' },
+  { src: '/images/nexora/wireframes/c3-confirmation.webp', label: 'C3 - Application Submitted' },
+  { src: '/images/nexora/wireframes/c4-status-tracker.webp', label: 'C4 - Application Status Tracker' },
+  { src: '/images/nexora/wireframes/c5-book-interview.webp', label: 'C5 - Book Interview Slot' },
 ];
 
-const tags = ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI Screening', 'Coded Prototype', 'Agile'];
+const tags = ['Product Design', 'Enterprise Recruitment', 'Two-Sided Platform', 'AI-Screening Flows', 'Working Prototype', 'Agile'];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -54,7 +55,7 @@ export default function CaseStudyNexora() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SEO title="Nexora Case Study" description="Designed a two-sided recruitment platform for a 14,000-person enterprise: recruiter dashboard and candidate portal as one connected system, prototyped in code across 14 screens." path="/work/Nexora" />
+      <SEO title="Nexora Case Study" description="Designed a two-sided recruitment platform for a 14,000-person enterprise: recruiter dashboard and candidate portal as one connected system, built as a working prototype across 14 screens." path="/work/Nexora" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main>
@@ -73,7 +74,7 @@ export default function CaseStudyNexora() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-sm text-[var(--text-400)] leading-relaxed mb-6">
-                Nexora Solutions is a Toronto enterprise tech consultancy with 14,000+ staff across 22 countries. Hiring at that scale ran on spreadsheets and inbox archaeology. I designed a recruiter platform and candidate portal as one connected system: 14 screens, prototyped in code, scoped honestly to what a sprint can deliver.
+                Nexora Solutions is a Toronto enterprise tech consultancy with 14,000+ staff across 22 countries. Hiring at that scale ran on spreadsheets and inbox archaeology. I designed a recruiter platform and candidate portal as one connected system: 14 screens, built as a working prototype, scoped honestly to what a sprint can deliver.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-xs text-[var(--text-500)] mb-8">
@@ -87,6 +88,7 @@ export default function CaseStudyNexora() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                <WorkLabel kind="Programme project" />
                 {tags.map((t) => (
                   <span key={t} className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{t}</span>
                 ))}
@@ -101,7 +103,7 @@ export default function CaseStudyNexora() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <ImageCarousel images={images} alt="Nexora mockup" />
+            <ImageCarousel images={images} alt="Mockups of the Nexora recruiter dashboard and candidate portal screens" />
           </motion.div>
         </section>
 
@@ -113,7 +115,7 @@ export default function CaseStudyNexora() {
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           >
             {[
-              { val: '50%', label: 'Target reduction in manual CV screening time through AI-assisted matching and recruiter decision flow' },
+              { val: '50%', label: 'Target reduction in manual CV screening time through designed AI-assisted screening flows and a recruiter decision flow' },
               { val: '30%', label: 'Target reduction in scheduling bottlenecks by closing the recruiter-candidate booking loop' },
               { val: '20%', label: 'Target lift in candidate satisfaction by eliminating post-application silence' },
             ].map((s) => (
@@ -186,12 +188,12 @@ export default function CaseStudyNexora() {
                   {[
                     'Information architecture for the full 14-screen system',
                     'Screen mapping for two user types (recruiter + candidate)',
-                    'Three wireframe iterations, lo-fi through to coded prototype',
+                    'Three wireframe iterations, lo-fi through to working prototype',
                     'Annotations tying every screen to a PRD pain point',
-                    'Built working HTML prototype using Claude Code',
+                    'Built a working prototype in Next.js and TypeScript using Claude Code',
                   ].map((s) => (
                     <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                      <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                      <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                     </li>
                   ))}
                 </ul>
@@ -210,7 +212,7 @@ export default function CaseStudyNexora() {
                     'Deployment',
                   ].map((s) => (
                     <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                      <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                      <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                     </li>
                   ))}
                 </ul>
@@ -256,13 +258,13 @@ export default function CaseStudyNexora() {
                 {
                   n: '03',
                   title: 'AI screens, the recruiter decides',
-                  reasoning: 'The applicant profile screen (R5) leads with an AI match score and a generated summary of the candidate against the role, then puts Advance and Reject as the primary actions for a human to take. The AI does the reading. The recruiter makes the call and can override the score whenever they disagree.',
+                  reasoning: 'The applicant profile screen (R5) leads with a designed AI match score and candidate summary state (shown as screens; no AI call is wired up in the prototype), then puts Advance and Reject as the primary actions for a human to take. The intent is that the AI does the reading and the recruiter makes the call and can override the score whenever they disagree.',
                   insight: 'Augmentation with the judgment left where it belongs. That framing makes the time saving real without asking anyone to trust a black box.',
                 },
                 {
                   n: '04',
                   title: 'Kill the silence at the moment of applying',
-                  reasoning: 'The candidate application form (C2) is short and progressive rather than a wall of fields, and uploading a CV is what triggers the AI parsing on the recruiter side. The confirmation screen (C3) immediately sets expectations about what happens next.',
+                  reasoning: 'The candidate application form (C2) is short and progressive rather than a wall of fields, and uploading a CV is designed to trigger AI parsing on the recruiter side. The confirmation screen (C3) immediately sets expectations about what happens next.',
                   insight: 'The first fix for radio silence is to never let it start. Abandonment begins before submission, not after.',
                 },
               ].map((d) => (
@@ -364,14 +366,14 @@ export default function CaseStudyNexora() {
                     <ul className="space-y-1.5">
                       {[
                         'Dashboard surfacing pipeline status and urgent actions',
-                        'Job listings into candidate list ranked by AI match score',
-                        'Applicant profile with AI summary and human Advance/Reject',
+                        'Job listings into candidate list, designed with an AI match score ranking',
+                        'Applicant profile with a designed AI summary state and human Advance/Reject',
                         'Schedule directly into bookable slots',
                         'Kanban pipeline board that notifies as it moves',
                         'Offer management and analytics dashboard with PRD KPIs',
                       ].map((s) => (
                         <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                          <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                          <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                         </li>
                       ))}
                     </ul>
@@ -390,13 +392,13 @@ export default function CaseStudyNexora() {
                     <ul className="space-y-1.5">
                       {[
                         'Browse roles with clear requirements and team context',
-                        'Short, progressive application form. CV upload triggers AI parsing',
+                        'Short, progressive application form. CV upload designed to trigger AI parsing',
                         'Immediate confirmation with real expectations',
                         'Status tracker updating from recruiter pipeline actions',
                         'Self-service interview booking into recruiter\'s actual availability',
                       ].map((s) => (
                         <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                          <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                          <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                         </li>
                       ))}
                     </ul>
@@ -463,7 +465,7 @@ export default function CaseStudyNexora() {
               <SectionLabel>Interactive Prototype</SectionLabel>
               <h2 className="text-2xl md:text-3xl font-medium mb-4">Try the prototype</h2>
               <p className="text-sm text-[var(--text-400)] leading-relaxed max-w-xl mx-auto">
-                Built with Claude Code as a working HTML prototype rather than static frames. Click through the recruiter dashboard, pipeline board, and candidate portal to see how the two sides connect.
+                Built with Claude Code in Next.js and TypeScript as a working prototype rather than static frames. Click through the recruiter dashboard, pipeline board, and candidate portal to see how the two sides connect.
               </p>
             </motion.div>
 
@@ -524,7 +526,7 @@ export default function CaseStudyNexora() {
                 The decisions I'm proudest of, the scheduling loop and the move-a-card-send-a-message pattern, are not really about how anything looks. They're about two screens behaving as one mechanism. The best fix for the candidate's experience lived inside the recruiter's workflow, and I would have missed it if I had designed the two flows separately instead of as halves of the same thing.
               </p>
               <p className="text-sm text-[var(--text-400)] leading-relaxed">
-                Prototyping in code with Claude Code let me work faster than I could have otherwise, and being open that two of my three iterations were partly wrong, and that this is a phase deliverable rather than a shipped product, costs me nothing and makes the work easier to trust.
+                Building the working prototype with Claude Code let me work faster than I could have otherwise, and being open that two of my three iterations were partly wrong, and that this is a phase deliverable rather than a shipped product, costs me nothing and makes the work easier to trust.
               </p>
             </motion.div>
           </motion.div>

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,25 +11,25 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/urbannest/slides/slide-1.png',
-  '/images/urbannest/slides/slide-2.png',
-  '/images/urbannest/slides/slide-3.png',
-  '/images/urbannest/slides/slide-4.png',
-  '/images/urbannest/slides/slide-5.png',
+  '/images/urbannest/slides/slide-1.webp',
+  '/images/urbannest/slides/slide-2.webp',
+  '/images/urbannest/slides/slide-3.webp',
+  '/images/urbannest/slides/slide-4.webp',
+  '/images/urbannest/slides/slide-5.webp',
 ];
 
 const finalDesigns = [
-  { src: '/images/urbannest/final/final-1.png', label: 'Welcome Screen' },
-  { src: '/images/urbannest/final/final-2.png', label: 'Onboarding - Budget' },
-  { src: '/images/urbannest/final/final-3.png', label: 'Onboarding - Workplace' },
-  { src: '/images/urbannest/final/final-4.png', label: 'Onboarding - Priorities' },
-  { src: '/images/urbannest/final/final-5.png', label: 'Home - Top 10 Picks' },
-  { src: '/images/urbannest/final/final-6.png', label: 'Search Results' },
-  { src: '/images/urbannest/final/final-7.png', label: 'Property Detail' },
-  { src: '/images/urbannest/final/final-8.png', label: 'Advanced Filters' },
+  { src: '/images/urbannest/final/final-1.webp', label: 'Welcome Screen' },
+  { src: '/images/urbannest/final/final-2.webp', label: 'Onboarding - Budget' },
+  { src: '/images/urbannest/final/final-3.webp', label: 'Onboarding - Workplace' },
+  { src: '/images/urbannest/final/final-4.webp', label: 'Onboarding - Priorities' },
+  { src: '/images/urbannest/final/final-5.webp', label: 'Home - Top 10 Picks' },
+  { src: '/images/urbannest/final/final-6.webp', label: 'Search Results' },
+  { src: '/images/urbannest/final/final-7.webp', label: 'Property Detail' },
+  { src: '/images/urbannest/final/final-8.webp', label: 'Advanced Filters' },
 ];
 
-const tags = ['Product Design', 'PropTech', 'Mobile-First', 'AI-Powered', 'Commute Data', 'B2C'];
+const tags = ['Product Design', 'PropTech', 'Mobile-First', 'Commute Data', 'B2C'];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -83,6 +84,7 @@ export default function CaseStudyUrbanNest() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                <WorkLabel kind="Programme project" />
                 {tags.map((t) => (
                   <span key={t} className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{t}</span>
                 ))}
@@ -98,7 +100,7 @@ export default function CaseStudyUrbanNest() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <ImageCarousel images={images} alt="UrbanNest mockup" />
+            <ImageCarousel images={images} alt="Phone mockups of the UrbanNest property search, with commute times on each listing card" />
           </motion.div>
         </section>
 
@@ -301,13 +303,13 @@ export default function CaseStudyUrbanNest() {
 
             <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { src: '/images/urbannest/process/midfi/midfi-1.png', label: 'Welcome Screen' },
-                { src: '/images/urbannest/process/midfi/midfi-2.png', label: 'Onboarding - Budget' },
-                { src: '/images/urbannest/process/midfi/midfi-3.png', label: 'Onboarding - Workplace' },
-                { src: '/images/urbannest/process/midfi/midfi-4.png', label: 'Onboarding - Priorities' },
-                { src: '/images/urbannest/process/midfi/midfi-5.png', label: 'Home' },
-                { src: '/images/urbannest/process/midfi/midfi-6.png', label: 'Search Results' },
-                { src: '/images/urbannest/process/midfi/midfi-7.png', label: 'Property Detail' },
+                { src: '/images/urbannest/process/midfi/midfi-1.webp', label: 'Welcome Screen' },
+                { src: '/images/urbannest/process/midfi/midfi-2.webp', label: 'Onboarding - Budget' },
+                { src: '/images/urbannest/process/midfi/midfi-3.webp', label: 'Onboarding - Workplace' },
+                { src: '/images/urbannest/process/midfi/midfi-4.webp', label: 'Onboarding - Priorities' },
+                { src: '/images/urbannest/process/midfi/midfi-5.webp', label: 'Home' },
+                { src: '/images/urbannest/process/midfi/midfi-6.webp', label: 'Search Results' },
+                { src: '/images/urbannest/process/midfi/midfi-7.webp', label: 'Property Detail' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -381,7 +383,7 @@ export default function CaseStudyUrbanNest() {
                       <ul className="space-y-1.5">
                         {f.details.map((d) => (
                           <li key={d} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                            <span className="text-[var(--border-md)] flex-shrink-0">-</span>{d}
+                            <span className="text-[var(--text-600)] flex-shrink-0">-</span>{d}
                           </li>
                         ))}
                       </ul>

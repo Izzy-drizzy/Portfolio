@@ -32,7 +32,7 @@ export default function ImageCarousel({ images, alt = 'Project mockup' }: ImageC
         <img
           key={i}
           src={src}
-          alt={`${alt} ${i + 1}`}
+          alt={`${alt} (${i + 1} of ${images.length})`}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}

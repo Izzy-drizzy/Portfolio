@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,25 +11,25 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/edusmart/slide-1.png',
-  '/images/edusmart/slide-2.png',
-  '/images/edusmart/slide-3.png',
-  '/images/edusmart/slide-4.png',
-  '/images/edusmart/slide-5.png',
-  '/images/edusmart/slide-6.png',
-  '/images/edusmart/slide-7.png',
+  '/images/edusmart/slide-1.webp',
+  '/images/edusmart/slide-2.webp',
+  '/images/edusmart/slide-3.webp',
+  '/images/edusmart/slide-4.webp',
+  '/images/edusmart/slide-5.webp',
+  '/images/edusmart/slide-6.webp',
+  '/images/edusmart/slide-7.webp',
 ];
 
 const finalDesigns = [
-  { src: '/images/edusmart/final-1.png', label: 'Student Onboarding - Step 1' },
-  { src: '/images/edusmart/final-2.png', label: 'Student Onboarding - Step 2 (Consent)' },
-  { src: '/images/edusmart/final-3.png', label: 'Student Dashboard' },
-  { src: '/images/edusmart/final-4.png', label: 'Student Settings' },
-  { src: '/images/edusmart/final-5.png', label: 'Instructor Dashboard' },
-  { src: '/images/edusmart/final-6.png', label: 'Instructor - At-Risk Students List' },
-  { src: '/images/edusmart/final-7.png', label: 'Admin Dashboard' },
-  { src: '/images/edusmart/final-8.png', label: 'Admin - Compliance Dashboard' },
-  { src: '/images/edusmart/final-9.png', label: 'Admin - Data Integration Status' },
+  { src: '/images/edusmart/final-1.webp', label: 'Student Onboarding - Step 1' },
+  { src: '/images/edusmart/final-2.webp', label: 'Student Onboarding - Step 2 (Consent)' },
+  { src: '/images/edusmart/final-3.webp', label: 'Student Dashboard' },
+  { src: '/images/edusmart/final-4.webp', label: 'Student Settings' },
+  { src: '/images/edusmart/final-5.webp', label: 'Instructor Dashboard' },
+  { src: '/images/edusmart/final-6.webp', label: 'Instructor - At-Risk Students List' },
+  { src: '/images/edusmart/final-7.webp', label: 'Admin Dashboard' },
+  { src: '/images/edusmart/final-8.webp', label: 'Admin - Compliance Dashboard' },
+  { src: '/images/edusmart/final-9.webp', label: 'Admin - Data Integration Status' },
 ];
 
 const tags = ['EdTech', 'AI-Powered', 'Analytics Dashboard', 'B2B SaaS', 'GDPR', 'Higher Education', 'Stakeholder Research'];
@@ -86,6 +87,7 @@ export default function CaseStudyEdusmart() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                <WorkLabel kind="Programme project" />
                 {tags.map((t) => (
                   <span key={t} className="text-xs border border-[var(--border-md)] text-[var(--text-400)] px-3 py-1 rounded-full">{t}</span>
                 ))}
@@ -101,7 +103,7 @@ export default function CaseStudyEdusmart() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <ImageCarousel images={images} alt="EduSmart mockup" />
+            <ImageCarousel images={images} alt="Phone mockups of the EduSmart student dashboard and privacy settings screens" />
           </motion.div>
         </section>
 
@@ -418,10 +420,10 @@ export default function CaseStudyEdusmart() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/edusmart/process/personas/persona-1.png', label: 'User persona 1' },
-                { src: '/images/edusmart/process/personas/persona-2.png', label: 'User persona 2' },
-                { src: '/images/edusmart/process/personas/persona-3.png', label: 'User persona 3' },
-                { src: '/images/edusmart/process/personas/persona-4.png', label: 'User persona 4' },
+                { src: '/images/edusmart/process/personas/persona-1.webp', label: 'User persona 1' },
+                { src: '/images/edusmart/process/personas/persona-2.webp', label: 'User persona 2' },
+                { src: '/images/edusmart/process/personas/persona-3.webp', label: 'User persona 3' },
+                { src: '/images/edusmart/process/personas/persona-4.webp', label: 'User persona 4' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -436,8 +438,8 @@ export default function CaseStudyEdusmart() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/edusmart/process/personas/journey-1.png', label: 'Journey map 1' },
-                { src: '/images/edusmart/process/personas/journey-2.png', label: 'Journey map 2' },
+                { src: '/images/edusmart/process/personas/journey-1.webp', label: 'Journey map 1' },
+                { src: '/images/edusmart/process/personas/journey-2.webp', label: 'Journey map 2' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -452,9 +454,9 @@ export default function CaseStudyEdusmart() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {[
-                { src: '/images/edusmart/process/lofi/lofi-student.png', label: 'Student Dashboard - wireframe' },
-                { src: '/images/edusmart/process/lofi/lofi-instructor.png', label: 'Instructor Dashboard - wireframe' },
-                { src: '/images/edusmart/process/lofi/lofi-admin.png', label: 'Admin Dashboard - wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-student.webp', label: 'Student Dashboard - wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-instructor.webp', label: 'Instructor Dashboard - wireframe' },
+                { src: '/images/edusmart/process/lofi/lofi-admin.webp', label: 'Admin Dashboard - wireframe' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -536,7 +538,7 @@ export default function CaseStudyEdusmart() {
                       <ul className="space-y-1.5">
                         {u.screens.map((s) => (
                           <li key={s} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                            <span className="text-[var(--border-md)] flex-shrink-0">–</span>{s}
+                            <span className="text-[var(--text-600)] flex-shrink-0">–</span>{s}
                           </li>
                         ))}
                       </ul>
@@ -611,7 +613,7 @@ export default function CaseStudyEdusmart() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {[
                 { val: '£5M', label: 'Annual contracts at risk', sub: '3 major universities were evaluating competitors, which is what made getting the product wrong expensive' },
-                { val: '£125K+', label: 'Development costs avoided', sub: '38 unvalidated features removed before any code was written' },
+                { val: '38', label: 'Unvalidated features removed', sub: 'Taken out of scope before any code was written' },
                 { val: '3 weeks', label: 'From brief to validated, tested design', sub: 'Research, stakeholder validation, full design system, and usability testing, one sprint' },
               ].map((s) => (
                 <motion.div key={s.val} variants={fadeUp}

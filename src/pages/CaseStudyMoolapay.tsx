@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -10,10 +11,10 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const images = [
-  '/images/moolapay/slide-1.png',
-  '/images/moolapay/slide-2.png',
-  '/images/moolapay/slide-3.png',
-  '/images/moolapay/slide-4.png',
+  '/images/moolapay/slide-1.webp',
+  '/images/moolapay/slide-2.webp',
+  '/images/moolapay/slide-3.webp',
+  '/images/moolapay/slide-4.webp',
 ];
 
 const tags = ['Product Design', 'Cryptocurrency', 'Financial Inclusion', 'Low Digital Literacy', 'Inclusive UX'];
@@ -62,6 +63,7 @@ export default function CaseStudyMoolapay() {
             <motion.div variants={fadeUp} custom={4} className="flex flex-col gap-3">
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest">Project Tags</p>
               <div className="flex flex-wrap gap-2">
+                <WorkLabel kind="Client project" />
                 {tags.map((tag) => (
                   <span key={tag} className="text-xs px-3 py-1.5 rounded-full border border-[var(--border-md)] text-[var(--text-300)] bg-[var(--surface)]">{tag}</span>
                 ))}
@@ -71,7 +73,7 @@ export default function CaseStudyMoolapay() {
           <motion.div className="lg:col-span-7 h-[55vh] lg:h-[80vh]"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>
-            <ImageCarousel images={images} alt="Moolapay mockup" />
+            <ImageCarousel images={images} alt="Phone mockups of the Moolapay payments app, with icon-led screens" />
           </motion.div>
         </section>
 
@@ -315,7 +317,7 @@ export default function CaseStudyMoolapay() {
                         <ul className="space-y-1">
                           {p.goals.map((g, i) => (
                             <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                              <span className="text-[var(--border-md)] shrink-0 mt-0.5">{i + 1}.</span>{g}
+                              <span className="text-[var(--text-600)] shrink-0 mt-0.5">{i + 1}.</span>{g}
                             </li>
                           ))}
                         </ul>
@@ -325,7 +327,7 @@ export default function CaseStudyMoolapay() {
                         <ul className="space-y-1">
                           {p.pains.map((pt, i) => (
                             <li key={i} className="flex gap-2 text-xs text-[var(--text-400)] leading-relaxed">
-                              <span className="text-[var(--border-md)] shrink-0 mt-0.5">{i + 1}.</span>{pt}
+                              <span className="text-[var(--text-600)] shrink-0 mt-0.5">{i + 1}.</span>{pt}
                             </li>
                           ))}
                         </ul>
@@ -394,7 +396,7 @@ export default function CaseStudyMoolapay() {
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">User Flow & Information Architecture</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)] mb-12">
-              <ImageZoom src="/images/moolapay/process/user-flow-ia.png" alt="User flow and IA diagram" className="w-full object-cover" />
+              <ImageZoom src="/images/moolapay/process/user-flow-ia.webp" alt="User flow and IA diagram" className="w-full object-cover" />
               <p className="text-xs text-[var(--text-600)] px-4 py-2">User flow & IA - full app structure</p>
             </motion.div>
 
@@ -404,8 +406,8 @@ export default function CaseStudyMoolapay() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12">
               {[
-                { src: '/images/moolapay/process/journey-fund-transfer.png', label: 'Journey map - Fund Transfer' },
-                { src: '/images/moolapay/process/journey-scan-to-pay.png', label: 'Journey map - Scan to Pay' },
+                { src: '/images/moolapay/process/journey-fund-transfer.webp', label: 'Journey map - Fund Transfer' },
+                { src: '/images/moolapay/process/journey-scan-to-pay.webp', label: 'Journey map - Scan to Pay' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -419,7 +421,7 @@ export default function CaseStudyMoolapay() {
               <p className="text-xs text-[var(--text-600)] uppercase tracking-widest mb-4">Wireframes & IA Sketches</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-              <ImageZoom src="/images/moolapay/process/wireframes.png" alt="Messy wireframes and IA sketches" className="w-full object-cover" />
+              <ImageZoom src="/images/moolapay/process/wireframes.webp" alt="Messy wireframes and IA sketches" className="w-full object-cover" />
               <p className="text-xs text-[var(--text-600)] px-4 py-2">Lo-fi wireframes & IA sketches</p>
             </motion.div>
           </motion.div>
@@ -672,27 +674,27 @@ export default function CaseStudyMoolapay() {
             {/* First row - 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               {[
-                '/images/moolapay/final-1.png',
-                '/images/moolapay/final-2.png',
-                '/images/moolapay/final-3.png',
+                '/images/moolapay/final-1.webp',
+                '/images/moolapay/final-2.webp',
+                '/images/moolapay/final-3.webp',
               ].map((src, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i}
                   className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] aspect-[4/3]">
-                  <ImageZoom src={src} alt={`Moolapay final design ${i + 1}`} className="w-full h-full object-cover" />
+                  <ImageZoom src={src} alt={`Final Moolapay app screen ${i + 1} of 6`} className="w-full h-full object-cover" />
                 </motion.div>
               ))}
             </div>
             {/* Second row - 4 columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                '/images/moolapay/final-4.png',
-                '/images/moolapay/final-5.png',
-                '/images/moolapay/final-6.png',
-                '/images/moolapay/final-7.png',
+                '/images/moolapay/final-4.webp',
+                '/images/moolapay/final-5.webp',
+                '/images/moolapay/final-6.webp',
+                '/images/moolapay/final-7.webp',
               ].map((src, i) => (
                 <motion.div key={i + 3} variants={fadeUp} custom={i + 3}
                   className="rounded-xl overflow-hidden bg-[var(--surface)] border border-[var(--border)] aspect-[4/3]">
-                  <ImageZoom src={src} alt={`Moolapay final design ${i + 4}`} className="w-full h-full object-cover" />
+                  <ImageZoom src={src} alt={`Final Moolapay app screen ${i + 4} of 6`} className="w-full h-full object-cover" />
                 </motion.div>
               ))}
             </div>

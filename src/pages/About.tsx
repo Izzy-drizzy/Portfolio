@@ -12,8 +12,8 @@ const expertise = [
     icon: '/icons/design-white.svg',
     link: { label: 'View Behance', href: 'https://www.behance.net/bukunmiisijola' },
     body: [
-      "I prototype in code as well as Figma, so API constraints, loading states and mobile performance come up while I'm designing instead of at handoff. I research before I design and prototype before I commit, and the business goal stays on the table throughout.",
-      "Most of my work has been in fintech and SaaS, where people need to understand complex information and trust it. Recent work includes an investment platform redesign that moved user satisfaction by 30%, and trading applications designed for both first-time and experienced investors. The most interesting part of the job is taking something that feels complicated and finding the version that makes sense on first use.",
+      "I build working prototypes as well as designing in Figma, so API constraints, loading states and mobile performance come up while I'm designing instead of at handoff. I research before I design and prototype before I commit, and the business goal stays on the table throughout.",
+      "Most of my work has been in fintech and SaaS, where people need to understand complex information and trust it. Recent work includes trading applications designed for both first-time and experienced investors. The most interesting part of the job is taking something that feels complicated and finding the version that makes sense on first use.",
     ],
   },
   {
@@ -22,7 +22,7 @@ const expertise = [
     link: { label: 'View GitHub', href: 'https://github.com/Izzy-drizzy' },
     body: [
       "My development background shapes how I design. I've written front-end code, so I know what's cheap to build and what isn't. That helps me make better calls early, which means less back-and-forth with developers and builds that match the designs.",
-      "I've built responsive web applications, contributed to complex API integration, and optimised user interfaces for performance. My prototypes usually run, and when I hand off designs, developers come back with questions about timelines rather than whether the thing can be built.",
+      "I've built responsive web applications. My prototypes usually run, and when I hand off designs, developers come back with questions about timelines rather than whether the thing can be built.",
     ],
   },
   {
@@ -31,7 +31,7 @@ const expertise = [
     link: { label: 'View Artbox', href: 'https://artbox-studio.com' },
     body: [
       "I launched Artbox Studio in November 2024. Running it has taught me project management, stakeholder communication, and how to deliver work a business can measure.",
-      "These days it's where I take on ambitious projects, including designing and building AI tools for local businesses, from the first sketch to working software.",
+      "These days it's where I take on ambitious projects, including building AI tools for UK home-improvement businesses.",
     ],
   },
 ];
@@ -78,7 +78,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans">
-      <SEO title="About" description="Product designer with a CS background who works best at the zero-to-one stage. Five years, most of it in fintech." path="/about" />
+      <SEO title="About" description="Product designer working in Figma and building in React and TypeScript, with a BSc and MSc in Computer Science. Owned design for a live consumer fintech product." path="/about" />
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
 
       <main className="pt-28 px-7 md:px-10">
@@ -111,7 +111,7 @@ export default function About() {
               As I got older I moved from paper to screens and taught myself Illustrator and Photoshop. Then came university and a Computer Science degree, where I found I could make things with code too: HTML, CSS, JavaScript, React. Frontend development turned out to be another creative outlet.
             </p>
             <p>
-              Fast forward through a Master's in Computer Science and 5+ years designing fintech and SaaS products, and I'm now a product designer who works on both sides of design and development. I know what users need and what engineers can build, so what I design tends to ship.
+              Fast forward through a Master's in Computer Science, product design at a fintech startup and my own studio, and I'm now a product designer who works on both sides of design and development. I know what users need and what engineers can build, so what I design tends to ship.
             </p>
             <p className="text-[var(--text-400)]">
               Currently running Artbox Studio and looking for a Senior Product Designer role.

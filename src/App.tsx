@@ -7,6 +7,7 @@ import { useState } from 'react';
 import SEO from './components/SEO';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import Built from './components/Built';
 import About from './components/About';
 import Stack from './components/Stack';
 // import Testimonials from './components/Testimonials';
@@ -25,6 +26,7 @@ export default function App() {
       <Navigation onOpenContact={() => setIsContactModalOpen(true)} />
       <main>
         <Hero onOpenContact={() => setIsContactModalOpen(true)} />
+        <Built />
         <About />
         <Stack />
         {/* <Testimonials /> */}

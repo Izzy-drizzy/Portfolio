@@ -36,9 +36,11 @@ export default function Footer() {
             </a>
 
             <div className="flex flex-wrap gap-6 text-sm">
+              <a href="/Bukunmi-Isijola-CV.pdf" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">CV</a>
               <a href="mailto:isijolabukunmi@gmail.com" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Mail</a>
               <a href="https://www.instagram.com/bukunmi.isijola/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Instagram</a>
               <a href="https://www.behance.net/bukunmiisijola" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">Behance</a>
+              <a href="https://github.com/Izzy-drizzy" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">GitHub</a>
               <a href="https://www.linkedin.com/in/bukunmi-isijola-ux/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">LinkedIn</a>
               <a href="https://x.com/IsijolaBukunmi/" target="_blank" rel="noreferrer" className="text-[var(--text-400)] hover:text-[var(--text)] transition-colors">X</a>
             </div>

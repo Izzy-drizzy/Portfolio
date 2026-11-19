@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -9,12 +10,12 @@ import ImageCarousel from '../components/ImageCarousel';
 import SEO from '../components/SEO';
 
 const slides = [
-  '/images/healf-zone2/slides/slide-1.png',
-  '/images/healf-zone2/slides/slide-2.png',
-  '/images/healf-zone2/slides/slide-3.png',
-  '/images/healf-zone2/slides/slide-4.png',
-  '/images/healf-zone2/slides/slide-5.png',
-  '/images/healf-zone2/slides/slide-6.png',
+  '/images/healf-zone2/slides/slide-1.webp',
+  '/images/healf-zone2/slides/slide-2.webp',
+  '/images/healf-zone2/slides/slide-3.webp',
+  '/images/healf-zone2/slides/slide-4.webp',
+  '/images/healf-zone2/slides/slide-5.webp',
+  '/images/healf-zone2/slides/slide-6.webp',
 ];
 
 const tags = ['Product Design', 'Health Tech', 'Mobile Design', 'Wellbeing Intelligence', 'UX Strategy'];
@@ -54,16 +55,17 @@ export default function CaseStudyHealfZone2() {
               Evolving Healf's blood testing service into an intelligent wellbeing companion
             </motion.h1>
             <motion.p variants={fadeUp} custom={2} className="text-sm text-[var(--text-400)] leading-relaxed max-w-md">
-              Most health apps give you data. Healf Zone 2.0 gives you answers. An unsolicited 14-day design sprint to demonstrate end-to-end product thinking for Healf's Founding Lead Product Designer role.
+              Most health apps give you data. Healf Zone 2.0 gives you answers. A self-set 14-day design sprint against Healf's published Founding Lead Product Designer brief, to demonstrate end-to-end product thinking.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="flex items-center gap-3 text-xs text-[var(--text-500)]">
               <span>March 2026</span>
               <span className="w-1 h-1 rounded-full bg-gray-600" />
-              <span>Unsolicited - Bukunmi Isijola</span>
+              <span>Self-set brief - Bukunmi Isijola</span>
             </motion.div>
             <motion.div variants={fadeUp} custom={4} className="flex flex-col gap-3">
               <SectionLabel>Project Tags</SectionLabel>
               <div className="flex flex-wrap gap-2">
+                <WorkLabel kind="Self-set brief" />
                 {tags.map((tag) => (
                   <span key={tag} className="text-xs px-3 py-1.5 rounded-full border border-[var(--border-md)] text-[var(--text-300)] bg-[var(--surface)]">
                     {tag}
@@ -76,7 +78,7 @@ export default function CaseStudyHealfZone2() {
           <motion.div className="lg:col-span-7 h-[55vh] lg:h-[80vh]"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>
-            <ImageCarousel images={slides} alt="Healf Zone 2.0 mockup" />
+            <ImageCarousel images={slides} alt="Phone mockups of the Healf Zone 2.0 results and check-in screens" />
           </motion.div>
         </section>
 
@@ -87,9 +89,9 @@ export default function CaseStudyHealfZone2() {
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}>
             {[
               { stat: '6 months', label: 'Between tests: the engagement gap this system closes' },
-              { stat: '73%', label: 'Of wellness app users frustrated with data without direction (research finding)' },
+              { stat: '73%', label: 'Of the 47 Reddit posts and 234 app reviews I reviewed expressed frustration with data without direction' },
               { stat: '5', label: 'Key micro-experiences designed end-to-end' },
-              { stat: '£1Bn', label: 'Revenue pathway this intelligence platform is built towards' },
+              { stat: '14 days', label: 'Length of the design sprint, from research to five designed experiences' },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-[#F45D01] mb-2">{item.stat}</p>
@@ -128,14 +130,14 @@ export default function CaseStudyHealfZone2() {
               <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-[var(--text-300)] uppercase tracking-wide">What the Research Said</h3>
                 <p className="text-sm text-[var(--text-400)] leading-relaxed">
-                  Research synthesis across 47 Reddit posts (r/Biohackers, r/QuantifiedSelf, r/Supplements), 234 app reviews across five competitors, and 12 behavioural science papers on health behaviour change.
+                  Research synthesis across 47 Reddit posts (r/Biohackers, r/QuantifiedSelf, r/Supplements), 234 app reviews across five competitors, and 12 behavioural science papers on health behaviour change. The percentages below are shares of those posts and reviews. They are not survey results.
                 </p>
                 <ul className="space-y-2">
                   {[
-                    '73% of users in my research expressed frustration with "data without direction," meaning numbers without context or next steps',
-                    '65% abandon health apps within 3–4 weeks due to tracking burden and daily logging fatigue',
-                    '58% report anxiety from test results when context is missing, with minor fluctuations catastrophised',
-                    '42% distrust product recommendations, perceiving apps as glorified sales funnels',
+                    '73% of the posts and reviews expressed frustration with "data without direction," meaning numbers without context or next steps',
+                    '65% described abandoning health apps within 3–4 weeks due to tracking burden and daily logging fatigue',
+                    '58% described anxiety from test results when context is missing, with minor fluctuations catastrophised',
+                    '42% expressed distrust of product recommendations, perceiving apps as glorified sales funnels',
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[var(--text-400)] leading-relaxed">
                       <span className="text-[#F45D01] mt-1 shrink-0">—</span>{item}
@@ -159,7 +161,7 @@ export default function CaseStudyHealfZone2() {
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
                     <p className="text-xs text-[var(--text-500)]">{m.label}</p>
-                    <p className="text-xs text-[var(--border-md)] mt-1">Source: {m.src}</p>
+                    <p className="text-xs text-[var(--text-600)] mt-1">Source: {m.src}</p>
                   </div>
                 ))}
               </div>
@@ -180,7 +182,7 @@ export default function CaseStudyHealfZone2() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {[
                   { label: 'Role', value: 'Solo Product Designer' },
-                  { label: 'Context', value: 'Unsolicited - Founding Lead PD application' },
+                  { label: 'Context', value: 'Self-set brief - Healf Founding Lead PD role' },
                   { label: 'Platform', value: 'iOS / Android' },
                   { label: 'Sprint', value: '14-day self-directed sprint' },
                 ].map((item, i) => (
@@ -293,14 +295,14 @@ export default function CaseStudyHealfZone2() {
             </motion.div>
             <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { src: '/images/healf-zone2/lofi/lofi-1.png', label: 'Entry Point - Post-Test Results' },
-                { src: '/images/healf-zone2/lofi/lofi-2.png', label: 'Protocol Overview - Four Pillars' },
-                { src: '/images/healf-zone2/lofi/lofi-3.png', label: 'Shop Tab - Vitamin D Products' },
-                { src: '/images/healf-zone2/lofi/lofi-4.png', label: 'Protocol Check-In - 48 Hours Later' },
-                { src: '/images/healf-zone2/lofi/lofi-5.png', label: 'Daily Reminder Opt-In' },
-                { src: '/images/healf-zone2/lofi/lofi-6.png', label: 'Weekly Check-In Entry' },
-                { src: '/images/healf-zone2/lofi/lofi-7.png', label: 'Response Validation' },
-                { src: '/images/healf-zone2/lofi/lofi-8.png', label: 'Progress Update - Retest' },
+                { src: '/images/healf-zone2/lofi/lofi-1.webp', label: 'Entry Point - Post-Test Results' },
+                { src: '/images/healf-zone2/lofi/lofi-2.webp', label: 'Protocol Overview - Four Pillars' },
+                { src: '/images/healf-zone2/lofi/lofi-3.webp', label: 'Shop Tab - Vitamin D Products' },
+                { src: '/images/healf-zone2/lofi/lofi-4.webp', label: 'Protocol Check-In - 48 Hours Later' },
+                { src: '/images/healf-zone2/lofi/lofi-5.webp', label: 'Daily Reminder Opt-In' },
+                { src: '/images/healf-zone2/lofi/lofi-6.webp', label: 'Weekly Check-In Entry' },
+                { src: '/images/healf-zone2/lofi/lofi-7.webp', label: 'Response Validation' },
+                { src: '/images/healf-zone2/lofi/lofi-8.webp', label: 'Progress Update - Retest' },
               ].map((img, i) => (
                 <div key={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-cover" />
@@ -330,7 +332,7 @@ export default function CaseStudyHealfZone2() {
                 {
                   num: '02',
                   title: 'Commerce Without the Sales-Funnel Feel',
-                  problem: 'Healf\'s revenue depends on product sales, but 42% of users in my research distrust health app recommendations. They see them as sales funnels, not guidance. Recommending a single product directly felt pushy and removed user choice.',
+                  problem: 'Healf\'s revenue depends on product sales, but 42% of the posts and reviews in my research expressed distrust of health app recommendations. They see them as sales funnels, not guidance. Recommending a single product directly felt pushy and removed user choice.',
                   solution: 'Three-layer architecture: Insight (intelligence) → Protocol (bridge) → Shop (5–10 curated options). Intelligence and transaction are fully separated. Users choose based on their values and budget, so the shop reads as the next step after the advice.',
                 },
                 {
@@ -392,7 +394,7 @@ export default function CaseStudyHealfZone2() {
                     'Timeline manages expectations: "Levels typically respond within 2–3 months"',
                     'Single clear CTA: View Recommended Protocol',
                   ],
-                  screen: '/images/healf-zone2/key-screens/screen-1.png',
+                  screen: '/images/healf-zone2/key-screens/screen-1.webp',
                 },
                 {
                   num: '02',
@@ -404,7 +406,7 @@ export default function CaseStudyHealfZone2() {
                     'Progress inferred from purchase history, no manual input needed',
                     'Connects felt experience to the upcoming retest validation',
                   ],
-                  screen: '/images/healf-zone2/key-screens/screen-2.png',
+                  screen: '/images/healf-zone2/key-screens/screen-2.webp',
                 },
                 {
                   num: '03',
@@ -416,7 +418,7 @@ export default function CaseStudyHealfZone2() {
                     'Connects objective improvement back to the felt-experience check-ins from earlier in the cycle',
                     'Teases a new finding, smooth transition into the next protocol cycle',
                   ],
-                  screen: '/images/healf-zone2/key-screens/screen-3.png',
+                  screen: '/images/healf-zone2/key-screens/screen-3.webp',
                 },
               ].map((m, i) => (
                 <motion.div key={i} variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -453,14 +455,14 @@ export default function CaseStudyHealfZone2() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { src: '/images/healf-zone2/key-screens/hifi-1.png', label: 'Entry Point - Post-Test Results' },
-                { src: '/images/healf-zone2/key-screens/hifi-2.png', label: 'Protocol Overview - Four Pillars' },
-                { src: '/images/healf-zone2/key-screens/hifi-3.png', label: 'Shop Tab - Vitamin D Products' },
-                { src: '/images/healf-zone2/key-screens/hifi-4.png', label: 'Protocol Check-In - 48h Later' },
-                { src: '/images/healf-zone2/key-screens/hifi-5.png', label: 'Daily Reminder Opt-In' },
-                { src: '/images/healf-zone2/key-screens/hifi-6.png', label: 'Weekly Check-In Entry' },
-                { src: '/images/healf-zone2/key-screens/hifi-7.png', label: 'Response Validation' },
-                { src: '/images/healf-zone2/key-screens/hifi-8.png', label: 'Progress Update - Retest' },
+                { src: '/images/healf-zone2/key-screens/hifi-1.webp', label: 'Entry Point - Post-Test Results' },
+                { src: '/images/healf-zone2/key-screens/hifi-2.webp', label: 'Protocol Overview - Four Pillars' },
+                { src: '/images/healf-zone2/key-screens/hifi-3.webp', label: 'Shop Tab - Vitamin D Products' },
+                { src: '/images/healf-zone2/key-screens/hifi-4.webp', label: 'Protocol Check-In - 48h Later' },
+                { src: '/images/healf-zone2/key-screens/hifi-5.webp', label: 'Daily Reminder Opt-In' },
+                { src: '/images/healf-zone2/key-screens/hifi-6.webp', label: 'Weekly Check-In Entry' },
+                { src: '/images/healf-zone2/key-screens/hifi-7.webp', label: 'Response Validation' },
+                { src: '/images/healf-zone2/key-screens/hifi-8.webp', label: 'Progress Update - Retest' },
               ].map((img, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
                   <ImageZoom src={img.src} alt={img.label} className="w-full object-contain" />

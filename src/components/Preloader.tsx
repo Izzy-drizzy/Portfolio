@@ -1,30 +1,42 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 
 const TARGET = 'Bukunmi Isijola';
 const CHARS = '!<>-_\\/[]{}—=+*^?#@$%&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
+const SEEN_KEY = 'preloader-seen';
+const DURATION = 600; // ms the name takes to resolve
+const HOLD = 100; // ms the finished name stays before the panel lifts
+const LIFT = 350; // ms the panel takes to slide away
+
+// The panel only plays on a visitor's first visit. After that, and for anyone who prefers reduced
+// motion, it is skipped so the page appears at once.
+function shouldPlay() {
+  try {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    if (localStorage.getItem(SEEN_KEY)) return false;
+  } catch {
+    /* storage blocked: play it */
+  }
+  return true;
+}
+
 export default function Preloader() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [phase, setPhase] = useState<'show' | 'lift' | 'gone'>(() => (shouldPlay() ? 'show' : 'gone'));
+  const isLoading = phase !== 'gone';
   const [progress, setProgress] = useState(0);
   const [displayText, setDisplayText] = useState(
     TARGET.split('').map(c => (c === ' ' ? ' ' : CHARS[Math.floor(Math.random() * CHARS.length)])).join('')
   );
 
   useEffect(() => {
-    const duration = 900;
-    const tickMs = 20;
-    const totalTicks = duration / tickMs;
-    let tick = 0;
+    if (!isLoading) return;
+    try { localStorage.setItem(SEEN_KEY, '1'); } catch { /* ignore */ }
 
-    const timer = setInterval(() => {
-      tick++;
-      const ratio = tick / totalTicks;
-
-      // Progress counter
+    const start = performance.now();
+    const tick = setInterval(() => {
+      const ratio = Math.min((performance.now() - start) / DURATION, 1);
       setProgress(Math.min(Math.round(Math.pow(ratio, 0.6) * 100), 100));
-
-      // Scramble: lock in characters left-to-right as ratio increases
       const locked = Math.floor(ratio * TARGET.length * 1.1);
       setDisplayText(
         TARGET.split('').map((char, i) => {
@@ -33,24 +45,27 @@ export default function Preloader() {
           return CHARS[Math.floor(Math.random() * CHARS.length)];
         }).join('')
       );
+    }, 30);
 
-      if (tick >= totalTicks) {
-        clearInterval(timer);
-        setDisplayText(TARGET);
-        setTimeout(() => setIsLoading(false), 150);
-      }
-    }, tickMs);
+    // One timer decides when the panel goes, so a slow or throttled tab cannot stretch it.
+    const done = setTimeout(() => {
+      clearInterval(tick);
+      setDisplayText(TARGET);
+      setPhase('lift');
+    }, DURATION + HOLD);
+    // Removed by a timer rather than by an animation callback, so a tab opened in the background
+    // (where animation frames are paused) is never left under the panel.
+    const gone = setTimeout(() => setPhase('gone'), DURATION + HOLD + LIFT);
 
-    return () => clearInterval(timer);
+    return () => { clearInterval(tick); clearTimeout(done); clearTimeout(gone); };
   }, []);
 
   return (
-    <AnimatePresence>
+    <>
       {isLoading && (
-        <motion.div
-          initial={{ y: 0 }}
-          exit={{ y: '-100%', transition: { duration: 0.45, ease: [0.76, 0, 0.24, 1] } }}
+        <div
           className="fixed inset-0 z-[100] bg-[#141414] flex items-center justify-center"
+          style={{ transform: phase === 'lift' ? 'translateY(-100%)' : 'none', transition: `transform ${LIFT}ms cubic-bezier(0.76, 0, 0.24, 1)` }}
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -60,15 +75,15 @@ export default function Preloader() {
           >
             {/* Left - Logo, same height as name text */}
             <div className="flex items-center h-[18px] md:h-[26px]">
-              <img src="/logo.svg" alt="Logo" className="h-full w-auto opacity-80" />
+              <img src="/logo.svg" alt="" className="h-full w-auto opacity-80" />
             </div>
 
             {/* Right - Name + progress percentage below */}
             <div>
-              <h1 className="text-[18px] md:text-[26px] font-semibold tracking-tight text-[#E4E3E0] leading-none">
+              <p aria-hidden="true" className="text-[18px] md:text-[26px] font-semibold tracking-tight text-[#E4E3E0] leading-none">
                 {displayText}
-              </h1>
-              <p className="text-[8px] md:text-[10px] font-mono text-gray-500 mt-2 tracking-widest">
+              </p>
+              <p className="text-[8px] md:text-[10px] font-mono text-gray-400 mt-2 tracking-widest">
                 [ LOADING ... {progress}% ]
               </p>
             </div>
@@ -76,8 +91,8 @@ export default function Preloader() {
 
           {/* Bottom dashed border */}
           <div className="absolute bottom-0 left-0 right-0 border-b border-dashed border-gray-800" />
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 }

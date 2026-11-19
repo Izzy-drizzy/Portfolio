@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
@@ -56,6 +57,7 @@ export default function CaseStudySpotifySoundMatch() {
             <motion.div variants={fadeUp} custom={4} className="flex flex-col gap-3">
               <SectionLabel>Project Tags</SectionLabel>
               <div className="flex flex-wrap gap-2">
+                <WorkLabel kind="Unsolicited concept" />
                 {tags.map((tag) => (
                   <span key={tag} className="text-xs px-3 py-1.5 rounded-full border border-[var(--border-md)] text-[var(--text-300)] bg-[var(--surface)]">
                     {tag}
@@ -148,7 +150,7 @@ export default function CaseStudySpotifySoundMatch() {
                   <div key={i} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="text-3xl font-medium text-white mb-1">{m.val}</p>
                     <p className="text-xs text-[var(--text-500)]">{m.label}</p>
-                    <p className="text-xs text-[var(--border-md)] mt-1">Source: {m.src}</p>
+                    <p className="text-xs text-[var(--text-600)] mt-1">Source: {m.src}</p>
                   </div>
                 ))}
               </div>
@@ -283,7 +285,7 @@ export default function CaseStudySpotifySoundMatch() {
               <p className="text-sm text-[var(--text-400)] mt-3 max-w-2xl">Before any screens, I mapped every way into the feature and every way the capture can go wrong. The failure paths shaped the design as much as the happy path.</p>
             </motion.div>
             <motion.div variants={fadeUp} className="rounded-xl overflow-hidden border border-[var(--border)]">
-              <ImageZoom src="/images/spotify-sound-match/flow.png" alt="Sound Match user flow" className="w-full object-contain" />
+              <ImageZoom src="/images/spotify-sound-match/flow.webp" alt="Sound Match user flow" className="w-full object-contain" />
             </motion.div>
           </motion.div>
         </section>
@@ -368,7 +370,7 @@ export default function CaseStudySpotifySoundMatch() {
                     'The lock screen control and widget work without unlocking. The widget shows your last match',
                     'Results come back as a Live Activity, with "Songs like this" one tap away',
                   ],
-                  screen: '/images/spotify-sound-match/slides/slide-2.png',
+                  screen: '/images/spotify-sound-match/slides/slide-2.webp',
                 },
                 {
                   num: '02',
@@ -380,7 +382,7 @@ export default function CaseStudySpotifySoundMatch() {
                     '"What we heard" turns the audio into six traits people can read at a glance',
                     'One clear next step: make a playlist. Song radio is still there for people who want it',
                   ],
-                  screen: '/images/spotify-sound-match/slides/slide-3.png',
+                  screen: '/images/spotify-sound-match/slides/slide-3.webp',
                 },
                 {
                   num: '03',
@@ -392,7 +394,7 @@ export default function CaseStudySpotifySoundMatch() {
                     'It plays straight away. It joins Your Library only when you save it',
                     'A share card turns the moment into something you can send ("I heard Slow Honey and found 30 songs like it")',
                   ],
-                  screen: '/images/spotify-sound-match/slides/slide-4.png',
+                  screen: '/images/spotify-sound-match/slides/slide-4.webp',
                 },
                 {
                   num: '04',
@@ -403,7 +405,7 @@ export default function CaseStudySpotifySoundMatch() {
                     'Too loud: it shows music against crowd noise, coaches you to move closer and keeps listening',
                     'Offline: it keeps the fingerprint, matches when you\'re back online and notifies you',
                   ],
-                  screen: '/images/spotify-sound-match/slides/slide-5.png',
+                  screen: '/images/spotify-sound-match/slides/slide-5.webp',
                 },
               ].map((m, i) => (
                 <motion.div key={i} variants={fadeUp} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -454,7 +456,7 @@ export default function CaseStudySpotifySoundMatch() {
                 { src: 's12', label: 'Offline - Waiting to Match' },
               ].map((img, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i} className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--surface)]">
-                  <ImageZoom src={`/images/spotify-sound-match/screens/${img.src}.png`} alt={img.label} className="w-full object-contain" />
+                  <ImageZoom src={`/images/spotify-sound-match/screens/${img.src}.webp`} alt={img.label} className="w-full object-contain" />
                   <p className="text-xs text-[var(--text-600)] px-4 py-2">{img.label}</p>
                 </motion.div>
               ))}
