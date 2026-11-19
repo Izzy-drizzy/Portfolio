@@ -5,6 +5,7 @@ import WorkLabel from '../components/WorkLabel';
 import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 import ImageZoom from '../components/ImageZoom';
+import HeroVideo from '../components/HeroVideo';
 import SEO from '../components/SEO';
 
 // Unlisted page: not linked from Work or the home page, not in the sitemap, and marked noindex.
@@ -69,7 +70,8 @@ export default function CaseStudyMonzoLeftToSpend() {
           <motion.div className="lg:col-span-7 lg:pl-10"
             initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}>
-            <ImageZoom src={`${IMG}/hero.webp`} alt="Home, the working and a bill notification from the Left to spend concept" className="w-full object-contain" />
+            <HeroVideo src={`${IMG}/video/left-to-spend.mp4`} label="Left to spend, until payday: concept video" />
+            <ImageZoom src={`${IMG}/hero.webp`} alt="Home, the working and a bill notification from the Left to spend concept" className="w-full object-contain mt-6" />
           </motion.div>
         </section>
 
